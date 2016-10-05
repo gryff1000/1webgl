@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>A DNA Mystery</title>
+    <script src="../hand.js"></script>
+    <script src= "../babylon.1.14-beta.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+			background-color: black;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#title {
+			position: absolute;
+			left:25%;
+			top:3%;
+			width:50%;
+			height: 5%;
+			font-family: Arial, Helvetica;
+			background-color: black;
+			line-height: 2em;
+			text-align: center;
+			font-size: 20px;
+			color: white;
+			display: block;
+			
+		}
+		
+		#words {
+			position: absolute;
+			left:5%;
+			top:85%;
+			width:90%;
+			line-height: 2em;
+			text-align: center;
+			font-family: Arial, Helvetica;
+			font-size: 18px;
+			color: white;
+			display: none;
+			
+		}
+		
+    </style>
+</head>
+<body>
+	<div id="title">Catherine Eddows: the 314.1c or 315.1c mtDNA Mystery</div>
+	<div id="words"><B>? </B>What DNA analysis technique is used tell the difference between the two base strings from positions 310-316,
+	</br>All the cystosine molecules (yellow) are chemically identical - just labelled differently</div>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+
+		var count = 0;
+		var entered = false;
+		var myScene;
+		var mybb1014;
+		var mybb14c;
+		var mybb1015;
+		var mybb15c;
+		var show = 0;
+		var myBox;
+		var theText;
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+
+            BABYLON.SceneLoader.Load("", "dna3a.babylon", engine, function (newScene) {
+                newScene.executeWhenReady(function () {
+                    // Attach camera to canvas inputs
+                    //newScene.activeCamera.attachControl(canvas);
+					var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), newScene);
+				   // Quick, let's use the setPosition() method... with a common Vector3 position, to make our camera better aimed.
+					myCamera.setPosition(new BABYLON.Vector3(5, 3, -10));
+					myCamera.speed = .01;
+					//myCamera.angularSensibility = 20000;
+					myCamera.wheelPrecision = 40;
+					myCamera.fov = .8;
+					//console.log(myCamera.fov);
+					/*
+					var myBox = BABYLON.Mesh.CreateBox("box", .6, newScene);
+					myBox.parent =myCamera;
+					myBox.position.x = -4;
+					myBox.position.z = 10;
+					myBox.position.y = 2
+					myBox.scaling.z = .01;
+					
+					var my316 = newScene.getMeshByName("bb16");
+					console.log(my316.position.x);
+					my316.position.x = +.1;
+					console.log(my316.position.x);
+					*/
+					
+					
+					mybb1014 = newScene.getMeshByName("bb10_14");
+					//mybb1014.isVisible = false;
+					mybb1015 = mybb1014.clone("bb10_15");
+					//mybb1015.isVisible = false;
+					
+					var mybb15 = newScene.getMeshByName("bb15");
+					//mybb15.isVisible = false;
+					var mybb16 = newScene.getMeshByName("bb16");
+					//mybb16.isVisible = false;
+					var mybb16_1 = mybb16.clone("bb10_16_1");
+					//mybb16_1.isVisible = false;
+					//console.log(mybb16_1.position.x);
+					//mybb16_1.position.x = -2;
+					mybb15.parent = mybb1015;
+					//mybb16_1.parent = mybb1015;
+					mybb16_1.position.y = 1
+					//mybb15.position.y = 1;
+					//mybb15.position.x = 1;
+					//mybb16_1.position.y = 0;
+					mybb1015.position.y = 2;
+					mybb1015.position.x = 0;
+					mybb1014.position.x = 0;
+					mybb14c = newScene.getMeshByName("bb14c");
+					mybb14c.isVisible = false;
+					mybb14c.position.y = 0;
+					mybb15c = newScene.getMeshByName("bb15c");
+					mybb15c.isVisible = false;
+					
+					myBox = BABYLON.Mesh.CreateBox("box", 1, newScene);
+					myBox.isVisible = false
+					myBox.scaling.y = 4;
+					myBox.scaling.x = 1.8;
+					myBox.position.y = 0.5;
+					myBox.position.x = 1.5;
+					myBox.material = new BABYLON.StandardMaterial("softbox", newScene);
+					myBox.material.alpha = .05;
+					myBox.material.diffuseColor = new BABYLON.Color3(0.0, 1.0, 0.0);
+					myBox.material.emissiveColor = new BABYLON.Color3(0.0, 1.0, 1.0);
+					myBox.showBoundingBox = true;
+					
+					// get the ? text
+					theText = newScene.getMeshByName("Text");
+					theText.isVisible = false;
+					
+					
+					var myBut1 = newScene.getMeshByName("button1");
+					myBut1.position.x = -4.5;
+					myBut1.position.y = 0;
+					myBut1.position.z = 10;
+					myBut1.parent = myCamera;
+					var myBut2 = newScene.getMeshByName("button2");
+					myBut2.position.x = -4.5;
+					myBut2.position.y = 2;
+					myBut2.position.z = 10;
+					myBut2.parent = myCamera;
+					// First, set the scene's activeCamera... to be My camera.
+					newScene.activeCamera = myCamera;
+					// Then attach the activeCamera to the canvas.
+					newScene.activeCamera.attachControl(canvas);
+					
+					var animation1 = new BABYLON.Animation("myAnimation", "position.x", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);// stop after last key 
+
+					// An array with all animation keys
+					var keys = [];  
+
+					//At the animation key 0, the value of scaling is "1"
+					keys.push({frame: 0, value: 0});
+
+					//At the animation key 100, the value of scaling is "1"
+					keys.push({frame: 60, value: -1});
+
+					//add keys to the animation object	
+					animation1.setKeys(keys);	
+
+					//link animation to the mesh object
+					mybb1014.animations.push(animation1);
+
+					var animation2 = new BABYLON.Animation("myAnimation2", "position.x", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);// stop after last key 
+
+					// An array with all animation keys
+					var keys = [];  
+
+					//At the animation key 0, the value of scaling is "1"
+					keys.push({frame: 0, value: 0});
+
+					//At the animation key 100, the value of scaling is "1"
+					keys.push({frame: 60, value: -1});
+
+					//add keys to the animation object	
+					animation2.setKeys(keys);	
+
+					//link animation to the mesh object
+					mybb1015.animations.push(animation2);
+					
+					var animation3 = new BABYLON.Animation("myAnimation3", "position.z", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);// stop after last key 
+
+					// An array with all animation keys
+					var keys = [];  
+
+					//At the animation key 0, the value of scaling is "1"
+					keys.push({frame: 0, value: 4});
+
+					//At the animation key 100, the value of scaling is "1"
+					keys.push({frame: 90, value: 0});
+
+					//add keys to the animation object	
+					animation3.setKeys(keys);	
+
+					//link animation to the mesh object
+					theText.animations.push(animation3);
+					
+					
+					myScene = newScene;
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+                        myScene.render();
+                    });
+                });
+            }, function (progress) {
+                // To do: give progress feedback to user
+            });
+			
+			 // Resize window
+		
+			window.addEventListener("resize", function () {
+				engine.resize();
+			});
+			
+			// On Click evt
+		 window.addEventListener("click", function (evt) {
+		 
+		 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
+		 //console.log(pickResult);
+		 if (pickResult.hit)
+        	{
+            //console.log(pickResult.hit);	
+			var objname = pickResult.pickedMesh.name;
+			//console.log(objname);
+            	switch(objname) {
+
+                	case "button1" :
+						//console.log("Button1 clicked");
+						myScene.beginAnimation(mybb1014, 0, 60, false, 1, onAnimationEnd
+						//mybb14c.isVisible = true;
+						);
+						//mybb14c.isVisible = true;
+					break;
+
+                	case "button2" :
+					
+					myScene.beginAnimation(mybb1015, 0, 60, false, 1, onAnimationEnd2);
+					//console.log("Button2 clicked");
+					break;
+					/*
+					case "Text" :
+						words.style.display = 'block';
+						//console.log("Text clicked");
+                	break;
+					*/
+					
+					default:
+					break;
+				}		
+						
+			
+            }
+        }
+		 
+		);
+		
+
+		function onAnimationEnd(){
+			//console.log ("ended");
+			mybb14c.isVisible = true;
+			show = show +1;
+			if (show == 2){
+			 //console.log ("ended");
+			 //myBox.isVisible = true
+			 theText.isVisible = true;
+			 myScene.beginAnimation(theText, 0, 90, false, 1, onAnimationEnd3);
+			 //words.style.display = 'block';
+			}
+		}
+		function onAnimationEnd2(){
+			//console.log ("ended");
+			mybb15c.isVisible = true;
+			show = show +1;
+			if (show == 2){
+			 //console.log ("ended");
+			 //myBox.isVisible = true
+			 theText.isVisible = true;
+			 myScene.beginAnimation(theText, 0, 90, false, 1, onAnimationEnd3);
+			 //words.style.display = 'block';
+			}
+		}
+		
+		function onAnimationEnd3(){
+			
+			 //console.log ("ended");
+			 myBox.isVisible = true
+			 theText.isVisible = true;
+			 words.style.display = 'block';
+			
+		}
+		
+		
+        }
+    </script>
+</body>
+</html>
