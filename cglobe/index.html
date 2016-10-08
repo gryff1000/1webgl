@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cassini Globe</title>
+    <script src="../hand.js"></script>
+    <script src="../babylon.2.0.js"></script>
+	<!--<script src="../babylon.1.14.js"></script>-->
+	<script src="../howler.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	
+	<div id = "fps">0</div>
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var scene = new BABYLON.Scene(engine);
+			
+			
+			
+			
+			//Use your file name at xxxxx
+			BABYLON.SceneLoader.Load("", "globe5.babylon", engine, function (newScene) {
+                newScene.executeWhenReady(function () {
+                    
+					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
+					var cameraFlag = 1;
+					
+					// which camera is active Arc Rotate or Blender Free Camera
+					
+					if (cameraFlag == 1){
+						var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), newScene);
+						myCamera.setPosition(new BABYLON.Vector3(0, 0, -4));
+						myCamera.speed = .02;
+						myCamera.wheelPrecision = 500;
+						myCamera.fov = .8;
+						
+						newScene.activeCamera = myCamera;
+					
+					}
+					else {
+						var myCamera2 = newScene.getCameraByName("Camera");
+						myCamera2.speed = .5;
+						myCamera2.maxZ= 500;
+						newScene.activeCamera = myCamera2;
+					}
+					
+					
+					
+					// Then attach the activeCamera to the canvas.
+					newScene.activeCamera.attachControl(canvas);
+					
+					scene = newScene;
+					
+					var ground = scene.getMeshByName("Landscape");
+					//ground.position.y = -20;
+					
+					
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+						//divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
+						divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        newScene.render();
+                    });
+                });
+            });
+			
+			
+			
+			
+        }
+
+		var dialog = new Howl({
+			urls: ['intro3.mp3'],
+			autoplay: false,
+			loop: false,
+			volume: 0.5,
+		});
+		
+		
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>
