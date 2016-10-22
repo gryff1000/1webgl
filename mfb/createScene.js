@@ -77,7 +77,7 @@ function createWorld(){
 			var doStuff = function(){
 				//var ended = 1;
 				var takes = 1;
-				myBackGrd.setEnabled(false);
+				//myBackGrd.setEnabled(false);
 				aButton.setEnabled(false);
 				aButtonMat = myScene.getMaterialByName("clapboard2.button");
 				aButtonMat.diffuseTexture.vOffset = .5;
