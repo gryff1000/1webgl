@@ -89,6 +89,7 @@ function createWorld(){
 			aButton.actionManager = new BABYLON.ActionManager(myScene);
 			aButton.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, doStuff));
 			
+			console.log(soundsReady);
 			
 			//if all sounds loaded enable the start-replay button and make it pickable
 			if(soundsReady === 8) {
