@@ -28,6 +28,11 @@ function createWorld(){
 		BABYLON.SceneLoader.Append("", "dk14_34b.babylon", myScene);
 		
 		myScene.executeWhenReady(function () {
+			
+			if( isMobile.any() ){ 
+				var myLight = myScene.getLightByName("Hemi.top");
+				myLight.intensity = 2;
+			}
 		
 			// create additional cameras from blender
 			myCamera1 = myScene.getCameraByName("Camera1");
