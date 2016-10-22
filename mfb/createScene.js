@@ -33,7 +33,7 @@ function createWorld(){
 				var myLight = myScene.getLightByName("Hemi.top");
 				myLight.intensity = 2;
 				var myWall = myScene.getMaterialByName("dk14_34b.blue");
-				myWall.diffuseColor = new BABYLON.Color3(0.125,.125,.25);
+				myWall.diffuseColor = new BABYLON.Color3(0.0,0.0,0.25);
 			}
 		
 			// create additional cameras from blender
