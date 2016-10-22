@@ -104,9 +104,9 @@ function setCamera(k){
 		case 4:
 			//first dk animation
 			myScene.activeCamera = myCamera2;
-			//setScene();
-			myScene.beginAnimation(skeleton, 5, 135, false, 1);
 			ooh.play();
+			myScene.beginAnimation(skeleton, 5, 135, false, 1);
+			
 			break;
 			
 		case 5:
