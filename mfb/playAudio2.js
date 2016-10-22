@@ -12,9 +12,9 @@ function createAudio(){
 	talk = new BABYLON.Sound("dktalk", "dklines2.mp3", myScene, soundReady, { loop: false, volume: theVolume  });
 	
 	function soundReady() {
-        soundsReady++;
-	divFps.innerHTML = soundsReady;
-	setCamera(4);
+        	soundsReady++;
+		divFps.innerHTML = soundsReady;
+	}
         //if (soundsReady === 3) {
             //start.play();
         //}
