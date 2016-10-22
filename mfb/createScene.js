@@ -10,6 +10,7 @@ var theVolume = 1;
 var soundsReady = 0;
 var myCamara0, myCamara1, myCamara2;
 var start,take1,music,cut,ooh,take2,clap1,clap2,talk;
+var myBackGrd;
 
 function createWorld(){
 
@@ -44,6 +45,8 @@ function createWorld(){
 			aButton = myScene.getMeshByName("Button");
 			aButton.setEnabled(false);
 			
+			myBackGrd = myScene.getMeshByName("background");
+			
 			myCamera0.position.z = 50;
 			
 			// get the melon mesh so it can be hidden later
@@ -74,7 +77,7 @@ function createWorld(){
 			var doStuff = function(){
 				//var ended = 1;
 				var takes = 1;
-				
+				myBackGrd.setEnabled(false);
 				aButton.setEnabled(false);
 				aButtonMat = myScene.getMaterialByName("clapboard2.button");
 				aButtonMat.diffuseTexture.vOffset = .5;
