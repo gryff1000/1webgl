@@ -31,7 +31,7 @@ function createAudio(){
 	};
 	
 	clap1.onended = function(){
-		setCamera(3);
+		setCamera(4);
 	};
 	
 	music.onended = function(){
