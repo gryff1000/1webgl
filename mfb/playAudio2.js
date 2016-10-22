@@ -14,6 +14,7 @@ function createAudio(){
 	function soundReady() {
         soundsReady++;
 	divFps.innerHTML = soundsReady;
+	setCamera(4);
         //if (soundsReady === 3) {
             //start.play();
         //}
