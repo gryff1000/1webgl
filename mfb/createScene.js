@@ -90,7 +90,7 @@ function createWorld(){
 		
 		// Once the scene is loaded, register a render loop
 		engine.runRenderLoop(function() {
-		divFps.innerHTML = engine.getFps().toFixed() + " fps";
+		//divFps.innerHTML = engine.getFps().toFixed() + " fps";
 		   myScene.render();
 		});
 	//});    
