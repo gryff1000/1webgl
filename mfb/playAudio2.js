@@ -24,7 +24,7 @@ function createAudio(){
 		
 	start.onended = function(){
 		setCamera(1);
-		myBackGrd.setEnabled(true);
+		//myBackGrd.setEnabled(true);
 	};
 	
 	take1.onended = function(){
