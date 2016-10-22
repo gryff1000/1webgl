@@ -5,7 +5,7 @@ function createAudio(){
 	take1 = new BABYLON.Sound("take1", "mfb1b.mp3", myScene, soundReady, { loop: false, volume: theVolume  });
 	clap1 = new BABYLON.Sound("clap1", "clap1.mp3", myScene, soundReady, { loop: false, volume: theVolume  });
 	music = new BABYLON.Sound("music", "intro_mfb2.mp3", myScene, soundReady, { loop: false, volume: theVolume });
-	ooh =new BABYLON.Sound("ooh", "ooo4.mp3", myScene, soundReady, { loop: false, volume: theVolume });
+	ooh =new BABYLON.Sound("ooh", "ooo3.mp3", myScene, soundReady, { loop: false, volume: theVolume });
 	cut = new BABYLON.Sound("cut", "cut3.mp3", myScene, soundReady, { loop: false, volume: theVolume });
 	take2 = new BABYLON.Sound("take2", "mfb2b.mp3", myScene, soundReady, { loop: false, volume: theVolume  });
 	clap2 = new BABYLON.Sound("clap2", "clap2.mp3", myScene, soundReady, { loop: false, volume: theVolume  });
@@ -13,7 +13,7 @@ function createAudio(){
 	
 	function soundReady() {
         	soundsReady++;
-		divFps.innerHTML = soundsReady;
+		//divFps.innerHTML = soundsReady;
 	
         //if (soundsReady === 3) {
             //start.play();
