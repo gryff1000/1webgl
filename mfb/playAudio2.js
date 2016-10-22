@@ -25,17 +25,17 @@ function createAudio(){
 	start.onended = function(){
 		setCamera(1);
 		//myBackGrd.setEnabled(true);
-		start.dispose();
+		//start.dispose();
 	};
 	
 	take1.onended = function(){
 		setCamera(2);
-		take1.dispose();
+		//take1.dispose();
 	};
 	
 	clap1.onended = function(){
 		setCamera(4);
-		clap1.dispose();
+		//clap1.dispose();
 	};
 	
 	music.onended = function(){
@@ -46,29 +46,29 @@ function createAudio(){
 	
 	ooh.onended = function(){
 		setCamera(5);
-		ohh.dispose();
+		//ohh.dispose();
 	};	
 	
 	cut.onended = function(){
 		setCamera(6);
-		cut.dispose();
+		//cut.dispose();
 	};	
 	
 	take2.onended = function(){
 		setCamera(7);
-		take2.dispose();
+		//take2.dispose();
 	};
 	
 	clap2.onended = function(){
 		takes = 2;
 		setCamera(8);
-		clap2.dispose();
+		//clap2.dispose();
 	};
 	
 	talk.onended = function(){
 		setCamera(0);//ended = 0;
 		aButton.setEnabled(true);
-		talk.dispose();
+		//talk.dispose();
 	};
 }
 	
