@@ -91,7 +91,7 @@ function createWorld(){
 			
 			
 			//if all sounds loaded enable the start-replay button and make it pickable
-			if(soundsReady === 9) {
+			if(soundsReady > 8) {
 				aButton.setEnabled(true);
 				aButton.isPickable = true;
 			}
