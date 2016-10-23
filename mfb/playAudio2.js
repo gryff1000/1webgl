@@ -57,6 +57,7 @@ function createAudio(){
 	};
 	
 	talk.onended = function(){
+		divFps.innerHTML = 0;
 		setCamera(0);//ended = 0;
 		aButton.setEnabled(true);
 	};
