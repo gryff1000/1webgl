@@ -80,10 +80,10 @@
 			BABYLON.SceneLoader.Load("", "PlayerBody.babylon", engine, function (newScene) {
                 newScene.executeWhenReady(function () {
                     
-					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
+					//change the value of cameraFlag to a value other than 1 to use the camera from blender
 					var cameraFlag = 0;
 					
-					// which camera is active Arc Rotate or Blender Free Camera
+					// which camera is active Arc Rotate or Blender Camera
 					
 					if (cameraFlag == 1){
 						var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), newScene);
