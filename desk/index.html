@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+    <title>Desk 4: No Rig</title>
+	 <script src="../babylon.2.5.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+
+	<div id = "fps">0</div>
+    <canvas id="renderCanvas"></canvas>
+	
+	<script>
+    if (BABYLON.Engine.isSupported()) {
+        var canvas = document.getElementById("renderCanvas");
+		var divFps = document.getElementById("fps"); 
+        var engine = new BABYLON.Engine(canvas, true);
+		var myScene;
+		var theParts = [];
+		var theBase;
+		
+		var isOpen = [false, false, false, false, false, false, false];
+		var isPlay = false;
+		
+        BABYLON.SceneLoader.Load("", "desk_drawers4_norig4b.babylon", engine, function (newScene) {
+           
+            newScene.executeWhenReady(function () {
+                // Attach camera to canvas inputs
+				newScene.activeCamera.speed = 1;
+				newScene.activeCamera.wheelPrecision = 250;
+                newScene.activeCamera.attachControl(canvas);
+				
+				var theDesk = newScene.getMeshByName("adesk");
+				theParts = theDesk.getChildren();
+				
+				for (i = 0; i < theParts.length; i++){
+					newScene.stopAnimation(theParts[i]);
+					//console.log("index = " + i + "   " +theParts[i].name);
+				}
+				
+
+			});
+				
+			myScene = newScene;
+				
+			// Once the scene is loaded, just register a render loop to render it
+			engine.runRenderLoop(function() {
+				divFps.innerHTML = engine.getFps().toFixed() + " fps";
+				myScene.render();
+			});
+        });
+    }
+	
+	// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		
+	// On Click evt
+		 window.addEventListener("click", function (evt) {
+		 
+		 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
+		 //console.log(pickResult);
+		 if (pickResult.hit)
+        	{
+ 
+			var objname = pickResult.pickedMesh.name;
+            	switch(objname) {
+
+                	case "L_cupboard" :
+						open(4);
+					break;
+
+                	case "L_drawer" :
+						open(3);
+					break;
+
+                	case "M_drawer" :
+						open(2);
+                    break;
+					
+					case "R_drawer" :
+						open(1);
+					break;
+
+                	case "R_cupboard" :
+						open(0);
+                    break;
+
+					
+
+					default:
+                    	
+                    break;
+            	}
+        	}
+		 
+		 }
+		 )
+		 
+		 
+		 function open(ndx)
+		 {
+			if (!isOpen[ndx] && !isPlay) 
+			{
+				isPlay = true
+				
+				myScene.beginAnimation(theParts[ndx], 0, 29, false,1, function(){
+					//console.log("opening");
+					isOpen[ndx] = true;
+					isPlay = false;
+				});
+			}
+						
+			else if (!isPlay) {
+				isPlay = true;
+		
+				myScene.beginAnimation(theParts[ndx], 31, 60, false,1, function(){
+					//console.log("closing");
+					isOpen[ndx] = false;
+					isPlay = false;
+				});
+			}
+			
+		//});
+		return;
+		};
+	
+	
+</script>
+	
+	
+ </body>
+</html>
