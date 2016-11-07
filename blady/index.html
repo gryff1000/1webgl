@@ -79,13 +79,13 @@
                 newScene.executeWhenReady(function () {
                     // Attach camera to canvas inputs
                     newScene.activeCamera.attachControl(canvas);
-					var skeleton = newScene.getSkeletonById(0);
-					newScene.beginAnimation(skeleton, 1, 928, true, 1);
-					sound.play();
-					//var myScene = newScene;
+		    var skeleton = newScene.getSkeletonById(0);
+		    newScene.beginAnimation(skeleton, 1, 928, true, 1);
+		    sound.play();
+					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
-					//divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
+			divFps.innerHTML = engine.getFps().toFixed() + " fps";
                         newScene.render();
                     });
                 });
