@@ -1,0 +1,269 @@
+Exporter version: 5.0.6, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  true
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\xmas_old_new2\
+	Python World class constructor completed
+	processing begun of camera (FreeCamera):  Camera1
+	processing begun of mesh:  dark_tree16.001
+		processing begun of Standard material:  trunk
+			Diffuse texture found "bark"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of Standard material:  branch
+			Diffuse texture found "leaves"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+			Opacity texture found "leaves"
+				Image texture found, type:  opacityTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  terrain4xamap.Multimaterial#0
+		num positions      :  339
+		num normals        :  339
+		num uvs            :  678
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  492
+	processing begun of mesh:  dark_tree16
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree15
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree14
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree13
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree12
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree11
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree10
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree09
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree08
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree07
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree06
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree05
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree04
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree03
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree02
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  dark_tree01
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of mesh:  a4tree08
+		processing begun of Standard material:  atree
+			Diffuse texture found "snowtree"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  12
+	processing begun of mesh:  a4tree07
+		mesh is an instance of :  a4tree08.  Processing halted.
+	processing begun of mesh:  a4tree06
+		mesh is an instance of :  a4tree08.  Processing halted.
+	processing begun of mesh:  a4tree05
+		mesh is an instance of :  a4tree08.  Processing halted.
+	processing begun of mesh:  a4tree04
+		mesh is an instance of :  a4tree08.  Processing halted.
+	processing begun of mesh:  a4tree00
+		mesh is an instance of :  a4tree08.  Processing halted.
+	processing begun of mesh:  a4tree03
+		mesh is an instance of :  a4tree08.  Processing halted.
+	processing begun of mesh:  a4tree02
+		mesh is an instance of :  a4tree08.  Processing halted.
+	processing begun of mesh:  a4tree01
+		mesh is an instance of :  a4tree08.  Processing halted.
+	processing begun of mesh:  a3tree12
+		registered as also a user of material:  atree
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  12
+	processing begun of mesh:  a3tree11
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree10
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree09
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree08
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree07
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree06
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree05
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree04
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree03
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree02
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree01
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a3tree
+		mesh is an instance of :  a3tree12.  Processing halted.
+	processing begun of mesh:  a2tree11
+		registered as also a user of material:  atree
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  12
+	processing begun of mesh:  a2tree10
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree09
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree08
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree07
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree06
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree05
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree04
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree03
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree02
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  a2tree01
+		mesh is an instance of :  a2tree11.  Processing halted.
+	processing begun of mesh:  atree13
+		registered as also a user of material:  atree
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  12
+	processing begun of mesh:  atree12
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree11
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree10
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree09
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree08
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree07
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree06
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree05
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree04
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree03
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree02
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  atree01
+		mesh is an instance of :  atree13.  Processing halted.
+	processing begun of mesh:  1wbotL
+		processing begun of Standard material:  wall
+			Diffuse texture found "stone"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  549
+		num normals        :  549
+		num uvs            :  1098
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  972
+	processing begun of mesh:  1wtopR
+		registered as also a user of material:  wall
+		num positions      :  528
+		num normals        :  528
+		num uvs            :  1056
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  936
+	processing begun of mesh:  1wtopL
+		registered as also a user of material:  wall
+		num positions      :  559
+		num normals        :  559
+		num uvs            :  1118
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  990
+	processing begun of mesh:  1botL
+		processing begun of Standard material:  snow
+			Diffuse texture found "shading"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  1056
+		num normals        :  1056
+		num uvs            :  2112
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5952
+	processing begun of mesh:  1topR
+		registered as also a user of material:  snow
+		num positions      :  1056
+		num normals        :  1056
+		num uvs            :  2112
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5952
+	processing begun of mesh:  1topL
+		registered as also a user of material:  snow
+		num positions      :  1024
+		num normals        :  1024
+		num uvs            :  2048
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5766
+	processing begun of mesh:  1wbotR
+		registered as also a user of material:  wall
+		num positions      :  519
+		num normals        :  519
+		num uvs            :  1038
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  918
+	processing begun of mesh:  limit
+		registered as also a user of material:  snow
+		num positions      :  32
+		num normals        :  32
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  192
+	processing begun of mesh:  1botR
+		registered as also a user of material:  snow
+		num positions      :  1089
+		num normals        :  1089
+		num uvs            :  2178
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6144
+	processing begun of camera (FreeCamera):  Camera
+	processing begun of mesh:  dark_tree
+		mesh is an instance of :  dark_tree16.001.  Processing halted.
+	processing begun of light (POINT):  Point4
+	processing begun of light (POINT):  Point2
+	processing begun of light (POINT):  Point3
+	processing begun of light (POINT):  Point1
+	processing begun of light (POINT):  PointGL1
+	processing begun of light (POINT):  PointGL2
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.1562 secs
