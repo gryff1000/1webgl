@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Terrain</title>
+    <script src="../hand.js"></script>
+    <script src="../babylon.2.5.js"></script>
+	
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	
+	<div id = "fps">0</div>
+	
+    <canvas id="renderCanvas"></canvas>
+    
+	<script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			
+			
+			//Use your file name at xxxxx
+			BABYLON.SceneLoader.Load("", "DoorAnimation.babylon", engine, function (newScene) {
+                newScene.executeWhenReady(function () {
+				
+				
+					//get the Doors, stop doors animating and make them pickable
+					var doors = [];
+					var n = 1;
+					
+					for (i=0; i <4; i++)
+					{
+						//console.log("Door" +n);
+						doors[i] = newScene.getMeshByName("Door" + n);
+						newScene.stopAnimation(doors[i]);
+						doors[i].isPickable = true;
+						n = n + 1;
+					}
+					// end stop doors animating and make them pickable
+                    
+					// as scene has no camera from 3DMax add an arcRotate camera
+					//change the value of **cameraFlag** to a value other than 1 to use a free camera from 3DMax
+					var cameraFlag = 1;
+					
+					if (cameraFlag == 1){
+						var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), newScene);
+						myCamera.setPosition(new BABYLON.Vector3(1, 10, -250));
+						myCamera.speed = .1;
+						myCamera.wheelPrecision = 10;
+						myCamera.fov = .8;
+						
+						newScene.activeCamera = myCamera;
+					
+					}
+					else {
+						var myCamera2 = newScene.getCameraByName("Camera");
+						myCamera2.speed = .5;
+						myCamera2.maxZ= 500;
+						newScene.activeCamera = myCamera2;
+					}
+					
+					
+					
+					// Then attach the activeCamera to the canvas.
+					newScene.activeCamera.attachControl(canvas);
+					
+		
+					
+					// Action Manager with On pick interpolations to open door
+					var control = function(mesh1) {
+						mesh1.actionManager = new BABYLON.ActionManager(newScene);
+						mesh1.actionManager.registerAction(new BABYLON.PlayAnimationAction(BABYLON.ActionManager.OnPickTrigger, mesh1, 0, 29))
+						.then(new BABYLON.PlayAnimationAction(BABYLON.ActionManager.OnPickTrigger, mesh1, 31, 60));
+					};
+			
+					control(doors[0]);
+					control(doors[1]);
+					control(doors[2]);
+					control(doors[3]);
+					// end Action Manager
+
+				
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+						divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        newScene.render();
+                    });
+                });
+            });
+			
+		};
+			
+			
+			
+			
+	
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>
