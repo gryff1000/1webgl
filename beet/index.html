@@ -120,7 +120,7 @@
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
 					divFps.innerHTML = engine.getFps().toFixed() + " fps";
-					divPick.innerHTML = "Total vertices: " + myScene.getActiveVertices();
+					divPick.innerHTML = "Total vertices: " + myScene.getTotalVertices();
                     myScene.render();
                     });
                 });
