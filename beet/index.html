@@ -119,7 +119,7 @@
 					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
-					divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
 					divPick.innerHTML = "Total vertices: " + myScene.getActiveVertices();
                     myScene.render();
                     });
