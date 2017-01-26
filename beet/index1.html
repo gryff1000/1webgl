@@ -1,1 +1,158 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Beethoven and friends</title>
+    <script src="../hand.js"></script>
+    <script src="../babylon.2.5.js"></script>
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+		#pick {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 200px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<!--<div id ="loader">Loading...</div>-->
+	<div id = "fps">0</div>
+	<div id = "pick">-------</div>
+	
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divPick = document.getElementById("pick");
+			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			var mySkeleton = [];
+			var thetext = null;
+			var myObj = [];
+			var isOpen = [false, false, false, false, false, false];
+			var isPlay = false;
+			var pageNum = 0;
+
+			
+            BABYLON.SceneLoader.Load("", "3beets.babylon", engine, function (newScene) {
+                newScene.executeWhenReady(function () {
+                    
+					// Attach camera to canvas inputs or if fixed do not.
+                    newScene.activeCamera.attachControl(canvas);
+					
+					
+					// Attach ArcRotate Cam code 
+					//var camera = new BABYLON.ArcRotateCamera("Camera", -2, 1.2, 8, new BABYLON.Vector3.Zero(), newScene);
+					//newScene.activeCamera = camera;
+					//newScene.activeCamera.attachControl(canvas);
+					
+					
+					
+					
+					myScene = newScene;
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divPick.innerHTML = "Total vertices: " + myScene.getTotalVertices();
+                    myScene.render();
+                    });
+                });
+				
+				
+				
+            }, function (progress) {
+                // To do: give progress feedback to user
+            });
+        }
+		
+		/*
+		var sound = new Howl({  
+		urls: ['book_open.mp3'],
+		autoplay: false,  
+		loop: false, 
+		volume: 0.1,
+		});
+		*/
+		
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+		
+		 
+		
+		
+    </script>
+</body>
+</html>
 
