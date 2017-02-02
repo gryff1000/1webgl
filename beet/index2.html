@@ -90,13 +90,6 @@
 			var divFps = document.getElementById("fps");
 			var divPick = document.getElementById("pick");
 			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
-			var mySkeleton = [];
-			var thetext = null;
-			var myObj = [];
-			var isOpen = [false, false, false, false, false, false];
-			var isPlay = false;
-			var pageNum = 0;
-
 			
             BABYLON.SceneLoader.Load("", "sleep2.babylon", engine, function (newScene) {
                 newScene.executeWhenReady(function () {
@@ -128,8 +121,8 @@
 					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
-					divFps.innerHTML = engine.getFps().toFixed() + " fps";
-					divPick.innerHTML = "Total vertices: " + myScene.getTotalVertices();
+					//divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					//divPick.innerHTML = "Total vertices: " + myScene.getTotalVertices();
                     myScene.render();
                     });
                 });
