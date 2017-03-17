@@ -73,9 +73,9 @@
         if (BABYLON.Engine.isSupported()) {
             var canvas = document.getElementById("renderCanvas");
             var engine = new BABYLON.Engine(canvas, true);
-			//var available = ['rock_wall1-astc.ktx', 'rock_wall1-dxt.ktx', 'rock_wall1-pvrtc.ktx', 'rock_wall1-etc2.ktx', 'rock_wall1-etc1.ktx'];
-			//var formatUsed = engine.setTextureFormatToUse(available);
-			//console.log("Texture Type = " + formatUsed);
+			var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
+			var formatUsed = engine.setTextureFormatToUse(available);
+			console.log("Texture Type = " + formatUsed);
 		
 			var divFps = document.getElementById("fps");
 			var myScene = new BABYLON.Scene(engine);
@@ -86,9 +86,7 @@
 			BABYLON.SceneLoader.Append("", "wall1.babylon", myScene);
 			
                		myScene.executeWhenReady(function () {
-			var available = ['rock_wall1-astc.ktx', 'rock_wall1-dxt.ktx', 'rock_wall1-pvrtc.ktx', 'rock_wall1-etc2.ktx', 'rock_wall1-etc1.ktx'];
-			var formatUsed = engine.setTextureFormatToUse(available);
-			console.log("Texture Type = " + formatUsed);
+			
 				
 					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
 					var cameraFlag = 0;
