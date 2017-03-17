@@ -76,6 +76,8 @@
 			var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
 			var formatUsed = engine.setTextureFormatToUse(available);
 			console.log("Texture Type = " + formatUsed);
+			var canBeUsed = engine.texturesSupported;
+			console.log(canBeUsed);
 		
 			var divFps = document.getElementById("fps");
 			var myScene = new BABYLON.Scene(engine);
