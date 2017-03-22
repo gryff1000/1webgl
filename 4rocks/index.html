@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>KTX Test</title>
+    <script src="../hand.js"></script>
+    <script src="../babylon.3.0.js"></script>
+	<!--<script src="../babylon.1.14.js"></script>-->
+	<script src="../howler.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px;
+		display:block
+		}
+		
+		#credits {
+		position: absolute;
+		background-color: black;
+		border:2px solid green;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 200px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	
+	<div id = "fps">0</div>
+	<div id ="credits">0</div>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
+			var formatUsed = engine.setTextureFormatToUse(available);
+			var canBeUsed = engine.texturesSupported;
+			console.log("Texture Type = " + formatUsed);
+			console.log(canBeUsed);
+			var divFps = document.getElementById("fps");
+			var divImage = document.getElementById("credits");
+			var myScene = new BABYLON.Scene(engine);
+			var num = 5; 
+			var Label = "Image Format is ";
+			
+			//append .babylon file to myScene
+			BABYLON.SceneLoader.Append("", "4rocks.babylon", myScene);
+			
+                myScene.executeWhenReady(function () {
+				
+					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
+					var cameraFlag = 0;
+					
+					// which camera is active BJS Arc Rotate or Blender Camera
+					
+					if (cameraFlag == 1){
+						var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), myScene);
+						myCamera.setPosition(new BABYLON.Vector3(0, 1, -4));
+						myCamera.speed = .1;
+						myCamera.wheelPrecision = 500;
+						myCamera.fov = .8;
+						
+						myScene.activeCamera = myCamera;
+					
+					}
+					else {
+						var myCamera2 = myScene.getCameraByName("Camera");
+						myCamera2.speed = .1;
+						myCamera2.wheelPrecision = 500;
+						myCamera2.maxZ= 500;
+						myScene.activeCamera = myCamera2;
+					}
+					
+					// Then attach the activeCamera to the canvas.
+					myScene.activeCamera.attachControl(canvas);
+					
+					
+					Label = Label + formatUsed;
+					divImage.innerHTML = Label;
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+						//divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
+						divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        myScene.render();
+                    });
+                });
+            };
+			//);
+			
+			
+			
+			
+        //}
+
+		
+		
+		
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+    </script>
+</body>
+</html>
