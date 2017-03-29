@@ -77,8 +77,8 @@
             var engine = new BABYLON.Engine(canvas, true);
 			
 			// getting compressed textures if available
-			var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
-			//var available = ['-astc.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
+			//var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
+			var available = ['-astc.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
 			var formatUsed = engine.setTextureFormatToUse(available);
 			//var canBeUsed = engine.texturesSupported;
 			//console.log("Texture Type = " + formatUsed);
@@ -153,7 +153,7 @@
 					var myLight = myScene.getLightByName("Hemi");
 					if( isMobile.any() ){ 
 					    var etcMat = myScene.getMaterialByName("leaf");
-						etcMat.opacityTexture = new BABYLON.Texture("leaves_7_alpha.png", myScene);
+						//etcMat.opacityTexture = new BABYLON.Texture("leaves_7_alpha.png", myScene);
 						myLight.intensity = 10;
 						myScene.activeCamera.detachControl(canvas);
 					}
