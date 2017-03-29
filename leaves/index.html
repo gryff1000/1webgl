@@ -148,7 +148,8 @@
 					
 					var etcMat = myScene.getMaterialByName("leaves1.leaf");
 					etcMat.opacityTexture = new BABYLON.Texture("leaves_7_alpha.png", myScene);
-					
+					var theMesh = myScene.getMeshByName("Plane");
+					theMesh.material = etcMat;
 					
 					//brighten light for mobile devices
 					var myLight = myScene.getLightByName("Hemi");
