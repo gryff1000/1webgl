@@ -143,7 +143,7 @@
 					myScene.activeCamera.attachControl(canvas);
 					
 					//get the leaf material if the type is etc1 and get the opacity/alpha map texture and apply it
-					if (formatUsed == '-etc1'){
+					if (formatUsed == '-etc1.ktx'){
 						var etcMat = myScene.getMaterialByName("leaves1.leaf");
 						etcMat.opacityTexture = new BABYLON.Texture("leaves_7_alpha.png", myScene);
 						etcMat.opacityTexture.getAlphaFromRGB = true;
