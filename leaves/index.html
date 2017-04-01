@@ -1,0 +1,193 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>KTX Transparency Test</title>
+    <script src="../hand.js"></script>
+    <script src="../babylon.3.0.js"></script>
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px;
+		display:block
+		}
+		
+		#credits {
+		position: absolute;
+		background-color: black;
+		border:2px solid green;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 200px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	
+	<div id = "fps">0</div>
+	<div id ="credits">0</div>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			
+			// getting compressed textures if available
+			var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
+			//var available = ['-astc.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
+			//var available = ['-astc.ktx', '-pvrtc.ktx', '-etc1.ktx'];
+			var formatUsed = engine.setTextureFormatToUse(available);
+			//var canBeUsed = engine.texturesSupported;
+			//console.log("Texture Type = " + formatUsed);
+			//console.log(canBeUsed);
+			var divFps = document.getElementById("fps");
+			var divImage = document.getElementById("credits");
+			var myScene = new BABYLON.Scene(engine);
+			var num = 5; 
+			var Label = "Image Format is ";
+			
+			//simple check for mobile device
+			var isMobile = {
+			Android: function() {
+					return navigator.userAgent.match(/Android/i);
+				},
+			BlackBerry: function() {
+					return navigator.userAgent.match(/BlackBerry/i);
+				},
+			iOS: function() {
+					return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+				},
+			Opera: function() {
+					return navigator.userAgent.match(/Opera Mini/i);
+				},
+			Windows: function() {
+					return navigator.userAgent.match(/IEMobile/i);
+				},
+			any: function() {
+					return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+				}
+			};
+			
+			//append .babylon file to myScene
+			BABYLON.SceneLoader.Append("", "leaves1.babylon", myScene);
+			
+                myScene.executeWhenReady(function () {
+				
+					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
+					var cameraFlag = 0;
+					
+					// which camera is active BJS Arc Rotate or Blender Camera
+					
+					if (cameraFlag == 1){
+						var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), myScene);
+						myCamera.setPosition(new BABYLON.Vector3(0, 1, -4));
+						myCamera.speed = .1;
+						myCamera.wheelPrecision = 500;
+						myCamera.fov = .8;
+						
+						myScene.activeCamera = myCamera;
+					
+					}
+					else {
+						var myCamera2 = myScene.getCameraByName("Camera");
+						myCamera2.speed = .1;
+						myCamera2.wheelPrecision = 500;
+						myCamera2.maxZ= 500;
+						myScene.activeCamera = myCamera2;
+					}
+					
+					// Then attach the activeCamera to the canvas.
+					myScene.activeCamera.attachControl(canvas);
+					
+					//get the leaf material if the type is etc1 and get the opacity/alpha map texture and apply it
+					if (formatUsed === '-etc1.ktx'){
+						var etcMat = myScene.getMaterialByName("leaves1.leaf");
+						//diable loading opacity/alpha map by commenting out next two lines
+						
+						etcMat.opacityTexture = new BABYLON.Texture("leaves_7_alpha.png", myScene);
+						etcMat.opacityTexture.getAlphaFromRGB = true;
+			
+						var theMesh = myScene.getMeshByName("Plane");
+						theMesh.material = etcMat;
+					}
+			
+					//brighten light for mobile devices
+					var myLight = myScene.getLightByName("Hemi");
+					if( isMobile.any() ){
+						myLight.intensity = 10;
+						myScene.activeCamera.detachControl(canvas);
+					}
+					
+					
+					
+					//output image type/format
+					Label = Label + formatUsed;
+					divImage.innerHTML = Label;
+					
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+			              divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        myScene.render();
+                    });
+                });
+            };
+			//);
+			
+			
+			
+			
+        //}
+		
+		
+		
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+    </script>
+</body>
+</html>
