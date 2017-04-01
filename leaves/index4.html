@@ -80,9 +80,9 @@
 			//var available = ['-astc.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
 			var available = ['-astc.ktx', '-pvrtc.ktx', '-etc1.ktx'];
 			var formatUsed = engine.setTextureFormatToUse(available);
-			//var canBeUsed = engine.texturesSupported;
+			var canBeUsed = engine.texturesSupported;
 			//console.log("Texture Type = " + formatUsed);
-			//console.log(canBeUsed);
+			console.log(canBeUsed);
 			var divFps = document.getElementById("fps");
 			var divImage = document.getElementById("credits");
 			var myScene = new BABYLON.Scene(engine);
