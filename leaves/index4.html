@@ -4,8 +4,7 @@
     <title>KTX Transparency Test</title>
     <script src="../hand.js"></script>
     <script src="../babylon.3.0.js"></script>
-	<!--<script src="../babylon.1.14.js"></script>-->
-	<script src="../howler.js"></script>
+	
     <style>
         html, body {
             width: 100%;
@@ -117,9 +116,6 @@
 			
                 myScene.executeWhenReady(function () {
 				
-					//var aCube = myScene.getMeshByName("Cube");
-					//aCube.isVisible = false;
-				
 					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
 					var cameraFlag = 0;
 					
@@ -146,13 +142,16 @@
 					// Then attach the activeCamera to the canvas.
 					myScene.activeCamera.attachControl(canvas);
 					
-					var etcMat = myScene.getMaterialByName("leaves1.leaf");
-					etcMat.opacityTexture = new BABYLON.Texture("leaves_7_alpha.png", myScene);
-					etcMat.opacityTexture.getAlphaFromRGB = true;
+					//get the leaf material if the type is etc1 and get the opacity/alpha map texture and apply it
+					if (formatUsed == '-etc1'){
+						var etcMat = myScene.getMaterialByName("leaves1.leaf");
+						etcMat.opacityTexture = new BABYLON.Texture("leaves_7_alpha.png", myScene);
+						etcMat.opacityTexture.getAlphaFromRGB = true;
 			
-					var theMesh = myScene.getMeshByName("Plane");
-					theMesh.material = etcMat;
-					
+						var theMesh = myScene.getMeshByName("Plane");
+						theMesh.material = etcMat;
+					}
+			
 					//brighten light for mobile devices
 					var myLight = myScene.getLightByName("Hemi");
 					if( isMobile.any() ){ 
