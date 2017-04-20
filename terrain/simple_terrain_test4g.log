@@ -1,0 +1,847 @@
+Exporter version: 5.2.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  true
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\terraintes2\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  cave rock.002
+		processing begun of Standard material:  ico_grn_cave
+			Diffuse texture found "ico_green_tex"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  80
+		num normals        :  80
+		num uvs            :  160
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  240
+	processing begun of mesh:  cave rock.001
+		mesh is an instance of :  cave rock.002.  Processing halted.
+	processing begun of mesh:  cave rock
+		mesh is an instance of :  cave rock.002.  Processing halted.
+	processing begun of mesh:  tunnel
+		processing begun of Standard material:  tunnel
+			Diffuse texture found "tuntext"
+				Image texture found, type:  diffuseTexture, mapped using: "uvMap"
+					WARNING: Texture is not mapped as UV or UV2, assigned 1
+		num positions      :  55
+		num normals        :  55
+		num uvs            :  110
+		num uvs2           :  110
+		num colors         :  0
+		num indices        :  216
+	processing begun of mesh:  new_tree.201
+		processing begun of Standard material:  bark
+			Diffuse texture found "pine_bark"
+				Image texture found, type:  diffuseTexture, mapped using: "Orco"
+		processing begun of Standard material:  new_leaf
+			Diffuse texture found "leaf"
+				Image texture found, type:  diffuseTexture, mapped using: "leafUV"
+				WARNING: Opacity non-std way to indicate opacity, use material alpha to also use Opacity texture
+		processing begun of multimaterial:  simple_terrain_test4g.Multimaterial#0
+		num positions      :  820
+		num normals        :  820
+		num uvs            :  1640
+		num uvs2           :  1640
+		num colors         :  0
+		num indices        :  1794
+	processing begun of mesh:  new_tree.200
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.199
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.198
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.197
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.196
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.195
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.194
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.193
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.192
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.191
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.190
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.189
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.188
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.187
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.186
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.185
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.184
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.183
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.182
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.181
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.180
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.179
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.178
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.177
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.176
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.175
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.174
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.173
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.172
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.171
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.170
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.169
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.168
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.167
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.166
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.165
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.164
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.163
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.162
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.161
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.160
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.159
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.158
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.157
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.156
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.155
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.154
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.153
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.152
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.151
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.150
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.149
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.148
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.147
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.146
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.145
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.144
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.143
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.142
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.141
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.140
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.139
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.138
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.137
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.136
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.135
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.134
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.133
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.132
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.131
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.130
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.129
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.128
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.127
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.126
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.125
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.124
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.123
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.122
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.121
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.120
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.119
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.118
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.117
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.116
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.115
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.114
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.113
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.112
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.111
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.110
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.109
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.108
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.107
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.106
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.105
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.104
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.103
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  new_tree.102
+		mesh is an instance of :  new_tree.201.  Processing halted.
+	processing begun of mesh:  stone_g00.050
+		processing begun of Standard material:  ico_grn
+			Diffuse texture found "ico_green_tex"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  80
+		num normals        :  80
+		num uvs            :  160
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  240
+	processing begun of mesh:  stone_g00.049
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.048
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.047
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.046
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.045
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.044
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.043
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.042
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.041
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.040
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.039
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.038
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.037
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.036
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.035
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.034
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.033
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.032
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.031
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.030
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.029
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.028
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.027
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.026
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.025
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.024
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.023
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.022
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.021
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.020
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.019
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.018
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.017
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.016
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.015
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.014
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.013
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.012
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.011
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.010
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.009
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.008
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.007
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.006
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.005
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.004
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.003
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.002
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.001
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of node:  new_trees
+	processing begun of mesh:  Icosphere.050
+		processing begun of Standard material:  rock29
+			Diffuse texture found "rock29t"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  54
+		num normals        :  54
+		num uvs            :  108
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  162
+	processing begun of mesh:  Icosphere.049
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.048
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.047
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.046
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.045
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.044
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.043
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.042
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.041
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.040
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.039
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.038
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.037
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.036
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.035
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.034
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.033
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.032
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.031
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.030
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.029
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.028
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.027
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.026
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.025
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.024
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.023
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.022
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.021
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.020
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.019
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.018
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.017
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.016
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.015
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.014
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.013
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.012
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.011
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.010
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.009
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.008
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.007
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.006
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.005
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.004
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.003
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.002
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  Icosphere.001
+		mesh is an instance of :  Icosphere.050.  Processing halted.
+	processing begun of mesh:  stone_g00.100
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.099
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.098
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.097
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.096
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.095
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.094
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.093
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.092
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.091
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.090
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.089
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.088
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.087
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.086
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.085
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.084
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.083
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.082
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.081
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.080
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.079
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.078
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.077
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.076
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.075
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.074
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.073
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.072
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.071
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.070
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.069
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.068
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.067
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.066
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.065
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.064
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.063
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.062
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.061
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.060
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.059
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.058
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.057
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.056
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.055
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.054
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.053
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.052
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g00.051
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of node:  bush
+	processing begun of mesh:  altar
+		processing begun of Standard material:  altar
+		num positions      :  12
+		num normals        :  12
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  48
+	processing begun of node:  yellow rocks
+	processing begun of mesh:  stone_y05
+		processing begun of Standard material:  ico_yellow
+			Diffuse texture found "ico_yell_tex"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  80
+		num normals        :  80
+		num uvs            :  160
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  240
+	processing begun of mesh:  stone_y04
+		mesh is an instance of :  stone_y05.  Processing halted.
+	processing begun of mesh:  stone_y03
+		mesh is an instance of :  stone_y05.  Processing halted.
+	processing begun of mesh:  stone_y02
+		mesh is an instance of :  stone_y05.  Processing halted.
+	processing begun of mesh:  stone_y01
+		mesh is an instance of :  stone_y05.  Processing halted.
+	processing begun of node:  green rocks
+	processing begun of mesh:  stone_g10
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g09
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g08
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g07
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g06
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g04
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g05
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g03
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g02
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of mesh:  stone_g01
+		mesh is an instance of :  stone_g00.050.  Processing halted.
+	processing begun of node:  bushes
+	processing begun of mesh:  newbush.100
+		processing begun of Standard material:  new_bush
+			Diffuse texture found "Texture.001"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+			Opacity texture found "Texture.001"
+				Image texture found, type:  opacityTexture, mapped using: "UVMap"
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  12
+	processing begun of mesh:  newbush.099
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.098
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.097
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.096
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.095
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.094
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.093
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.092
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.091
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.090
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.089
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.088
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.087
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.086
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.085
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.084
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.083
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.082
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.081
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.080
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.079
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.078
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.077
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.076
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.075
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.074
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.073
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.072
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.071
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.070
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.069
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.068
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.067
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.066
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.065
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.064
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.063
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.062
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.061
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.060
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.059
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.058
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.057
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.056
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.055
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.054
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.053
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.052
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.051
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.050
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.049
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.048
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.047
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.046
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.045
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.044
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.043
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.042
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.041
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.040
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.039
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.038
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.037
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.036
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.035
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.034
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.033
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.032
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.031
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.030
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.029
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.028
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.027
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.026
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.025
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.024
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.023
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.022
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.021
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.020
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.019
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.018
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.017
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.016
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.015
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.014
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.013
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.012
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.011
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.010
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.009
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.008
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.007
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.006
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.005
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.004
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.003
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.002
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of mesh:  newbush.001
+		mesh is an instance of :  newbush.100.  Processing halted.
+	processing begun of node:  trees
+	processing begun of node:  rocks
+	processing begun of camera (FreeCamera):  Camera
+	processing begun of mesh:  Landscape
+		processing begun of Standard material:  ground
+			Diffuse texture found "ground_text1"
+				Image texture found, type:  diffuseTexture, mapped using: "groundmap"
+			Bump texture found "ground_normal"
+				Image texture found, type:  bumpTexture, mapped using: "groundmap"
+		processing begun of Standard material:  cave
+		processing begun of Standard material:  circle
+		processing begun of multimaterial:  simple_terrain_test4g.Multimaterial#1
+		num positions      :  4128
+		num normals        :  4128
+		num uvs            :  8256
+		num uvs2           :  8256
+		num colors         :  0
+		num indices        :  23832
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 3.6094 secs
