@@ -1,0 +1,101 @@
+{"producer":{"name":"Blender","version":"2.76 (sub 0)","exporter_version":"5.2.0","file":"lift.babylon"},
+"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"ambientColor":[0,0,0],"gravity":[0,-9.81,0],
+"materials":[{"name":"lift.rope","id":"lift.rope","ambient":[0.8,0,0],"diffuse":[0.64,0,0],"specular":[0.5,0.5,0.5],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4},
+{"name":"lift.lift","id":"lift.lift","ambient":[0,0.8,0],"diffuse":[0,0.64,0],"specular":[0.5,0.5,0.5],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4}],
+"multiMaterials":[],
+"skeletons":[],
+"meshes":[{"name":"target","id":"target","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"tags":""
+,"positions":[-0.045,0.045,0.045,-0.045,-0.045,0.045,-0.045,-0.045,-0.045,0.045,0.045,0.045,0.045,-0.045,0.045,0.045,0.045,-0.045,0.045,-0.045,-0.045,-0.045,0.045,-0.045]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"rope2","id":"rope2","materialId":"lift.rope","billboardMode":0,"position":[0.4,2,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"tags":""
+,"positions":[-0.0125,0,0.0125,-0.0125,-2,0.0125,-0.0125,-2,-0.0125,0.0125,0,0.0125,0.0125,-2,0.0125,0.0125,0,-0.0125,0.0125,-2,-0.0125,-0.0125,0,-0.0125]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"animations":[{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[0,0,0]},
+{"frame":16,"values":[0,0,0]},
+{"frame":31,"values":[0,0,0]},
+{"frame":46,"values":[0,0,0]},
+{"frame":61,"values":[0,0,0]},
+{"frame":76,"values":[0,0,0]},
+{"frame":91,"values":[0,0,0]}],"loopBehavior":1,"name":"rotation animation","property":"rotation"},{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[0.4,2,0]},
+{"frame":16,"values":[0.4,2,0]},
+{"frame":31,"values":[0.4,2,0]},
+{"frame":46,"values":[0.4,2,0]},
+{"frame":61,"values":[0.4,2,0]},
+{"frame":76,"values":[0.4,2,0]},
+{"frame":91,"values":[0.4,2,0]}],"loopBehavior":1,"name":"position animation","property":"position"},{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[1,1,1]},
+{"frame":16,"values":[1,0.75,1]},
+{"frame":31,"values":[1,0.5,1]},
+{"frame":46,"values":[1,0.25,1]},
+{"frame":61,"values":[1,0.5,1]},
+{"frame":76,"values":[1,0.75,1]},
+{"frame":91,"values":[1,1,1]}],"loopBehavior":1,"name":"scaling animation","property":"scaling"}],"ranges":[{"name":"scaleAction","from":0,"to":91}],"autoAnimate":true,"autoAnimateFrom":1,"autoAnimateTo":91,"autoAnimateLoop":true
+,"instances":[]}
+,{"name":"rope1","id":"rope1","materialId":"lift.rope","billboardMode":0,"position":[-0.4,2,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"tags":""
+,"positions":[-0.0125,0,0.0125,-0.0125,-2,0.0125,-0.0125,-2,-0.0125,0.0125,0,0.0125,0.0125,-2,0.0125,0.0125,0,-0.0125,0.0125,-2,-0.0125,-0.0125,0,-0.0125]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"animations":[{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[0,0,0]},
+{"frame":16,"values":[0,0,0]},
+{"frame":31,"values":[0,0,0]},
+{"frame":46,"values":[0,0,0]},
+{"frame":61,"values":[0,0,0]},
+{"frame":76,"values":[0,0,0]},
+{"frame":91,"values":[0,0,0]}],"loopBehavior":1,"name":"rotation animation","property":"rotation"},{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[-0.4,2,0]},
+{"frame":16,"values":[-0.4,2,0]},
+{"frame":31,"values":[-0.4,2,0]},
+{"frame":46,"values":[-0.4,2,0]},
+{"frame":61,"values":[-0.4,2,0]},
+{"frame":76,"values":[-0.4,2,0]},
+{"frame":91,"values":[-0.4,2,0]}],"loopBehavior":1,"name":"position animation","property":"position"},{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[1,1,1]},
+{"frame":16,"values":[1,0.75,1]},
+{"frame":31,"values":[1,0.5,1]},
+{"frame":46,"values":[1,0.25,1]},
+{"frame":61,"values":[1,0.5,1]},
+{"frame":76,"values":[1,0.75,1]},
+{"frame":91,"values":[1,1,1]}],"loopBehavior":1,"name":"scaling animation","property":"scaling"}],"ranges":[{"name":"scaleAction","from":0,"to":91}],"autoAnimate":true,"autoAnimateFrom":1,"autoAnimateTo":91,"autoAnimateLoop":true
+,"instances":[]}
+,{"name":"lift","id":"lift","materialId":"lift.lift","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"tags":""
+,"positions":[-0.5,0.05,0.5,-0.5,-0.05,0.5,-0.5,-0.05,-0.5,0.5,0.05,0.5,0.5,-0.05,0.5,0.5,0.05,-0.5,0.5,-0.05,-0.5,-0.5,0.05,-0.5]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"animations":[{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[0,0,0]},
+{"frame":16,"values":[0,0,0]},
+{"frame":31,"values":[0,0,0]},
+{"frame":46,"values":[0,0,0]},
+{"frame":61,"values":[0,0,0]},
+{"frame":76,"values":[0,0,0]},
+{"frame":91,"values":[0,0,0]}],"loopBehavior":1,"name":"rotation animation","property":"rotation"},{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[0,0,0]},
+{"frame":16,"values":[0,0.5,0]},
+{"frame":31,"values":[0,1,0]},
+{"frame":46,"values":[0,1.5,0]},
+{"frame":61,"values":[0,1,0]},
+{"frame":76,"values":[0,0.5,0]},
+{"frame":91,"values":[0,0,0]}],"loopBehavior":1,"name":"position animation","property":"position"},{"dataType":1,"framePerSecond":30,"keys":[
+{"frame":1,"values":[1,1,1]},
+{"frame":16,"values":[1,1,1]},
+{"frame":31,"values":[1,1,1]},
+{"frame":46,"values":[1,1,1]},
+{"frame":61,"values":[1,1,1]},
+{"frame":76,"values":[1,1,1]},
+{"frame":91,"values":[1,1,1]}],"loopBehavior":1,"name":"scaling animation","property":"scaling"}],"ranges":[{"name":"upAction","from":0,"to":91}],"autoAnimate":true,"autoAnimateFrom":1,"autoAnimateTo":91,"autoAnimateLoop":true
+,"instances":[]}
+],
+"cameras":[{"name":"Camera","id":"Camera","position":[0,1.69,-9.7888],"rotation":[0,0,0],"fov":0.8576,"minZ":0.1,"maxZ":100,"speed":1,"inertia":0.9,"checkCollisions":false,"applyGravity":false,"ellipsoid":[0.2,0.9,0.2],"cameraRigMode":0,"interaxial_distance":0.0637,"type":"ArcRotateCamera","alpha":-1.5708,"beta":1.3998,"radius":9.9336,"lockedTargetId":"target"}],"activeCamera":"Camera",
+"lights":[{"name":"Hemi","id":"Hemi","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1]}],
+"shadowGenerators":[]
+}
