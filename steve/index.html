@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Shapekey Test</title>
+    <title>Animation Test</title>
     <script src="../hand.js"></script>
     <script src="../babylon.3.0.js"></script>
 	<!--<script src="../babylon.1.14.js"></script>-->
-	<script src="../howler.js"></script>
+	<!--<script src="../howler.js"></script>-->
     <style>
         html, body {
             width: 100%;
@@ -75,30 +75,15 @@
         if (BABYLON.Engine.isSupported()) {
             var canvas = document.getElementById("renderCanvas");
             var engine = new BABYLON.Engine(canvas, true);
-			
-			// getting compressed textures if available
-			//var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
-			//var formatUsed = engine.setTextureFormatToUse(available);
-			//var canBeUsed = engine.texturesSupported;
-			//console.log("Texture Type = " + formatUsed);
-			//console.log(canBeUsed);
+		
 			var divFps = document.getElementById("fps");
-			//var divImage = document.getElementById("credits");
-			var myScene = new BABYLON.Scene(engine);
-			//var num = 5; 
-			//var Label = "Image Format is ";
 			
+			var myScene = new BABYLON.Scene(engine);
 			
 			//append .babylon file to myScene
 			BABYLON.SceneLoader.Append("", "office-guy.babylon", myScene);
-			//BABYLON.SceneLoader.Append("", "camera4.babylon", myScene);
 			
-                myScene.executeWhenReady(function () {
-				
-					//var aRope1 = myScene.getMeshByName("rope1");
-					//var aRope2 = myScene.getMeshByName("rope2");
-					//var aLift =  myScene.getMeshByName("lift");
-				
+                		myScene.executeWhenReady(function () {
 				
 					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
 					var cameraFlag = 0;
@@ -125,37 +110,12 @@
 						myScene.activeCamera = myCamera2;
 					}
 					
-					//myScene.beginAnimation(myCamera2, 0,360,true);
+					
 					var meshcam = myScene.getMeshByName("CameraPreset");
-					console.log(meshcam);
+					
 					myScene.beginAnimation(meshcam,1,360,true);
 					
-					// Then attach the activeCamera to the canvas.
-					//myScene.activeCamera.attachControl(canvas);
-					//myCamera2.beginAnimation(cameraAction);
 					
-					//var theCloth = myScene.getMeshByName("Cloth");
-					//console.log(theCloth);
-					
-					// Create a manager and affect it to the cloth
-					//var manager = new BABYLON.MorphTargetManager();
-					//var manager = myScene.getMorphTargetManagerById("theCloth");
-					//console.log("Manager = " + manager);
-					
-					//var aManager = theCloth.getMorphTargetManager();
-					
-					
-					//theCloth.morphTargetManager = manager;
-					
-					//var aManager = BABYLON.MorphTargetManager.FromMesh(theCloth, "theCloth");
-					//console.log(aManager.name);
-
-					// Add the targets
-					//var target = BABYLON.MorphTarget.FromMesh(theCloth, "theCloth");
-					//console.log(target.name);
-					//manager.addTarget(target);
-					//target.influence = 1;
-					//console.log(target);
 					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
