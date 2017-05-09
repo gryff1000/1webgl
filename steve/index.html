@@ -84,32 +84,6 @@
 			BABYLON.SceneLoader.Append("", "office-guy.babylon", myScene);
 			
                 		myScene.executeWhenReady(function () {
-				
-					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
-					var cameraFlag = 0;
-					
-					// which camera is active BJS Arc Rotate or Blender Camera
-					
-					if (cameraFlag == 1){
-						var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), myScene);
-						myCamera.setPosition(new BABYLON.Vector3(0, 100, -300));
-						//myCamera.speed = .1;
-						//myCamera.wheelPrecision = 500;
-						myCamera.fov = .8;
-						
-						myScene.activeCamera = myCamera;
-					
-					}
-					else {
-						var myCamera2 = myScene.getCameraByName("TurnTableCamera");
-						//var myCamera2 = myScene.getCameraByName("Camera");
-						//console.log(myCamera2);
-						myCamera2.speed = .1;
-						myCamera2.wheelPrecision = 5;
-						myCamera2.maxZ= 500;
-						myScene.activeCamera = myCamera2;
-					}
-					
 					
 					var meshcam = myScene.getMeshByName("CameraPreset");
 					
