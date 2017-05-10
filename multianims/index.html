@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Shapekey Test</title>
+    <title>MultiAnimations Test1</title>
     <script src="../hand.js"></script>
     <script src="../babylon.3.0.js"></script>
 	<!--<script src="../babylon.1.14.js"></script>-->
@@ -76,22 +76,15 @@
             var canvas = document.getElementById("renderCanvas");
             var engine = new BABYLON.Engine(canvas, true);
 			
-			// getting compressed textures if available
-			//var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
-			//var formatUsed = engine.setTextureFormatToUse(available);
-			//var canBeUsed = engine.texturesSupported;
-			//console.log("Texture Type = " + formatUsed);
-			//console.log(canBeUsed);
 			var divFps = document.getElementById("fps");
-			//var divImage = document.getElementById("credits");
+			
 			var myScene = new BABYLON.Scene(engine);
-			//var num = 5; 
-			//var Label = "Image Format is ";
+			
 			
 			
 			//append .babylon file to myScene
-			//BABYLON.SceneLoader.Append("", "office-guy.babylon", myScene);
-			BABYLON.SceneLoader.Append("", "multiActions1.babylon", myScene);
+
+		BABYLON.SceneLoader.Append("", "multiActions.babylon", myScene);
 			
                 myScene.executeWhenReady(function () {
 				
@@ -121,17 +114,14 @@
 						myScene.activeCamera = myCamera2;
 					}
 					
-					//myScene.beginAnimation(myCamera2, 0,360,true);
-					//var meshcam = myScene.getMeshByName("CameraPreset");
-					//console.log(meshcam);
-					//myScene.beginAnimation(meshcam,1,360,true);
+					
 					
 					
 					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
-						//divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
-						divFps.innerHTML = engine.getFps().toFixed() + " fps";
+			//divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
+			divFps.innerHTML = engine.getFps().toFixed() + " fps";
                         myScene.render();
                     });
                 });
