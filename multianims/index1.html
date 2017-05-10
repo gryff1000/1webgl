@@ -76,24 +76,14 @@
             var canvas = document.getElementById("renderCanvas");
             var engine = new BABYLON.Engine(canvas, true);
 			
-			// getting compressed textures if available
-			//var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
-			//var formatUsed = engine.setTextureFormatToUse(available);
-			//var canBeUsed = engine.texturesSupported;
-			//console.log("Texture Type = " + formatUsed);
-			//console.log(canBeUsed);
 			var divFps = document.getElementById("fps");
-			//var divImage = document.getElementById("credits");
-			var myScene = new BABYLON.Scene(engine);
-			//var num = 5; 
-			//var Label = "Image Format is ";
 			
+			var myScene = new BABYLON.Scene(engine);
 			
 			//append .babylon file to myScene
-			//BABYLON.SceneLoader.Append("", "office-guy.babylon", myScene);
 			BABYLON.SceneLoader.Append("", "multiActions1.babylon", myScene);
 			
-                myScene.executeWhenReady(function () {
+               		 myScene.executeWhenReady(function () {
 				
 				
 					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
@@ -121,10 +111,6 @@
 						myScene.activeCamera = myCamera2;
 					}
 					
-					//myScene.beginAnimation(myCamera2, 0,360,true);
-					//var meshcam = myScene.getMeshByName("CameraPreset");
-					//console.log(meshcam);
-					//myScene.beginAnimation(meshcam,1,360,true);
 					
 					
 					
