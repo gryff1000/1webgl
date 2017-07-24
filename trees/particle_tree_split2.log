@@ -1,0 +1,451 @@
+Exporter version: 5.3-beta, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  true
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\newtree\final\
+	Python World class constructor completed
+	processing begun of mesh:  Cube.203
+		processing begun of Standard material:  Material.001
+			Diffuse texture found "bark2.001"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of Standard material:  mixed3
+			Diffuse texture found "mixed3"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+				WARNING: Opacity non-std way to indicate opacity, use material alpha to also use Opacity texture
+		processing begun of multimaterial:  particle_tree_split2.Multimaterial#0
+		num positions      :  220
+		num normals        :  220
+		num uvs            :  440
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  360
+	processing begun of mesh:  Cube.202
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.201
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.200
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.199
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.198
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.197
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.196
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.195
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.194
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.193
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.192
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.191
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.190
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.189
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.188
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.187
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.186
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.185
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.184
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.183
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.182
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.181
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.180
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.179
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.178
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.177
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.176
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.175
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.174
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.173
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.172
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.171
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.170
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.169
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.168
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.167
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.166
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.165
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.164
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.163
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.162
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.161
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.160
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.159
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.158
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.157
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.156
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.155
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.154
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.153
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.152
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.151
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.150
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.149
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.148
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.147
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.146
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.145
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.144
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.143
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.142
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.141
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.140
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.139
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.138
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.137
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.136
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.135
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.134
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.133
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.132
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.131
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.130
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.129
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.128
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.127
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.126
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.125
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.124
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.123
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.122
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.121
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.120
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.119
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.118
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.117
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.116
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.115
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.114
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.113
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.112
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.111
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.110
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.109
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.108
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.107
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.106
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.105
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  Cube.104
+		mesh is an instance of :  Cube.203.  Processing halted.
+	processing begun of mesh:  trunk01_base.222
+		processing begun of Standard material:  trunk_bark.001
+			Diffuse texture found "bark2.001"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of Standard material:  green2
+			Diffuse texture found "green2"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+				WARNING: Opacity non-std way to indicate opacity, use material alpha to also use Opacity texture
+		processing begun of multimaterial:  particle_tree_split2.Multimaterial#1
+		num positions      :  294
+		num normals        :  294
+		num uvs            :  588
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  492
+	processing begun of mesh:  trunk01_base.221
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.220
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.219
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.218
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.217
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.216
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.215
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.214
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.213
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.212
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.211
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.210
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.209
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.208
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.207
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.206
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.205
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.204
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.203
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.202
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.201
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.200
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.199
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.198
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.197
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.196
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.195
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.194
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.193
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.192
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.191
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.190
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.189
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.188
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.187
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.186
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.185
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.184
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.183
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.182
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.181
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.180
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.179
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.178
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.177
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.176
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.175
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.174
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.173
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.172
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.171
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.170
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.169
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.168
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.167
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.166
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.165
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.164
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.163
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.162
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.161
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.160
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.159
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.158
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.157
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.156
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.155
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.154
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.153
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.152
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.151
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.150
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.149
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.148
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.147
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.146
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.145
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.144
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.143
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.142
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.141
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.140
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.139
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.138
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.137
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.136
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.135
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.134
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.133
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.132
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.131
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.130
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.129
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.128
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.127
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.126
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.125
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.124
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of mesh:  trunk01_base.123
+		mesh is an instance of :  trunk01_base.222.  Processing halted.
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Landscape
+		processing begun of Standard material:  ground
+			Diffuse texture found "ground_text1"
+				Image texture found, type:  diffuseTexture, mapped using: "groundmap"
+		num positions      :  4096
+		num normals        :  4096
+		num uvs            :  8192
+		num uvs2           :  8192
+		num colors         :  0
+		num indices        :  23814
+	processing begun of light (HEMI):  Hemi.001
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 5.6719 secs
