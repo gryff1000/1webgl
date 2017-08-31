@@ -117,25 +117,7 @@
 					var theSkin = newScene.getMaterialByName("wyvern1.WyvernSkin");
 					theSkin.backFaceCulling = false;
 					
-					/*
-					var myBone = skeleton.bones[0];
-					var myAnim = myBone.animations[0]
-					var myAnimName = myAnim.name;
-					console.log(myAnimName);
 					
-					var myKeys = myAnim._keys;
-					console.log("key length = " + myKeys.length);
-					console.log(myKeys[1]);
-					var myFrame = myKeys[1].frame;
-					console.log("frame = " + myFrame);
-					var myValues = myKeys[1].value;
-					var myArray = myValues.m;
-					console.log("Value Array Length = " + myArray.length);
-					for ( i = 0; i < myArray.length; i++){
-					console.log("i= " + i + " array value= " + myArray[i]);
-					}
-					console.log("the end");
-					*/
 					
 					//change these parameters as necessary for start and end frames of animation, looping, and speed
 					newScene.beginAnimation(skeleton, 1, 25, true, 1);
