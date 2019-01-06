@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Terrain Test</title>
+    <script src="../hand.js"></script>
+    <script src="../babylon.3.1.js"></script>
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	
+	<div id = "fps">0</div>
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        //if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			
+			
+			//Use your file name at xxxxx
+			BABYLON.SceneLoader.Load("", "test1f.babylon", engine, function (newScene) {
+                newScene.executeWhenReady(function () {
+                    
+					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
+					var cameraFlag = 0;
+					
+					// which camera is active Arc Rotate or Blender Free Camera
+					
+					if (cameraFlag == 1){
+						var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), newScene);
+						myCamera.setPosition(new BABYLON.Vector3(2, 2, -6));
+						myCamera.speed = .1;
+						myCamera.wheelPrecision = 250;
+						myCamera.fov = .8;
+						myCamera.maxZ= 1000;
+						
+						newScene.activeCamera = myCamera;
+					
+					}
+					else {
+						var myCamera2 = newScene.getCameraByName("Camera");
+						myCamera2.speed = .2;
+						myCamera2.maxZ= 1000;
+						newScene.activeCamera = myCamera2;
+					}
+					
+					
+					
+					// Then attach the activeCamera to the canvas.
+					newScene.activeCamera.attachControl(canvas);
+					
+					// gravity ???
+					//newScene.getPhysicsEngine().setGravity(new BABYLON.Vector3(0, -0.1, 0));
+					//newScene.setGravity(new BABYLON.Vector3(0, -0.1, 0));
+					
+					//var leafMat = newScene.getMaterialByName("test3.leaves");
+					//var bushMat = newScene.getMaterialByName("test3.Material");
+					//var bushMat2 = newScene.getMaterialByName("simple_terrain_test4g.new_bush");
+					//var leafMat2 = newScene.getMaterialByName("simple_terrain_test4g.new_leaf");
+					//var treeMat = newScene.getMaterialByName("test3.bryce");
+					
+					//leafMat.backFaceCulling = false;
+					//leafMat2.backFaceCulling = false;
+					//bushMat.backFaceCulling = false;
+					//bushMat2.backFaceCulling = false;
+					//treeMat.backFaceCulling = false;
+					/*
+					var aTree = newScene.getMeshByName("tree.100");
+					console.log(aTree.name);
+					
+					var instanceTrees =aTree.instances;
+					console.log(instanceTrees.length);
+					*/
+					
+					//var aWall = newScene.getMeshByName("wall");
+					//aWall.isVisible = false;
+					
+					
+					//create fog
+					
+					//newScene.fogMode = BABYLON.Scene.FOGMODE_EXP;
+					//newScene.fogDensity = 0.03;
+					
+					/*
+					newScene.fogMode =BABYLON.Scene.FOGMODE_LINEAR
+					newScene.fogStart = 1.0;
+					newScene.fogEnd = 250.0;
+					*/
+					
+					//newScene.fogColor = new BABYLON.Color3(0.1, 0.12, 0.10);
+					
+					// end fog code
+					
+					
+					//newScene.createOrUpdateSelectionOctree();
+					
+					// create a skybox
+					
+					/*
+					var skybox = BABYLON.Mesh.CreateBox("skyBox", 250.0, newScene);
+					var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", newScene);
+					skyboxMaterial.backFaceCulling = false;
+					//skybox.infiniteDistance = true;
+					skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("wales3/dbcanyon2a", newScene);
+					skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+					skyboxMaterial.diffuseColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+					skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+					skybox.material = skyboxMaterial;
+					//skybox.renderingGroupId = 0;
+					
+					*/
+					
+                    //newScene.activeCamera.attachControl(canvas);
+					//var skeleton = newScene.getSkeletonById(0);
+					//var isRange = skeleton.getAnimationRange("hop") ;
+					//var myBone = skeleton.bones[36].name;
+					//console.log(isRange);
+					
+					//newScene.stopAnimation(skeleton);
+					//var play = newScene.getMeshByName("layout");
+					//console.log(play.position);
+					
+					/*
+					var myBone = skeleton.bones[0];
+					var myAnim = myBone.animations[0]
+					var myAnimName = myAnim.name;
+					console.log(myAnimName);
+					
+					var myKeys = myAnim._keys;
+					console.log("key length = " + myKeys.length);
+					console.log(myKeys[1]);
+					var myFrame = myKeys[1].frame;
+					console.log("frame = " + myFrame);
+					var myValues = myKeys[1].value;
+					var myArray = myValues.m;
+					console.log("Value Array Length = " + myArray.length);
+					for ( i = 0; i < myArray.length; i++){
+					console.log("i= " + i + " array value= " + myArray[i]);
+					}
+					console.log("the end");
+					*/
+					/*
+					var n = 1;
+					var atEnd = function() {
+						console.log("reached");
+						if( n === 1)
+						{
+							n = 0;
+							newScene.beginAnimation(skeleton, 31, 60, false, 1, atEnd);
+						}
+						else
+						{
+							n = 1;
+							newScene.beginAnimation(skeleton, 1, 30, false, 1, atEnd);
+						}
+					};
+					*/
+					//change these parameters as necessary for start and end frames of animation, looping, and speed
+					//newScene.beginAnimation(skeleton, 1, 60, false, 1, atEnd);
+					//newScene.beginAnimation(skeleton, 1, 60, true, 1);
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+						divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        newScene.render();
+                    });
+                });
+            }, function (progress) {
+                // To do: give progress feedback to user
+            });
+        }
+
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>
