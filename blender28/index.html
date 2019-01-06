@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
-    <title>Babylon - Getting Started</title>
+    <title>Blender2.8 - Getting Started</title>
     <!--- Link to the last version of BabylonJS --->
     <script src="https://cdn.babylonjs.com/babylon.js"></script>
     <style>
@@ -35,31 +35,34 @@
             var createScene = function(){
                 // create a basic BJS Scene object
                 var scene = new BABYLON.Scene(engine);
+                
+                BABYLON.SceneLoader.Load("", "test1f.babylon", engine, function (scene) {
+                scene.executeWhenReady(function () {
 
                 // create a FreeCamera, and set its position to (x:0, y:5, z:-10)
-                var camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5,-10), scene);
+                //var camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5,-10), scene);
 
                 // target the camera to scene origin
-                camera.setTarget(BABYLON.Vector3.Zero());
+                //camera.setTarget(BABYLON.Vector3.Zero());
 
                 // attach the camera to the canvas
-                camera.attachControl(canvas, false);
+                //camera.attachControl(canvas, false);
 
                 // create a basic light, aiming 0,1,0 - meaning, to the sky
-                var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0,1,0), scene);
+                //var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0,1,0), scene);
 
                 // create a built-in "sphere" shape; its constructor takes 6 params: name, segment, diameter, scene, updatable, sideOrientation 
-                var sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 2, scene);
+                //var sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 2, scene);
 
                 // move the sphere upward 1/2 of its height
-                sphere.position.y = 1;
+                //sphere.position.y = 1;
 
                 // create a built-in "ground" shape;
-                var ground = BABYLON.Mesh.CreateGround('ground1', 6, 6, 2, scene);
+                //var ground = BABYLON.Mesh.CreateGround('ground1', 6, 6, 2, scene);
 
                 // return the created scene
                 return scene;
-            }
+            }}
 
             // call the createScene function
             var scene = createScene();
