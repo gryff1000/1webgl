@@ -78,8 +78,9 @@
 			//Use your file name at xxxxx
 			//BABYLON.SceneLoader.Load("", "benoitmhx2.babylon", engine, function (newScene) {
 			BABYLON.SceneLoader.Load("", "test1f.babylon", engine, function (newScene) {
-                newScene.executeWhenReady(function () {
-                    
+                	newScene.executeWhenReady(function () {
+				console.log("Scene Ready");
+                    	
 					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
 					var cameraFlag = 0;
 					
