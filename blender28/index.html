@@ -45,7 +45,7 @@
 	
             camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 3, 20, new BABYLON.Vector3(0,0,0), scene);
             camera.speed = .1;
-	    //camera.wheelPrecision = 250;
+	    camera.wheelPrecision = 250;
 	    camera.fov = .8;
 	    camera.maxZ= 1000;
             camera.attachControl(canvas, true);
@@ -54,16 +54,15 @@
             //var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
             //var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
-            // Add and manipulate meshes in the scene
-            //var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:2}, scene);
+            
             
             BABYLON.SceneLoader.Append("", "test1f.babylon", scene, function (scene) {
-	   // BABYLON.SceneLoader.Load("", "test1f.babylon", engine, function (newScene) {
-            // do something with the scene
-		//camera = scene.getCameraByName("Camera");
-		//camera.attachControl(canvas, true);
+	   
+            	// do something with the scene
             });
-            //scene = newscene;
+		
+           
+		
             console.log("The scene has been loaded");
 
             return scene;
