@@ -42,13 +42,14 @@
             var scene = new BABYLON.Scene(engine);
 
             // Add a camera to the scene and attach it to the canvas
+	/*	
             camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, new BABYLON.Vector3(0,5,30), scene);
             camera.speed = .5;
 	    //camera.wheelPrecision = 250;
 	    camera.fov = .8;
 	    camera.maxZ= 1000;
             camera.attachControl(canvas, true);
-
+	*/
             // Add lights to the scene
             //var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
             //var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
@@ -58,6 +59,8 @@
             
             BABYLON.SceneLoader.Append("", "test1f.babylon", scene, function (scene) {
             // do something with the scene
+		camera = scene.getCameraByName("Camera");
+		camera.attachControl(canvas, true);
             });
             
             console.log("The scene has been loaded");
