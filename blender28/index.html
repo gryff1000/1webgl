@@ -57,12 +57,13 @@
             // Add and manipulate meshes in the scene
             //var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:2}, scene);
             
-            BABYLON.SceneLoader.Append("", "test1f.babylon", scene, function (scene) {
+            //BABYLON.SceneLoader.Append("", "test1f.babylon", scene, function (scene) {
+	    BABYLON.SceneLoader.Load("", "test1f.babylon", engine, function (newScene) {
             // do something with the scene
 		//camera = scene.getCameraByName("Camera");
 		//camera.attachControl(canvas, true);
             });
-            
+            scene = newscene;
             console.log("The scene has been loaded");
 
             return scene;
