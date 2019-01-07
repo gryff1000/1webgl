@@ -3,7 +3,7 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Babylon Template</title>
+        <title>Blender Template</title>
 
         <style>
             html, body {
@@ -46,10 +46,14 @@
 
             // Add lights to the scene
             var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
-            var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
+            //var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
             // Add and manipulate meshes in the scene
-            var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:2}, scene);
+            //var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:2}, scene);
+            
+            BABYLON.SceneLoader.Append("", "test1f.babylon", scene, function (scene) {
+            // do something with the scene
+            });
             
             console.log("The scene has loaded");
 
