@@ -1,0 +1,237 @@
+Exporter version: 6.0-beta 5, Blender version: 2.80 (sub 39)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		export scope        :  ALL
+		inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory   :  G:\blends\cave\particles\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Icosphere
+		processing begun of material:  particle_rocks1.rock
+			processing texture baked
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  44
+		num normals        :  44
+		num uvs            :  88
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  162
+	processing begun of mesh:  Plane
+		processing begun of material:  particle_rocks1.Material.001
+		num positions      :  529
+		num normals        :  529
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  2904
+	processing begun of mesh:  Icosphere.001
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.002
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.003
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.004
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.005
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.006
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.007
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.008
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.009
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.010
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.011
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.012
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.013
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.014
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.015
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.016
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.017
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.018
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.019
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.020
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.021
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.022
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.023
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.024
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.025
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.026
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.027
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.028
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.029
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.030
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.031
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.032
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.033
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.034
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.035
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.036
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.037
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.038
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.039
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.040
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.041
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.042
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.043
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.044
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.045
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.046
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.047
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.048
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.049
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.050
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.051
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.052
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.053
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.054
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.055
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.056
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.057
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.058
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.059
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.060
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.061
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.062
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.063
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.064
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.065
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.066
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.067
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.068
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.069
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.070
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.071
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.072
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.073
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.074
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.075
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.076
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.077
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.078
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.079
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.080
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.081
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.082
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.083
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.084
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.085
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.086
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.087
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.088
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.089
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.090
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.091
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.092
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.093
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.094
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.095
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.096
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.097
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.098
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.099
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of mesh:  Icosphere.100
+		mesh is an instance of :  Icosphere.  Processing halted.
+	processing begun of light (HEMI FROM AREA):  Hemi_light
+========= Writing of JSON file started =========
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.03 secs
