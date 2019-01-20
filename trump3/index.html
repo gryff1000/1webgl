@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>4Rocks : Blender Template</title>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+			
+			
+			#fps {
+			position: absolute;
+			background-color: black;
+			border:2px solid red;
+			text-align:center;
+			font-size: 16px;
+			color: white;
+			top: 15px;
+			left: 10px;
+			width: 60px;
+			height:30px
+			display:none;
+			}
+			
+			#verts{
+			position: absolute;
+			background-color: black;
+			border:2px solid red;
+			text-align:center;
+			font-size: 16px;
+			color: white;
+			top: 50px;
+			left: 10px;
+			width: 140px;
+			height:30px
+			display:none;
+			}
+			
+			#dCalls {
+			position: absolute;
+			background-color: black;
+			border:2px solid red;
+			text-align:center;
+			font-size: 16px;
+			color: white;
+			top: 50px;
+			left: 160px;
+			width: 100px;
+			height:30px
+			display:none;
+			}
+			
+			#meshes {
+			position: absolute;
+			background-color: black;
+			border:2px solid red;
+			text-align:center;
+			font-size: 16px;
+			color: white;
+			top: 15px;
+			left: 80px;
+			width: 160px;
+			height:30px
+			display:none;
+			}
+        </style>
+
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+       <!-- <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script> -->
+        <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+		
+		 <!--sound -->
+		<script src= "howler.js"></script>
+		
+    </head>
+
+   <body>
+    
+   
+   
+   
+   <div id = "fps">0</div>
+  
+	<div id = "meshes">0</div>
+	
+	<div id = "verts">0</div>
+	<!--
+	<div id = "dCalls">0</div>
+	-->
+    <canvas id="renderCanvas" touch-action="none"></canvas> //touch-action="none" for best results from PEP
+
+    <script>
+        var canvas = document.getElementById("renderCanvas"); // Get the canvas element 
+        var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
+		var camera;
+		var skeleton;
+		var divFps = document.getElementById("fps");
+		var divMeshes = document.getElementById("meshes");
+		var divVerts = document.getElementById("verts");
+		var allMeshes, allVerts;
+		
+		var anthem;
+        
+		
+		//1.  anthem
+		anthem = new Howl({
+					urls: ['us_anthem3.mp3'],
+					autoplay: false,
+					loop: false,
+					volume: .5,
+					
+					onload: function() {
+						console.log("sound loaded");
+						//soundLoad();
+					},
+					
+					
+					onplay: function() {
+						console.log("playing");
+						//myScene.beginAnimation(skeleton,1,60,false, 1);
+					},
+					onend:  function() {
+						scene.beginAnimation(skeleton, 60, 120, false);
+						ended = 1;
+						//talk.play();
+					},
+		});
+		
+		
+		/******* Add the create scene function ******/
+        var createScene = function () {
+
+            // Create the scene space
+            var scene = new BABYLON.Scene(engine);
+
+            // Add a camera to the scene and attach it to the canvas
+	
+            //camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 3, 5, new BABYLON.Vector3(0,0,0), scene);
+			camera = new BABYLON.ArcRotateCamera("Camera", -1.3, 1.1, 5, new BABYLON.Vector3(0,0,0), scene);
+			//camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0,0,0), scene);
+			//camera.setPosition(-1,2,5);
+            camera.speed = .4;
+			camera.wheelPrecision = 100;
+			camera.fov = .8;
+			camera.maxZ= 200;
+			camera.attachControl(canvas, true);
+	
+            // Add lights to the scene
+            //var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
+            //var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
+
+            
+            
+            BABYLON.SceneLoader.Append("", "trump2.babylon", scene, function (scene) {
+				scene.executeWhenReady(function () {
+					skeleton = scene.getSkeletonById(0);
+					allMeshes = scene.meshes;
+					allVerts = scene.getTotalVertices(); 
+					divVerts.innerHTML = allVerts  + " Total Verts"; 
+					//console.log(allVerts);
+					divMeshes.innerHTML = allMeshes.length + " Total Meshes";
+					
+					anthem.play();
+					
+					scene.beginAnimation(skeleton, 0, 60, false);
+					console.log("animation playing");
+	   
+            	// do something with the scene
+            });
+		
+			});
+		
+            console.log("The scene has been loaded");
+			
+			
+			//var myVar = setTimeout(alertFunc, 6000);
+			
+
+
+
+            return scene;
+			
+        };
+        /******* End of the create scene function ******/    
+
+        var scene = createScene(); //Call the createScene function
+		
+		//Limit Camera Rotation
+		/*
+		scene.RegisterBeforeRender(function () {
+		console.log("entered");
+		if(camera.beta <.75)
+			camera.beta = .75;
+		else if(camera.beta > (Math.PI/2)*0.66)
+			camera.beta =  (Math.PI/2)*0.66;
+		
+		});
+		*/
+        
+		
+		// Register a render loop to repeatedly render the scene
+        engine.runRenderLoop(function () { 
+				divFps.innerHTML = engine.getFps().toFixed() + " fps";
+				//divVerts.innerHTML = myScene.getTotalVertices()  + " Total Verts"; 
+				//divCalls.innerHTML = engine.drawCalls + " DrawCalls";
+				//divMeshes.innerHTML = allMeshes.length + " Total Meshes";
+                scene.render();
+        });
+
+        // Watch for browser/canvas resize events
+        window.addEventListener("resize", function () { 
+                engine.resize();
+        });
+		
+		/*
+		function alertFunc() {
+			//alert("Hello!");
+			scene.beginAnimation(skeleton, 61, 120, false);
+		};
+		*/
+		
+    </script>
+
+   </body>
+
+</html>
