@@ -166,6 +166,9 @@
             
             BABYLON.SceneLoader.Append("", "trump2.babylon", scene, function (scene) {
 				scene.executeWhenReady(function () {
+					var hairMesh = scene.getMeshByName("Trump2_hair");
+					hairMesh.getBoundingInfo().scale(4);
+					
 					skeleton = scene.getSkeletonById(0);
 					allMeshes = scene.meshes;
 					allVerts = scene.getTotalVertices(); 
