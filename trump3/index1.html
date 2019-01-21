@@ -168,6 +168,10 @@
 				scene.executeWhenReady(function () {
 					var hairMesh = scene.getMeshByName("Trump2_hair");
 					hairMesh.getBoundingInfo().scale(4);
+					var bodyMesh = scene.getMeshByName("Trump2:Male_generic");
+					bodyMesh.getBoundingInfo().scale(2);
+					var tieMesh = scene.getMeshByName("Trump3:Tie_1_male");
+					tieMesh.getBoundingInfo().scale(2);
 					
 					skeleton = scene.getSkeletonById(0);
 					allMeshes = scene.meshes;
