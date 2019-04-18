@@ -85,7 +85,7 @@ function setCamera(k){
 			aCBoard.diffuseTexture.vOffset = 0;
 			takes = 1;
 			clap1.play();
-			myScene.beginAnimation(theclap, 2, 30, false, 1);
+			myScene.beginAnimation(theclap, 2, 31, false, 1);
 			break;
 		
 		case 3:
