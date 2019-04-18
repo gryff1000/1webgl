@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Mr. Mogg</title>
-    <script src="../hand.js"></script>
-    <script src="../babylon.3.1.js"></script>
+    <script src="../babylon.js"></script>
+	<script src="../pep.js"></script>
 	<!--sound -->
 	<script src= "../howler.js"></script>
 	
@@ -78,11 +78,18 @@
 			var skeleton;
 			var scene;
 			var myCamera2;
+			var counter = 0;
+			var loops;
+			//var theFlag;
 			
 			//Use your file name at xxxxx
 			//BABYLON.SceneLoader.Load("", "benoitmhx2.babylon", engine, function (newScene) {
 			BABYLON.SceneLoader.Load("", "mogg2e.babylon", engine, function (newScene) {
                 newScene.executeWhenReady(function () {
+				
+				
+				
+				//newScene.stopAnimation();
 				scene = newScene;
                     
 					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
@@ -104,19 +111,31 @@
 						myCamera2.wheelPrecision = 250;
 						myCamera2.fov = 1;
 						newScene.activeCamera = myCamera2;
-					}
+					};
 					
-					//var plane =  BABYLON.Mesh.CreateGround("ground", 20,20,2,newScene);
+					
 					
 					// Then attach the activeCamera to the canvas.
-					newScene.activeCamera.attachControl(canvas);
+					//newScene.activeCamera.attachControl(canvas);
 					
-					
+					BABYLON.SceneLoader.Append("", "flag_shape.babylon", scene);
 					
                     //newScene.activeCamera.attachControl(canvas);
 					
 					//var man = newScene.getMeshByName('Man.');
 					//man.skeleton.beginAnimation('idle_with_shield', true);
+					
+					//theFlag = scene.getMeshByName("flag");
+					//console.log(theFlag);
+					
+					
+					//for ( i = 0; i < aFlag.morphTargetManager.numInfluencers;  i++) {
+						//var targets = aFlag.morphTargetManager.getTarget(0).influence;
+						//console.log(targets);
+					
+					//aFlag.morphTargetManager.getTarget(0).influence = 1;
+					//targets = aFlag.morphTargetManager.getTarget(0).influence;
+					//console.log(targets);
 					
 					skeleton = newScene.getSkeletonById(0);
 					//newScene.beginAnimation(skeleton,1,75,true, 1);
@@ -146,24 +165,34 @@
 						onload: function() {
 							//soundReady()
 							fanfare.play();
-							//scene.beginAnimation(skeleton,1,75,false, 1);
+							//scene.stopAnimation();
 						},
 						onplay: function() {
 							//myScene.beginAnimation(skeleton,1,60,false, 1);
 							//myCamera2.position.z = -3.5;
-							//scene.beginAnimation(skeleton,1,75,false, 1);
+							//scene.stopAnimation();
+							//scene.beginAnimation(skeleton,1,1,false, 1);
 							
 						},
 						onend:  function() {
-							myCamera2.position.z = -3.5;
-							opening.play();
-						},
+							
+								//myCamera2.position.z = -3.5;
+								opening.play('slave');
+								
+							}
+						//},
 				});
 		
 		
 			
 				opening = new Howl({
-						urls: ['mogg3a.mp3'],
+						urls: ['mogg3c.mp3'],
+						sprite: {
+							slave: [0, 2400],
+							fall: [2405, 2000],
+							laugh:[4405,4500]
+						},
+						
 						autoplay: false,
 						loop: false,
 						volume: 0.5,
@@ -171,20 +200,70 @@
 							//soundReady()
 							//opening.play();
 							//scene.beginAnimation(skeleton,1,75,false, 1);
+							
 						},
 						onplay: function() {
+							//console.log("playing");
 							//myScene.beginAnimation(skeleton,1,60,false, 1);
 							myCamera2.position.z = -3.5;
+							//console.log(myCamera2.position.z);
 							scene.beginAnimation(skeleton,1,75,false, 1);
 							
 						},
 						onend:  function() {
-							//openingEnd();
+							switch(counter) {
+							  case 0:
+								opening.play('fall');
+								scene.beginAnimation(skeleton,95,176,false, 1);
+								counter = 1;
+								break;
+							  case 1:
+								//opening.play('fall');
+								//nappy.play();
+								opening.play('laugh');
+								scene.beginAnimation(skeleton,180,220,true, .5);
+								counter = 2
+								break;
+							  case 2:
+								nappy.play();
+							  break;
+							};
 						},
-				});
-		};
+		});
+		
+			nappy = new Howl({
+				urls: ['nappy2.mp3'],
+				autoplay: false,
+				loop: false,
+				volume: 0.5,
+				onload: function() {
+					//soundReady()
+					//fanfare.play();
+					//scene.beginAnimation(skeleton,1,75,false, 1);
+				},
+				onplay: function() {
+					//console.log(counter);
+					// scene.beginAnimation(skeleton,180,220,true, .5);
+					//myCamera2.position.z = -3.5;
+					//scene.beginAnimation(skeleton,1,1,false, 1);
+					
+				},
+				onend:  function() {
+					scene.stopAnimation(skeleton);
+					myCamera2.position.z = 3.5;
+					var theFlag = scene.getMeshByName("flag");
+					theFlag.morphTargetManager.getTarget(0).influence = 1;
+					scene.beginAnimation(theFlag, 1, 30, false, .5);
+					scene.activeCamera.attachControl(canvas);
+					
+				},
+				//},
+		});
 		
 		
+		
+		
+	};		
 		
         window.addEventListener("resize", function () {
             engine.resize();
