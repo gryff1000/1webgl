@@ -122,7 +122,7 @@ function setCamera(k){
 		case 7:// animate clapboard again camera same as Case 6
 			takes = 2;
 			clap2.play();
-			myScene.beginAnimation(theclap, 2, 30, false, 1);
+			myScene.beginAnimation(theclap, 2, 31, false, 1);
 			break;	
 		
 		case 8:
