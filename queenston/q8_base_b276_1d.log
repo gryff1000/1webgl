@@ -1,0 +1,861 @@
+Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  true
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\queenston11\
+	Python World class constructor completed
+	processing begun of node:  ukCommanders
+	processing begun of mesh:  ukSheaffe
+		processing begun of Standard material:  ukumiform
+			Diffuse texture found "ukdress"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of Standard material:  arrowuk
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#0
+		num positions      :  404
+		num normals        :  404
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1074
+	processing begun of mesh:  ukBrock1
+		registered as also a user of material:  ukumiform
+		registered as also a user of material:  arrowuk
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#1
+		num positions      :  404
+		num normals        :  404
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1074
+	processing begun of mesh:  mohawk
+		processing begun of Standard material:  mohawk
+			Diffuse texture found "mo_uniform"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of Standard material:  arrow_nor
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#2
+		num positions      :  373
+		num normals        :  373
+		num uvs            :  746
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1248
+	processing begun of node:  ukMoveSoldiers
+	processing begun of mesh:  uksoldier02
+		registered as also a user of material:  ukumiform
+		registered as also a user of material:  arrowuk
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#3
+		num positions      :  339
+		num normals        :  339
+		num uvs            :  678
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  978
+	processing begun of mesh:  uksoldier01
+		mesh is an instance of :  uksoldier02.  Processing halted.
+	processing begun of mesh:  uksoldier00
+		mesh is an instance of :  uksoldier02.  Processing halted.
+	processing begun of node:  usMoveSoldiers
+	processing begun of mesh:  usScott
+		processing begun of Standard material:  usdress
+			Diffuse texture found "uniformus"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of Standard material:  arrowus
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#4
+		num positions      :  404
+		num normals        :  404
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1074
+	processing begun of mesh:  ussoldier01
+		registered as also a user of material:  usdress
+		registered as also a user of material:  arrowus
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#5
+		num positions      :  339
+		num normals        :  339
+		num uvs            :  678
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  978
+	processing begun of mesh:  ussoldier00
+		registered as also a user of material:  usdress
+		registered as also a user of material:  arrowus
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#6
+		num positions      :  339
+		num normals        :  339
+		num uvs            :  678
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  978
+	processing begun of mesh:  usSvr
+		registered as also a user of material:  usdress
+		registered as also a user of material:  arrowus
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#7
+		num positions      :  404
+		num normals        :  404
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1074
+	processing begun of mesh:  curtain
+		processing begun of Standard material:  curtain
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of node:  us_lostboats
+	processing begun of mesh:  us_boat05
+		registered as also a user of material:  arrowus
+		num positions      :  20
+		num normals        :  20
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  108
+	processing begun of mesh:  us_boat04
+		mesh is an instance of :  us_boat05.  Processing halted.
+	processing begun of mesh:  us_boat03
+		mesh is an instance of :  us_boat05.  Processing halted.
+	processing begun of mesh:  us_boat02
+		mesh is an instance of :  us_boat05.  Processing halted.
+	processing begun of mesh:  us_boat01
+		mesh is an instance of :  us_boat05.  Processing halted.
+	processing begun of mesh:  us_boat00
+		mesh is an instance of :  us_boat05.  Processing halted.
+	processing begun of node:  3pound
+	processing begun of mesh:  30_handle01
+		processing begun of Standard material:  handle
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  30_handle00
+		mesh is an instance of :  30_handle01.  Processing halted.
+	processing begun of mesh:  30_wheel01
+		processing begun of Standard material:  wheel
+		num positions      :  48
+		num normals        :  48
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  288
+	processing begun of mesh:  30_wheel00
+		mesh is an instance of :  30_wheel01.  Processing halted.
+	processing begun of mesh:  30_spoke11
+		processing begun of Standard material:  spoke
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
+	processing begun of mesh:  30_spoke10
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke09
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke08
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke07
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke06
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke05
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke04
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke03
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke00
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke02
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_spoke01
+		mesh is an instance of :  30_spoke11.  Processing halted.
+	processing begun of mesh:  30_cannon00
+		processing begun of Standard material:  cannon
+		num positions      :  185
+		num normals        :  185
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1056
+	processing begun of mesh:  30_axle00
+		registered as also a user of material:  wheel
+		num positions      :  24
+		num normals        :  24
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  132
+	processing begun of node:  yellow_trees
+	processing begun of mesh:  ytree18
+		processing begun of Standard material:  ytree
+			Diffuse texture found "ytree"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  ytree17
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree16
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree15
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree14
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree13
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree12
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree11
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree10
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree09
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree08
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree07
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree06
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree05
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree04
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree03
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree02
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree01
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of mesh:  ytree00
+		mesh is an instance of :  ytree18.  Processing halted.
+	processing begun of node:  fir_trees1
+	processing begun of mesh:  ftree21
+		processing begun of Standard material:  ftree
+			Diffuse texture found "aftree"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  ftree20
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree19
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree18
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree17
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree16
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree15
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree14
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree13
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree12
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree11
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree10
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree09
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree08
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree07
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree06
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree05
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree04
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree03
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree02
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree01
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of mesh:  ftree00
+		mesh is an instance of :  ftree21.  Processing halted.
+	processing begun of node:  red_trees1
+	processing begun of mesh:  rtree52
+		processing begun of Standard material:  tree
+			Diffuse texture found "atree"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  rtree51
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree50
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree49
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree48
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree47
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree46
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree45
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree44
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree43
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree42
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree41
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree40
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree39
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree38
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree37
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree36
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree35
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree34
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree33
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree32
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree31
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree30
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree29
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree28
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree27
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree26
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree25
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree24
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree23
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree22
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree21
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree20
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree19
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree18
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree17
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree16
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree15
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree14
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree13
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree12
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree11
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree10
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree09
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree08
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree07
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree06
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree05
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree04
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree03
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree02
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree01
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of mesh:  rtree00
+		mesh is an instance of :  rtree52.  Processing halted.
+	processing begun of node:  menu
+	processing begun of node:  18pound
+	processing begun of mesh:  2_18wheel03
+		registered as also a user of material:  cannon
+		num positions      :  24
+		num normals        :  24
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  132
+	processing begun of mesh:  2_18wheel02
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  2_18wheel01
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  2_18wheel00
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  2_18side01
+		processing begun of Standard material:  sides
+		num positions      :  32
+		num normals        :  32
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  180
+	processing begun of mesh:  2_18side00
+		mesh is an instance of :  2_18side01.  Processing halted.
+	processing begun of mesh:  2_18cannon00
+		registered as also a user of material:  cannon
+		num positions      :  209
+		num normals        :  209
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1188
+	processing begun of mesh:  2_18base00
+		registered as also a user of material:  sides
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  1_18wheel03
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  1_18wheel02
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  1_18wheel01
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  1_18wheel00
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  1_18side01
+		mesh is an instance of :  2_18side01.  Processing halted.
+	processing begun of mesh:  1_18side00
+		mesh is an instance of :  2_18side01.  Processing halted.
+	processing begun of mesh:  1_18cannon00
+		mesh is an instance of :  2_18cannon00.  Processing halted.
+	processing begun of mesh:  1_18base00
+		mesh is an instance of :  2_18base00.  Processing halted.
+	processing begun of mesh:  0_18base00
+		mesh is an instance of :  2_18base00.  Processing halted.
+	processing begun of mesh:  0_18cannon00
+		mesh is an instance of :  2_18cannon00.  Processing halted.
+	processing begun of mesh:  0_18side00
+		mesh is an instance of :  2_18side01.  Processing halted.
+	processing begun of mesh:  0_18side01
+		mesh is an instance of :  2_18side01.  Processing halted.
+	processing begun of mesh:  0_18wheel00
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  0_18wheel01
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  0_18wheel02
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of mesh:  0_18wheel03
+		mesh is an instance of :  2_18wheel03.  Processing halted.
+	processing begun of node:  z_bits
+	processing begun of mesh:  30_limber00
+		registered as also a user of material:  wheel
+		num positions      :  40
+		num normals        :  40
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  198
+	processing begun of node:  norton
+	processing begun of mesh:  n_arrow14
+		registered as also a user of material:  arrowuk
+		registered as also a user of material:  arrow_nor
+		processing begun of multimaterial:  q8_base_b276_1d.Multimaterial#8
+		num positions      :  20
+		num normals        :  20
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  108
+	processing begun of mesh:  n_arrow13
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow12
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow11
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow10
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow09
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow08
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow07
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow06
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow05
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow04
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow03
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow02
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow01
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of mesh:  n_arrow00
+		mesh is an instance of :  n_arrow14.  Processing halted.
+	processing begun of node:  field_guns
+	processing begun of mesh:  0_axle
+		registered as also a user of material:  wheel
+		num positions      :  24
+		num normals        :  24
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  132
+	processing begun of mesh:  0_cannon
+		registered as also a user of material:  cannon
+		num positions      :  185
+		num normals        :  185
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1056
+	processing begun of mesh:  0_spoke01
+		registered as also a user of material:  spoke
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
+	processing begun of mesh:  0_spoke02
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke03
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke04
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke05
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke06
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke07
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke08
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke09
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke10
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke11
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_spoke12
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  0_wheel00
+		registered as also a user of material:  wheel
+		num positions      :  48
+		num normals        :  48
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  288
+	processing begun of mesh:  0_wheel01
+		mesh is an instance of :  0_wheel00.  Processing halted.
+	processing begun of mesh:  2_wheel01
+		mesh is an instance of :  0_wheel00.  Processing halted.
+	processing begun of mesh:  2_wheel00
+		mesh is an instance of :  0_wheel00.  Processing halted.
+	processing begun of mesh:  2_spoke12
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke11
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke10
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke09
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke08
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke07
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke06
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke05
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke04
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke03
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke02
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_spoke01
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  2_cannon
+		mesh is an instance of :  0_cannon.  Processing halted.
+	processing begun of mesh:  2_axle
+		mesh is an instance of :  0_axle.  Processing halted.
+	processing begun of mesh:  1_wheel01
+		mesh is an instance of :  0_wheel00.  Processing halted.
+	processing begun of mesh:  1_wheel00
+		mesh is an instance of :  0_wheel00.  Processing halted.
+	processing begun of mesh:  1_spoke12
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke11
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke10
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke09
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke08
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke07
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke06
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke05
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke04
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke03
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke02
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_spoke01
+		mesh is an instance of :  0_spoke01.  Processing halted.
+	processing begun of mesh:  1_cannon
+		mesh is an instance of :  0_cannon.  Processing halted.
+	processing begun of mesh:  1_axle
+		mesh is an instance of :  0_axle.  Processing halted.
+	processing begun of mesh:  0_limber
+		registered as also a user of material:  wheel
+		num positions      :  40
+		num normals        :  40
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  198
+	processing begun of mesh:  2_limber
+		mesh is an instance of :  0_limber.  Processing halted.
+	processing begun of mesh:  1_limber
+		mesh is an instance of :  0_limber.  Processing halted.
+	processing begun of node:  mortars
+	processing begun of mesh:  2mortar_block
+		registered as also a user of material:  sides
+		num positions      :  12
+		num normals        :  12
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  60
+	processing begun of mesh:  2mortar
+		registered as also a user of material:  cannon
+		num positions      :  237
+		num normals        :  237
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1266
+	processing begun of mesh:  2m_side01
+		registered as also a user of material:  sides
+		num positions      :  132
+		num normals        :  132
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  132
+	processing begun of mesh:  2m_side00
+		mesh is an instance of :  2m_side01.  Processing halted.
+	processing begun of mesh:  1m_side00
+		mesh is an instance of :  2m_side01.  Processing halted.
+	processing begun of mesh:  1m_side01
+		mesh is an instance of :  2m_side01.  Processing halted.
+	processing begun of mesh:  1mortar
+		mesh is an instance of :  2mortar.  Processing halted.
+	processing begun of mesh:  1mortar_block
+		mesh is an instance of :  2mortar_block.  Processing halted.
+	processing begun of node:  uscompanies
+	processing begun of mesh:  soldierus07
+		registered as also a user of material:  usdress
+		num positions      :  319
+		num normals        :  319
+		num uvs            :  638
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  870
+	processing begun of mesh:  soldierus06
+		mesh is an instance of :  soldierus07.  Processing halted.
+	processing begun of mesh:  soldierus05
+		mesh is an instance of :  soldierus07.  Processing halted.
+	processing begun of mesh:  soldierus04
+		mesh is an instance of :  soldierus07.  Processing halted.
+	processing begun of mesh:  soldierus03
+		mesh is an instance of :  soldierus07.  Processing halted.
+	processing begun of mesh:  soldierus02
+		mesh is an instance of :  soldierus07.  Processing halted.
+	processing begun of mesh:  soldierus01
+		mesh is an instance of :  soldierus07.  Processing halted.
+	processing begun of mesh:  soldierus00
+		mesh is an instance of :  soldierus07.  Processing halted.
+	processing begun of node:  ukcompanies
+	processing begun of mesh:  soldieruk02
+		registered as also a user of material:  ukumiform
+		num positions      :  319
+		num normals        :  319
+		num uvs            :  638
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  870
+	processing begun of mesh:  soldieruk01
+		mesh is an instance of :  soldieruk02.  Processing halted.
+	processing begun of mesh:  soldieruk00
+		mesh is an instance of :  soldieruk02.  Processing halted.
+	processing begun of node:  us_redan
+	processing begun of mesh:  us_arrow25
+		registered as also a user of material:  arrowus
+		num positions      :  20
+		num normals        :  20
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  108
+	processing begun of mesh:  us_arrow24
+		mesh is an instance of :  us_arrow25.  Processing halted.
+	processing begun of mesh:  us_arrow23
+		mesh is an instance of :  us_arrow25.  Processing halted.
+	processing begun of mesh:  us_arrow22
+		mesh is an instance of :  us_arrow25.  Processing halted.
+	processing begun of mesh:  us_arrow21
+		mesh is an instance of :  us_arrow25.  Processing halted.
+	processing begun of mesh:  us_arrow20
+		mesh is an instance of :  us_arrow25.  Processing halted.
+	processing begun of node:  us_attack
+	processing begun of mesh:  us_arrow03
+		registered as also a user of material:  arrowus
+		num positions      :  20
+		num normals        :  20
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  108
+	processing begun of mesh:  us_arrow02
+		mesh is an instance of :  us_arrow03.  Processing halted.
+	processing begun of mesh:  us_arrow01
+		mesh is an instance of :  us_arrow03.  Processing halted.
+	processing begun of mesh:  us_arrow00
+		mesh is an instance of :  us_arrow03.  Processing halted.
+	processing begun of node:  z_thetrees
+	processing begun of node:  sheaffe
+	processing begun of mesh:  s_arrow14
+		registered as also a user of material:  arrowuk
+		num positions      :  20
+		num normals        :  20
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  108
+	processing begun of mesh:  s_arrow13
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow12
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow11
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow10
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow09
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow08
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow07
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow06
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow05
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow04
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow03
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow02
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow01
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of mesh:  s_arrow00
+		mesh is an instance of :  s_arrow14.  Processing halted.
+	processing begun of node:  brock1
+	processing begun of mesh:  b_arrow10
+		registered as also a user of material:  arrowuk
+		num positions      :  20
+		num normals        :  20
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  108
+	processing begun of mesh:  b_arrow09
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow08
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow07
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow06
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow05
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow04
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow03
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow02
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow01
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  b_arrow00
+		mesh is an instance of :  b_arrow10.  Processing halted.
+	processing begun of mesh:  water
+		processing begun of Standard material:  river
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  16
+		num indices        :  6
+	processing begun of mesh:  qterrain01
+		processing begun of Standard material:  painteftext
+			Diffuse texture found "grass"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  63544
+		num normals        :  63544
+		num uvs            :  127088
+		num uvs2           :  0
+		num colors         :  254176
+		num indices        :  374061
+	WARNING: The following camera not visible in scene thus ignored: Camera
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 23.7656 secs

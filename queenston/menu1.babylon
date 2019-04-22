@@ -1,0 +1,25 @@
+{"producer":{"name":"Blender","version":"2.76 (sub 0)","exporter_version":"4.4.4","file":"menu1.babylon"},
+"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"ambientColor":[0,0,0],"gravity":[0,-9.81,0],
+"materials":[{"name":"menu1.hilite","id":"menu1.hilite","ambient":[0.8,0.8,0.8],"diffuse":[0.64,0.64,0.64],"specular":[0,0,0],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":true,"checkReadyOnlyOnce":false},
+{"name":"menu1.buttons","id":"menu1.buttons","ambient":[0.8,0.8,0.8],"diffuse":[0.8,0.8,0.8],"specular":[0,0,0],"emissive":[0.8,0.8,0.8],"specularPower":50,"alpha":1,"backFaceCulling":true,"checkReadyOnlyOnce":false, 
+"diffuseTexture":{"name":"menu_icons1.png","level":1,"hasAlpha":1,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}}],
+"multiMaterials":[],
+"skeletons":[],
+"meshes":[{"name":"hiliter","id":"hiliter","materialId":"menu1.hilite","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false
+,"positions":[1,-1,0,1,1,0,-1,1,0,-1,-1,0]
+,"normals":[0,0,-1,0,0,-1,0,0,-1,0,0,-1]
+,"indices":[0,1,2,3,0,2]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
+,"instances":[]}
+,{"name":"buttons","id":"buttons","materialId":"menu1.buttons","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false
+,"positions":[8,-1,0,8,1,0,-8,1,0,-8,-1,0]
+,"normals":[0,0,-1,0,0,-1,0,0,-1,0,0,-1]
+,"uvs":[0.9981,0.002,0.9981,0.1232,0.0021,0.1232,0.0021,0.002]
+,"indices":[0,1,2,3,0,2]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
+,"instances":[]}
+],
+"cameras":[],
+"lights":[{"name":"Hemi","id":"Hemi","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1]}],
+"shadowGenerators":[]
+}
