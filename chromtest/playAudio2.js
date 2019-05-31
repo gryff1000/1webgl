@@ -80,6 +80,9 @@ function setCamera(k){
 			myScene.activeCamera = myCamera0;
 			console.log(myCamera0.position.z);
 			aButton.setEnabled(true);
+			
+			myScene.beginAnimation(skeleton, 1, 2, false, 1);
+			myCamera.useAutoRotationBehavior = false;
 			//aCBoard.diffuseTexture.vOffset = 0;
 			takes = 1;
 			//take1.play();
