@@ -1,0 +1,135 @@
+Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\wingy5\
+	Python World class constructor completed
+	processing begun of mesh:  legs
+		processing begun of Standard material:  desk_base
+			Diffuse texture found "desk_base"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  44
+		num normals        :  44
+		num uvs            :  88
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  96
+	processing begun of mesh:  chair
+		registered as also a user of material:  desk_base
+		num positions      :  207
+		num normals        :  207
+		num uvs            :  414
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  372
+	processing begun of mesh:  cushion
+		processing begun of Standard material:  leather
+			Diffuse texture found "leather"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  85
+		num normals        :  85
+		num uvs            :  170
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  210
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of node:  adesk
+	processing begun of mesh:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  984
+		num normals        :  984
+		num uvs            :  1968
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  984
+	processing begun of mesh:  desk_top
+		registered as also a user of material:  desk_base
+		num positions      :  69
+		num normals        :  69
+		num uvs            :  138
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  204
+	processing begun of mesh:  L_cupboard
+		registered as also a user of material:  desk_base
+		num positions      :  123
+		num normals        :  123
+		num uvs            :  246
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  348
+	processing begun of mesh:  L_drawer
+		registered as also a user of material:  desk_base
+		num positions      :  223
+		num normals        :  223
+		num uvs            :  446
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  486
+	processing begun of mesh:  M_drawer
+		registered as also a user of material:  desk_base
+		num positions      :  222
+		num normals        :  222
+		num uvs            :  444
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  486
+	processing begun of mesh:  R_cupboard
+		registered as also a user of material:  desk_base
+		num positions      :  124
+		num normals        :  124
+		num uvs            :  248
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  348
+	processing begun of mesh:  R_drawer
+		registered as also a user of material:  desk_base
+		num positions      :  226
+		num normals        :  226
+		num uvs            :  452
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  486
+	processing begun of mesh:  a_keyboard
+		registered as also a user of material:  desk_base
+		num positions      :  31
+		num normals        :  31
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  monitor_desk
+		registered as also a user of material:  desk_base
+		num positions      :  216
+		num normals        :  216
+		num uvs            :  432
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  216
+	processing begun of mesh:  Circle
+		processing begun of Standard material:  CAN
+			Diffuse texture found "Texture.001"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  1999
+		num normals        :  1999
+		num uvs            :  3998
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6384
+	processing begun of mesh:  Button
+		processing begun of Standard material:  button
+			Diffuse texture found "Texture"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  17
+		num normals        :  17
+		num uvs            :  34
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.75 secs
