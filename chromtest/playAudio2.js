@@ -78,6 +78,8 @@ function setCamera(k){
 		case 1: 
 			// take1 play
 			myScene.activeCamera = myCamera0;
+			console.log(myCamera0.position.z);
+			aButton.setEnabled(true);
 			//aCBoard.diffuseTexture.vOffset = 0;
 			takes = 1;
 			//take1.play();
