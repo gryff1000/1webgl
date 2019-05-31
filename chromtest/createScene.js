@@ -105,6 +105,8 @@ function createWorld(){
 				//aMelon.setEnabled(true);
 				aButton.setEnabled(false);
 				console.log("reached");
+				myCamera.useAutoRotationBehavior = true;
+				myCamera.autoRotationBehavior.idleRotationSpeed = -0.25;
 				myScene.activeCamera = myCamera;
 				myScene.beginAnimation(skeleton,1,60,true, 1);
 				start.play();
