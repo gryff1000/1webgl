@@ -1,0 +1,138 @@
+Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  true
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\whitechapel03\
+	Python World class constructor completed
+	processing begun of mesh:  backing
+		processing begun of Standard material:  opening
+			Diffuse texture found "opening"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  pictur0
+		processing begun of Standard material:  objects
+			Diffuse texture found "victims"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  bpack00
+		processing begun of Standard material:  item
+			Diffuse texture found "item"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of node:  objects
+	processing begun of node:  allitems
+	processing begun of mesh:  item07
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  item06
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  item05
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  item04
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  item03
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  item02
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  item01
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  item00
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  bpack01
+		processing begun of Standard material:  bpack
+			Diffuse texture found "Texture"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  backpack
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of camera (UniversalCamera):  menu_Cam
+	processing begun of mesh:  Button
+		processing begun of Standard material:  button
+			Diffuse texture found "Texture.001"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  17
+		num normals        :  17
+		num uvs            :  34
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	WARNING: The following lamp not visible in scene thus ignored: Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.0469 secs
