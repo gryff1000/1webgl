@@ -24,7 +24,7 @@ if (sceneNum === 0){
 		
 		
 		BABYLON.SceneLoader.Append("", "menu6.babylon", myScene);
-		BABYLON.SceneLoader.Append("", "whitechapel03b.babylon", myScene);
+		BABYLON.SceneLoader.Append("", "whitechapel03c.babylon", myScene);
 				myScene.executeWhenReady(function () {
 				
 // xxxxxxxxxxxxxxx		
