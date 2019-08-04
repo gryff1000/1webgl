@@ -6,6 +6,40 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		inline textures:  false
 		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\whitechapel03\
 	Python World class constructor completed
+	processing begun of mesh:  street.002
+		processing begun of Standard material:  street
+			Diffuse texture found "cobbles"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  32
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  54
+	processing begun of mesh:  wall_post05
+		processing begun of Standard material:  lampost
+		num positions      :  24
+		num normals        :  24
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  wall_lamp05
+		registered as also a user of material:  lampost
+		num positions      :  25
+		num normals        :  25
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  120
+	processing begun of mesh:  wall_light05
+		processing begun of Standard material:  publight
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
 	processing begun of mesh:  miller_t_door.001
 		processing begun of Standard material:  doors
 			Diffuse texture found "doors"
@@ -27,7 +61,7 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num colors         :  0
 		num indices        :  6
 	processing begun of mesh:  wall_post04
-		processing begun of Standard material:  lampost
+		registered as also a user of material:  lampost
 		num positions      :  24
 		num normals        :  24
 		num uvs            :  0
@@ -61,7 +95,7 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num colors         :  0
 		num indices        :  84
 	processing begun of mesh:  wall_light03
-		processing begun of Standard material:  publight
+		registered as also a user of material:  publight
 		num positions      :  8
 		num normals        :  8
 		num uvs            :  0
@@ -101,9 +135,7 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num colors         :  0
 		num indices        :  120
 	processing begun of mesh:  streetFD
-		processing begun of Standard material:  street
-			Diffuse texture found "cobbles"
-				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		registered as also a user of material:  street
 		num positions      :  30
 		num normals        :  30
 		num uvs            :  60
@@ -194,6 +226,22 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num colors         :  0
 		num indices        :  24
 	processing begun of node:  Triggers
+	processing begun of mesh:  Trigger04
+		registered as also a user of material:  lampost
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  Trigger03
+		registered as also a user of material:  lampost
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
 	processing begun of mesh:  Trigger02
 		registered as also a user of material:  lampost
 		num positions      :  8
@@ -506,12 +554,12 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num indices        :  30
 	processing begun of mesh:  street
 		registered as also a user of material:  street
-		num positions      :  249
-		num normals        :  249
-		num uvs            :  498
+		num positions      :  243
+		num normals        :  243
+		num uvs            :  486
 		num uvs2           :  0
 		num colors         :  0
-		num indices        :  1170
+		num indices        :  1116
 	processing begun of mesh:  wall01.L
 		processing begun of Standard material:  buildings02
 			Diffuse texture found "build_text"
@@ -1608,6 +1656,7 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  24
+	processing begun of light (POINT):  Point.008
 	processing begun of light (POINT):  Point.007
 	processing begun of light (POINT):  Point.006
 	processing begun of light (POINT):  Point.005
@@ -1620,4 +1669,4 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 ========= Writing of scene file started =========
 ========= Writing of scene file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 2.9844 secs
+elapsed time:  0 min, 4.0781 secs
