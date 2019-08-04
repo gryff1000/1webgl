@@ -214,13 +214,13 @@ var onPointerDown = function (evt) {
 		
 			case 9 :	
 				//F&D Row
-				theSounds.play(0, 12.000, 1.600);
+				theStreets.play(0, 0.0, 16.00);
 				theMesh.isPickable = false;
 				break;
 		
 			case 8 :	
 				//dorset
-				theSounds.play(0, 12.000, 1.600);
+				theStreets.play(0, 16.50, 16.260);
 				theMesh.isPickable = false;
 				break;
 		
@@ -359,18 +359,34 @@ var onPointerDown = function (evt) {
 		
 			case 1 :
 			console.log("Annie Chapman");
+			for(i =0; i < items.length; i++){
+				items[i].isPickable = false;
+			};
+			theChapman.play();
 			break;
 			
 			case 2 :
 			console.log("Liz Stride");
+			for(i =0; i < items.length; i++){
+				items[i].isPickable = false;
+			};
+			theStride.play();
 			break;
 			
 			case 3 :
 			console.log("Catherine Eddows");
+			for(i =0; i < items.length; i++){
+				items[i].isPickable = false;
+			};
+			theEddowes.play();
 			break;
 			
 			case 4 :
 			console.log("Mary Jane Kelly");
+			for(i =0; i < items.length; i++){
+				items[i].isPickable = false;
+			};
+			theMjk.play();
 			break;
 			
 			case 5 :
@@ -391,6 +407,10 @@ var onPointerDown = function (evt) {
 			
 			case 7 :
 			console.log("Joseph Merrick");
+			for(i =0; i < items.length; i++){
+				items[i].isPickable = false;
+			};
+			theMerrick.play();
 			break;
 		
 		}

@@ -39,16 +39,19 @@ function createAudio(){
 	theMusic =  new BABYLON.Sound("theMusic1", "singing1.mp3", myScene, soundReady, { loop: true, autoplay: false, volume: 0.20, spatialSound: true, distanceModel: "linear", maxDistance: 15});
 	theMusic2 =  new BABYLON.Sound("theMusic2", "singing2.mp3", myScene, soundReady, { loop: true, autoplay: false, volume: 0.20, spatialSound: true, distanceModel: "linear", maxDistance: 15});
 	theEnding = new BABYLON.Sound("theEnd", "ending1.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
-
-
-	
+	theStreets = new BABYLON.Sound("theStreets", "streets1.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
+	theMerrick = new BABYLON.Sound("theMerrick", "merrick1.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
+	theStride = new BABYLON.Sound("theStride", "stride1.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
+	theMjk = new BABYLON.Sound("theMjk", "mjk1.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
+	theEddowes = new BABYLON.Sound("theEddowes", "eddowes1.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
+	theChapman = new BABYLON.Sound("theChapman", "chapman1.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
 	function soundReady() {
         soundsReady++;
-		if(soundsReady > 7){
+		if(soundsReady > 13){
 		
 			aButton.setEnabled(true);
 			aButton.isPickable = true;
-			//console.log("entered");
+			console.log(soundsReady);
 			
 			var thePub = myScene.getMeshByName("Trigger02");	
 			theMusic.setPosition(new BABYLON.Vector3(56, 0, 48));
@@ -115,6 +118,81 @@ function createAudio(){
 
 		};
 		
+		//make icons pickable after end of theMerrick
+		theMerrick.onended = function(){
+			//console.log(isComplete);
+			if (isComplete > 7){
+				theEnding.play(5);
+			}
+			else {
+				for(i =0; i < items.length; i++){
+					items[i].isPickable = true;
+				};
+			//checkEnd() 
+			};
+
+		};
+		
+		//make icons pickable after end of theStride
+		theStride.onended = function(){
+			//console.log(isComplete);
+			if (isComplete > 7){
+				theEnding.play(5);
+			}
+			else {
+				for(i =0; i < items.length; i++){
+					items[i].isPickable = true;
+				};
+			//checkEnd() 
+			};
+
+		};
+		
+		//make icons pickable after end of theMjk
+		theMjk.onended = function(){
+			//console.log(isComplete);
+			if (isComplete > 7){
+				theEnding.play(5);
+			}
+			else {
+				for(i =0; i < items.length; i++){
+					items[i].isPickable = true;
+				};
+			//checkEnd() 
+			};
+
+		};
+		
+		//make icons pickable after end of theEddowes
+		theEddowes.onended = function(){
+			//console.log(isComplete);
+			if (isComplete > 7){
+				theEnding.play(5);
+			}
+			else {
+				for(i =0; i < items.length; i++){
+					items[i].isPickable = true;
+				};
+			//checkEnd() 
+			};
+
+		};
+		
+		//make icons pickable after end of theEddowes
+		theChapman.onended = function(){
+			//console.log(isComplete);
+			if (isComplete > 7){
+				theEnding.play(5);
+			}
+			else {
+				for(i =0; i < items.length; i++){
+					items[i].isPickable = true;
+				};
+			//checkEnd() 
+			};
+
+		};
+		
 		// make icons pickable after end of dialogs
 		theEnding.onended = function(){
 			//console.log(isComplete);
@@ -149,6 +227,11 @@ function createAudio(){
 			bottle.setEnabled(true);
 			var card = myScene.getMeshByName("object05");
 			card.setEnabled(true);
+			
+			// ******************Need to add here*************************************************
+			// *****************Change the camsensor target back for Target 3 ********************
+			// *****************otherwise Merrick will not appear again **************************
+			
 			//drawMenu(myScene);
 			//createWorld();
 			//if (isComplete > 7) theEnding.play();

@@ -54,6 +54,7 @@ if (sceneNum === 0){
 			
 			//hide merrick for now
 			var aMerrick = myScene.getMeshByName("merrick");
+			aMerrick.position = new BABYLON.Vector3(-24.5168,0.25,49.4593);
 			allMerrick = aMerrick.getChildren();
 			for (i=0; i<allMerrick.length; i++){
 				allMerrick[i].setEnabled(false);
@@ -108,7 +109,7 @@ if (sceneNum === 0){
 			
 			//console.log(soundsReady);
 			//if all sounds loaded enable the start-replay button and make it pickable
-			if(soundsReady > 5) {
+			if(soundsReady > 8) {
 				aButton.setEnabled(true);
 				aButton.isPickable = true;
 				//console.log("entered");
@@ -125,27 +126,31 @@ if (sceneNum === 0){
 				//console.log("Triggers = " + allTriggers[i].name);
 				}
 				
+				allTriggers.reverse(); // get order right
+				
 				
 							
+				function hideMerrick() {
+				  for (i=0; i<allMerrick.length; i++){
+					 allMerrick[i].setEnabled(false); 
+					};
+				 camSensor.actionManager.unregisterAction(inAction2);
+				 camSensor.actionManager.unregisterAction(outAction2);
+				 camSensor.actionManager.unregisterAction(inAction3);
+				 myCamera2.attachControl(canvas, true);
+				 theSounds.play(0,0,5);
+				};
 				
-				
-				//var myMesh = allTriggers[0];
+		
 					
 						camSensor.actionManager = new BABYLON.ActionManager(myScene);
 						
 						let inAction0 = new BABYLON.ExecuteCodeAction(
-							{
-								trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, 
-								parameter: { 
-									mesh: allTriggers[0]
-								}
-							},
+							{trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: {mesh: allTriggers[0]}},
 							(evt) => {
-								//sphere.material.diffuseColor = new BABYLON.Color3(1,1,0)
-								//myMesh.isVisible = false;
-								//console.log("entered");
+								console.log("entered0");
 								theSounds.play(0, 34.5, 2.7);
-							}
+								}
 						);
 
 						let outAction0 = new BABYLON.ExecuteCodeAction(
@@ -156,13 +161,10 @@ if (sceneNum === 0){
 								}
 							},
 							(evt) => {
-								//sphere.material.diffuseColor = new BABYLON.Color3(0,0,1)
-								//myMesh.isVisible = true;
-								//console.log("left");
+								console.log("left0");
 								var aRand0 = Math.floor(Math.random() * 9);
 								theSounds.play(0,soundArray[aRand0][0], soundArray[aRand0][1]);
-								
-								//theSounds.play(0, 23.0, 7.9);
+								//llTriggers[0].setEnabled(false); 
 							}
 						);
 						
@@ -174,9 +176,7 @@ if (sceneNum === 0){
 								}
 							},
 							(evt) => {
-								//sphere.material.diffuseColor = new BABYLON.Color3(1,1,0)
-								//myMesh.isVisible = false;
-								//console.log("entered");
+								console.log("entered1");
 								theSounds.play(0, 34.5, 2.7);
 							}
 						);
@@ -189,21 +189,70 @@ if (sceneNum === 0){
 								}
 							},
 							(evt) => {
-								//sphere.material.diffuseColor = new BABYLON.Color3(0,0,1)
-								//myMesh.isVisible = true;
-								//console.log("left");
+								console.log("left1");
 								var aRand0 = Math.floor(Math.random() * 9);
 								theSounds.play(0,soundArray[aRand0][0], soundArray[aRand0][1]);
-								
-								//theSounds.play(0, 23.0, 7.9);
 							}
 						);
+						
+						
+						let inAction2 = new BABYLON.ExecuteCodeAction(
+							{
+								trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, 
+								parameter: { 
+									mesh: allTriggers[2]
+								}
+							},
+							(evt) => {
+								//console.log("entered2");
+								
+								theSounds.play(0, 12.0, 1.6);
+								for (i=0; i<allMerrick.length; i++){
+									allMerrick[i].setEnabled(true);
+								};
+								myCamera2.detachControl(canvas, true);
+								myCamera2.position.x = -24.5168;
+								var myVar = setTimeout(hideMerrick, 1500);
+								
+							}
+						);
+
+						let outAction2 = new BABYLON.ExecuteCodeAction(
+							{
+								trigger: BABYLON.ActionManager.OnIntersectionExitTrigger, 
+								parameter: { 
+									mesh: allTriggers[2]
+								}
+							},
+							(evt) => {
+								//console.log("left2");
+								var aRand0 = Math.floor(Math.random() * 9);
+								theSounds.play(0,soundArray[aRand0][0], soundArray[aRand0][1]);
+								}
+						);
+						
+						let inAction3 = new BABYLON.ExecuteCodeAction(
+							{
+								trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, 
+								parameter: { 
+									mesh: allTriggers[3]
+								}
+							},
+							(evt) => {
+								console.log("entered3");
+								//theSounds.play(0, 12.0, 1.6);
+								var myVar = setTimeout(hideMerrick, 100);
+							}
+						);
+						
 				
 			camSensor.actionManager.registerAction(inAction0);
 			camSensor.actionManager.registerAction(outAction0);
 			camSensor.actionManager.registerAction(inAction1);
 			camSensor.actionManager.registerAction(outAction1);	
-				
+			camSensor.actionManager.registerAction(inAction2);
+			camSensor.actionManager.registerAction(outAction2);	
+			camSensor.actionManager.registerAction(inAction3);		
 				
 				
 			var aMenu = drawMenu(myScene);
