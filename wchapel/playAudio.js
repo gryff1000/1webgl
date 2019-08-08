@@ -75,7 +75,7 @@ function createAudio(){
 	// set the fog, and change active camera	
 		theStart.onended = function(){
 			myScene.clearColor = new BABYLON.Color3(.0509,0.0509,0.0509);
-			myScene.fogDensity = .03;
+			myScene.fogDensity = .1;
 			myScene.fogColor = new BABYLON.Color3(.0509,0.0509,0.0509);
 			myScene.activeCamera = myCamera2;
 			
