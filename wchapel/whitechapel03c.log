@@ -6,10 +6,66 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		inline textures:  false
 		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\whitechapel03\
 	Python World class constructor completed
-	processing begun of mesh:  street.002
+	processing begun of mesh:  street.miller
 		processing begun of Standard material:  street
 			Diffuse texture found "cobbles"
 				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  12
+		num normals        :  12
+		num uvs            :  24
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  wall_post07
+		processing begun of Standard material:  lampost
+		num positions      :  49
+		num normals        :  49
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  204
+	processing begun of mesh:  wall_light07
+		processing begun of Standard material:  publight
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
+	processing begun of mesh:  street.brick
+		registered as also a user of material:  street
+		num positions      :  9
+		num normals        :  9
+		num uvs            :  18
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
+	processing begun of mesh:  wall_post06
+		registered as also a user of material:  lampost
+		num positions      :  24
+		num normals        :  24
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  wall_lamp05.001
+		registered as also a user of material:  lampost
+		num positions      :  25
+		num normals        :  25
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  120
+	processing begun of mesh:  wall_light05.001
+		registered as also a user of material:  publight
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
+	processing begun of mesh:  street.hanbury
+		registered as also a user of material:  street
 		num positions      :  16
 		num normals        :  16
 		num uvs            :  32
@@ -17,7 +73,7 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num colors         :  0
 		num indices        :  54
 	processing begun of mesh:  wall_post05
-		processing begun of Standard material:  lampost
+		registered as also a user of material:  lampost
 		num positions      :  24
 		num normals        :  24
 		num uvs            :  0
@@ -33,7 +89,7 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num colors         :  0
 		num indices        :  120
 	processing begun of mesh:  wall_light05
-		processing begun of Standard material:  publight
+		registered as also a user of material:  publight
 		num positions      :  8
 		num normals        :  8
 		num uvs            :  0
@@ -554,12 +610,12 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num indices        :  30
 	processing begun of mesh:  street
 		registered as also a user of material:  street
-		num positions      :  243
-		num normals        :  243
-		num uvs            :  486
+		num positions      :  240
+		num normals        :  240
+		num uvs            :  480
 		num uvs2           :  0
 		num colors         :  0
-		num indices        :  1116
+		num indices        :  1056
 	processing begun of mesh:  wall01.L
 		processing begun of Standard material:  buildings02
 			Diffuse texture found "build_text"
@@ -1064,30 +1120,14 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  513
-	processing begun of mesh:  pub2_back door
-		registered as also a user of material:  doors
-		num positions      :  19
-		num normals        :  19
-		num uvs            :  38
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  24
-	processing begun of mesh:  pub2_doors.L1
-		registered as also a user of material:  doors
-		num positions      :  8
-		num normals        :  8
-		num uvs            :  16
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  12
 	processing begun of mesh:  pub2_doors.L2
 		registered as also a user of material:  doors
-		num positions      :  9
-		num normals        :  9
-		num uvs            :  18
-		num uvs2           :  0
+		num positions      :  52
+		num normals        :  52
+		num uvs            :  104
+		num uvs2           :  104
 		num colors         :  0
-		num indices        :  12
+		num indices        :  72
 	processing begun of mesh:  pub2_windows.L1
 		registered as also a user of material:  windows
 		num positions      :  86
@@ -1112,16 +1152,6 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  240
-	processing begun of mesh:  pub_door
-		processing begun of Standard material:  workhouse
-			Diffuse texture found "workhouse"
-				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
-		num positions      :  16
-		num normals        :  16
-		num uvs            :  32
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  24
 	processing begun of mesh:  pub_small window
 		registered as also a user of material:  windows
 		num positions      :  25
@@ -1327,7 +1357,9 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num colors         :  0
 		num indices        :  24
 	processing begun of mesh:  workhouse.F
-		registered as also a user of material:  workhouse
+		processing begun of Standard material:  workhouse
+			Diffuse texture found "workhouse"
+				Image texture found, type:  diffuseTexture, mapped using: "UVTex"
 		num positions      :  279
 		num normals        :  279
 		num uvs            :  558
@@ -1656,6 +1688,8 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  24
+	processing begun of light (POINT):  Point.010
+	processing begun of light (POINT):  Point.009
 	processing begun of light (POINT):  Point.008
 	processing begun of light (POINT):  Point.007
 	processing begun of light (POINT):  Point.006
@@ -1669,4 +1703,4 @@ Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
 ========= Writing of scene file started =========
 ========= Writing of scene file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.0781 secs
+elapsed time:  0 min, 4.2344 secs
