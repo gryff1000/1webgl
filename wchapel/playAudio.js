@@ -78,7 +78,7 @@ function createAudio(){
 			myScene.fogDensity = .1;
 			myScene.fogColor = new BABYLON.Color3(.0509,0.0509,0.0509);
 			myScene.activeCamera = myCamera2;
-			theSounds.play(0,14,9.2);
+			theSounds.play(0,37.5,6.65);
 			
 			myScene.beginAnimation(aMerrick, 0, 40, false, 2,function() {
 				//console.log("Animation ended");
