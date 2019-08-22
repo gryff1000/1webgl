@@ -1,0 +1,32 @@
+Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\shapekeys\
+	Python World class constructor completed
+	processing begun of skeleton:  Armature, id:  0
+		processing begun of bone:  Bone, index:  0
+		processing action KeyAction:  in[0 - 151], out[0 - 151]
+	processing begun of mesh:  Male_Head
+		processing begun of Standard material:  skin
+		num positions      :  1498
+		num normals        :  1498
+		num uvs            :  2996
+		num uvs2           :  2996
+		num colors         :  0
+		num indices        :  7446
+		Skeleton stats:  
+			Total Influencers:  1498
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  1498
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  5992
+		Shape Keys:
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of light (HEMI):  Lamp
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.0781 secs

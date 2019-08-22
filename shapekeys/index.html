@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BABYLON - Menu Test</title>
+
+    <!--Loading babylon engine -->
+    <!--<script src ="../hand.js"></script>-->
+	
+	<!--<script src="../babylon.2.3.js"></script>-->
+	<!--<script src="../babylon.fireMaterial.js"></script>-->
+	 <script src="../babylon4.1a5.js"></script>
+	<script src="../pep.js"></script>
+	 
+	 <!--sound -->
+	<!--<script src= "../howler.js"></script>-->
+    
+	<!--Loading scene control & creation-->
+	<!--<script src ="maze1.js"></script>-->
+	<!--<script src ="draw.js"></script>
+    <script src ="loader.js"></script>
+    <script src ="createScene.js"></script>
+	<script src ="draw.js"></script>-->
+	<!--<script src ="talk1.js"></script> -->
+	<script src ="playAudio.js"></script>
+	<!--<script src="babylon.fireMaterial.js"></script> -->
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	
+	<div id = "fps">0</div>
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var aHead;
+			var myScene = new BABYLON.Scene(engine);
+			
+			//Use your file name at xxxxx
+			BABYLON.SceneLoader.Append("", "loqu3_30_2.babylon", myScene);
+                myScene.executeWhenReady(function () {
+                    
+					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
+					var cameraFlag = 0;
+					
+					// which camera is active Arc Rotate or Blender Free Camera
+					
+					if (cameraFlag == 1){
+						var myCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), myScene);
+						myCamera.setPosition(new BABYLON.Vector3(1, 2, -4));
+						myCamera.speed = .1;
+						myCamera.wheelPrecision = 250;
+						myCamera.fov = .8;
+						
+						myScene.activeCamera = myCamera;
+					
+					}
+					else {
+						var myCamera2 = myScene.getCameraByName("Camera");
+						myCamera2.speed = .1;
+						//myCamera2.setPosition(new BABYLON.Vector3(0, 1.5, -4));
+						myScene.activeCamera = myCamera2;
+					}
+					
+					
+					
+					// Then attach the activeCamera to the canvas.
+					myScene.activeCamera.attachControl(canvas);
+					//console.log(myBone);
+					//var aCube1 = newScene.getMeshByName("cube1");
+					//var aRange = aCube1.getRange("action.slide1");
+					//console.log(aRange);
+					//newScene.beginAnimation("action.slide1");
+					
+					createAudio();
+					
+					aHead = myScene.getMeshByName("Male_Head");
+					aHead.isPickable = true;
+					//var targets;
+					//for ( i = 0; i < aFlag.morphTargetManager.numInfluencers;  i++) {
+						//targets = aHead.morphTargetManager.getTarget(1).influence;
+						//console.log(targets);
+					
+					//aHead.morphTargetManager.getTarget(1).influence = 0;
+					//targets = aHead.morphTargetManager.getTarget(0).influence;
+					//console.log(targets);
+					
+					//console.log(aCube2);
+					//newScene.beginAnimation(aFlag, 1, 30, false, .5);
+					
+                    //newScene.activeCamera.attachControl(canvas);
+					//var skeleton = newScene.getSkeletonById(0);
+					//var myBone = skeleton.bones[28].name;
+					//console.log(myBone);
+					//change these parameters as necessary for start and end frames of animation, looping, and speed
+					
+					//newScene.stopAnimation();
+					//newScene.beginAnimation(skeleton, 1, 137, true, 1);
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+						divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        myScene.render();
+                    });
+                });
+            }//, function (progress) {
+                // To do: give progress feedback to user
+            //});
+        //}
+
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+	// When a key is pressed
+		window.addEventListener('keydown',function(event){
+			
+			
+			//if (event.keyCode === 73)
+			//{
+				
+				switch (event.keyCode) {
+				
+					case 85://
+						console.log("U");
+						index = 0;
+						theTobe.play();
+						createMotion();
+						//console.log(aLamp.intensity);
+						//aLamp.intensity = aLamp.intensity + 0.1;
+					break;
+				
+					case 68:
+						console.log("D")
+						//aLamp.intensity = aLamp.intensity - 0.1;
+					break;
+					
+					default:
+					console.log("other")
+					break;
+				
+				}
+			  
+			//}
+
+		});
+	
+/*
+canvas.addEventListener("pointerdown", onPointerDown, false);
+canvas.addEventListener("pointerup", onPointerUp, false);	
+		
+	
+var onPointerUp = function() { isDown = false};	
+	
+var onPointerDown = function (evt) {
+	
+	isDown = true;
+	var pickInfo = myScene.pick(myScene.pointerX, myScene.pointerY);
+	//if(pickInfo.pickedMesh.name.length > 6) return;
+	if (pickInfo.hit) {
+		var theMesh = pickInfo.pickedMesh;
+		var whichObject = pickInfo.pickedMesh.name.substring(0,1); 
+		console.log("which type = " + whichObject);
+		
+		
+		if(whichObject === "a") {
+		
+		//var whichItem = Number(pickInfo.pickedMesh.name.substring(6));
+		//console.log("The Item = " + whichItem);
+		
+		switch(whichObject) {
+		
+			case a :	
+				//Brick lane
+				//theSounds.play(0, 12.000, 1.600);
+				//theMesh.isPickable = false;
+				console.log("clicked");
+				break;
+		
+				
+	}
+		
+};	
+	
+	//else {console.log("missed");}
+}};
+*/		
+    </script>
+</body>
+</html>
