@@ -1,0 +1,220 @@
+Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  true
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\crypt2\
+	Python World class constructor completed
+	processing begun of mesh:  Column.002
+		processing begun of Standard material:  Material_column
+			Diffuse texture found "column"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  27
+		num normals        :  27
+		num uvs            :  54
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  72
+	processing begun of mesh:  Column.001
+		mesh is an instance of :  Column.002.  Processing halted.
+	processing begun of mesh:  Column.000
+		mesh is an instance of :  Column.002.  Processing halted.
+	processing begun of mesh:  Column.003
+		mesh is an instance of :  Column.002.  Processing halted.
+	processing begun of node:  doors
+	processing begun of mesh:  door04
+		processing begun of Standard material:  door
+			Diffuse texture found "old_door"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of mesh:  door03
+		mesh is an instance of :  door04.  Processing halted.
+	processing begun of mesh:  door02
+		mesh is an instance of :  door04.  Processing halted.
+	processing begun of mesh:  door01
+		mesh is an instance of :  door04.  Processing halted.
+	processing begun of mesh:  walls.001
+		processing begun of Standard material:  Material
+			Diffuse texture found "wall"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  90
+		num normals        :  90
+		num uvs            :  180
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  90
+		WARNING: # of 0 area faces found:  8
+	processing begun of node:  skels
+	processing begun of mesh:  skel01
+		processing begun of Standard material:  skeleton
+			Diffuse texture found "Texture"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  14
+		num normals        :  14
+		num uvs            :  28
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  skel02
+		mesh is an instance of :  skel01.  Processing halted.
+	processing begun of mesh:  skel03
+		mesh is an instance of :  skel01.  Processing halted.
+	processing begun of mesh:  skel04
+		mesh is an instance of :  skel01.  Processing halted.
+	processing begun of mesh:  skel05
+		mesh is an instance of :  skel01.  Processing halted.
+	processing begun of mesh:  skel06
+		mesh is an instance of :  skel01.  Processing halted.
+	processing begun of mesh:  skel07
+		mesh is an instance of :  skel01.  Processing halted.
+	processing begun of mesh:  skel08
+		mesh is an instance of :  skel01.  Processing halted.
+	processing begun of mesh:  skel09
+		mesh is an instance of :  skel01.  Processing halted.
+	processing begun of mesh:  floor
+		processing begun of Standard material:  floor
+			Diffuse texture found "floor"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  28
+		num normals        :  28
+		num uvs            :  56
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  78
+	processing begun of mesh:  walls
+		registered as also a user of material:  Material
+		num positions      :  336
+		num normals        :  336
+		num uvs            :  672
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  336
+	processing begun of node:  coffins
+	processing begun of mesh:  coffin09
+		processing begun of Standard material:  Material.001
+		num positions      :  84
+		num normals        :  84
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  coffin08
+		mesh is an instance of :  coffin09.  Processing halted.
+	processing begun of mesh:  coffin06
+		mesh is an instance of :  coffin09.  Processing halted.
+	processing begun of mesh:  coffin05
+		mesh is an instance of :  coffin09.  Processing halted.
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  coffin03
+		mesh is an instance of :  coffin09.  Processing halted.
+	processing begun of mesh:  coffin02
+		mesh is an instance of :  coffin09.  Processing halted.
+	processing begun of mesh:  coffin07
+		mesh is an instance of :  coffin09.  Processing halted.
+	processing begun of mesh:  coffin04
+		mesh is an instance of :  coffin09.  Processing halted.
+	processing begun of mesh:  coffin01
+		mesh is an instance of :  coffin09.  Processing halted.
+	processing begun of node:  lids
+	processing begun of mesh:  lid00
+		animation processing begun
+			processing action Action.rot:  in[1 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  lid01
+		animation processing begun
+			processing action Action.rot:  in[0 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  lid02
+		animation processing begun
+			processing action Action.rot:  in[0 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  lid03
+		animation processing begun
+			processing action Action.rot:  in[0 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  lid04
+		animation processing begun
+			processing action Action.rot:  in[1 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  lid05
+		animation processing begun
+			processing action Action.rot:  in[1 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  lid06
+		animation processing begun
+			processing action Action.rot:  in[1 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  lid07
+		animation processing begun
+			processing action Action.rot:  in[1 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  lid08
+		animation processing begun
+			processing action Action.rot:  in[1 - 61], out[0 - 61]
+		registered as also a user of material:  Material.001
+		num positions      :  16
+		num normals        :  16
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of light (HEMI):  Hemi.001
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.7031 secs
