@@ -24,8 +24,8 @@ function createWorld(){
 	
 	
 if (sceneNum === 0){
-		//startCamera = new BABYLON.FreeCamera("start",new BABYLON.Vector3(0,1,195),myScene);
-		//myScene.activeCamera = startCamera;
+		startCamera = new BABYLON.FreeCamera("start",new BABYLON.Vector3(0,1,195),myScene);
+		myScene.activeCamera = startCamera;
 		
 		
 		//BABYLON.SceneLoader.Append("", "menu6.babylon", myScene);
