@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BABYLON - Menu Test</title>
+
+    <!--Loading babylon engine -->
+    <!--<script src ="../hand.js"></script>-->
+	
+	<!--<script src="../babylon.2.3.js"></script>-->
+	<!--<script src="../babylon.fireMaterial.js"></script>-->
+	 <script src="../babylon4.1a5.js"></script>
+	<script src="../pep.js"></script>
+	 
+	 <!--sound -->
+	<!--<script src= "../howler.js"></script>-->
+    
+	<!--Loading scene control & creation-->
+	<!--<script src ="maze1.js"></script>-->
+	<!--<script src ="draw.js"></script>-->
+    <script src ="loader2.js"></script>
+   <script src ="createScene2.js"></script>
+	<!-- <script src ="draw.js"></script>-->
+	<!--<script src ="talk1.js"></script> -->
+	<script src ="playAudio.js"></script>
+	<!--<script src="babylon.fireMaterial.js"></script> -->
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	
+	<div id = "fps">0</div>
+	
+    <canvas id="renderCanvas"></canvas>
+    
+</body>
+</html>
