@@ -1,0 +1,181 @@
+Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\weapons2\
+	Python World class constructor completed
+	processing begun of skeleton:  base_clothes, id:  0
+		processing begun of bone:  hips, index:  0
+		processing begun of bone:  thigh.L, index:  1
+		processing begun of bone:  shin.L, index:  2
+		processing begun of bone:  foot.L, index:  3
+		processing begun of bone:  toe.L, index:  4
+		processing begun of bone:  thigh.R, index:  5
+		processing begun of bone:  shin.R, index:  6
+		processing begun of bone:  foot.R, index:  7
+		processing begun of bone:  toe.R, index:  8
+		processing begun of bone:  spine, index:  9
+		processing begun of bone:  chest, index:  10
+		processing begun of bone:  clavicle.R, index:  11
+		processing begun of bone:  upper_arm.R, index:  12
+		processing begun of bone:  forearm.R, index:  13
+		processing begun of bone:  hand.R, index:  14
+		processing begun of bone:  thumb.02.R, index:  15
+		processing begun of bone:  thumb.03.R, index:  16
+		processing begun of bone:  f_ring.01.R, index:  17
+		processing begun of bone:  f_index.01.R, index:  18
+		processing begun of bone:  clavicle.L, index:  19
+		processing begun of bone:  upper_arm.L, index:  20
+		processing begun of bone:  forearm.L, index:  21
+		processing begun of bone:  hand.L, index:  22
+		processing begun of bone:  thumb.02.L, index:  23
+		processing begun of bone:  thumb.03.L, index:  24
+		processing begun of bone:  f_ring.01.L, index:  25
+		processing begun of bone:  f_index.01.L, index:  26
+		processing begun of bone:  neck, index:  27
+		processing begun of bone:  head, index:  28
+		processing begun of bone:  jaw, index:  29
+		processing begun of bone:  eye.R, index:  30
+		processing begun of bone:  eye.L, index:  31
+		processing action stand:  in[1 - 31], out[0 - 31]
+	processing begun of mesh:  swordx1
+		processing begun of Standard material:  Material
+		num positions      :  36
+		num normals        :  36
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  swordz
+		registered as also a user of material:  Material
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  swordx
+		registered as also a user of material:  Material
+		processing begun of Standard material:  top
+		processing begun of Standard material:  green
+		processing begun of multimaterial:  sword_anim2new.Multimaterial#0
+		num positions      :  36
+		num normals        :  36
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  swordy
+		registered as also a user of material:  Material
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  base_clothes:Low-Poly
+		processing begun of Standard material:  base_clothes:Low-Poly:Eye_brown
+			Diffuse texture found "base_clothes:Low-Poly:diffuse"
+				Image texture found, type:  diffuseTexture, mapped using: "Texture"
+		num positions      :  96
+		num normals        :  96
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  516
+		Skeleton stats:  
+			Total Influencers:  104
+			Avg # of influencers per vertex:  1.0833
+			Highest # of influencers observed:  2, num vertices with this:  8
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  base_clothes:mhair02
+		processing begun of Standard material:  base_clothes:mhair02:mhair02black
+			Diffuse texture found "base_clothes:mhair02:diffuse"
+				Image texture found, type:  diffuseTexture, mapped using: "Texture"
+		num positions      :  2424
+		num normals        :  2424
+		num uvs            :  4848
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  10380
+		Skeleton stats:  
+			Total Influencers:  2742
+			Avg # of influencers per vertex:  1.1312
+			Highest # of influencers observed:  4, num vertices with this:  11
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  9696
+	processing begun of mesh:  base_clothes:Tshirt01
+		processing begun of Standard material:  base_clothes:Tshirt01:TShirtWhite
+			Diffuse texture found "base_clothes:Tshirt01:diffuse"
+				Image texture found, type:  diffuseTexture, mapped using: "Texture"
+			Bump texture found "base_clothes:Tshirt01:normal"
+				Image texture found, type:  bumpTexture, mapped using: "Texture"
+		num positions      :  1430
+		num normals        :  1430
+		num uvs            :  2860
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6624
+		Skeleton stats:  
+			Total Influencers:  2821
+			Avg # of influencers per vertex:  1.9727
+			Highest # of influencers observed:  4, num vertices with this:  12
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  5720
+	processing begun of mesh:  base_clothes:jeans01
+		processing begun of Standard material:  base_clothes:jeans01:jeans01Material
+			Diffuse texture found "base_clothes:jeans01:diffuse"
+				Image texture found, type:  diffuseTexture, mapped using: "Texture"
+			Bump texture found "base_clothes:jeans01:normal"
+				Image texture found, type:  bumpTexture, mapped using: "Texture"
+		num positions      :  1065
+		num normals        :  1065
+		num uvs            :  2130
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5136
+		Skeleton stats:  
+			Total Influencers:  1877
+			Avg # of influencers per vertex:  1.7624
+			Highest # of influencers observed:  3, num vertices with this:  92
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  4260
+	processing begun of mesh:  base_clothes:shoes02
+		processing begun of Standard material:  base_clothes:shoes02:SportShoes
+			Diffuse texture found "base_clothes:shoes02:diffuse"
+				Image texture found, type:  diffuseTexture, mapped using: "Texture"
+		num positions      :  1655
+		num normals        :  1655
+		num uvs            :  3310
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  7680
+		Skeleton stats:  
+			Total Influencers:  1655
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  1655
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  6620
+	processing begun of mesh:  base_clothes:Body
+		processing begun of Standard material:  base_clothes:Skin
+		num positions      :  10191
+		num normals        :  10191
+		num uvs            :  20382
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  47994
+		Skeleton stats:  
+			Total Influencers:  13877
+			Avg # of influencers per vertex:  1.3617
+			Highest # of influencers observed:  3, num vertices with this:  449
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  40764
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 20.4062 secs
