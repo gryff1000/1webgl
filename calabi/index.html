@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Calabi-Yau Manifold</title>
+    <script src="../hand.js"></script>
+    <script src="../babylon.2.5.js"></script>
+	<!--<script src="../howler.js"></script> -->
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		
+		font-size: 16px;
+		color: white;
+		top: 90%;
+		left: 2%;
+		width: 900px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+		#pick {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 1000px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<!--<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	<div id = "pick">-------</div>-->
+	<div id = "credits">The Calabi-Yau Manifold model by "carlafonda" at the International Centre for Theoretical Physics (ICTP) in Trieste, Italy. 
+	</br>Based on an original model by Professor Oliver Knill from Harvard University</div>
+	
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divPick = document.getElementById("pick");
+			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			
+
+			
+            BABYLON.SceneLoader.Load("", "calabi01.babylon", engine, function (newScene) {
+                newScene.executeWhenReady(function () {
+                    
+					myCamera = newScene.getCameraByName("Camera")
+					myCamera.maxZ = 500;
+					myCamera.speed = .1;
+					myCamera.wheelPrecision = 100;
+					
+					// Attach camera to canvas inputs or if fixed do not.
+					
+                    newScene.activeCamera.attachControl(canvas);
+					
+					//create skybox
+					var skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, newScene);
+					var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", newScene);
+					skyboxMaterial.backFaceCulling = false;
+					//skybox.infiniteDistance = true;
+					skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("skybox/myfirststars1", newScene);
+					skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+					skyboxMaterial.diffuseColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+					skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+					skybox.material = skyboxMaterial;
+					
+					
+					
+					myScene = newScene;
+					/*
+					// limit rotation Dad72 code
+					myScene.registerBeforeRender(function () {		            
+						if (myCamera.beta < .85)
+							{myCamera.beta = .85;}
+						else if (myCamera.beta > (Math.PI / 2) * 0.95)
+							{myCamera.beta = (Math.PI / 2) * 0.95;}
+						if (myCamera.alpha < -1)
+							{myCamera.alpha = -1;}
+						else if (myCamera.alpha > (Math.PI / 2) * 0.35)
+							{myCamera.alpha = (Math.PI / 2) * 0.35;}
+					});
+					*/
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					//divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					//divPick.innerHTML = "Total vertices: " + myScene.getTotalVertices();
+                    myScene.render();
+                    });
+                });
+				
+				
+				
+            }, function (progress) {
+                // To do: give progress feedback to user
+            });
+        }
+		
+		/*
+		var sound = new Howl({  
+		urls: ['there_is_romance2.mp3'],
+		autoplay: true,  
+		loop: true, 
+		volume: 0.4,
+		});
+		
+		*/
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+		
+		 
+		
+		
+    </script>
+</body>
+</html>
