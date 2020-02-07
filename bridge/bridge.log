@@ -1,0 +1,318 @@
+Exporter version: 6.2.4, Blender version: 2.81 (sub 16)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory   :  F:\downloads\blender\models\bridge\bjs2\
+	Python World class constructor completed
+	WARNING: The following camera not visible in scene thus ignored: Camera
+	processing begun of mesh:  Terrain
+		processing begun of material:  Material.001
+			processing texture ground_colour
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  319
+		num normals        :  319
+		num tangents       :  0
+		num uvs            :  638
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  678
+	processing begun of mesh:  Water
+		processing begun of material:  Material.002
+			processing texture water_colour
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  142
+		num normals        :  142
+		num tangents       :  0
+		num uvs            :  284
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  240
+	processing begun of mesh:  grass pack.004
+		processing begun of material:  grass pack
+			processing texture grass_pack_more_saturated
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  48
+		num normals        :  48
+		num tangents       :  0
+		num uvs            :  96
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  162
+	processing begun of mesh:  grass pack.006
+		mesh is an instance of :  grass pack.004.  Processing halted.
+	processing begun of mesh:  grass pack.007
+		mesh is an instance of :  grass pack.004.  Processing halted.
+	processing begun of mesh:  grass pack.008
+		mesh is an instance of :  grass pack.004.  Processing halted.
+	processing begun of mesh:  grass pack.009
+		mesh is an instance of :  grass pack.004.  Processing halted.
+	processing begun of mesh:  grass pack.010
+		mesh is an instance of :  grass pack.004.  Processing halted.
+	processing begun of mesh:  grass pack.012
+		processing begun of material:  grass pack
+		registered as also a user of material:  grass pack
+		num positions      :  48
+		num normals        :  48
+		num tangents       :  0
+		num uvs            :  96
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  162
+	processing begun of mesh:  grass pack.013
+		mesh is an instance of :  grass pack.012.  Processing halted.
+	processing begun of mesh:  grass pack.014
+		mesh is an instance of :  grass pack.004.  Processing halted.
+	processing begun of mesh:  grass pack.019
+		mesh is an instance of :  grass pack.012.  Processing halted.
+	processing begun of mesh:  grass pack.020
+		mesh is an instance of :  grass pack.012.  Processing halted.
+	processing begun of mesh:  PinkPlant01
+		processing begun of material:  grass pack
+		registered as also a user of material:  grass pack
+		num positions      :  51
+		num normals        :  51
+		num tangents       :  0
+		num uvs            :  102
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  54
+	processing begun of mesh:  PinkPlant01a
+		mesh is an instance of :  PinkPlant01.  Processing halted.
+	processing begun of mesh:  PinkPlant01b
+		mesh is an instance of :  PinkPlant01.  Processing halted.
+	processing begun of mesh:  PinkPlant01c
+		mesh is an instance of :  PinkPlant01.  Processing halted.
+	processing begun of mesh:  PinkPlant01d
+		mesh is an instance of :  PinkPlant01.  Processing halted.
+	processing begun of mesh:  PinkPlant01e
+		mesh is an instance of :  PinkPlant01.  Processing halted.
+	processing begun of mesh:  PinkPlant01f
+		mesh is an instance of :  PinkPlant01.  Processing halted.
+	processing begun of mesh:  PinkPlant01g
+		mesh is an instance of :  PinkPlant01.  Processing halted.
+	processing begun of mesh:  PinkPlant01h
+		mesh is an instance of :  PinkPlant01.  Processing halted.
+	processing begun of mesh:  YellowPlant01
+		processing begun of material:  grass pack
+		registered as also a user of material:  grass pack
+		num positions      :  51
+		num normals        :  51
+		num tangents       :  0
+		num uvs            :  102
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  54
+	processing begun of mesh:  YellowPlant02
+		processing begun of material:  grass pack
+		registered as also a user of material:  grass pack
+		num positions      :  51
+		num normals        :  51
+		num tangents       :  0
+		num uvs            :  102
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  54
+	processing begun of mesh:  aPlank1.A
+		processing begun of material:  Material.003
+			processing texture wooden_bridge
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  62
+		num normals        :  62
+		num tangents       :  0
+		num uvs            :  124
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  beam_lower.B
+		processing begun of material:  Material.003
+		registered as also a user of material:  Material.003
+		num positions      :  144
+		num normals        :  144
+		num tangents       :  0
+		num uvs            :  288
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  204
+	processing begun of mesh:  beam_upper.B
+		processing begun of material:  Material.003
+		registered as also a user of material:  Material.003
+		num positions      :  148
+		num normals        :  148
+		num tangents       :  0
+		num uvs            :  296
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  216
+	processing begun of mesh:  support01
+		processing begun of material:  Material.003
+		registered as also a user of material:  Material.003
+		num positions      :  63
+		num normals        :  63
+		num tangents       :  0
+		num uvs            :  126
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  aPlank2.D
+		processing begun of material:  Material.003
+		registered as also a user of material:  Material.003
+		num positions      :  114
+		num normals        :  114
+		num tangents       :  0
+		num uvs            :  228
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  180
+	processing begun of mesh:  aPlank2.A
+		mesh is an instance of :  aPlank2.D.  Processing halted.
+	processing begun of mesh:  aPlank1.B
+		mesh is an instance of :  aPlank1.A.  Processing halted.
+	processing begun of mesh:  aPlank2.B
+		mesh is an instance of :  aPlank2.D.  Processing halted.
+	processing begun of mesh:  aPlank2.C
+		mesh is an instance of :  aPlank2.D.  Processing halted.
+	processing begun of mesh:  aPlank1.C
+		mesh is an instance of :  aPlank1.A.  Processing halted.
+	processing begun of mesh:  afront_post.R
+		processing begun of material:  Material.003
+		registered as also a user of material:  Material.003
+		num positions      :  63
+		num normals        :  63
+		num tangents       :  0
+		num uvs            :  126
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  beam_lower.F
+		mesh is an instance of :  beam_lower.B.  Processing halted.
+	processing begun of mesh:  beam_upper.F
+		mesh is an instance of :  beam_upper.B.  Processing halted.
+	processing begun of node:  Empty
+	processing begun of mesh:  support02
+		mesh is an instance of :  support01.  Processing halted.
+	processing begun of mesh:  support03
+		mesh is an instance of :  support01.  Processing halted.
+	processing begun of mesh:  aback_post.R
+		mesh is an instance of :  afront_post.R.  Processing halted.
+	processing begun of mesh:  afront_post.L
+		mesh is an instance of :  afront_post.R.  Processing halted.
+	processing begun of mesh:  aback_post.L
+		mesh is an instance of :  afront_post.R.  Processing halted.
+	processing begun of mesh:  support04
+		mesh is an instance of :  support01.  Processing halted.
+	processing begun of mesh:  support05
+		mesh is an instance of :  support01.  Processing halted.
+	processing begun of mesh:  support03.001
+		mesh is an instance of :  support01.  Processing halted.
+	processing begun of mesh:  stroneR01
+		processing begun of material:  stones
+			processing texture stones_Base_Color
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  62
+		num normals        :  62
+		num tangents       :  0
+		num uvs            :  124
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  stoneR03
+		processing begun of material:  stones
+		registered as also a user of material:  stones
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  big_rockL01
+		processing begun of material:  stones
+		registered as also a user of material:  stones
+		num positions      :  233
+		num normals        :  233
+		num tangents       :  0
+		num uvs            :  466
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  564
+		WARNING: # of 0 area faces found:  2
+	processing begun of mesh:  small_rockR01
+		processing begun of material:  stones
+		registered as also a user of material:  stones
+		num positions      :  43
+		num normals        :  43
+		num tangents       :  0
+		num uvs            :  86
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  66
+	processing begun of mesh:  small_rockL01
+		processing begun of material:  stones
+		registered as also a user of material:  stones
+		num positions      :  43
+		num normals        :  43
+		num tangents       :  0
+		num uvs            :  86
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  66
+	processing begun of mesh:  stoneL02
+		processing begun of material:  stones
+		registered as also a user of material:  stones
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  84
+	processing begun of mesh:  small_rockR02
+		processing begun of material:  stones
+		registered as also a user of material:  stones
+		num positions      :  43
+		num normals        :  43
+		num tangents       :  0
+		num uvs            :  86
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  66
+	processing begun of mesh:  big_rockR01
+		mesh is an instance of :  big_rockL01.  Processing halted.
+	processing begun of mesh:  stoneL01
+		mesh is an instance of :  stroneR01.  Processing halted.
+	processing begun of mesh:  stoneL03
+		mesh is an instance of :  stoneR03.  Processing halted.
+	processing begun of mesh:  stoneR02
+		mesh is an instance of :  stoneL02.  Processing halted.
+	processing begun of light (HEMI FROM AREA):  Area.001
+	processing begun of light (HEMI FROM AREA):  Area
+========= Writing of JSON file started =========
+	writing mesh:  Terrain
+	writing mesh:  Water
+	writing mesh:  grass pack.004
+	writing mesh:  grass pack.012
+	writing mesh:  PinkPlant01
+	writing mesh:  YellowPlant01
+	writing mesh:  YellowPlant02
+	writing mesh:  aPlank1.A
+	writing mesh:  beam_lower.B
+	writing mesh:  beam_upper.B
+	writing mesh:  support01
+	writing mesh:  aPlank2.D
+	writing mesh:  afront_post.R
+	writing mesh:  stroneR01
+	writing mesh:  stoneR03
+	writing mesh:  big_rockL01
+	writing mesh:  small_rockR01
+	writing mesh:  small_rockL01
+	writing mesh:  stoneL02
+	writing mesh:  small_rockR02
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.3482 secs
