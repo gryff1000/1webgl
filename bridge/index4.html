@@ -76,6 +76,7 @@
         if (BABYLON.Engine.isSupported()) {
             var canvas = document.getElementById("renderCanvas");
             var engine = new BABYLON.Engine(canvas, true);
+	var myCamera;
 			
 			// getting compressed textures if available
 			//var available = ['-astc.ktx', '-dxt.ktx', '-pvrtc.ktx', '-etc2.ktx', '-etc1.ktx'];
@@ -128,7 +129,7 @@
 					// which camera is active BJS Arc Rotate or Blender Camera
 					
 					if (cameraFlag == 1){
-						var myCamera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 3, 60, new BABYLON.Vector3(0,0,0), myScene);
+						myCamera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 3, 60, new BABYLON.Vector3(0,0,0), myScene);
 						myCamera.setPosition(new BABYLON.Vector3(0, 1, -4));
 						myCamera.speed = .1;
 						myCamera.wheelPrecision = 500;
