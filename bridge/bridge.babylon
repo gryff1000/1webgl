@@ -1,5 +1,5 @@
 {"producer":{"name":"Blender","version":"2.81 (sub 16)","exporter_version":"6.2.4","file":"bridge.babylon"},
-"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-9.81,0],
+"autoClear":true,"clearColor":[0.0,0.0,0.0],"gravity":[0,-9.81,0],
 "materials":[{"name":"Material.001","id":"Material.001","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"specular":[0,0,0],"specularPower":0,"alpha":1,"indexOfRefraction":0.6897, 
 "diffuseTexture":{"name":"ground colour.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}},
 {"name":"Material.002","id":"Material.002","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"specular":[0,0,0],"specularPower":23.2727,"alpha":1,"indexOfRefraction":0.6897, 
