@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Low-poly Bridge by Grant Abbitt</title>
+    <!--<script src="../hand.js"></script> -->
+	 <script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<!--<script src="../babylon.1.14.js"></script>-->
+	<!--<script src="../howler.js"></script> -->
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px;
+		display:block
+		}
+		
+		#credits {
+		position: absolute;
+		left:25%;
+		top:90%;
+		width:50%;
+		height: 30px;
+		background-color: black;
+		line-height: 150%;
+		text-align: center;
+		font-size: 20px;
+		color: white;
+		
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id = "fps">0</div>
+	
+
+	<div id ="credits">Grant Abbitt's Low-Poly Bridge and Terrain in 3D in a web browser</div>
+
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var myCamera;
+		
+			var divFps = document.getElementById("fps");
+			//var divImage = document.getElementById("credits");
+			var myScene = new BABYLON.Scene(engine);
+
+			
+			//append .babylon file to myScene
+			BABYLON.SceneLoader.Append("", "bridge.babylon", myScene);
+			
+                myScene.executeWhenReady(function () {
+				
+				
+					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
+					var cameraFlag = 1;
+					
+					// which camera is active BJS Arc Rotate or Blender Camera
+					
+					if (cameraFlag == 1){
+						myCamera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 3, 60, new BABYLON.Vector3(0,0,0), myScene);
+						myCamera.setPosition(new BABYLON.Vector3(0, 1, -10));
+						myCamera.speed = .2;
+						myCamera.wheelPrecision = 100;
+						myCamera.fov = .8;
+						
+						myScene.activeCamera = myCamera;
+					
+					}
+					else {
+						var myCamera2 = myScene.getCameraByName("Camera");
+						myCamera2.speed = .1;
+						myCamera2.wheelPrecision = 500;
+						myCamera2.maxZ= 500;
+						myScene.activeCamera = myCamera2;
+					}
+					
+					// Then attach the activeCamera to the canvas.
+					myScene.activeCamera.attachControl(canvas);
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+						divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        myScene.render();
+                    });
+                });
+            };
+			//);
+			
+			
+			
+			
+        //}
+
+		
+		
+		
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+    </script>
+</body>
+</html>
