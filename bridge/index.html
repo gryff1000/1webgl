@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Low-poly Bridge by Grant Abbitt</title>
@@ -37,7 +37,7 @@
 		#credits {
 		position: absolute;
 		left:25%;
-		top:90%;
+		top:25px;
 		width:50%;
 		height: 30px;
 		background-color: black;
@@ -46,6 +46,19 @@
 		font-size: 20px;
 		color: white;
 		
+		}
+		
+		#music {
+		position: absolute;
+		left:25%;
+		top:90%;
+		width:60%;
+		height: 30px;
+		background-color: black;
+		line-height: 150%;
+		text-align: center;
+		font-size: 16px;
+		color: white;
 		}
 		
 		#container {
@@ -69,9 +82,10 @@
 </head>
 <body>
 	<div id = "fps">0</div>
-	
 
-	<div id ="credits">Grant Abbitt's Low-Poly Bridge and Terrain in 3D in a web browser</div>
+	<div id = "credits">Grant Abbitt's Low-Poly Bridge and Terrain in 3D in a web browser</div>
+	
+	<div id = "music">Music: "There is Romance" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License </br> http://creativecommons.org/licenses/by/4.0/</div>
 
     <canvas id="renderCanvas"></canvas>
     <script>
@@ -79,7 +93,8 @@
             var canvas = document.getElementById("renderCanvas");
             var engine = new BABYLON.Engine(canvas, true);
 			var myCamera;
-		
+			var soundsReady = 0;
+			var theVolume =.2;
 			var divFps = document.getElementById("fps");
 			//var divImage = document.getElementById("credits");
 			var myScene = new BABYLON.Scene(engine);
@@ -108,7 +123,7 @@
 					}
 					else {
 						var myCamera2 = myScene.getCameraByName("Camera");
-						myCamera2.speed = .2;
+						myCamera2.speed = .1;
 						myCamera2.wheelPrecision = 500;
 						myCamera2.maxZ= 500;
 						myScene.activeCamera = myCamera2;
@@ -116,6 +131,8 @@
 					
 					// Then attach the activeCamera to the canvas.
 					myScene.activeCamera.attachControl(canvas);
+					
+					createAudio();
 					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
@@ -125,14 +142,23 @@
                 });
             };
 			//);
-			
-			
-			
-			
         //}
 
 		
+		function createAudio(){
 		
+			theMusic = new BABYLON.Sound("theMusic", "There is Romance_loop.mp3", myScene, soundReady, { loop: true, autoplay: false, volume: theVolume  });
+
+			function soundReady(){
+					
+				soundsReady++;
+				if(soundsReady > 0){
+					theMusic.play();
+				}
+			}
+
+		};
+
 		
         window.addEventListener("resize", function () {
             engine.resize();
