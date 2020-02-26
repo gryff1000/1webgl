@@ -1,0 +1,107 @@
+Exporter version: 5.4.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  true
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  E:\EasyPHP-DevServer-14.1VC9\data\localweb\webgl\flannan_new2\
+	Python World class constructor completed
+	processing begun of mesh:  stairs.016
+		processing begun of Standard material:  steps
+			Diffuse texture found "stair"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  31
+		num normals        :  31
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  stairs.015
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.014
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.013
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.012
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.011
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.010
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  step floor
+		processing begun of Standard material:  terrain
+		num positions      :  36
+		num normals        :  36
+		num uvs            :  72
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  stairs.009
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.008
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.007
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.006
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.005
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.004
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.003
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.002
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  stairs.001
+		mesh is an instance of :  stairs.016.  Processing halted.
+	processing begun of mesh:  rails.001
+		processing begun of Standard material:  Material
+			Diffuse texture found "Texture"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  150
+		num normals        :  150
+		num uvs            :  300
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  150
+	processing begun of camera (UniversalCamera):  Camera.walk
+	processing begun of mesh:  rails
+		registered as also a user of material:  Material
+		num positions      :  30
+		num normals        :  30
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  30
+	processing begun of mesh:  Cube
+		WARNING: No materials have been assigned: 
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  Landscape1a
+		registered as also a user of material:  terrain
+		num positions      :  7271
+		num normals        :  7271
+		num uvs            :  14542
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  38739
+	processing begun of mesh:  sea
+		processing begun of Standard material:  sea
+			Diffuse texture found "theSea"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.4844 secs
