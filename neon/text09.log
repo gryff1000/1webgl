@@ -11,6 +11,19 @@ Exporter version: 6.3.0, Blender version: 2.82 (sub 7)
 		Keep Z-up r-handed  :  no
 		Texture directory   :  H:\XDrive\281files\text_test\
 	Python World class constructor completed
+	processing begun of mesh:  Wall01
+		processing begun of material:  Material.005
+			processing texture brick01
+				WARNING: Exception during copy:
+					'H:\\XDrive\\281files\\text_test\\brick01.png' and 'H:\\XDrive\\281files\\text_test\\brick01.png' are the same file
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
 	processing begun of mesh:  Text.009
 		processing begun of material:  Material.004
 		num positions      :  3155
@@ -20,22 +33,10 @@ Exporter version: 6.3.0, Blender version: 2.82 (sub 7)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  13428
-		WARNING: # of 0 area faces found:  4
-	processing begun of mesh:  Cube.001
-		processing begun of material:  Material.005
-			processing texture TexturesCom_BricksSmallOld0080_1_seamless_S
-				texture type:  diffuseTexture, mapped using: "UVMap"
-		num positions      :  29
-		num normals        :  29
-		num tangents       :  0
-		num uvs            :  58
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36
-	processing begun of light (HEMI FROM AREA):  Light
+		WARNING: # of 0 area faces found:  8
 ========= Writing of JSON file started =========
+	writing mesh:  Wall01
 	writing mesh:  Text.009
-	writing mesh:  Cube.001
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 1.2318 secs
+elapsed time:  0 min, 1.1941 secs
