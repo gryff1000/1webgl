@@ -34,9 +34,10 @@ Exporter version: 6.3.0, Blender version: 2.82 (sub 7)
 		num colors         :  0
 		num indices        :  13428
 		WARNING: # of 0 area faces found:  8
+	processing begun of light (POINT):  Sun
 ========= Writing of JSON file started =========
 	writing mesh:  Wall01
 	writing mesh:  Text.009
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 1.1941 secs
+elapsed time:  0 min, 1.2533 secs
