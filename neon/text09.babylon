@@ -1,5 +1,5 @@
 {"producer":{"name":"Blender","version":"2.82 (sub 7)","exporter_version":"6.3.0","file":"text09.babylon"},
-"autoClear":true,"clearColor":[1.0,0.0,0.0],"gravity":[0,-9.81,0],
+"autoClear":true,"clearColor":[1.0,1.0,0.0],"gravity":[0,-9.81,0],
 "materials":[{"name":"Material.005","id":"Material.005","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[0,0,0],"roughness":0,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":1, 
 "albedoTexture":{"name":"brick01.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":true},
 {"name":"Material.004","id":"Material.004","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"emissive":[0.496,0.5265,0],"roughness":0.2,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"emissiveIntensity":2}],
@@ -784,6 +784,6 @@
 ],
 "morphTargetManagers":[],
 "cameras":[],"activeCameraID":"Camera",
-"lights":[{"name":"Sun","id":"Sun","type":0,"position":[0,0.99,-1.22],"range":40,"intensityMode":0,"intensity":10,"diffuse":[1,1,1],"specular":[1,1,1],"radius":1.655,"includedOnlyMeshesIds":["Wall01"]}],
+"lights":[{"name":"Sun","id":"Sun","type":0,"position":[0,0.99,-1.22],"range":40,"intensityMode":0,"intensity":50,"diffuse":[1,1,1],"specular":[1,1,1],"radius":1.655,"includedOnlyMeshesIds":["Wall01"]}],
 "shadowGenerators":[]
 }
