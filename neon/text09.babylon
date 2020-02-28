@@ -784,6 +784,6 @@
 ],
 "morphTargetManagers":[],
 "cameras":[],"activeCameraID":"Camera",
-"lights":[{"name":"Sun","id":"Sun","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":6,"includedOnlyMeshesIds":["Wall01"]}],
+"lights":[{"name":"Sun","id":"Sun","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":10,"diffuse":[1,1,1],"specular":[1,1,1],"radius":6,"includedOnlyMeshesIds":["Wall01"]}],
 "shadowGenerators":[]
 }
