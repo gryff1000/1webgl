@@ -131,6 +131,9 @@
 					
 					// Then attach the activeCamera to the canvas.
 					myScene.activeCamera.attachControl(canvas);
+			
+					var gl = new BABYLON.GlowLayer("glow", scene);
+   					gl.intensity = 2;
 					
 					//createAudio();
 					
