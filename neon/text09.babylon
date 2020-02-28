@@ -2,7 +2,7 @@
 "autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-9.81,0],
 "materials":[{"name":"Material.004","id":"Material.004","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"emissive":[0.496,0.5265,0],"roughness":0.2,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"emissiveIntensity":4.5},
 {"name":"Material.005","id":"Material.005","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[1,1,1],"roughness":0,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
-"albedoTexture":{"name":"TexturesCom_BricksSmallOld0080_1_seamless_S.jpg","level":1,"hasAlpha":false,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":false}],
+"albedoTexture":{"name":"brick01.png","level":1,"hasAlpha":false,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":false}],
 "multiMaterials":[],
 "skeletons":[],
 "meshes":[{"name":"Text.009","id":"Text.009","materialId":"Material.004","billboardMode":0,"position":[0,0,0],"rotation":[-1.5708,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
