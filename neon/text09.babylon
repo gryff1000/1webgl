@@ -15,7 +15,7 @@
 ,"indices":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,0,18,1,3,19,4,6,20,7,9,21,22,23,24,25,26,27,28]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":29,"indexStart":0,"indexCount":36}]
 ,"instances":[]}
-,{"name":"Text.009","id":"Text.009","materialId":"Material.004","billboardMode":0,"position":[0,0,0.035],"rotation":[-1.5708,0,0],"scaling":[1.09,1,1.15],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+,{"name":"Text.009","id":"Text.009","materialId":"Material.004","billboardMode":0,"position":[0,0,0.03],"rotation":[-1.5708,0,0],"scaling":[1.1,1,1.15],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
 ,"positions":[0.412,0.005,0.0656,0.4164,0.005,0.0656,0.4142,0.005,0.0661,0.3296,0.005,0.0651,0.3339,0.005,0.0659,0.3317,0.005,0.0659,0.3359,0.005,0.065,0.4102,0.005,0.0644,0.4182,0.005,0.0644,0.328,0.005,0.0635,0.3375,0.005,0.0634,0.409,0.005,0.0626,0.4194,0.005,0.0626,0.3271,0.005,0.0615,0.4191,0.005,-0.0572,0.4085,0.005,0.0604,0.4199,0.005,0.0604
 ,0.3271,0.005,0.0593,0.4085,0.005,-0.0225,0.4199,0.005,-0.0225,0.3279,0.005,0.0572,0.4095,0.005,-0.0634,0.3304,0.005,0.0279,0.3348,0.005,0.0279,0.3326,0.005,0.0284,0.3286,0.005,0.0267,0.3366,0.005,0.0267,0.3274,0.005,0.0249,0.3378,0.005,0.0249,0.3269,0.005,0.0227,0.3383,0.005,0.0227,0.3269,0.005,-0.0602,0.3383,0.005,-0.0602,0.409,0.005,-0.0248
 ,0.4194,0.005,-0.0248,0.4182,0.005,-0.0266,0.4102,0.005,-0.0266,0.4164,0.005,-0.0277,0.412,0.005,-0.0277,0.4142,0.005,-0.0282,0.4199,0.005,-0.0593,0.4199,0.005,-0.0615,0.3378,0.005,-0.0625,0.3274,0.005,-0.0625,0.419,0.005,-0.0635,0.3366,0.005,-0.0642,0.3286,0.005,-0.0642,0.4111,0.005,-0.065,0.4174,0.005,-0.0651,0.3348,0.005,-0.0654,0.3304,0.005,-0.0654
@@ -784,6 +784,6 @@
 ],
 "morphTargetManagers":[],
 "cameras":[],"activeCameraID":"Camera",
-"lights":[{"name":"Sun","id":"Sun","type":0,"position":[0,0.99,-1.22],"range":40,"intensityMode":0,"intensity":50,"diffuse":[1,1,1],"specular":[1,1,1],"radius":1.655,"includedOnlyMeshesIds":["Wall01"]}],
+"lights":[{"name":"Sun","id":"Sun","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":6,"includedOnlyMeshesIds":["Wall01"]}],
 "shadowGenerators":[]
 }
