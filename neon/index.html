@@ -113,7 +113,7 @@
 					
 					if (cameraFlag == 1){
 						myCamera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 3, 60, new BABYLON.Vector3(0,0,0), myScene);
-						myCamera.setPosition(new BABYLON.Vector3(0, 1, -10));
+						myCamera.setPosition(new BABYLON.Vector3(0, 1, -3));
 						myCamera.speed = .2;
 						myCamera.wheelPrecision = 100;
 						myCamera.fov = .8;
@@ -131,9 +131,9 @@
 					
 					// Then attach the activeCamera to the canvas.
 					myScene.activeCamera.attachControl(canvas);
-			
+					
 					var gl = new BABYLON.GlowLayer("glow", myScene);
-   					gl.intensity = 2;
+					gl.intensity = 2;
 					
 					//createAudio();
 					
