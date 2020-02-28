@@ -784,6 +784,6 @@
 ],
 "morphTargetManagers":[],
 "cameras":[],"activeCameraID":"Camera",
-"lights":[],
+"lights":[{"name":"Sun","id":"Sun","type":1,"position":[0,0.99,-1.22],"direction":[0,-0.6307,0.776],"intensityMode":0,"intensity":0.1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":0.125}],
 "shadowGenerators":[]
 }
