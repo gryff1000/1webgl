@@ -43,10 +43,11 @@ Exporter version: 6.3.0, Blender version: 2.82 (sub 7)
 		num colors         :  0
 		num indices        :  8040
 	processing begun of camera (UniversalCamera):  Camera
+	processing begun of light (POINT):  Light
 ========= Writing of JSON file started =========
 	writing mesh:  backdrop
 	writing mesh:  tube01
 	writing mesh:  Open Bar
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 0.6595 secs
+elapsed time:  0 min, 1.1509 secs
