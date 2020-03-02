@@ -1,12 +1,12 @@
 {"producer":{"name":"Blender","version":"2.82 (sub 7)","exporter_version":"6.3.0","file":"neon01.babylon"},
-"autoClear":true,"clearColor":[0.1,0.0,0.1],"gravity":[0,-9.81,0],
+"autoClear":true,"clearColor":[0.1,0.0,0.0],"gravity":[0,-9.81,0],
 "materials":[{"name":"Material.001","id":"Material.001","customType":"BABYLON.PBRMaterial","backFaceCulling":false,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[0,0,0],"roughness":1,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
 "albedoTexture":{"name":"surround05.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":true},
 {"name":"Material.003","id":"Material.003","customType":"BABYLON.PBRMaterial","backFaceCulling":false,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"emissive":[0,0,1],"roughness":0.2,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"emissiveIntensity":57.3},
 {"name":"Material.002","id":"Material.002","customType":"BABYLON.PBRMaterial","backFaceCulling":false,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"emissive":[1,0,0],"roughness":0.2,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"emissiveIntensity":40}],
 "multiMaterials":[],
 "skeletons":[],
-"meshes":[{"name":"backdrop","id":"backdrop","materialId":"Material.001","billboardMode":0,"position":[0,0,0.005],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+"meshes":[{"name":"backdrop","id":"backdrop","materialId":"Material.001","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
 ,"positions":[2,-2,0,-2,2,0,-2,-2,0,2,2,0]
 ,"normals":[0,0,-1,0,0,-1,0,0,-1,0,0,-1]
 ,"uvs":[1,0,0,1,0,0,1,1]
