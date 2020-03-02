@@ -6,7 +6,7 @@
 {"name":"Material.002","id":"Material.002","customType":"BABYLON.PBRMaterial","backFaceCulling":false,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"emissive":[1,0,0],"roughness":0.2,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"emissiveIntensity":40}],
 "multiMaterials":[],
 "skeletons":[],
-"meshes":[{"name":"backdrop","id":"backdrop","materialId":"Material.001","billboardMode":0,"position":[0,0,0.04],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+"meshes":[{"name":"backdrop","id":"backdrop","materialId":"Material.001","billboardMode":0,"position":[0,0,0.015],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
 ,"positions":[2,-2,0,-2,2,0,-2,-2,0,2,2,0]
 ,"normals":[0,0,-1,0,0,-1,0,0,-1,0,0,-1]
 ,"uvs":[1,0,0,1,0,0,1,1]
