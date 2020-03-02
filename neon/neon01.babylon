@@ -1098,6 +1098,6 @@
 ],
 "morphTargetManagers":[],
 "cameras":[{"name":"Camera","id":"Camera","position":[0,0,-5.5558],"rotation":[0,0,0],"fov":0.6911,"minZ":0.1,"maxZ":100,"speed":1,"inertia":0.9,"checkCollisions":false,"applyGravity":false,"ellipsoid":[0.2,0.9,0.2],"cameraRigMode":0,"interaxial_distance":0.0637,"type":"UniversalCamera"}],"activeCameraID":"Camera",
-"lights":[{"name":"Light.001","id":"Light.001","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4}],
+"lights":[{"name":"Light.001","id":"Light.001","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[0,0,0],"radius":4}],
 "shadowGenerators":[]
 }
