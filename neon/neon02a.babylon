@@ -1,6 +1,6 @@
 {"producer":{"name":"Blender","version":"2.82 (sub 7)","exporter_version":"6.3.0","file":"neon02a.babylon"},
-"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-9.81,0],
-"materials":[{"name":"Material.003","id":"Material.003","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"emissive":[1,0,0],"specularPower":102.4,"alpha":1},
+"autoClear":true,"clearColor":[0.0,0.0,0.0],"gravity":[0,-9.81,0],
+"materials":[{"name":"Material.003","id":"Material.003","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"emissive":[.4,0,0],"specularPower":102.4,"alpha":1},
 {"name":"frame.001","id":"frame.001","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"specular":[0.5,0.5,0.5],"specularPower":64,"alpha":1,"indexOfRefraction":0.6897, 
 "diffuseTexture":{"name":"bar01.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}},
 {"name":"frame","id":"frame","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"specular":[0.5,0.5,0.5],"specularPower":64,"alpha":1,"indexOfRefraction":0.6897, 
