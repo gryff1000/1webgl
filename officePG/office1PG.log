@@ -1,0 +1,226 @@
+Exporter version: 6.3.1, Blender version: 2.82 (sub 7)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\PG\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  window
+		processing begun of material:  Material.001
+		processing begun of material:  the_window
+			processing texture my_window01a
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  office1PG.Multimaterial#0
+		num positions      :  12
+		num normals        :  12
+		num tangents       :  0
+		num uvs            :  24
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
+	processing begun of mesh:  office
+		processing begun of material:  Material.001
+		processing begun of material:  the_window
+		processing begun of material:  floor
+		registered as also a user of material:  the_window
+			processing texture finewood512
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  office1PG.Multimaterial#1
+		num positions      :  159
+		num normals        :  159
+		num tangents       :  0
+		num uvs            :  318
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  246
+	processing begun of mesh:  aMug
+		processing begun of material:  desk_base
+			processing texture woods2_1024_leather2_knob1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  109
+		num normals        :  109
+		num tangents       :  0
+		num uvs            :  218
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  216
+	processing begun of mesh:  Pistol
+		processing begun of material:  DarkWood
+		processing begun of material:  DarkMetal
+		processing begun of material:  Metal
+		processing begun of material:  Black
+		processing begun of material:  Black2
+		processing begun of multimaterial:  office1PG.Multimaterial#2
+		num positions      :  632
+		num normals        :  632
+		num tangents       :  2528
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3120
+		WARNING: # of 0 area faces found:  4
+	processing begun of node:  adesk
+	processing begun of mesh:  M_drawer
+		animation processing begun
+			processing action Action:  in[1 - 60], out[0 - 60]
+		processing begun of material:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  408
+		num normals        :  408
+		num tangents       :  0
+		num uvs            :  816
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  486
+	processing begun of mesh:  R_drawer
+		animation processing begun
+			processing action Action:  in[1 - 60], out[0 - 60]
+		processing begun of material:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  407
+		num normals        :  407
+		num tangents       :  0
+		num uvs            :  814
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  486
+	processing begun of mesh:  R_cupboard
+		animation processing begun
+			processing action Action:  in[1 - 60], out[0 - 60]
+		processing begun of material:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  124
+		num normals        :  124
+		num tangents       :  0
+		num uvs            :  248
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  348
+	processing begun of mesh:  L_drawer
+		animation processing begun
+			processing action Action:  in[1 - 60], out[0 - 60]
+		processing begun of material:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  223
+		num normals        :  223
+		num tangents       :  0
+		num uvs            :  446
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  486
+	processing begun of mesh:  L_cupboard
+		animation processing begun
+			processing action Action:  in[0 - 60], out[0 - 60]
+		processing begun of material:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  124
+		num normals        :  124
+		num tangents       :  0
+		num uvs            :  248
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  348
+	processing begun of mesh:  desk_top
+		processing begun of material:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  43
+		num normals        :  43
+		num tangents       :  0
+		num uvs            :  86
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  204
+	processing begun of mesh:  desk_base
+		processing begun of material:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  628
+		num normals        :  628
+		num tangents       :  0
+		num uvs            :  1256
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  984
+	processing begun of mesh:  floor
+		processing begun of material:  Material.001
+		processing begun of material:  the_window
+		processing begun of material:  floor
+		registered as also a user of material:  the_window
+		registered as also a user of material:  floor
+		processing begun of multimaterial:  office1PG.Multimaterial#3
+		num positions      :  5
+		num normals        :  5
+		num tangents       :  0
+		num uvs            :  10
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  9
+	processing begun of mesh:  seat
+		processing begun of material:  desk_base
+		registered as also a user of material:  desk_base
+		num positions      :  2729
+		num normals        :  2729
+		num tangents       :  0
+		num uvs            :  5458
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  9792
+	processing begun of node:  theLamp
+	processing begun of mesh:  base
+		processing begun of material:  lamp
+		num positions      :  22
+		num normals        :  22
+		num tangents       :  0
+		num uvs            :  44
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  66
+	processing begun of mesh:  bulb
+		processing begun of material:  lamp
+		processing begun of material:  bulb
+		processing begun of multimaterial:  office1PG.Multimaterial#4
+		num positions      :  92
+		num normals        :  92
+		num tangents       :  0
+		num uvs            :  184
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  336
+	processing begun of mesh:  shade
+		processing begun of material:  lamp
+		registered as also a user of material:  lamp
+		num positions      :  80
+		num normals        :  80
+		num tangents       :  0
+		num uvs            :  160
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  420
+	processing begun of light (HEMI FROM AREA):  Light
+	processing begun of light (POINT):  Point
+========= Writing of JSON file started =========
+	writing mesh:  window
+	writing mesh:  office
+	writing mesh:  aMug
+	writing mesh:  Pistol
+	writing mesh:  M_drawer
+	writing mesh:  R_drawer
+	writing mesh:  R_cupboard
+	writing mesh:  L_drawer
+	writing mesh:  L_cupboard
+	writing mesh:  desk_top
+	writing mesh:  desk_base
+	writing mesh:  floor
+	writing mesh:  seat
+	writing mesh:  base
+	writing mesh:  bulb
+	writing mesh:  shade
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.3555 secs
