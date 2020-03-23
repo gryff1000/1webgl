@@ -9,7 +9,7 @@ function createAudio(){
 	
 	theStart = new BABYLON.Sound("theStart", "silence5.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
 	
-	theIntro = new BABYLON.Sound("theIntro", "intro.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
+	//theIntro = new BABYLON.Sound("theIntro", "intro.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
 
 	thePhone = new BABYLON.Sound("thePhone", "sg_talk04b.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: theVolume  });
 	
