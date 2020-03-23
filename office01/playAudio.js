@@ -71,7 +71,7 @@ function createAudio(){
 		//theMusic.maxDistance = 10;
 		//theMusic.play();
 		//theMusic2.play();
-		theStart.play();
+		//theStart.play();
 		//theSounds.play(1,14.0,9.2);
 		//theSounds.play(0, soundArray[0][0], soundArray[0][1]);
 		//console.log(soundArray[0][0] + "  " + soundArray[0][1]);
