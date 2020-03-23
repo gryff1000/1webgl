@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Neon Light</title>
+    <!--<script src="../hand.js"></script> -->
+	 <script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<!--<script src="../babylon.1.14.js"></script>-->
+	<script src="playAudio.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px;
+		display:block
+		}
+		
+		#credits {
+		position: absolute;
+		left:25%;
+		top:25px;
+		width:50%;
+		height: 30px;
+		background-color: black;
+		line-height: 150%;
+		text-align: center;
+		font-size: 20px;
+		color: white;
+		
+		}
+		
+		#music {
+		position: absolute;
+		left:1%;
+		top:90%;
+		width:8%;
+		height: 30px;
+		background-color: black;
+		line-height: 150%;
+		text-align: center;
+		font-size: 16px;
+		color: white;
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id = "fps">0</div>
+
+	<!--<div id = "credits">NEON LIGHTS - Inspired By Wingnut</div>-->
+	
+	<div id = "music">NEON LIGHTS</div>
+
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var myCamera;
+			var soundsReady = 0;
+			var theVolume =.2;
+			var theMonitor;
+			var theStart;
+			var thePhone;
+			var divFps = document.getElementById("fps");
+			//var divImage = document.getElementById("credits");
+			var myScene = new BABYLON.Scene(engine);
+			
+			BABYLON.Engine.audioEngine.useCustomUnlockedButton = true; 
+
+			// URL for Playground version https://playground.babylonjs.com/#PEDSSP#1
+			//append .babylon file to myScene
+			BABYLON.SceneLoader.Append("", "office1a.babylon", myScene);
+			
+                myScene.executeWhenReady(function () {
+				
+					//theMat = myScene.getMeshByName("BAR.f");
+					//console.log(theMat);
+					//theMat.material.diffuseColor = BABYLON.Color3.Red();
+				
+				
+					//change the value of cameraFlag to a value other than 1 to use the free camera from blender
+					var cameraFlag = 0;
+					
+					// which camera is active BJS Arc Rotate or Blender Camera
+					
+					if (cameraFlag == 1){
+						myCamera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 3, 60, new BABYLON.Vector3(0,0,0), myScene);
+						myCamera.setPosition(new BABYLON.Vector3(0, 1, -6));
+						myCamera.speed = .2;
+						myCamera.wheelPrecision = 100;
+						myCamera.fov = .8;
+						myCamera.maxZ = 1000;
+						myCamera.minZ = .01;
+						
+						myScene.activeCamera = myCamera;
+					
+					}
+					else {
+						var myCamera2 = myScene.getCameraByName("Camera");
+						myCamera2.speed = .1;
+						myCamera2.wheelPrecision = 500;
+						myCamera2.maxZ= 500;
+						//myCamera2.inputs.clear();
+						//myCamera2.inputs.addMouse();
+						myScene.activeCamera = myCamera2;
+					}
+					
+					// Then attach the activeCamera to the canvas.
+					myScene.activeCamera.attachControl(canvas);
+					
+					myScene.gravity = new BABYLON.Vector3(0, -0.81, 0);
+					//myScene.activeCamera.attachControl(canvas);
+					
+					var gl = new BABYLON.GlowLayer("glow", myScene);
+					gl.intensity = 1.5;
+					
+					
+					// shadows
+					
+					var shadowGenerator = new BABYLON.ShadowGenerator(1024, myScene.getLightByName("Point"));
+					
+					shadowGenerator.useExponentialShadowMap
+					shadowGenerator.setDarkness(0.4);
+					shadowGenerator.depthScale = .5;
+					//shadowGenerator.blurBoxOffset = 64.0;
+					shadowGenerator.useKernelBlur = true;
+					shadowGenerator.blurKernel = 64;
+					//shadowGenerator.usePoissonSampling = true;
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("seat"));
+					
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("seat.001"));
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("aMug"));
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("Pistol"));
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("desk_base"));
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("a_keyboard"));
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("monitor"));
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("phone"));
+					shadowGenerator.addShadowCaster(myScene.getMeshByName("cigarette"));
+					
+					
+					
+					var shadowGenerator2 = new BABYLON.ShadowGenerator(1024, myScene.getLightByName("point_back02"));
+					shadowGenerator2.setDarkness(0.3);
+					shadowGenerator2.addShadowCaster(myScene.getMeshByName("Plant_Pot"));
+					shadowGenerator2.addShadowCaster(myScene.getMeshByName("Plant_upper"));
+					//var theFloor = myScene.getMeshByName("floor");
+					
+					//var shadowGenerator3 = new BABYLON.ShadowGenerator(1024, myScene.getLightByName("Point.R"));
+					//shadowGenerator3.setDarkness(0.3);
+					//shadowGenerator2.addShadowCaster(myScene.getMeshByName("Plant_Pot01"));
+					//shadowGenerator2.addShadowCaster(myScene.getMeshByName("Plant_upper01"));
+					
+					
+					var theOffice = myScene.getMeshByName("office_wallsB");
+					var theFloor = myScene.getMeshByName("floor");
+					var theDesk = myScene.getMeshByName("desk_top");
+					
+					
+					theOffice.receiveShadows = true;
+					theDesk.receiveShadows = true;
+					theFloor.receiveShadows = true;
+					
+					theMonitor = myScene.getMeshByName("monitor");
+					theMonitor.isPickable = true;
+					
+					
+					var doStuff = function(){
+					
+						BABYLON.Engine.audioEngine.unlock();
+						//var ended = 1;
+						//var takes = 1;
+						//aButton.setEnabled(false);
+						//var aButtonMat = myScene.getMaterialByName("menu5a.button");
+						//aButtonMat.diffuseTexture.vOffset = .5;
+						//aMelon.setEnabled(true);
+						console.log("reached dostuff");
+						
+						thePhone.play();
+						
+					};
+					
+					
+					theMonitor.actionManager = new BABYLON.ActionManager(myScene);
+					theMonitor.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, doStuff));
+					
+					
+					//createAudio();
+					
+					createSmoke();
+					
+					createAudio();
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+						divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        myScene.render();
+                    });
+                });
+            };
+			//);
+        //}
+
+		/*
+		function createAudio(){
+		
+			theMusic = new BABYLON.Sound("theStart", "There is Romance_loop.mp3", myScene, soundReady, { loop: true, autoplay: false, volume: theVolume  });
+
+			function soundReady(){
+					
+				soundsReady++;
+				if(soundsReady > 0){
+					theMusic.play();
+				}
+			}
+
+		};
+		
+		*/
+		
+		
+		
+		function createSmoke(){
+			//Whispy Smoke
+			
+			var aSmoke = myScene.getMeshByName("smoke");
+			aSmoke.isVisible = false;
+			var aSmokePos = aSmoke.position;
+			aSmokePos.y -= .09;
+			
+			
+			var particlesSmoke = new BABYLON.ParticleSystem("particles", 20, myScene);
+			particlesSmoke.particleTexture = new BABYLON.Texture("smoke2_grey.png", myScene);
+			particlesSmoke.emitter = aSmoke; // the starting object, the emitter
+			particlesSmoke.minEmitBox = new BABYLON.Vector3(-0.01, .05, -0.01); // Starting all from
+			particlesSmoke.maxEmitBox = new BABYLON.Vector3(0.01, .07, 0.01); // To...
+			
+			particlesSmoke.color1 = new BABYLON.Color4(0.65, 0.65, 0.65, 0.5);
+			particlesSmoke.color2 = new BABYLON.Color4(0.9, 0.9, 0.9, 0.1);
+			particlesSmoke.colorDead = new BABYLON.Color4(0.0, 0.0, 0.0, 0.0);
+			
+			particlesSmoke.minSize = .05;
+			particlesSmoke.maxSize = .1; //set to 0.2
+			
+			particlesSmoke.minLifeTime = .1;
+			particlesSmoke.maxLifeTime = .25; //set to 10
+
+			particlesSmoke.emitRate = 25;
+
+			// Blend mode : BLENDMODE_ONEONE, or BLENDMODE_STANDARD
+			particlesSmoke.blendMode = BABYLON.ParticleSystem.BLENDMODE_STANDARD;
+
+			particlesSmoke.gravity = new BABYLON.Vector3(0, 0, 0);
+
+			particlesSmoke.direction1 = new BABYLON.Vector3(-.1, 2, -0.25);
+			//particlesSmoke.direction2 = new BABYLON.Vector3(2, 2, 0.75);
+
+			particlesSmoke.minEmitPower = 0.1;
+			particlesSmoke.maxEmitPower = 1.0;
+			particlesSmoke.updateSpeed = 0.0007; //set to 0.01
+
+			particlesSmoke.start();
+		}
+
+		
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+    </script>
+</body>
+</html>
