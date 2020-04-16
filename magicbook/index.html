@@ -126,7 +126,7 @@
 					
 					var theCards = myScene.getMeshByName("cards");
 					var card_seen = theCards.getChildren();
-					console.log(card_seen.length);
+					//console.log(card_seen.length);
 					for(i = 0; i<card_seen.length; i++){
 					
 						console.log(card_seen[i].name);
@@ -163,7 +163,7 @@
 		 window.addEventListener("click", function (evt) {
 		 
 		 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
-		 console.log(pickResult);
+		 //console.log(pickResult);
 		 if (pickResult.hit)
         	{
             //console.log(pickResult.hit);	
