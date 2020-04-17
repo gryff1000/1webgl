@@ -145,6 +145,10 @@
 					//Billboard the flame
 					var flame1 = myScene.getMeshByName("flame"); 
 					flame1.billboardMode = BABYLON.Mesh.BILLBOARDMODE_Y;
+			
+					//set the glow
+					var gl = new BABYLON.GlowLayer("glow", myScene);
+					gl.intensity = 2;
 					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
