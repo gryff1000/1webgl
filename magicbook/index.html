@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>The Book</title>
+   <!-- <script src="../hand.js"></script>
+    <script src="../babylon.1.12-beta.js"></script>
+	<script src="../howler.js"></script> -->
+	
+	 <script src="https://cdn.babylonjs.com/babylon.js"></script>
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+		#pick {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 100px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id="loader">Loading...</div>
+	<div id="fps">38 fps</div>
+	<div id="pick">book closed</div>
+	
+	
+    <canvas height="695" width="1920" id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divPick = document.getElementById("pick");
+			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			var mySkeleton = [];
+			var thetext = null;
+			var book = null;
+			var desk =null;
+			var isOpen = [false, false, false, false, false, false];
+			var isPlay = false;
+			var pageNum = 0;
+			var thePart = [];
+			var thePage;
+			var particleSystem;
+
+			
+            BABYLON.SceneLoader.Append("", "book01.babylon", myScene);
+			BABYLON.SceneLoader.Append("", "monk04a.babylon", myScene);
+			
+                myScene.executeWhenReady(function () {
+                    
+					var myCamera2 = myScene.getCameraByName("Camera");
+						myCamera2.speed = .1;
+						myCamera2.wheelPrecision = 500;
+						myCamera2.maxZ= 500;
+						//myCamera2.inputs.clear();
+						//myCamera2.inputs.addMouse();
+						myScene.activeCamera = myCamera2;
+					
+					
+					// Attach camera to canvas inputs or if fixed do not.
+                    myScene.activeCamera.attachControl(canvas);
+					
+					//get tarot cards
+					
+					var theCards = myScene.getMeshByName("cards");
+					var card_seen = theCards.getChildren();
+					//console.log(card_seen.length);
+					for(i = 0; i<card_seen.length; i++){
+					
+						//console.log(card_seen[i].name);
+					
+					}
+					
+[1]					//Get the skeleton
+					mySkeleton[0] = myScene.getSkeletonByName("the_book");
+					mySkeleton[1] = myScene.getSkeletonByName("Monk01");
+					myScene.beginAnimation(mySkeleton[1],10,50,true, 1);
+					//And the page material
+					thePage = myScene.getMaterialByName("book_base_baked");
+					//console.log("thePage");
+					
+					//Billboard the flame
+					var flame1 = myScene.getMeshByName("flame"); 
+					flame1.billboardMode = BABYLON.Mesh.BILLBOARDMODE_Y;
+					
+					//set the glow
+					var gl = new BABYLON.GlowLayer("glow", myScene);
+					gl.intensity = 2;
+					
+					
+					createAura();
+					
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                    myScene.render();
+                    });
+                });
+        };
+		
+		
+		function createAura(){
+		
+			var aAura = myScene.getMeshByName("aurabook");
+			aAura.isVisible = false;
+			var aAuraPos = aAura.position;
+			aAuraPos.y += .09;
+			
+			// Create a particle system
+			particleSystem = new BABYLON.ParticleSystem("particles", 2000, myScene);
+
+			//Texture of each particle
+		   particleSystem.particleTexture = new BABYLON.Texture("star1.png", myScene);
+
+			// Where the particles come from
+			particleSystem.emitter = aAura; // the starting object, the emitter
+			particleSystem.minEmitBox = new BABYLON.Vector3(-0.01, 0, 0); // Starting all from
+			particleSystem.maxEmitBox = new BABYLON.Vector3(0.01, 0, 0); // To...
+
+			// Colors of all particles
+			particleSystem.color1 = new BABYLON.Color4(1.0, 0.0, 0.0, 1.0);
+			particleSystem.color2 = new BABYLON.Color4(1.0, 1.0, 0.0, 1.0);
+			particleSystem.colorDead = new BABYLON.Color4(0.2, 0.2, 0.2, 0.0);
+
+			// Size of each particle (random between...
+			particleSystem.minSize = 0.01;
+			particleSystem.maxSize = 0.05;
+
+			// Life time of each particle (random between...
+			particleSystem.minLifeTime = 0.1;
+			particleSystem.maxLifeTime = 0.2;
+
+			// Emission rate
+			particleSystem.emitRate = 400;
+
+			// Blend mode : BLENDMODE_ONEONE, or BLENDMODE_STANDARD
+			particleSystem.blendMode = BABYLON.ParticleSystem.BLENDMODE_ONEONE;
+
+			// Set the gravity of all particles
+			particleSystem.gravity = new BABYLON.Vector3(0, -9.81, 0);
+
+			// Direction of each particle after it has been emitted
+			particleSystem.direction1 = new BABYLON.Vector3(-3, 4, 3);
+			particleSystem.direction2 = new BABYLON.Vector3(3, 4, -3);
+
+			// Angular speed, in radians
+			particleSystem.minAngularSpeed = 0;
+			particleSystem.maxAngularSpeed = Math.PI;
+
+			// Speed
+			particleSystem.minEmitPower = .1;
+			particleSystem.maxEmitPower = 1;
+			particleSystem.updateSpeed = 0.001;
+			console.log("reached");
+		};
+
+		
+		
+		
+		//};
+		
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+		// On Click evt
+		 window.addEventListener("click", function (evt) {
+		 
+		 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
+		 //console.log(pickResult);
+		 if (pickResult.hit)
+        	{
+            //console.log(pickResult.hit);	
+			var objname = pickResult.pickedMesh.name;
+			//console.log(objname);
+            	switch(objname) {
+				
+					case "book_base" :
+						if (!isOpen[6] && !isPlay && pageNum < 3) {
+								isPlay = true;
+								//sound.play();
+								//thePage.diffuseTexture.uOffset = 0.0;
+								particleSystem.start();
+								myScene.beginAnimation(mySkeleton[0], 1, 40, false, .5, function(){
+									//particleSystem.start();
+									divPick.textContent = "book opened" ;
+									isPlay = false;
+									isOpen[6] = true;
+								});
+						}
+						else if (!isPlay) {
+								isPlay = true;
+								//sound.play();
+								//thePage.diffuseTexture.uOffset = 0.5;
+								particleSystem.stop();
+								myScene.beginAnimation(mySkeleton[0], 40, 1, false, .5, function(){
+									divPick.textContent = "book closed" ;
+									//particleSystem.stop();
+									//thePage.diffuseTexture.uOffset -= 0.5;
+									thePage.diffuseTexture.vOffset -= 0.5;
+									isPlay = false;
+									isOpen[6] = false;
+									// change the page
+									//var thepage = myScene.getMaterialByName("book_base_baked");
+									//thepage.diffuseTexture.uOffset -=0.5;
+								
+								});
+						}
+						
+					break;
+
+					default:
+                    	//divPick.textContent = objname;	
+                    break
+            	}
+        	}
+		 
+		 }
+		 )
+		 
+		function open(ndx)
+		 {
+			if (!isOpen[ndx] && !isPlay) 
+			{
+				//isPlay = true;
+				//sound.play();
+				
+				myScene.beginAnimation(mySkeleton[0].bones[ndx], 1, 40, false, 0.5, function(){
+					divPick.textContent = "opened" ;
+					isPlay = false;
+					isOpen[ndx] = true;
+				});
+			}
+						
+			else if (!isPlay) {
+				isPlay = true;
+				//sound.play();
+				myScene.beginAnimation(mySkeleton[0].bones[ndx], 40, 1, false, 0.5, function(){
+					divPick.textContent = "closed" ;
+					isPlay = false;
+					isOpen[ndx] = false;
+				});
+			}
+			
+		//});
+		return;
+		};
+		
+    </script>
+
+
+</body></html>
