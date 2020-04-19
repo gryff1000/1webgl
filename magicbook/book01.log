@@ -9,7 +9,7 @@ Exporter version: 6.3.1, Blender version: 2.82 (sub 7)
 		Vert Color Precision:  3
 		Mat Weight Precision:  2
 		Keep Z-up r-handed  :  no
-		Texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\book\
+		Texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\castle\
 	Python World class constructor completed
 	processing begun of skeleton:  the_book, id:  0
 		processing begun of bone:  book base, index:  0
@@ -248,6 +248,15 @@ Exporter version: 6.3.1, Blender version: 2.82 (sub 7)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  84
+	processing begun of mesh:  aurabook
+		processing begun of material:  Material
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
 	processing begun of mesh:  theGround
 		processing begun of material:  ground
 		num positions      :  4
@@ -281,7 +290,8 @@ Exporter version: 6.3.1, Blender version: 2.82 (sub 7)
 	writing mesh:  Skull1
 	writing mesh:  books
 	writing mesh:  aBook
+	writing mesh:  aurabook
 	writing mesh:  theGround
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 1.5239 secs
+elapsed time:  0 min, 1.2716 secs

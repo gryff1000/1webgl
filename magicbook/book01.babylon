@@ -21,6 +21,7 @@
 "diffuseTexture":{"name":"paper01.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}},
 {"name":"skull","id":"skull","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"specular":[0,0,0],"specularPower":0,"alpha":1,"indexOfRefraction":0.6897, 
 "diffuseTexture":{"name":"paper01.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}},
+{"name":"Material","id":"Material","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"diffuse":[0.8,0.8,0.8],"specularPower":102.4,"alpha":1},
 {"name":"ground","id":"ground","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"diffuse":[0.0775,0.2031,0.0027],"specular":[0.5,0.5,0.5],"specularPower":64,"alpha":1,"indexOfRefraction":0.6897}],
 "multiMaterials":[{"name":"book01.Multimaterial#0","id":"book01.Multimaterial#0","materials":["book_base_baked","cover"]},{"name":"book01.Multimaterial#1","id":"book01.Multimaterial#1","materials":["bell_baked","handle"]}],
 "skeletons":[{"name":"the_book","id":0,"dimensionsAtRest":[0.4149,0.0004,0.0004],"bones":[
@@ -816,6 +817,16 @@
 ,9,45,46,47,48,49,15,50,51,52,53,19,54,55,22,24,56,57,58,59,60,61,62,63,64,65,66,36,67,68,69,70,71]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":72,"indexStart":0,"indexCount":84}]
 ,"instances":[]}
+,{"name":"aurabook","id":"aurabook","materialId":"Material","billboardMode":0,"position":[0,1,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+,"positions":[-0.0125,0.0125,-0.0125,-0.0125,-0.0125,0.0125,-0.0125,-0.0125,-0.0125,-0.0125,0.0125,0.0125,0.0125,-0.0125,0.0125,-0.0125,-0.0125,0.0125,0.0125,0.0125,0.0125,0.0125,-0.0125,-0.0125,0.0125,-0.0125,0.0125,0.0125,0.0125,-0.0125,-0.0125,-0.0125,-0.0125,0.0125,-0.0125,-0.0125,0.0125,-0.0125,0.0125,-0.0125,-0.0125,-0.0125,-0.0125,-0.0125,0.0125,-0.0125,0.0125,0.0125,0.0125,0.0125,-0.0125
+,0.0125,0.0125,0.0125,-0.0125,0.0125,0.0125,0.0125,0.0125,0.0125,0.0125,0.0125,-0.0125,-0.0125,0.0125,-0.0125,-0.0125,-0.0125,-0.0125,0.0125,-0.0125,0.0125,0.0125,-0.0125,-0.0125,-0.0125,-0.0125,-0.0125,-0.0125,0.0125,0.0125,-0.0125,0.0125,-0.0125,0.0125,0.0125,-0.0125]
+,"normals":[-1,0,0,-1,0,0,-1,0,0,0,0,1,0,0,1,0,0,1,1,0,0,1,0,0,1,0,0,0,0,-1,0,0,-1,0,0,-1,0,-1,0,0,-1,0,0,-1,0,0,1,0,0,1,0
+,0,1,0,-1,0,0,0,0,1,1,0,0,0,0,-1,0,0,-1,0,-1,0,0,-1,0,0,-1,0,0,1,0,0,1,0,0,1,0]
+,"uvs":[0.625,0,0.375,0.25,0.375,0,0.625,0.25,0.375,0.5,0.375,0.25,0.625,0.5,0.375,0.75,0.375,0.5,0.625,0.75,0.375,1,0.375,0.75,0.375,0.5,0.125,0.75,0.125,0.5,0.875,0.5,0.625,0.75,0.625,0.5,0.625,0.25,0.625,0.5,0.625,0.75,0.625,1,0.375,1,0.375,0.5,0.375,0.75
+,0.125,0.75,0.875,0.5,0.875,0.75,0.625,0.75]
+,"indices":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,0,18,1,3,19,4,6,20,7,9,21,22,23,24,25,26,27,28]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":29,"indexStart":0,"indexCount":36}]
+,"instances":[]}
 ,{"name":"theGround","id":"theGround","materialId":"ground","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":true,"receiveShadows":false,"pickable":true,"tags":""
 ,"positions":[10,0,-10,-10,0,10,-10,0,-10,10,0,10]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
@@ -826,6 +837,6 @@
 ],
 "morphTargetManagers":[],
 "cameras":[{"name":"Camera","id":"Camera","position":[0,1.6,-4],"rotation":[0,0,0],"fov":0.8576,"minZ":0.1,"maxZ":100,"speed":1,"inertia":0.9,"checkCollisions":true,"applyGravity":true,"ellipsoid":[0.2,0.9,0.2],"cameraRigMode":0,"interaxial_distance":0.0637,"type":"UniversalCamera"}],"activeCameraID":"Camera",
-"lights":[{"name":"Point","id":"Point","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4,"includedOnlyMeshesIds":["book_base","bench","bench.stand","bench.legs","bench.shelf"]},{"name":"Hemi","id":"Hemi","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":30.002,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4,"includedOnlyMeshesIds":["bell","bottle01","feather","cork","candle","flame","Plane","tarot deck","tarot_card","tarot_card01","tarot_card02","tarot_card03","tarot_card04","Skull1","books","aBook"]}],
+"lights":[{"name":"Point","id":"Point","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4,"includedOnlyMeshesIds":["book_base","bench","bench.stand","bench.legs","bench.shelf"]},{"name":"Hemi","id":"Hemi","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":30.002,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4,"includedOnlyMeshesIds":["bell","bottle01","feather","cork","candle","flame","Plane","tarot deck","tarot_card","tarot_card01","tarot_card02","tarot_card03","tarot_card04","Skull1","books","aBook","aurabook"]}],
 "shadowGenerators":[]
 }
