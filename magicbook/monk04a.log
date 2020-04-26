@@ -1,0 +1,177 @@
+Exporter version: 6.3.1, Blender version: 2.82 (sub 7)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\castle2\
+	Python World class constructor completed
+	processing begun of skeleton:  Monk01, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LHipJoint, index:  1
+		processing begun of bone:  LeftUpLeg, index:  2
+		processing begun of bone:  LeftLeg, index:  3
+		processing begun of bone:  LeftFoot, index:  4
+		processing begun of bone:  LeftToeBase, index:  5
+		processing begun of bone:  LowerBack, index:  6
+		processing begun of bone:  Spine, index:  7
+		processing begun of bone:  Spine1, index:  8
+		processing begun of bone:  LeftShoulder, index:  9
+		processing begun of bone:  LeftArm, index:  10
+		processing begun of bone:  LeftForeArm, index:  11
+		processing begun of bone:  LeftHand, index:  12
+		processing begun of bone:  LThumb, index:  13
+		processing begun of bone:  LeftFingerBase, index:  14
+		processing begun of bone:  LeftHandFinger1, index:  15
+		processing begun of bone:  Neck, index:  16
+		processing begun of bone:  Neck1, index:  17
+		processing begun of bone:  Head, index:  18
+		processing begun of bone:  RightShoulder, index:  19
+		processing begun of bone:  RightArm, index:  20
+		processing begun of bone:  RightForeArm, index:  21
+		processing begun of bone:  RightHand, index:  22
+		processing begun of bone:  RThumb, index:  23
+		processing begun of bone:  RightFingerBase, index:  24
+		processing begun of bone:  RightHandFinger1, index:  25
+		processing begun of bone:  RHipJoint, index:  26
+		processing begun of bone:  RightUpLeg, index:  27
+		processing begun of bone:  RightLeg, index:  28
+		processing begun of bone:  RightFoot, index:  29
+		processing begun of bone:  RightToeBase, index:  30
+		Ignoring IK bone:  LLeg.IK
+		Ignoring IK bone:  RLeg.IK
+		Ignoring IK bone:  LKnee.IK
+		Ignoring IK bone:  RKnee.IK
+		Ignoring IK bone:  LElbow.IK
+		Ignoring IK bone:  RElbow.IK
+		Ignoring IK bone:  LHand.IK
+		Ignoring IK bone:  RHand.IK
+		processing action monk2Action:  in[1 - 5], out[0 - 5]
+		processing action wand_action:  in[1 - 40], out[10 - 50]
+	processing begun of mesh:  skin_Uni1228
+		animation processing begun
+			processing action wand_action:  in[1 - 40], out[0 - 40]
+		processing begun of material:  Monk01:Uni1228:Defaultskin
+		processing begun of material:  Material
+			processing texture unn1221_newface01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  monk04a.Multimaterial#0
+		num positions      :  1548
+		num normals        :  1548
+		num tangents       :  0
+		num uvs            :  3096
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  4980
+		Skeleton stats:  
+			Total Influencers:  3910
+			Avg # of influencers per vertex:  2.5258
+			Highest # of influencers observed:  6, num vertices with this:  9
+			exported as 6 influencers
+			num skeletonWeights and skeletonIndices:  12384
+	processing begun of mesh:  Low-poly-eyes
+		processing begun of material:  Monk01:Low-poly:Eye_brown
+			processing texture unn1221_newface01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  0
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  516
+		Skeleton stats:  
+			Total Influencers:  96
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  96
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  robe2
+		animation processing begun
+			processing action wand_action:  in[1 - 40], out[0 - 40]
+		processing begun of material:  theRobe
+		num positions      :  745
+		num normals        :  745
+		num tangents       :  0
+		num uvs            :  1490
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3132
+		Skeleton stats:  
+			Total Influencers:  2394
+			Avg # of influencers per vertex:  3.2134
+			Highest # of influencers observed:  7, num vertices with this:  27
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  5960
+	processing begun of mesh:  hood2
+		processing begun of material:  theRobe
+		registered as also a user of material:  theRobe
+		num positions      :  716
+		num normals        :  716
+		num tangents       :  0
+		num uvs            :  1432
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3264
+		Skeleton stats:  
+			Total Influencers:  3045
+			Avg # of influencers per vertex:  4.2528
+			Highest # of influencers observed:  7, num vertices with this:  18
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  5728
+	processing begun of mesh:  staff
+		processing begun of material:  staff
+		processing begun of material:  jewel
+		processing begun of multimaterial:  monk04a.Multimaterial#1
+		num positions      :  151
+		num normals        :  151
+		num tangents       :  0
+		num uvs            :  302
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  330
+		Skeleton stats:  
+			Total Influencers:  151
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  151
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  604
+	processing begun of mesh:  chair
+		processing begun of material:  chair
+			processing texture fine_woods02_1024
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  195
+		num normals        :  195
+		num tangents       :  0
+		num uvs            :  390
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  276
+	processing begun of mesh:  chair.001
+		processing begun of material:  chair
+		registered as also a user of material:  chair
+		num positions      :  111
+		num normals        :  111
+		num tangents       :  0
+		num uvs            :  222
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  144
+	WARNING: The following camera not visible in scene thus ignored: Camera
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  skin_Uni1228
+	writing mesh:  Low-poly-eyes
+	writing mesh:  robe2
+	writing mesh:  hood2
+	writing mesh:  staff
+	writing mesh:  chair
+	writing mesh:  chair.001
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.6477 secs
