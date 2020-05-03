@@ -1,0 +1,95 @@
+Exporter version: 6.2.4, Blender version: 2.81 (sub 16)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\bvh\
+	Python World class constructor completed
+	processing begun of skeleton:  Test02, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LHipJoint, index:  1
+		processing begun of bone:  LeftUpLeg, index:  2
+		processing begun of bone:  LeftLeg, index:  3
+		processing begun of bone:  LeftFoot, index:  4
+		processing begun of bone:  LeftToeBase, index:  5
+		processing begun of bone:  LowerBack, index:  6
+		processing begun of bone:  Spine, index:  7
+		processing begun of bone:  Spine1, index:  8
+		processing begun of bone:  LeftShoulder, index:  9
+		processing begun of bone:  LeftArm, index:  10
+		processing begun of bone:  LeftForeArm, index:  11
+		processing begun of bone:  LeftHand, index:  12
+		processing begun of bone:  LThumb, index:  13
+		processing begun of bone:  LeftFingerBase, index:  14
+		processing begun of bone:  LeftHandFinger1, index:  15
+		processing begun of bone:  Neck, index:  16
+		processing begun of bone:  Neck1, index:  17
+		processing begun of bone:  Head, index:  18
+		processing begun of bone:  RightShoulder, index:  19
+		processing begun of bone:  RightArm, index:  20
+		processing begun of bone:  RightForeArm, index:  21
+		processing begun of bone:  RightHand, index:  22
+		processing begun of bone:  RThumb, index:  23
+		processing begun of bone:  RightFingerBase, index:  24
+		processing begun of bone:  RightHandFinger1, index:  25
+		processing begun of bone:  RHipJoint, index:  26
+		processing begun of bone:  RightUpLeg, index:  27
+		processing begun of bone:  RightLeg, index:  28
+		processing begun of bone:  RightFoot, index:  29
+		processing begun of bone:  RightToeBase, index:  30
+		processing action Test06_02x30:  in[1 - 179], out[0 - 179]
+	processing begun of mesh:  Test02:Uni1228
+		processing begun of material:  Test02:Uni1228:Defaultskin
+		num positions      :  2029
+		num normals        :  2029
+		num tangents       :  0
+		num uvs            :  4058
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  7320
+		Skeleton stats:  
+			Total Influencers:  4368
+			Avg # of influencers per vertex:  2.1528
+			Highest # of influencers observed:  7, num vertices with this:  12
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  16232
+	processing begun of mesh:  Test02:High-poly
+		processing begun of material:  Test02:High-poly:Eye_brown
+			processing texture brown_eye
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  1082
+		num normals        :  1082
+		num tangents       :  0
+		num uvs            :  2164
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6120
+		Skeleton stats:  
+			Total Influencers:  1082
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  1082
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  4328
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Cube
+		processing begun of material:  Material.001
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of light (POINT):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Test02:Uni1228
+	writing mesh:  Test02:High-poly
+	writing mesh:  Cube
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.0131 secs
