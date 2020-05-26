@@ -1,0 +1,74 @@
+Exporter version: 6.3.1, Blender version: 2.82 (sub 7)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\aHouse\
+	Python World class constructor completed
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  building_003
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  walls
+		processing begun of material:  roof
+		processing begun of material:  glass
+		processing begun of material:  slabs
+			processing texture shop02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture brick1024
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		registered as also a user of material:  walls
+			processing texture shop02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  shop01.Multimaterial#0
+		num positions      :  1090
+		num normals        :  1090
+		num tangents       :  0
+		num uvs            :  2180
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1542
+	processing begun of mesh:  sign01
+		processing begun of material:  glass
+		registered as also a user of material:  glass
+		num positions      :  48
+		num normals        :  48
+		num tangents       :  0
+		num uvs            :  96
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  54
+	processing begun of mesh:  sign02
+		processing begun of material:  glass
+		registered as also a user of material:  glass
+		num positions      :  45
+		num normals        :  45
+		num tangents       :  0
+		num uvs            :  90
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  54
+	processing begun of mesh:  Cube
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  building_003
+	writing mesh:  sign01
+	writing mesh:  sign02
+	writing mesh:  Cube
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.0952 secs
