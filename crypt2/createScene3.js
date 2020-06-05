@@ -246,10 +246,12 @@ if (sceneNum === 0){
 
 		
 		//if all sounds loaded enable the start-replay button and make it pickable
-		if(soundsReady === 0) {
+	/*	
+	if(soundsReady === 0) {
 			
 			//console.log("sounds ready");
 		}
+	*/
 				
 				
 
