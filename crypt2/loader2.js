@@ -43,6 +43,7 @@ window.onload = function () {
 	
 	
 // When a key is pressed
+/*
 		window.addEventListener('keydown',function(event){
 			
 			
@@ -71,7 +72,7 @@ window.onload = function () {
 			//}
 
 		});
-
+*/
 	
 	
 
