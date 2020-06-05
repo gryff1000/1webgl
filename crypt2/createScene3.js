@@ -210,7 +210,7 @@ if (sceneNum === 0){
 		};	
 
 
-/*
+
 		myScene.onKeyboardObservable.add((kbInfo) => {
 		switch (kbInfo.type) {
 			case BABYLON.KeyboardEventTypes.KEYDOWN:
@@ -238,7 +238,7 @@ if (sceneNum === 0){
 		}
 	});
 	
-	*/
+	
 			
 
 //} // end when ready
