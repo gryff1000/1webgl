@@ -13,7 +13,7 @@ var allMerrick;
 var aMerrick;
 */
 var aLamp;
-
+var myCamera;
 var myCamera2;
 var allLids;
 var openLids = [0,1,0,1,0,0,0,0,1];
@@ -55,7 +55,7 @@ if (sceneNum === 0){
 					
 					}
 					else {
-						var myCamera2 = myScene.getCameraByName("Camera");
+						myCamera2 = myScene.getCameraByName("Camera");
 						myCamera2.speed = .1;
 						//myCamera2.setPosition(new BABYLON.Vector3(0, 1.5, -4));
 						myScene.activeCamera = myCamera2;
