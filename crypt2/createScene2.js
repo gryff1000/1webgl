@@ -274,7 +274,7 @@ function createAnimation(startX) {
 };
 */
 
-
+/*
 // When a key is pressed
 		window.addEventListener('keydown',function(event){
 			
@@ -302,3 +302,4 @@ function createAnimation(startX) {
 
 		});
 
+*/
