@@ -305,6 +305,6 @@
 ],
 "morphTargetManagers":[],
 "cameras":[{"name":"Camera","id":"Camera","position":[0,5.421,-9.6588],"rotation":[0.5271,0,0],"fov":0.8576,"minZ":0.1,"maxZ":100,"speed":1,"inertia":0.9,"checkCollisions":false,"applyGravity":false,"ellipsoid":[0.2,0.9,0.2],"cameraRigMode":0,"interaxial_distance":0.0637,"type":"ArcRotateCamera","alpha":0.7854,"beta":0.7854,"radius":5.1962,"lockedTargetId":"coffin05"}],"activeCamera":"Camera",
-"lights":[{"name":"Hemi.001","id":"Hemi.001","type":3,"direction":[0,-1,0],"groundColor":[0,0,0],"intensity":0.3,"diffuse":[1,1,1],"specular":[0,0,0]},{"name":"Hemi","id":"Hemi","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"intensity":1.5,"diffuse":[1,1,1],"specular":[0,0,0]}],
+"lights":[{"name":"Hemi.001","id":"Hemi.001","type":3,"direction":[0,-1,0],"groundColor":[0,0,0],"intensity":0.5,"diffuse":[1,1,1],"specular":[0,0,0]},{"name":"Hemi","id":"Hemi","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"intensity":1.8,"diffuse":[1,1,1],"specular":[0,0,0]}],
 "shadowGenerators":[]
 }
