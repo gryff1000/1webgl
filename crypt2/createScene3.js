@@ -62,7 +62,7 @@ if (sceneNum === 0){
 					}
 			
 			// Then attach the activeCamera to the canvas for testing.
-			myScene.activeCamera.attachControl(canvas);
+			//myScene.activeCamera.attachControl(canvas);
 			
 	//}
 			allMeshes = myScene.meshes;
