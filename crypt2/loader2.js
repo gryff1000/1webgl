@@ -11,6 +11,7 @@ var canvas;
 var sceneNum = 0;
 var myScene;
 var ended = 0;
+var aLamp;
 //--------------------end shared variables---------------------------------
 
 
