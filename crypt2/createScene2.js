@@ -282,8 +282,8 @@ function createAnimation(startX) {
 	   
 		function onKeyUp(event) {
 			aLamp = myScene.getLightByName("Hemi");
-			aLamp.intensity = aLamp.intensity + 0.2;
-			console.log("key pressed = " + event.keyCode + "  intensity = " + aLamp.intensity);
+			//aLamp.intensity = aLamp.intensity + 0.2;
+			//console.log("key pressed = " + event.keyCode + "  intensity = " + aLamp.intensity);
 			switch(event.keyCode){
 			
 				case 85:
