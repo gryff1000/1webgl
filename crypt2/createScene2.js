@@ -281,7 +281,7 @@ function createAnimation(startX) {
 	   
 	   
 		function onKeyUp(event) {
-			console.log("key pressed");
+			console.log("key pressed new");
 		};
 
 
