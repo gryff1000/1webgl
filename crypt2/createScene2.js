@@ -156,7 +156,7 @@ if (sceneNum === 0){
 						break;
 				
 					case 4 :	
-							console.log ("four");
+							//console.log ("four");
 							var tempLids = [];
 							tempLids = [1,3,4,5,7];	
 							changeLids(tempLids);
