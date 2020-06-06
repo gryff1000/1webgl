@@ -45,14 +45,14 @@ window.onload = function () {
 	
 // When a key is pressed
 	
-	
+/*	
  window.addEventListener("keyup", onKeyUp);
 	   
 	   
 		function onKeyUp(event) {
 			console.log("key pressed");
 		};
-	
+*/	
 	
 	
 /*
