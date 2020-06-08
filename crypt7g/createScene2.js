@@ -2,7 +2,8 @@
 var aLamp;
 var myCamera2;
 var allLids;
-var openLids = [0,0,0,0,0,0,0,1,1];
+//var openLids = [0,0,0,0,0,0,0,1,1];
+var openLids = [1,1,0,0,0,1,0,1,1];
 var counter = 0;
 
 function createWorld(){
