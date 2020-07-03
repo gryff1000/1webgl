@@ -1,0 +1,70 @@
+Exporter version: 6.3.1, Blender version: 2.82 (sub 7)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\raptor\
+	Python World class constructor completed
+	processing begun of skeleton:  Armature, id:  0
+		processing begun of bone:  Armature, index:  0
+		processing begun of bone:  Base, index:  1
+		processing begun of bone:  Body, index:  2
+		processing begun of bone:  Neck, index:  3
+		processing begun of bone:  Head, index:  4
+		processing begun of bone:  Jaw, index:  5
+		processing begun of bone:  Fin2, index:  6
+		processing begun of bone:  Ear2, index:  7
+		processing begun of bone:  Ear1, index:  8
+		processing begun of bone:  Fin1, index:  9
+		processing begun of bone:  Arm1, index:  10
+		processing begun of bone:  Hand1, index:  11
+		processing begun of bone:  Arm2, index:  12
+		processing begun of bone:  Hand2, index:  13
+		processing begun of bone:  Tail1, index:  14
+		processing begun of bone:  Tail2, index:  15
+		processing begun of bone:  Tail3, index:  16
+		processing action action01:  in[1 - 300], out[0 - 300]
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  dilo_L0
+		processing begun of material:  Material.001
+			processing texture texture_NM
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture texture_BC
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  5551
+		num normals        :  5551
+		num tangents       :  22204
+		num uvs            :  11102
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  15600
+		Skeleton stats:  
+			Total Influencers:  11518
+			Avg # of influencers per vertex:  2.0749
+			Highest # of influencers observed:  5, num vertices with this:  9
+			exported as 5 influencers
+			num skeletonWeights and skeletonIndices:  44408
+	processing begun of mesh:  Cube
+		processing begun of material:  Material.001
+		registered as also a user of material:  Material.001
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  dilo_L0
+	writing mesh:  Cube
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.4579 secs
