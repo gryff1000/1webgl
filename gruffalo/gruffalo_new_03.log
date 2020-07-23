@@ -1,0 +1,129 @@
+Exporter version: 6.3.1, Blender version: 2.82 (sub 7)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\YDrive\downloads\gruffalo\The+Gruffalo+Family\files2\
+	Python World class constructor completed
+	processing begun of node:  Empty
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  gruffalo_5k
+		processing begun of material:  skin
+			processing texture base_text02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  10367
+		num normals        :  10367
+		num tangents       :  0
+		num uvs            :  20734
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  51108
+	processing begun of mesh:  gruffalo_horns
+		processing begun of material:  horns
+		num positions      :  668
+		num normals        :  668
+		num tangents       :  2672
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3936
+	processing begun of mesh:  gruffalo_eyes
+		processing begun of material:  eyes
+		processing begun of material:  iris
+		processing begun of multimaterial:  gruffalo_new_03.Multimaterial#0
+		num positions      :  558
+		num normals        :  558
+		num tangents       :  2232
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3120
+	processing begun of mesh:  gruffalo_teeth_big
+		processing begun of material:  teeth_big
+		num positions      :  340
+		num normals        :  340
+		num tangents       :  1360
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  2016
+	processing begun of mesh:  gruffalo_claws_pawR
+		processing begun of material:  claws
+		num positions      :  125
+		num normals        :  125
+		num tangents       :  500
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  690
+	processing begun of mesh:  gruffalo_claws_pawL
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  127
+		num normals        :  127
+		num tangents       :  508
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  714
+	processing begun of mesh:  gruffalo_claws_footR
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  148
+		num normals        :  148
+		num tangents       :  592
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  792
+	processing begun of mesh:  gruffalo_claws_footL
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  912
+	processing begun of mesh:  Cube
+		processing begun of material:  teeth_big
+		registered as also a user of material:  teeth_big
+		num positions      :  17
+		num normals        :  17
+		num tangents       :  0
+		num uvs            :  34
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  gruffalo_teeth_small
+		processing begun of material:  teeth_big
+		registered as also a user of material:  teeth_big
+		num positions      :  67
+		num normals        :  67
+		num tangents       :  268
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  306
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  gruffalo_5k
+	writing mesh:  gruffalo_horns
+	writing mesh:  gruffalo_eyes
+	writing mesh:  gruffalo_teeth_big
+	writing mesh:  gruffalo_claws_pawR
+	writing mesh:  gruffalo_claws_pawL
+	writing mesh:  gruffalo_claws_footR
+	writing mesh:  gruffalo_claws_footL
+	writing mesh:  Cube
+	writing mesh:  gruffalo_teeth_small
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.3293 secs
