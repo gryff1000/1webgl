@@ -94,6 +94,7 @@
 			var mySkeleton = [];
 			var theRaptor;
 			var myCamera2;
+			var aFlag = 0;
 			
 			
 			BABYLON.SceneLoader.Append("", "gruffalo_new_05.babylon", myScene);
@@ -157,8 +158,16 @@
 				//console.log(objname);
 					switch(objname) {
 						case "Trigger" :
-							myScene.beginAnimation(mySkeleton[0],1,60,true, 1);
-							theTrigger.isPickable = false;
+							if(aFlag === 0){
+								myScene.beginAnimation(mySkeleton[0],1,60,true, 1);
+								//theTrigger.isPickable = false;
+								aFlag = 1;
+							}
+							else {
+								myScene.stopAnimation(mySkeleton[0]);
+								aFlag = 0;
+								//theTrigger.isPickable = true
+							}
 						break;
 		
 					}
