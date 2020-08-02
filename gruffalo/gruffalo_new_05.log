@@ -1,0 +1,263 @@
+Exporter version: 6.2.4, Blender version: 2.81 (sub 16)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory   :  H:\YDrive\downloads\gruffalo\The+Gruffalo+Family\files2\
+	Python World class constructor completed
+	processing begun of skeleton:  Armature, id:  0
+		processing begun of bone:  hip, index:  0
+		processing begun of bone:  spine01, index:  1
+		processing begun of bone:  spine02, index:  2
+		processing begun of bone:  neck, index:  3
+		processing begun of bone:  head_bone, index:  4
+		processing begun of bone:  UpperLeg.L, index:  5
+		processing begun of bone:  LowerLeg.L, index:  6
+		processing begun of bone:  Foot.L, index:  7
+		processing begun of bone:  Toes.L, index:  8
+		processing begun of bone:  leg.IK.L, index:  9
+		processing begun of bone:  shoulder.L, index:  10
+		processing begun of bone:  upperArm.L, index:  11
+		processing begun of bone:  lowerArm.L, index:  12
+		processing begun of bone:  hand.L, index:  13
+		processing begun of bone:  fingers.L, index:  14
+		processing begun of bone:  jaw_bone, index:  15
+		processing begun of bone:  thumb.L, index:  16
+		processing begun of bone:  hand.IK.L, index:  17
+		processing begun of bone:  shoulder.R, index:  18
+		processing begun of bone:  upperArm.R, index:  19
+		processing begun of bone:  lowerArm.R, index:  20
+		processing begun of bone:  hand.R, index:  21
+		processing begun of bone:  fingers.R, index:  22
+		processing begun of bone:  thumb.R, index:  23
+		processing begun of bone:  hand.IK.R, index:  24
+		processing begun of bone:  UpperLeg.R, index:  25
+		processing begun of bone:  LowerLeg.R, index:  26
+		processing begun of bone:  Foot.R, index:  27
+		processing begun of bone:  Toes.R, index:  28
+		processing begun of bone:  leg.IK.R, index:  29
+		processing begun of bone:  knee.IK.L, index:  30
+		processing begun of bone:  knee.IK.R, index:  31
+		processing action sitAction:  in[1 - 60], out[0 - 60]
+	processing begun of node:  Empty
+	processing begun of mesh:  Trigger
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  gruffalo_5k
+		processing begun of material:  skin
+			processing texture base_text02
+				WARNING: Exception during copy:
+					'H:\\YDrive\\downloads\\gruffalo\\The+Gruffalo+Family\\files2\\base_text02.png' and 'H:\\YDrive\\downloads\\gruffalo\\The+Gruffalo+Family\\files2\\base_text02.png' are the same file
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  10587
+		num normals        :  10587
+		num tangents       :  0
+		num uvs            :  21174
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  52080
+		Skeleton stats:  
+			WARNING: Maximum # of influencers exceeded for 4 vertices, extras ignored
+			Total Influencers:  36481
+			Avg # of influencers per vertex:  3.4458
+			Highest # of influencers observed:  9, num vertices with this:  4
+			exported as 8 influencers
+			num skeletonWeights and skeletonIndices:  84696
+	processing begun of mesh:  gruffalo_horns
+		processing begun of material:  horns
+		num positions      :  668
+		num normals        :  668
+		num tangents       :  2672
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3936
+		Skeleton stats:  
+			Total Influencers:  668
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  668
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  2672
+	processing begun of mesh:  gruffalo_eyes
+		processing begun of material:  eyes
+		processing begun of material:  iris
+		processing begun of multimaterial:  gruffalo_new_05.Multimaterial#0
+		num positions      :  558
+		num normals        :  558
+		num tangents       :  2232
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3120
+		Skeleton stats:  
+			Total Influencers:  558
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  558
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  2232
+	processing begun of mesh:  gruffalo_teeth_big
+		processing begun of material:  teeth_big
+		num positions      :  340
+		num normals        :  340
+		num tangents       :  1360
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  2016
+		Skeleton stats:  
+			Total Influencers:  340
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  340
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  1360
+	processing begun of mesh:  gruffalo_claws_pawR
+		processing begun of material:  claws
+		num positions      :  105
+		num normals        :  105
+		num tangents       :  420
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  582
+		Skeleton stats:  
+			Total Influencers:  105
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  105
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  420
+	processing begun of mesh:  gruffalo_claws_pawL
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  97
+		num normals        :  97
+		num tangents       :  388
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  546
+		Skeleton stats:  
+			Total Influencers:  97
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  97
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  388
+	processing begun of mesh:  gruffalo_claws_footR
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  148
+		num normals        :  148
+		num tangents       :  592
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  792
+		Skeleton stats:  
+			Total Influencers:  148
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  148
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  592
+	processing begun of mesh:  gruffalo_claws_footL
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  912
+		Skeleton stats:  
+			Total Influencers:  172
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  172
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  688
+	processing begun of mesh:  Cube
+		processing begun of material:  teeth_big
+		registered as also a user of material:  teeth_big
+		num positions      :  17
+		num normals        :  17
+		num tangents       :  0
+		num uvs            :  34
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  gruffalo_teeth_small
+		processing begun of material:  teeth_big
+		registered as also a user of material:  teeth_big
+		num positions      :  67
+		num normals        :  67
+		num tangents       :  268
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  306
+		Skeleton stats:  
+			Total Influencers:  67
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  67
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  268
+	processing begun of mesh:  gruffalo_claws_thumbL.
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  120
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  168
+		Skeleton stats:  
+			Total Influencers:  30
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  30
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  120
+	processing begun of mesh:  gruffalo_claws_thumbR
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  20
+		num normals        :  20
+		num tangents       :  80
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  108
+		Skeleton stats:  
+			Total Influencers:  20
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  20
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  80
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Trigger
+	writing mesh:  gruffalo_5k
+	writing mesh:  gruffalo_horns
+	writing mesh:  gruffalo_eyes
+	writing mesh:  gruffalo_teeth_big
+	writing mesh:  gruffalo_claws_pawR
+	writing mesh:  gruffalo_claws_pawL
+	writing mesh:  gruffalo_claws_footR
+	writing mesh:  gruffalo_claws_footL
+	writing mesh:  Cube
+	writing mesh:  gruffalo_teeth_small
+	writing mesh:  gruffalo_claws_thumbL.
+	writing mesh:  gruffalo_claws_thumbR
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 8.8581 secs
