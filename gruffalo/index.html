@@ -113,19 +113,19 @@
 					
 					
 					// Attach camera to canvas inputs or if fixed do not.
-                    myScene.activeCamera.attachControl(canvas);
+                    			myScene.activeCamera.attachControl(canvas);
 					
 					
-					//var aTrigger = myScene.getMeshByName("trigger01");
+					var aTrigger = myScene.getMeshByName("Trigger");
 					
 
 					//Get the skeleton
-					/*
+					
 					mySkeleton[0] = myScene.getSkeletonByName("Armature");
 					// get the mesh
-					theRaptor = myScene.getMeshByName("dilo_L0");
+					theTrigger = myScene.getMeshByName("Trigger");
 					
-					*/
+					
 					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
@@ -156,9 +156,9 @@
 				var objname = pickResult.pickedMesh.name;
 				//console.log(objname);
 					switch(objname) {
-						case "dilo_L0" :
-							myScene.beginAnimation(mySkeleton[0],1,300,true, 1);
-							theRaptor.isPickable = false;
+						case "Trigger" :
+							myScene.beginAnimation(mySkeleton[0],1,60,true, 1);
+							theTrigger.isPickable = false;
 						break;
 		
 					}
