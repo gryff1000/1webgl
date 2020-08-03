@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>The Gruffalo</title>
+   
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+		#pick {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 100px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<!--<div id="loader">Loading...</div> -->
+	<div id="fps">0 fps</div>
+	<!--<div id="pick">book closed</div> -->
+	
+	
+    <canvas height="695" width="1920" id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divPick = document.getElementById("pick");
+			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			var mySkeleton = [];
+			var theRaptor;
+			var myCamera2;
+			var aFlag = 0;
+			
+			
+			BABYLON.SceneLoader.Append("", "gruffalo_new_06a.babylon", myScene);
+            
+			
+                myScene.executeWhenReady(function () {
+                    
+					myCamera2 = myScene.getCameraByName("Camera");
+
+					myCamera2.speed = .05;
+					myCamera2.wheelPrecision = 500;
+					myCamera2.maxZ= 500;
+					myCamera2.angularSensibility =4000;
+					//myCamera2.inputs.attached.keyboard.angularSpeed = .002;
+					//myCamera2.inputs.addMouse();
+					myScene.activeCamera = myCamera2;
+					
+					
+					// Attach camera to canvas inputs or if fixed do not.
+                    			myScene.activeCamera.attachControl(canvas);
+					
+					
+					var aTrigger = myScene.getMeshByName("Trigger");
+					
+
+					//Get the skeleton
+					
+					mySkeleton[0] = myScene.getSkeletonByName("Armature");
+					// get the mesh
+					theTrigger = myScene.getMeshByName("Trigger");
+					
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                    myScene.render();
+                    });
+                });
+        };
+		
+		
+		
+		
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+		// On Click evt
+		
+		
+		 window.addEventListener("click", function (evt) {
+		 
+			 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
+			 if (pickResult.hit)
+				{
+				var objname = pickResult.pickedMesh.name;
+				//console.log(objname);
+					switch(objname) {
+						case "Trigger" :
+							if(aFlag === 0){
+								myScene.beginAnimation(mySkeleton[0],1,30,false, 1);
+								//mySkeleton[0].beginAnimation("mouthAction");
+								//theTrigger.isPickable = false;
+								aFlag = 1;
+							}
+							else {
+								myScene.beginAnimation(mySkeleton[0],30,1,false,1);
+								aFlag = 0;
+								//theTrigger.isPickable = true
+							}
+						break;
+		
+					}
+				}
+		 
+		 });
+		 
+		 
+		 
+		
+		
+		
+    </script>
+
+
+</body></html>
