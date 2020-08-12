@@ -115,6 +115,11 @@
             
 			
                 myScene.executeWhenReady(function () {
+			
+			
+					myScene.clearColor = new BABYLON.Color3(.0509,0.0509,0.0509);
+					myScene.fogDensity = .005;
+					myScene.fogColor = new BABYLON.Color3(.5509,0.5509,0.509);
                     
 					myCamera2 = myScene.getCameraByName("Camera");
 
