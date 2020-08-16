@@ -99,27 +99,28 @@
 			
 			var mix = new BABYLON.MixMaterial("mix", myScene);
 			
-			mix.mixTexture1 = new BABYLON.Texture("testsplat02.png", myScene);
-			mix.diffuseTexture1 = new BABYLON.Texture("rock_grass1baked.png", myScene);
-			mix.diffuseTexture2 = new BABYLON.Texture("rock2baked.png", myScene);
-			mix.diffuseTexture3 = new BABYLON.Texture("grass4baked.png", myScene);
+			mix.mixTexture1 = new BABYLON.Texture("new_splatA.png", myScene);
+			mix.diffuseTexture1 = new BABYLON.Texture("bakedGrass01.png", myScene);
+			mix.diffuseTexture3 = new BABYLON.Texture("rock2baked.png", myScene);
+			mix.diffuseTexture2 = new BABYLON.Texture("bakedRock01.png", myScene);
 			mix.diffuseTexture4 = new BABYLON.Texture("grass1.jpg", myScene);
 
 			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 10;
-			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 20;
-			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 10;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 10;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 20;
 			mix.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 1;
 			
+			
+			
 			BABYLON.SceneLoader.Append("", "skydome01.babylon", myScene);
-			BABYLON.SceneLoader.Append("", "gruffalo_new_08.babylon", myScene);
+			BABYLON.SceneLoader.Append("", "gruffalo_new_09a.babylon", myScene);
             
 			
                 myScene.executeWhenReady(function () {
-			
-			
-					myScene.clearColor = new BABYLON.Color3(.0509,0.0509,0.0509);
-					myScene.fogDensity = .005;
-					myScene.fogColor = new BABYLON.Color3(.5509,0.5509,0.509);
+				
+						myScene.clearColor = new BABYLON.Color3(.0509,0.0509,0.0509);
+			myScene.fogDensity = .015;
+			myScene.fogColor = new BABYLON.Color3(.0509,0.0509,0.000);
                     
 					myCamera2 = myScene.getCameraByName("Camera");
 
@@ -137,17 +138,21 @@
 					myCamera2.upperRadiusLimit = 6;
 					 */
 					
-				myScene.activeCamera = myCamera2;
+					myScene.activeCamera = myCamera2;
 					
 					
 					// Attach camera to canvas inputs or if fixed do not.
 					myScene.activeCamera.attachControl(canvas);
 					
+					var theSky = myScene.getMeshByName("sky");
+					//theSky.applyFog = false;
 					
 					
 					var aTrigger = myScene.getMeshByName("Trigger");
 					var ground = myScene.getMeshByName("Terrain");
 					ground.material = mix;
+					
+			
 
 					//Get the skeleton
 					
