@@ -1,0 +1,612 @@
+Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\gruffalo3\
+	Python World class constructor completed
+	processing begun of skeleton:  Armature, id:  0
+		processing begun of bone:  hip, index:  0
+		processing begun of bone:  spine01, index:  1
+		processing begun of bone:  spine02, index:  2
+		processing begun of bone:  neck, index:  3
+		processing begun of bone:  head_bone, index:  4
+		processing begun of bone:  UpperLeg.L, index:  5
+		processing begun of bone:  LowerLeg.L, index:  6
+		processing begun of bone:  Foot.L, index:  7
+		processing begun of bone:  Toes.L, index:  8
+		processing begun of bone:  shoulder.L, index:  9
+		processing begun of bone:  upperArm.L, index:  10
+		processing begun of bone:  lowerArm.L, index:  11
+		processing begun of bone:  hand.L, index:  12
+		processing begun of bone:  fingers.L, index:  13
+		processing begun of bone:  jaw_bone, index:  14
+		processing begun of bone:  thumb.L, index:  15
+		processing begun of bone:  shoulder.R, index:  16
+		processing begun of bone:  upperArm.R, index:  17
+		processing begun of bone:  lowerArm.R, index:  18
+		processing begun of bone:  hand.R, index:  19
+		processing begun of bone:  fingers.R, index:  20
+		processing begun of bone:  thumb.R, index:  21
+		processing begun of bone:  UpperLeg.R, index:  22
+		processing begun of bone:  LowerLeg.R, index:  23
+		processing begun of bone:  Foot.R, index:  24
+		processing begun of bone:  Toes.R, index:  25
+		Ignoring IK bone:  leg.L.IK
+		Ignoring IK bone:  leg.R.IK
+		Ignoring IK bone:  arm.L.IK
+		Ignoring IK bone:  arm.R.IK
+		processing action mouthAction:  in[1 - 30], out[0 - 30]
+	processing begun of mesh:  Trigger
+		processing begun of material:  Material.001
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  tree_log
+		processing begun of material:  wood
+			processing texture darkwood01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  258
+		num normals        :  258
+		num tangents       :  0
+		num uvs            :  516
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  128
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  gruffalo_5k
+		processing begun of material:  skin
+			processing texture base_text02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  10589
+		num normals        :  10589
+		num tangents       :  0
+		num uvs            :  21178
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  17360
+		Skeleton stats:  
+			WARNING: Maximum # of influencers exceeded for 4 vertices, extras ignored
+			Total Influencers:  36485
+			Avg # of influencers per vertex:  3.4456
+			Highest # of influencers observed:  9, num vertices with this:  4
+			exported as 8 influencers
+			num skeletonWeights and skeletonIndices:  84712
+	processing begun of mesh:  gruffalo_horns
+		processing begun of material:  horns
+		num positions      :  668
+		num normals        :  668
+		num tangents       :  2672
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1312
+		Skeleton stats:  
+			Total Influencers:  668
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  668
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  2672
+	processing begun of mesh:  gruffalo_teeth_big
+		processing begun of material:  teeth_big
+		num positions      :  340
+		num normals        :  340
+		num tangents       :  1360
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  672
+		Skeleton stats:  
+			Total Influencers:  340
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  340
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  1360
+	processing begun of mesh:  gruffalo_claws_pawR
+		processing begun of material:  claws
+		num positions      :  105
+		num normals        :  105
+		num tangents       :  420
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  194
+		Skeleton stats:  
+			Total Influencers:  105
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  105
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  420
+	processing begun of mesh:  gruffalo_claws_pawL
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  97
+		num normals        :  97
+		num tangents       :  388
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  182
+		Skeleton stats:  
+			Total Influencers:  97
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  97
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  388
+	processing begun of mesh:  gruffalo_claws_footR
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  148
+		num normals        :  148
+		num tangents       :  592
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  264
+		Skeleton stats:  
+			Total Influencers:  148
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  148
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  592
+	processing begun of mesh:  gruffalo_claws_footL
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  304
+		Skeleton stats:  
+			Total Influencers:  172
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  172
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  688
+	processing begun of mesh:  Cube
+		processing begun of material:  teeth_big
+		registered as also a user of material:  teeth_big
+		num positions      :  17
+		num normals        :  17
+		num tangents       :  0
+		num uvs            :  34
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  gruffalo_teeth_small
+		processing begun of material:  teeth_big
+		registered as also a user of material:  teeth_big
+		num positions      :  67
+		num normals        :  67
+		num tangents       :  268
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  102
+		Skeleton stats:  
+			Total Influencers:  67
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  67
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  268
+	processing begun of mesh:  gruffalo_claws_thumbL.
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  120
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  56
+		Skeleton stats:  
+			Total Influencers:  30
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  30
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  120
+	processing begun of mesh:  gruffalo_claws_thumbR
+		processing begun of material:  claws
+		registered as also a user of material:  claws
+		num positions      :  20
+		num normals        :  20
+		num tangents       :  80
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  36
+		Skeleton stats:  
+			Total Influencers:  20
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  20
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  80
+	processing begun of mesh:  gruffalo_LP_eyes
+		processing begun of material:  eyes
+		processing begun of material:  iris
+		processing begun of multimaterial:  gruffalo_new_09a.Multimaterial#0
+		num positions      :  360
+		num normals        :  360
+		num tangents       :  0
+		num uvs            :  720
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  448
+		Skeleton stats:  
+			Total Influencers:  360
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  360
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  1440
+	processing begun of mesh:  Terrain
+		processing begun of material:  Material
+			processing texture new_splatA
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4225
+		num normals        :  4225
+		num tangents       :  0
+		num uvs            :  8450
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8192
+	processing begun of mesh:  tree02.001
+		processing begun of material:  trunk01.001
+		processing begun of material:  leaves02.001
+			processing texture darkwood01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture new_green01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  gruffalo_new_09a.Multimaterial#1
+		num positions      :  294
+		num normals        :  294
+		num tangents       :  0
+		num uvs            :  588
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  tree02.002
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.003
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.004
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.005
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.006
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.007
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.008
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.009
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.010
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.011
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.012
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.013
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.014
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.015
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.016
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.017
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.018
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.019
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.020
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.021
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.022
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.023
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.024
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.025
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.026
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.027
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.028
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.029
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.030
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.031
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.032
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.033
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.034
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.035
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.036
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.037
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.038
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.039
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.040
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.041
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.042
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.043
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.044
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.045
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.046
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.047
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.048
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.049
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.050
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.051
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.052
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.053
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.054
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.055
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.056
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.057
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.058
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.059
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.060
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.061
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.062
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.063
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.064
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.065
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.066
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.067
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.068
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.069
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.070
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.071
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.072
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.073
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.074
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.075
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.076
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.077
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.078
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.079
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.080
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.081
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.082
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.083
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.084
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.085
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.086
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.087
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.088
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.089
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.090
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.091
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.092
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.093
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.094
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.095
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.096
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.097
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.098
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.099
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree02.100
+		mesh is an instance of :  tree02.001.  Processing halted.
+	processing begun of mesh:  tree01.001
+		processing begun of material:  trunk01
+		processing begun of material:  leaves01
+			processing texture darkwood01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture new_mixed01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  gruffalo_new_09a.Multimaterial#2
+		num positions      :  294
+		num normals        :  294
+		num tangents       :  0
+		num uvs            :  588
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  tree01.002
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.003
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.004
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.005
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.006
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.007
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.008
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.009
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.010
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.011
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.012
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.013
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.014
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.015
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.016
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.017
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.018
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.019
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.020
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.021
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.022
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.023
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.024
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.025
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.026
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.027
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.028
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.029
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.030
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.031
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.032
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.033
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.034
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.035
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.036
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.037
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.038
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.039
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.040
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.041
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.042
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.043
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.044
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.045
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.046
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.047
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.048
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.049
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.050
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of light (HEMI FROM AREA):  Light
+	processing begun of light (HEMI FROM AREA):  Light.001
+========= Writing of JSON file started =========
+	writing mesh:  Trigger
+	writing mesh:  tree_log
+	writing mesh:  gruffalo_5k
+	writing mesh:  gruffalo_horns
+	writing mesh:  gruffalo_teeth_big
+	writing mesh:  gruffalo_claws_pawR
+	writing mesh:  gruffalo_claws_pawL
+	writing mesh:  gruffalo_claws_footR
+	writing mesh:  gruffalo_claws_footL
+	writing mesh:  Cube
+	writing mesh:  gruffalo_teeth_small
+	writing mesh:  gruffalo_claws_thumbL.
+	writing mesh:  gruffalo_claws_thumbR
+	writing mesh:  gruffalo_LP_eyes
+	writing mesh:  Terrain
+	writing mesh:  tree02.001
+	writing mesh:  tree01.001
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 10.6234 secs
