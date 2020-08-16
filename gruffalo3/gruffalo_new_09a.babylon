@@ -1,5 +1,5 @@
 {"producer":{"name":"Blender","version":"2.82 (sub 7)","exporter_version":"6.4.3","file":"gruffalo_new_09a.babylon"},
-"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-9.81,0],
+"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-1.81,0],
 "materials":[{"name":"Material.001","id":"Material.001","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"diffuse":[0.8,0.8,0.8],"specular":[0.5,0.5,0.5],"specularPower":64,"alpha":1,"indexOfRefraction":0.6897},
 {"name":"wood","id":"wood","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"specular":[0,0,0],"specularPower":0,"alpha":1,"indexOfRefraction":0.6897, 
 "diffuseTexture":{"name":"darkwood01.jpg","level":1,"hasAlpha":false,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}},
