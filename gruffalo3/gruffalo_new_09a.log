@@ -587,6 +587,16 @@ Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
 		mesh is an instance of :  tree01.001.  Processing halted.
 	processing begun of mesh:  tree01.050
 		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  aWall
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		num positions      :  84
+		num normals        :  84
+		num tangents       :  0
+		num uvs            :  168
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
 	processing begun of light (HEMI FROM AREA):  Light
 	processing begun of light (HEMI FROM AREA):  Light.001
 ========= Writing of JSON file started =========
@@ -607,6 +617,7 @@ Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
 	writing mesh:  Terrain
 	writing mesh:  tree02.001
 	writing mesh:  tree01.001
+	writing mesh:  aWall
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 10.4842 secs
+elapsed time:  0 min, 10.0888 secs
