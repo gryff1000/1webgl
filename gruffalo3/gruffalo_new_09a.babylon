@@ -1,5 +1,5 @@
 {"producer":{"name":"Blender","version":"2.82 (sub 7)","exporter_version":"6.4.3","file":"gruffalo_new_09a.babylon"},
-"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-9.81,0],
+"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-1.81,0],
 "materials":[{"name":"Material.001","id":"Material.001","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"diffuse":[0.8,0.8,0.8],"specular":[0.5,0.5,0.5],"specularPower":64,"alpha":1,"indexOfRefraction":0.6897},
 {"name":"wood","id":"wood","customType":"BABYLON.StandardMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"specular":[0,0,0],"specularPower":0,"alpha":1,"indexOfRefraction":0.6897, 
 "diffuseTexture":{"name":"darkwood01.jpg","level":1,"hasAlpha":false,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}},
@@ -7484,6 +7484,8 @@
 ],
 "morphTargetManagers":[],
 "cameras":[{"name":"Camera","id":"Camera","position":[0,1.65,-5],"rotation":[0,0,0],"fov":0.6911,"minZ":0.1,"maxZ":250,"speed":1,"inertia":0.9,"checkCollisions":true,"applyGravity":true,"ellipsoid":[0.2,0.9,0.2],"cameraRigMode":0,"interaxial_distance":0.0637,"type":"UniversalCamera"}],"activeCameraID":"Camera",
-"lights":[{"name":"Light","id":"Light","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":1},{"name":"Light.001","id":"Light.001","type":3,"direction":[0,-1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4,"includedOnlyMeshesIds":["Terrain","tree02.001","tree01.001"]}],
+"lights":[
+{"name":"Light","id":"Light","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":0.75,"diffuse":[1,1,1],"specular":[1,1,1],"radius":1},
+{"name":"Light.001","id":"Light.001","type":3,"direction":[0,-1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":0.2,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4,"includedOnlyMeshesIds":["Terrain","tree02.001","tree01.001"]}],
 "shadowGenerators":[]
 }
