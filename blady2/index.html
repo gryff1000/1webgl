@@ -83,6 +83,7 @@ http://creativecommons.org/licenses/by/4.0/
 			var divFps = document.getElementById("fps");
 			var myScene = new BABYLON.Scene(engine);
 			var music;
+			var skeleton;
 			
 			
 			
@@ -94,8 +95,8 @@ http://creativecommons.org/licenses/by/4.0/
                 myScene.executeWhenReady(function () {
                     // Attach camera to canvas inputs
                     myScene.activeCamera.attachControl(canvas);
-					var skeleton = myScene.getSkeletonById(0);
-					myScene.beginAnimation(skeleton, 1, 928, true, 1);
+					skeleton = myScene.getSkeletonById(0);
+					//myScene.beginAnimation(skeleton, 1, 928, true, 1);
 					//music.play();
 					
                     // Once the scene is loaded, just register a render loop to render it
@@ -125,6 +126,7 @@ http://creativecommons.org/licenses/by/4.0/
 		
 		function soundReady() {
 			//soundsReady++;
+			myScene.beginAnimation(skeleton, 1, 928, true, 1);
 			music.play();
 		};
 		
