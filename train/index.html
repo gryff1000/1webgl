@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>A Single Fairlie</title>
+    <title>The Little Train of Wales</title>
     <!--<script src="../hand.js"></script> -->
 	
 	<script src="https://cdn.babylonjs.com/babylon.js"></script>
-	
+	<script src="babylon.mixMaterial.min.js"></script>
     <!--<script src="../babylon.2.5.js"></script>
 	<script src="../howler.js"></script> -->
     <style>
@@ -85,14 +85,30 @@ http://creativecommons.org/licenses/by/4.0/
             var engine = new BABYLON.Engine(canvas, true);
 			var divFps = document.getElementById("fps");
 			var myScene = new BABYLON.Scene(engine);
-			var music;
-			var skeleton;
+			var chuff;
+			//var skeleton;
 			var myTrigger;
+			var theSignal =0;
 			var flag = 0; 
 			var theAnim;
-			var currFrame = 1;
+			//var currFrame = 1;
+			var myCamera;
+			var myCamera2;
+			var camFlag = 0;
+			var soundsReady = 0;
 			
+			var mix = new BABYLON.MixMaterial("mix", myScene);
 			
+			mix.mixTexture1 = new BABYLON.Texture("terrain_map.png", myScene);
+			mix.diffuseTexture1 = new BABYLON.Texture("grass1a.jpg", myScene);//red
+			mix.diffuseTexture2 = new BABYLON.Texture("rock2baked.png", myScene);//green
+			mix.diffuseTexture3 = new BABYLON.Texture("bakedRock01.png", myScene);//blue
+			mix.diffuseTexture4 = new BABYLON.Texture("4planks01.png", myScene);// alpha
+
+			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 10;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 20;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 20;
+			mix.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 10;
 			
 			// Load the sound and play it automatically once ready
 			//music = new BABYLON.Sound("music", "Bassa Island Game Loop2.mp3", myScene, soundReady, { loop: true, volume: 0.5 });
@@ -115,19 +131,119 @@ http://creativecommons.org/licenses/by/4.0/
                 myScene.executeWhenReady(function () {
                     // Attach camera to canvas inputs
 					
-					var myCamera = myScene.getCameraByName("Camera");
+					myCamera = myScene.getCameraByName("Camera");
                    
 					myCamera.speed = .5;
 					myCamera.wheelPrecision = 10;
 					myCamera.maxZ= 500;
+					//myCamera.lowerRadiusLimit = 50;
+					myCamera.upperRadiusLimit = 70;
+					myCamera.lowerBetaLimit = 1.2708;
+					myCamera.upperBetaLimit = 1.0708;
+					//actCamera = myCamera;
 					myScene.activeCamera = myCamera;
 				    myScene.activeCamera.attachControl(canvas);
 					
-					myTrigger = myScene.getMeshByName("loco");
-					myTrigger.isPickable = false;
+					myLoco = myScene.getMeshByName("loco");
+					myLoco.isPickable = false;
+					aSignal1 = myScene.getMeshByName("signal1");
+					aSignal2 = myScene.getMeshByName("signal2");
+					
+					
+					
+					myCamera2 = myScene.getCameraByName("cab_camera");
+					myCamera2.position.x = -3.50;
+					//myScene.activeCamera = myCamera2;
+					//myScene.activeCamera.attachControl(canvas);
+					
+					
+					var ground = myScene.getMeshByName("terrain.001");
+					ground.material = mix;
+					
+					
+					/*
+					var itHasStopped = function () {
+						setTimeout(function(){console.log("stopped"), 4000});
+						if(flag === 0){
+							console.log("itHasStopped func reports the animation stopped");
+							theAnim = myScene.beginAnimation(myTrigger, 116, 251, false, 1, itHasStopped);
+							flag = 1;
+						}
+						else{
+							console.log("itHasStopped func reports the animation stopped AGAIN");
+							theAnim = myScene.beginAnimation(myTrigger, 1, 115, false, 1, itHasStopped);
+							flag = 0;
+						}
+					};
+					*/
 					
 					//skeleton = myScene.getSkeletonById(0);
-					theAnim = myScene.beginAnimation(myTrigger, 1, 251, true, 1);
+					
+					createSmoke();
+					
+					//When click event is raised
+					myScene.onPointerDown = function (evt, pickResult) {
+					// We try to pick an object
+					if (pickResult.hit) {
+					myTrigger = pickResult.pickedMesh.name;
+					//console.log(myTrigger);
+					switch (myTrigger){
+						case "signal1" :
+						
+							//theAnim.onAnimationEnd = function(){console.log("ended")};
+						
+							//console.log("clicked on "+pickResult.pickedMesh.name);
+							chuff.play();
+							theAnim = myScene.beginAnimation(myLoco, 1, 115, false, 0.5);
+							//onAnimationEnd = function(){chuff.stop();};
+							theAnim.onAnimationEnd = function(){chuff.stop(); console.log("ended")};
+
+							myScene.beginAnimation(aSignal1, 1, 24, false, 1);
+							myScene.beginAnimation(aSignal2, 1, 24, false, 1);
+							
+							
+
+							flag = 1;
+							//console.log(aSignal2.position);
+							break;
+							
+						case "signal2" :
+							//console.log("clicked AGAIN");
+							chuff.play();
+							theAnim = myScene.beginAnimation(myLoco, 116, 251, false, 0.5);
+							theAnim.onAnimationEnd = function(){chuff.stop(); console.log("ended")};
+
+							myScene.beginAnimation(aSignal2, 24, 1, false, 1);
+							myScene.beginAnimation(aSignal1, 24, 1, false, 1)
+							flag = 0;
+							//console.log(aSignal1.position);
+							break;
+							
+						default:
+							break;
+					
+					
+					}
+					/*
+						if(flag ===0 ){
+							//header.textContent = pickResult.pickedMesh.name;
+							console.log("clicked");
+							theAnim = myScene.beginAnimation(myTrigger, 1, 115, false, 1);
+							flag = 1;
+						}
+						else{
+							console.log("clicked AGAIN");
+							theAnim = myScene.beginAnimation(myTrigger, 116, 251, false, 1);
+							flag = 0;
+						}
+					*/
+					}
+					};
+					
+					//theAnim = myScene.beginAnimation(myTrigger, 1, 115, false, 1);
+					
+					
+					
 					//myScene.beginAnimation(skeleton, 1, 928, true, 1);
 					//music.play();
 					
@@ -154,64 +270,110 @@ http://creativecommons.org/licenses/by/4.0/
 		*/
 		
 		// Load the sound and play it automatically once ready
-		//music = new BABYLON.Sound("music", "Bassa_Island_Game_ Loop2.mp3", myScene, soundReady, { loop: true, volume: 0.5 });
+		chuff = new BABYLON.Sound("music", "train02a.mp3", myScene, soundReady, { loop: false, volume: 0.5 });
 		
-//function soundReady() {
-			//soundsReady++;
+		function soundReady() {
+			soundsReady++;
 			//myScene.beginAnimation(skeleton, 1, 928, true, 1);
-			//music.play();
-		//};
+			//chuff.play();
+		};
+		
+		
+		function createSmoke(){
+			//Whispy Smoke
+			
+			var aSmoke = myScene.getMeshByName("smoke");
+			aSmoke.isVisible = false;
+			var aSmokePos = aSmoke.position;
+			aSmokePos.y += .09;
+			
+			// Create a particle system
+			
+		
+			var particlesSmoke = new BABYLON.ParticleSystem("particles", 800, myScene);
+			particlesSmoke.particleTexture = new BABYLON.Texture("smoke3_grey.png", myScene);
+			particlesSmoke.emitter = aSmoke; // the starting object, the emitter
+			particlesSmoke.minEmitBox = new BABYLON.Vector3(-0.01, .05, -0.01); // Starting all from
+			particlesSmoke.maxEmitBox = new BABYLON.Vector3(0.4, 1.0, 0.4); // To...
+			
+			particlesSmoke.color1 = new BABYLON.Color4(0.65, 0.65, 0.65, 0.5);
+			particlesSmoke.color2 = new BABYLON.Color4(0.9, 0.9, 0.9, 0.1);
+			particlesSmoke.colorDead = new BABYLON.Color4(0.0, 0.0, 0.0, 0.0);
+			
+			particlesSmoke.minSize = .2;
+			particlesSmoke.maxSize = .6; //set to 0.2
+			
+			particlesSmoke.minLifeTime = .5;
+			particlesSmoke.maxLifeTime = .75; //set to 10
+
+			particlesSmoke.emitRate = 500;
+
+			// Blend mode : BLENDMODE_ONEONE, or BLENDMODE_STANDARD
+			particlesSmoke.blendMode = BABYLON.ParticleSystem.BLENDMODE_STANDARD;
+
+			particlesSmoke.gravity = new BABYLON.Vector3(0, 0, 0);
+
+			particlesSmoke.direction1 = new BABYLON.Vector3(-.1, 2, -0.25);
+			particlesSmoke.direction2 = new BABYLON.Vector3(2, 2, 0.75);
+
+			particlesSmoke.minEmitPower = 1.0;
+			particlesSmoke.maxEmitPower = 3.0;
+			particlesSmoke.updateSpeed = 0.0075; //set to 0.01
+
+			particlesSmoke.start();
+			
+	/*		
+			
+			
+			*/
+		}
+		
 		
 		// Resize
         window.addEventListener("resize", function () {
             engine.resize();
         });
 		
-		
-		
-		/*
-		window.addEventListener("click", function (evt) {
-		 
-			 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
-			 if (pickResult.hit){
-			// myTrigger = pickResult.pickedMesh.name;
-			 //console.log(myTrigger);
-			 //if (pickResult.hit){
-			 //switch(myTrigger) {
-				//case "loco" :
-					//theAnim = myScene.beginAnimation(myTrigger, 1, 251, true, 1);
-				//break;
-				
-				//default:
-				//	break;
-				
-			 
-				//if (flag === 0){
-					//console.log("hit")
-					//anim = myScene.beginAnimation(skeleton, 1, 928, true, 1);
-					theAnim = myScene.beginAnimation(myTrigger, 1, 251, true, 1);
-					//anim.goToFrame(currFrame);
-					//myTrigger.isPickable = false; 
-					//music.play();
-					//flag = 1;
-				//}
-				//else {
-				 //console.log("no hit");
-				// myScene.stopAnimation(skeleton);
-					//theAnim.pause();
-					//music.pause();
-				 //currFrame = anim.getAnimations()[0].currentFrame;
-				 //console.log(currFrame);
-				 //myScene.beginAnimation(skeleton, 1, 2, false, 1);
-				 
-				 //flag = 0;
-				//}
-				
+		 // Scene controls
+	   
+	   window.addEventListener("keyup", onKeyUp);
+	   
+	   
+		function onKeyUp(event) {
 			
+			switch (event.keyCode) {
+				   
+				case 83 : //'s'
+					var theCam = myScene.activeCamera;
+					console.log("s pressed");
+					//if(theCam.speed > .01) theCam.speed = theCam.speed - .02;
+				   break;
+				   
+				 case 67 : //'c'
+					if(camFlag === 0){
+						myScene.activeCamera = myCamera2;
+						console.log("c pressed");
+						camFlag = 1;
+					}
+					else {
+						myScene.activeCamera = myCamera;
+						myScene.activeCamera.attachControl(canvas);
+						camFlag = 0;
+					}
+					
+					//if(theCam.speed < .09) theCam.speed = theCam.speed + .02;
+				   break;  
+				   
+				default: 
+					
+					break;
 			}
+			
+		}
 		
-		});
-*/
+		
+		
+		
     </script>
 </body>
 </html>

@@ -1,0 +1,351 @@
+Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\train2\
+	Python World class constructor completed
+	processing begun of mesh:  signal_stand01
+		processing begun of material:  signal
+		num positions      :  292
+		num normals        :  292
+		num tangents       :  0
+		num uvs            :  584
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  104
+	processing begun of mesh:  signal1
+		animation processing begun
+			processing action rotAction:  in[1 - 24], out[0 - 24]
+		processing begun of material:  red
+		num positions      :  51
+		num normals        :  51
+		num tangents       :  0
+		num uvs            :  102
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  signal_stand.02
+		mesh is an instance of :  signal_stand01.  Processing halted.
+	processing begun of mesh:  signal2
+		animation processing begun
+			processing action rotAction:  in[1 - 23], out[0 - 23]
+		processing begun of material:  red
+		registered as also a user of material:  red
+		num positions      :  51
+		num normals        :  51
+		num tangents       :  0
+		num uvs            :  102
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  track
+		processing begun of material:  posts
+		processing begun of material:  rail
+		processing begun of multimaterial:  loco01_281.Multimaterial#0
+		num positions      :  17852
+		num normals        :  17852
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  25872
+	processing begun of mesh:  name
+		processing begun of material:  loco
+		processing begun of material:  edge
+		processing begun of multimaterial:  loco01_281.Multimaterial#1
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  0
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  smoke
+		processing begun of material:  piston
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	WARNING: The following object (type - CURVE) is not currently exportable thus ignored: BezierCurve
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  target
+		processing begun of material:  loco
+		registered as also a user of material:  loco
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  loco
+		animation processing begun
+			processing action Action:  in[1 - 259], out[0 - 259]
+		processing begun of material:  loco
+		processing begun of material:  boiler
+		processing begun of material:  aWheel
+		processing begun of material:  piston
+		processing begun of material:  edge
+		registered as also a user of material:  loco
+		registered as also a user of material:  piston
+		registered as also a user of material:  edge
+		processing begun of multimaterial:  loco01_281.Multimaterial#2
+		num positions      :  2002
+		num normals        :  2002
+		num tangents       :  0
+		num uvs            :  4004
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1548
+	processing begun of camera (UniversalCamera):  cab_camera
+	processing begun of mesh:  terrain.001
+		processing begun of material:  terrain
+			processing texture terrain_map
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4356
+		num normals        :  4356
+		num tangents       :  0
+		num uvs            :  8712
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8450
+	processing begun of mesh:  tree01
+		processing begun of material:  trunk01
+		processing begun of material:  leaves01
+			processing texture darkwood01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture new_mixed01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  loco01_281.Multimaterial#3
+		num positions      :  294
+		num normals        :  294
+		num tangents       :  0
+		num uvs            :  588
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  tree01.001
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.002
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.003
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.004
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.005
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.006
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.007
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.008
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.009
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.010
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.011
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.012
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.013
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.014
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.015
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.016
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.017
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.018
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.019
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.020
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.021
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.022
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.023
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.024
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.025
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.026
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.027
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.028
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.029
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.030
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.031
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.032
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.033
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.034
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.035
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.036
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.037
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.038
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.039
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.040
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.041
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.042
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.043
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.044
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.045
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.046
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.047
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.048
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.049
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.050
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.051
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.052
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.053
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.054
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.055
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.056
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.057
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.058
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.059
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.060
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.061
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.062
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.063
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.064
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.065
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.066
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.067
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.068
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.069
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.070
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.071
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.072
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.073
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.074
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.075
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.076
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.077
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.078
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.079
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.080
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.081
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.082
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.083
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.084
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.085
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.086
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.087
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.088
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.089
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.090
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.091
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.092
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.093
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.094
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.095
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.096
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.097
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.098
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.099
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of mesh:  tree01.100
+		mesh is an instance of :  tree01.  Processing halted.
+	processing begun of light (HEMI FROM AREA):  Lamp
+========= Writing of JSON file started =========
+	writing mesh:  signal_stand01
+	writing mesh:  signal1
+	writing mesh:  signal2
+	writing mesh:  track
+	writing mesh:  name
+	writing mesh:  smoke
+	writing mesh:  target
+	writing mesh:  loco
+	writing mesh:  terrain.001
+	writing mesh:  tree01
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.6117 secs
