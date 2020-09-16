@@ -76,38 +76,6 @@ Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  12
-	WARNING: The following object (type - CURVE) is not currently exportable thus ignored: BezierCurve
-	processing begun of camera (ArcRotateCamera):  Camera
-	processing begun of mesh:  target
-		processing begun of material:  loco
-		registered as also a user of material:  loco
-		num positions      :  29
-		num normals        :  29
-		num tangents       :  0
-		num uvs            :  58
-		num uvs2           :  0
-		num colors         :  0
-		num triangles      :  12
-	processing begun of mesh:  loco
-		animation processing begun
-			processing action Action:  in[1 - 259], out[0 - 259]
-		processing begun of material:  loco
-		processing begun of material:  boiler
-		processing begun of material:  aWheel
-		processing begun of material:  piston
-		processing begun of material:  edge
-		registered as also a user of material:  loco
-		registered as also a user of material:  piston
-		registered as also a user of material:  edge
-		processing begun of multimaterial:  loco01_281.Multimaterial#2
-		num positions      :  2002
-		num normals        :  2002
-		num tangents       :  0
-		num uvs            :  4004
-		num uvs2           :  0
-		num colors         :  0
-		num triangles      :  1548
-	processing begun of camera (UniversalCamera):  cab_camera
 	processing begun of mesh:  terrain.001
 		processing begun of material:  terrain
 			processing texture terrain_map
@@ -126,7 +94,7 @@ Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
 				texture type:  diffuseTexture, mapped using: "UVMap"
 			processing texture new_mixed01
 				texture type:  diffuseTexture, mapped using: "UVMap"
-		processing begun of multimaterial:  loco01_281.Multimaterial#3
+		processing begun of multimaterial:  loco01_281.Multimaterial#2
 		num positions      :  294
 		num normals        :  294
 		num tangents       :  0
@@ -334,7 +302,6 @@ Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
 		mesh is an instance of :  tree01.  Processing halted.
 	processing begun of mesh:  tree01.100
 		mesh is an instance of :  tree01.  Processing halted.
-	processing begun of light (HEMI FROM AREA):  Lamp
 ========= Writing of JSON file started =========
 	writing mesh:  signal_stand01
 	writing mesh:  signal1
@@ -342,10 +309,8 @@ Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
 	writing mesh:  track
 	writing mesh:  name
 	writing mesh:  smoke
-	writing mesh:  target
-	writing mesh:  loco
 	writing mesh:  terrain.001
 	writing mesh:  tree01
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 2.5218 secs
+elapsed time:  0 min, 2.6429 secs
