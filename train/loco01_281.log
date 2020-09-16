@@ -9,7 +9,7 @@ Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
 		Vert Color Precision:  3
 		Mat Weight Precision:  2
 		Keep Z-up r-handed  :  no
-		Texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\train2\
+		Texture directory   :  H:\XDrive\EasyPHP-DevServer-14.1VC9\EasyPHP-DevServer-14.1VC9\data\localweb\projects\train\
 	Python World class constructor completed
 	processing begun of mesh:  signal_stand01
 		processing begun of material:  signal
@@ -348,4 +348,4 @@ Exporter version: 6.4.3, Blender version: 2.82 (sub 7)
 	writing mesh:  tree01
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 2.6117 secs
+elapsed time:  0 min, 2.5218 secs
