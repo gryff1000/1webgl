@@ -86,16 +86,15 @@ http://creativecommons.org/licenses/by/4.0/
 			var divFps = document.getElementById("fps");
 			var myScene = new BABYLON.Scene(engine);
 			var chuff;
-			//var skeleton;
 			var myTrigger;
 			var theSignal =0;
 			var flag = 0; 
 			var theAnim;
-			//var currFrame = 1;
 			var myCamera;
 			var myCamera2;
 			var camFlag = 0;
 			var soundsReady = 0;
+			var aSignal1, aSignal2;
 			
 			var mix = new BABYLON.MixMaterial("mix", myScene);
 			
@@ -103,44 +102,28 @@ http://creativecommons.org/licenses/by/4.0/
 			mix.diffuseTexture1 = new BABYLON.Texture("grass1a.jpg", myScene);//red
 			mix.diffuseTexture2 = new BABYLON.Texture("rock2baked.png", myScene);//green
 			mix.diffuseTexture3 = new BABYLON.Texture("bakedRock01.png", myScene);//blue
-			mix.diffuseTexture4 = new BABYLON.Texture("grass1a.jpg", myScene);// alpha
+			mix.diffuseTexture4 = new BABYLON.Texture("4planks01.png", myScene);// alpha
 
 			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 10;
-			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 20;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 10;
 			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 20;
 			mix.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 10;
 			
-			// Load the sound and play it automatically once ready
-			//music = new BABYLON.Sound("music", "Bassa Island Game Loop2.mp3", myScene, soundReady, { loop: true, volume: 0.5 });
-			
-			
-			/*
-					var skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, myScene);
-					var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", myScene);
-					skyboxMaterial.backFaceCulling = false;
-					//skybox.infiniteDistance = true;
-					skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("skybox/myfirststars1", myScene);
-					skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
-					skyboxMaterial.diffuseColor = new BABYLON.Color3(0.0, 0.0, 0.0);
-					skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
-					skybox.material = skyboxMaterial;
-			*/		
 		
 			//BABYLON.SceneLoader.Append("", "camera.babylon", myScene);
             BABYLON.SceneLoader.Append("", "loco01_281.babylon", myScene);
                 myScene.executeWhenReady(function () {
-                    // Attach camera to canvas inputs
-					
+                    
+					// Attach camera to canvas inputs
 					myCamera = myScene.getCameraByName("Camera");
                    
 					myCamera.speed = .5;
 					myCamera.wheelPrecision = 10;
 					myCamera.maxZ= 500;
-					myCamera.lowerRadiusLimit = 40;
+					//myCamera.lowerRadiusLimit = 50;
 					myCamera.upperRadiusLimit = 70;
 					myCamera.lowerBetaLimit = 1.2708;
 					myCamera.upperBetaLimit = 1.0708;
-					//actCamera = myCamera;
 					myScene.activeCamera = myCamera;
 				    myScene.activeCamera.attachControl(canvas);
 					
@@ -148,36 +131,17 @@ http://creativecommons.org/licenses/by/4.0/
 					myLoco.isPickable = false;
 					aSignal1 = myScene.getMeshByName("signal1");
 					aSignal2 = myScene.getMeshByName("signal2");
+					aSignal2.isPickable = false;
 					
 					
 					
 					myCamera2 = myScene.getCameraByName("cab_camera");
 					myCamera2.position.x = -3.50;
-					//myScene.activeCamera = myCamera2;
-					//myScene.activeCamera.attachControl(canvas);
 					
-					
+					// apply textures to terrain
 					var ground = myScene.getMeshByName("terrain.001");
 					ground.material = mix;
 					
-					
-					/*
-					var itHasStopped = function () {
-						setTimeout(function(){console.log("stopped"), 4000});
-						if(flag === 0){
-							console.log("itHasStopped func reports the animation stopped");
-							theAnim = myScene.beginAnimation(myTrigger, 116, 251, false, 1, itHasStopped);
-							flag = 1;
-						}
-						else{
-							console.log("itHasStopped func reports the animation stopped AGAIN");
-							theAnim = myScene.beginAnimation(myTrigger, 1, 115, false, 1, itHasStopped);
-							flag = 0;
-						}
-					};
-					*/
-					
-					//skeleton = myScene.getSkeletonById(0);
 					
 					createSmoke();
 					
@@ -186,37 +150,39 @@ http://creativecommons.org/licenses/by/4.0/
 					// We try to pick an object
 					if (pickResult.hit) {
 					myTrigger = pickResult.pickedMesh.name;
-					//console.log(myTrigger);
+					//which object
 					switch (myTrigger){
 						case "signal1" :
-						
-							//theAnim.onAnimationEnd = function(){console.log("ended")};
-						
-							//console.log("clicked on "+pickResult.pickedMesh.name);
 							chuff.play();
 							theAnim = myScene.beginAnimation(myLoco, 1, 115, false, 0.5);
-							//onAnimationEnd = function(){chuff.stop();};
-							theAnim.onAnimationEnd = function(){chuff.stop(); console.log("ended")};
+							theAnim.onAnimationEnd = function(){
+								chuff.stop();
+								aSignal2.isPickable = true;
+							};
 
 							myScene.beginAnimation(aSignal1, 1, 24, false, 1);
 							myScene.beginAnimation(aSignal2, 1, 24, false, 1);
-							
-							
-
+							aSignal1.isPickable = false;
+	
 							flag = 1;
-							//console.log(aSignal2.position);
+							
 							break;
 							
 						case "signal2" :
 							//console.log("clicked AGAIN");
 							chuff.play();
 							theAnim = myScene.beginAnimation(myLoco, 116, 251, false, 0.5);
-							theAnim.onAnimationEnd = function(){chuff.stop(); console.log("ended")};
+							theAnim.onAnimationEnd = function(){
+								chuff.stop();
+								aSignal1.isPickable = true;
+							};
 
 							myScene.beginAnimation(aSignal2, 24, 1, false, 1);
 							myScene.beginAnimation(aSignal1, 24, 1, false, 1)
+							aSignal2.isPickable = false;
+							
 							flag = 0;
-							//console.log(aSignal1.position);
+							
 							break;
 							
 						default:
@@ -224,28 +190,11 @@ http://creativecommons.org/licenses/by/4.0/
 					
 					
 					}
-					/*
-						if(flag ===0 ){
-							//header.textContent = pickResult.pickedMesh.name;
-							console.log("clicked");
-							theAnim = myScene.beginAnimation(myTrigger, 1, 115, false, 1);
-							flag = 1;
-						}
-						else{
-							console.log("clicked AGAIN");
-							theAnim = myScene.beginAnimation(myTrigger, 116, 251, false, 1);
-							flag = 0;
-						}
-					*/
+					
 					}
 					};
 					
-					//theAnim = myScene.beginAnimation(myTrigger, 1, 115, false, 1);
 					
-					
-					
-					//myScene.beginAnimation(skeleton, 1, 928, true, 1);
-					//music.play();
 					
                     // Once the scene is loaded, just register a render loop to render it
                     engine.runRenderLoop(function() {
@@ -253,21 +202,10 @@ http://creativecommons.org/licenses/by/4.0/
                         myScene.render();
                     });
                 });
-           // }, function (progress) {
-                // To do: give progress feedback to user
-            //});
+           
         }
 		
 		
-		
-		/*
-		var sound = new Howl({  
-		urls: ['Bassa Island Game Loop2.mp3'],
-		autoplay: false,  
-		loop: true, 
-		volume: 0.3,
-		});
-		*/
 		
 		// Load the sound and play it automatically once ready
 		chuff = new BABYLON.Sound("music", "train02a.mp3", myScene, soundReady, { loop: false, volume: 0.5 });
