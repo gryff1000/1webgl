@@ -190,7 +190,7 @@ http://creativecommons.org/licenses/by/4.0/
 			soundsReady++;
 			//myScene.beginAnimation(skeleton, 1, 928, true, 1);
 			if(soundsReady > 1){
-			 talk.play(0,1.8,3.6);
+			 wind.play();
 			}
 		};
 		
@@ -215,10 +215,12 @@ http://creativecommons.org/licenses/by/4.0/
 				case 83 : //'s'
 					console.log("s pressed");
 					if(animFlag === 0){
+						talk.play(0,0.1,1.6);
 						myScene.beginAnimation(mySkeleton[0],1,30,false, 1);
 						animFlag = 1;
 					}
 					else {
+						talk.play(0,1.7,3.66);
 						myScene.beginAnimation(mySkeleton[0],30,1,false, 1);
 						animFlag = 0;
 					}
