@@ -97,9 +97,7 @@ http://creativecommons.org/licenses/by/4.0/
 			var camFlag = 0;
 			var animFlag = 0;
 			var soundsReady = 0;
-			//var camPos = [16.5967,-3.5205,9.0839];
-			//var camRot = [-0.0209,-2.0391,0];
-			//var aSignal1, aSignal2;
+			
 			
 			var mix = new BABYLON.MixMaterial("mix", myScene);
 			
@@ -137,11 +135,7 @@ http://creativecommons.org/licenses/by/4.0/
 					
 					
 					myCamera2 = myScene.getCameraByName("Camera_walk");
-					//camPos = myCamera2.position.clone();
-					//console.log(camPos);
 					myCamera2.speed = .1;
-					//myScene.activeCamera = myCamera2;
-				    //myScene.activeCamera.attachControl(canvas);
 					myCamera2.storeState();
 					
 					
@@ -176,56 +170,6 @@ http://creativecommons.org/licenses/by/4.0/
 					
 					
 					
-					//When click event is raised
-					/*
-					myScene.onPointerDown = function (evt, pickResult) {
-					// We try to pick an object
-					if (pickResult.hit) {
-					myTrigger = pickResult.pickedMesh.name;
-					//which object
-					switch (myTrigger){
-						case "signal1" :
-							chuff.play();
-							theAnim = myScene.beginAnimation(myLoco, 1, 115, false, 0.5);
-							theAnim.onAnimationEnd = function(){
-								chuff.stop();
-								aSignal2.isPickable = true;
-							};
-
-							myScene.beginAnimation(aSignal1, 1, 24, false, 1);
-							myScene.beginAnimation(aSignal2, 1, 24, false, 1);
-							aSignal1.isPickable = false;
-	
-							flag = 1;
-							
-							break;
-							
-						case "signal2" :
-							//console.log("clicked AGAIN");
-							chuff.play();
-							theAnim = myScene.beginAnimation(myLoco, 116, 251, false, 0.5);
-							theAnim.onAnimationEnd = function(){
-								chuff.stop();
-								aSignal1.isPickable = true;
-							};
-
-							myScene.beginAnimation(aSignal2, 24, 1, false, 1);
-							myScene.beginAnimation(aSignal1, 24, 1, false, 1)
-							aSignal2.isPickable = false;
-							
-							flag = 0;
-							
-							break;
-							
-						default:
-							break;
-					
-					
-					}
-					
-					}
-					};
-					*/
 					
 					
                     // Once the scene is loaded, just register a render loop to render it
@@ -293,22 +237,13 @@ http://creativecommons.org/licenses/by/4.0/
 						myScene.activeCamera.attachControl(canvas);
 						camFlag = 0;
 					}
-					
-					//if(theCam.speed < .09) theCam.speed = theCam.speed + .02;
 				   break;  
 				   
 				   
 				 case 82 : //'r'  
-					//console.log("r key pressed, position  = " + camPos);
-					//console.log("rotation = " + camRot);
+					
 					myCamera2.restoreState();
-					//myCamera2.setPosition = camPos;
-					//myCamera2.setRotation = camRot;
-					//myCamera2.setPosition.y = camPos[1];
-					//myCamera2.setPosition.z = camPos[2];
-					//console.log(camPos);
-					//console.log(camRot)
-				 
+					
 				    break;
 				  
 				default: 
