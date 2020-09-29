@@ -199,7 +199,7 @@ Exporter version: 6.4.4, Blender version: 2.90.0
 		num triangles      :  128
 	processing begun of mesh:  bridge
 		processing begun of material:  planks
-			processing texture brown_planks_512
+			processing texture baked_planks02a
 				texture type:  diffuseTexture, mapped using: "UVMap"
 		num positions      :  289
 		num normals        :  289
@@ -342,4 +342,4 @@ Exporter version: 6.4.4, Blender version: 2.90.0
 	writing mesh:  rock02.001
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 9.078 secs
+elapsed time:  0 min, 8.7673 secs
