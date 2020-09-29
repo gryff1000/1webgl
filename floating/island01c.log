@@ -38,10 +38,10 @@ Exporter version: 6.4.4, Blender version: 2.90.0
 		processing begun of bone:  LowerLeg.R, index:  23
 		processing begun of bone:  Foot.R, index:  24
 		processing begun of bone:  Toes.R, index:  25
-		processing begun of bone:  leg.L.IK, index:  26
-		processing begun of bone:  leg.R.IK, index:  27
-		processing begun of bone:  arm.L.IK, index:  28
-		processing begun of bone:  arm.R.IK, index:  29
+		Ignoring IK bone:  leg.L.IK
+		Ignoring IK bone:  leg.R.IK
+		Ignoring IK bone:  arm.L.IK
+		Ignoring IK bone:  arm.R.IK
 		processing action mouthAction:  in[1 - 30], out[0 - 30]
 	processing begun of mesh:  gruffalo_claws_footL
 		processing begun of material:  claws
@@ -201,10 +201,10 @@ Exporter version: 6.4.4, Blender version: 2.90.0
 		processing begun of material:  planks
 			processing texture baked_planks02a
 				texture type:  diffuseTexture, mapped using: "UVMap"
-		num positions      :  289
-		num normals        :  289
+		num positions      :  296
+		num normals        :  296
 		num tangents       :  0
-		num uvs            :  578
+		num uvs            :  592
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  116
@@ -267,6 +267,7 @@ Exporter version: 6.4.4, Blender version: 2.90.0
 			Highest # of influencers observed:  1, num vertices with this:  668
 			exported as 1 influencers
 			num skeletonWeights and skeletonIndices:  2672
+	processing begun of camera (UniversalCamera):  Camera_walk
 	processing begun of mesh:  tree01
 		processing begun of material:  trunk01
 		processing begun of material:  leaves01
@@ -342,4 +343,4 @@ Exporter version: 6.4.4, Blender version: 2.90.0
 	writing mesh:  rock02.001
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 8.7673 secs
+elapsed time:  0 min, 9.4817 secs
