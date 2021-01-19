@@ -121,16 +121,16 @@ http://creativecommons.org/licenses/by/4.0/
                     
 					// Attach camera to canvas inputs
 					myCamera = myScene.getCameraByName("Camera_1");
-/*                   
+                  
 					
 					myCamera.speed = .5;
 					myCamera.wheelPrecision = 10;
 					myCamera.maxZ= 500;
-					myCamera.lowerRadiusLimit = 10;
-					myCamera.upperRadiusLimit = 57;
+					myCamera.lowerRadiusLimit = 1.5;
+					myCamera.upperRadiusLimit = 20;
 					myCamera.lowerBetaLimit = 1.000;
-					myCamera.upperBetaLimit = 1.518;
-*/
+					myCamera.upperBetaLimit = 1.718;
+
 					myScene.activeCamera = myCamera;
 				    myScene.activeCamera.attachControl(canvas);
 
@@ -233,7 +233,7 @@ http://creativecommons.org/licenses/by/4.0/
                     });
                 });
            
-        }
+        };
 		
 		
 		
