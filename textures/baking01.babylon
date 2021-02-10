@@ -1,6 +1,6 @@
 {"producer":{"name":"Blender","version":"2.90.0","exporter_version":"6.4.4","file":"baking01.babylon"},
 "autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-9.81,0],
-"materials":[{"name":"Material.003","id":"Material.003","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[0.5,0.5,0.5],"roughness":0.5,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
+"materials":[{"name":"Material.003","id":"Material.003","customType":"BABYLON.PBRMaterial","backFaceCulling":false,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[0.5,0.5,0.5],"roughness":0.5,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
 "albedoTexture":{"name":"baked03.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":true}],
 "multiMaterials":[],
 "skeletons":[],
