@@ -94,6 +94,7 @@
 			var divFps = document.getElementById("fps");
 			var aHead;
 			var myScene = new BABYLON.Scene(engine);
+			var speed;
 			
 			//Use your file name at xxxxx
 			BABYLON.SceneLoader.Append("", "loqu3_30_2.babylon", myScene);
@@ -131,7 +132,9 @@
 					//console.log(aRange);
 					//newScene.beginAnimation("action.slide1");
 					
-					createAudio();
+					speed = 24*(engine.getFps().toFixed()/60);
+			
+					createAudio(speed);
 					
 					aHead = myScene.getMeshByName("Male_Head");
 					aHead.isPickable = true;
