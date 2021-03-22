@@ -228,7 +228,7 @@ function soundReady() {
 };
 };
 
-function createMotion(){
+function createMotion(n){
 	
 	if(index === (activities.length -1)){
 		clearTimeout(id);
@@ -240,7 +240,7 @@ function createMotion(){
 		aHead.morphTargetManager.getTarget(1).influence = activities[index][1];
 		aHead.morphTargetManager.getTarget(2).influence = activities[index][2];
 		++index;
-		id = setTimeout(createMotion, 30);
+		id = setTimeout(createMotion, n);
 	}
  };
  
