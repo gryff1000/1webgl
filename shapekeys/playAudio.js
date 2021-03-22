@@ -170,6 +170,8 @@ theTobe = new BABYLON.Sound("tobe", "tobe151.mp3", myScene, soundReady, { loop: 
 function soundReady() {
         soundsReady++;
 		if(soundsReady > 0){
+			
+			console.log(speed);
 		
 			//createAudio2();
 		
