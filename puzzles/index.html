@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Welsh Tower</title>
+    <!--<script src="../hand.js"></script> -->
+	
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<!--<script src="https://preview.babylonjs.com/babylon.js"></script>-->
+	<!--<script src="babylon.mixMaterial.min.js"></script>-->
+    <!--<script src="../babylon.2.5.js"></script> -->
+	
+	<link rel="icon" href="data:,">
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align: center;
+		font-size: 60px;
+		color: red;
+		top: 50%;
+		width: 100%;
+		height: 60px;
+		display: none;
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<!--<div id = "verts">0</div>-->
+	<div id = "credits">vvvvvvv</div>
+<!--
+	<div id ="container">
+	<div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div> </div>
+-->
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divEnding = document.getElementById("credits")
+			//var divVerts = document.getElementById("verts")
+			var myScene = new BABYLON.Scene(engine);
+			//var sceneInstru;
+			var myCamera;
+			var myCamera1;
+			var myCamera2;
+			var camSensor;
+			//var allCamera;
+			var drown;
+			var camFlag = 1;
+			//arrays for opening closing doors
+			var direct = [0,1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,1,1,0,0,0,1,1,0];
+			var opened = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0];
+			
+			
+			var thePositions = [
+			[-4,0,3],[4,0,-3],[0,0,3],[4,0,3],[-4,0,-3]];
+			var theRotations = [1,1,0,1,1];
+			
+			var curMesh;
+			var lastMesh;
+			var numClicks = 0;
+			var theStart = [[]];
+			
+			var allMeshes;
+			var thePieces;
+			
+			var dummyCamera = new BABYLON.FreeCamera("dummy",new BABYLON.Vector3(0,10,-100),myScene)
+			
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+           
+			BABYLON.SceneLoader.Append("", "square_puzzle01.babylon", myScene);
+            myScene.executeWhenReady(function () {
+					
+					// Attach start camera to canvas inputs
+					myCamera1 = myScene.getCameraByName("Camera");
+					myCamera1.wheelPrecision =5;
+					
+					/*
+					myCamera1.maxZ =2200;
+					myCamera1.speed =0.1;
+					myCamera1.lowerRadiusLimit = 70;
+					myCamera1.upperRadiusLimit = 620;
+					myCamera1.lowerBetaLimit = 0.9;
+					myCamera1.upperBetaLimit = 1.518;
+					
+					*/
+					
+					// start scene with arc rotate camera
+					myCamera = myCamera1;
+					myScene.activeCamera = myCamera;
+					//myScene.activeCamera.attachControl(canvas);
+					
+					
+					
+					var aParent = myScene.getMeshByName("Pieces");
+					
+					thePieces = aParent.getChildren();
+					for(i=0; i<thePieces.length; i++){
+						//console.log(thePieces[i].name + " = " + thePieces[i].position);
+						//theStart[i] = thePieces[i].position;
+						//console.log(theStart[i]);
+						//thePieces[i].rotation.y = Math.PI * (i +1)/2;
+						thePieces[i].position.x = thePositions[i][0];
+						thePieces[i].position.y = thePositions[i][1];
+						thePieces[i].position.z = thePositions[i][2];
+						thePieces[i].rotation.y = Math.PI * theRotations[i]/2;
+						thePieces[i].isVisible = true;
+					}
+					
+					//console.log(theStart.length);
+					
+					//for(i=0; i<theStart.length; i++){
+						//console.log(theStart[i].position);
+					//}
+					
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					//divVerts.innerHTML = vertTotal + " Total vertices";
+		
+					
+					/* remove maybe just rotate the empty instead?
+					
+					const animDoor1 = new BABYLON.Animation("openDoor", "rotation.y", 30, 
+					BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+					
+					const doorKeys1 = []; 
+					//At the animation key 0, the value of rotation.y is 0
+					doorKeys1.push({
+						frame: 0,
+						value: Math.PI
+					});
+					//At the animation key 30, (after 1 sec since animation fps = 30) the value of rotation.y is 2PI for a complete rotation
+					doorKeys1.push({
+						frame: 30,
+						value: Math.PI * 3/2 
+					});
+					
+					animDoor1.setKeys(doorKeys1);
+					*/
+					
+					
+					// add this line to bring up the debug layer with all the scene datadata
+					//myScene.debugLayer.show();
+					
+					
+					// keycodes : w=87, s=83, e=69, a=65
+					
+					
+					myScene.onKeyboardObservable.add((kbInfo) => {
+						switch (kbInfo.type) {
+							case BABYLON.KeyboardEventTypes.KEYDOWN:
+								switch (kbInfo.event.key) {
+									case "w":
+										curMesh.position.z += 0.1;
+										//console.log(curMesh.position);
+										break;
+									
+									case "s":
+										curMesh.position.z -= 0.1;
+										//console.log(curMesh.position);
+										break;
+										
+									case "a":
+										curMesh.position.x -= 0.1;
+										//console.log(curMesh.position);
+										break;
+										
+									case "d":
+										curMesh.position.x += 0.1;
+										//console.log(curMesh.position);
+										break;
+										
+									case "r":
+										curMesh.rotation.y += Math.PI/2;
+										//console.log(curMesh.rotation.y);
+										break;
+										
+										case "y":
+										for(i=0; i<thePieces.length; i++){
+											console.log(thePieces[i].name + " = " + thePieces[i].position);
+											//console.log(theStart[i]);
+											//console.log('spheres apart:', thePieces[i].position.subtract(theStart[i].position));
+										};
+										break;
+										
+								}
+									
+							break;			
+						}
+					});
+					
+					
+				
+					
+					// select puzzle  click code
+					myScene.onPointerObservable.add((pointerInfo) => {
+					
+						myScene.onPointerDown = function (evt, pickResult) {
+							// We try to pick an object
+							if (pickResult.hit) {
+								
+								//if(numClicks < 1)
+								//{
+									numClicks = numClicks + 1;
+									//lastMesh = pickResult.pickedMesh;
+									curMesh = pickResult.pickedMesh;
+									console.log(curMesh.name);
+									//console.log(curMesh.position);
+								//}	
+								
+							}
+								
+							
+						}
+							
+					}
+					);
+					
+					
+					
+					
+				});
+			};
+					
+					
+				// Once the scene is loaded, just register a render loop to render it
+				engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+					myScene.render();
+				});
+    
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		 
+		
+	
+
+	
+		
+		
+    </script>
+</body>
+</html>

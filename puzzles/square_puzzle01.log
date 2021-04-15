@@ -1,0 +1,91 @@
+Exporter version: 6.4.4, Blender version: 2.90.0
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\puzzles\
+	Python World class constructor completed
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  Cube
+		processing begun of material:  white
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Piece0
+		processing begun of material:  yellow
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  0
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  Piece1
+		processing begun of material:  green
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  0
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  Piece2
+		processing begun of material:  red
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Piece3
+		processing begun of material:  blue
+		num positions      :  46
+		num normals        :  46
+		num tangents       :  0
+		num uvs            :  92
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Piece4
+		processing begun of material:  purple
+		num positions      :  39
+		num normals        :  39
+		num tangents       :  0
+		num uvs            :  78
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of node:  Pieces
+	processing begun of mesh:  aSquare
+		processing begun of material:  white
+		registered as also a user of material:  white
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Cube
+	writing mesh:  Piece0
+	writing mesh:  Piece1
+	writing mesh:  Piece2
+	writing mesh:  Piece3
+	writing mesh:  Piece4
+	writing mesh:  aSquare
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.1679 secs
