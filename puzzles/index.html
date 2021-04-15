@@ -116,7 +116,7 @@
 	<div id = "fps">0</div>
 	<div id ="DCs">0</div>
 	<div id ="meshes">0</div>
-	<!--<div id = "verts">0</div>-->
+	<div id = "verts">0</div>
 	<div id = "credits">vvvvvvv</div>
 <!--
 	<div id ="container">
@@ -137,7 +137,7 @@ http://creativecommons.org/licenses/by/4.0/
 			var divDCs = document.getElementById("DCs");
 			var divAllMeshs = document.getElementById("meshes");
 			var divEnding = document.getElementById("credits")
-			//var divVerts = document.getElementById("verts")
+			var divVerts = document.getElementById("verts")
 			var myScene = new BABYLON.Scene(engine);
 			//var sceneInstru;
 			var myCamera;
@@ -222,7 +222,7 @@ http://creativecommons.org/licenses/by/4.0/
 							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
 						}
 					}
-					//divVerts.innerHTML = vertTotal + " Total vertices";
+					divVerts.innerHTML = vertTotal + " Total vertices";
 		
 					
 					/* remove maybe just rotate the empty instead?
