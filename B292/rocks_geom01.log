@@ -1,0 +1,59 @@
+Exporter version: 2.80.1, Blender version: 2.92.0
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\B292\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Plane
+		processing begun of material:  Material
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Icosphere_g
+		processing begun of material:  aPainted _rock
+========= An error was encountered =========
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\json_exporter.py", line 115, in execute
+    mesh = Mesh(object, scene, self)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\mesh.py", line 146, in __init__
+    recipe = BakingRecipe(bpyMesh, exporter)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\baking_recipe.py", line 43, in __init__
+    bjsMaterial = BJSMaterial(bpyMaterial, exporter)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\material.py", line 63, in __init__
+    self.bjsNodeTree = AbstractBJSNode.readMaterialNodeTree(bpyMaterial.node_tree)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\abstract.py", line 254, in readMaterialNodeTree
+    return AbstractBJSNode.readNodeTree(node_tree, 'ShaderNodeOutputMaterial')
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\abstract.py", line 274, in readNodeTree
+    return AbstractBJSNode(output, topLevelId, True)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\abstract.py", line 78, in __init__
+    bjsWrapperNode = AbstractBJSNode.GetBJSWrapperNode(nodeSocket.links[0].from_node, nodeSocket.name)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\abstract.py", line 328, in GetBJSWrapperNode
+    return PrincipledBJSNode(bpyNode, socketName)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\principled.py", line 11, in __init__
+    super().__init__(bpyNode, socketName)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\abstract.py", line 78, in __init__
+    bjsWrapperNode = AbstractBJSNode.GetBJSWrapperNode(nodeSocket.links[0].from_node, nodeSocket.name)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\abstract.py", line 322, in GetBJSWrapperNode
+    return NormalMapBJSNode(bpyNode, socketName)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\normal_map.py", line 8, in __init__
+    super().__init__(bpyNode, socketName)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\abstract.py", line 78, in __init__
+    bjsWrapperNode = AbstractBJSNode.GetBJSWrapperNode(nodeSocket.links[0].from_node, nodeSocket.name)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\abstract.py", line 340, in GetBJSWrapperNode
+    return TextureImageBJSNode(bpyNode, socketName)
+  File "C:\Users\Peter\AppData\Roaming\Blender Foundation\Blender\2.92\scripts\addons\babylon_js\materials\nodes\tex_image.py", line 13, in __init__
+    self.alpha = bpyNode.image.file_format not in NON_ALPHA_FORMATS
+ERROR:  'NoneType' object has no attribute 'file_format'
+========= end of processing =========
+elapsed time:  0 min, 0.007 secs
