@@ -1,0 +1,203 @@
+Exporter version: 2.80.1, Blender version: 2.92.0
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\geonodes\
+	Python World class constructor completed
+	processing begun of mesh:  sky
+		processing begun of material:  sky
+			processing texture blduy_ylbsg
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  307
+		num normals        :  307
+		num tangents       :  0
+		num uvs            :  614
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  480
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Terrain
+		processing begun of material:  terrain
+			processing texture new_splatA
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4225
+		num normals        :  4225
+		num tangents       :  0
+		num uvs            :  8450
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8192
+	processing begun of mesh:  Icosphere00uv_down.001
+		processing begun of material:  rocks_4.arid
+			processing texture two_rocks1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  54
+		num normals        :  54
+		num tangents       :  216
+		num uvs            :  108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  54
+	processing begun of mesh:  Icosphere00uv_down.002
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.003
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.004
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.005
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.006
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.007
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.008
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.009
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.010
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.011
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.012
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.013
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.014
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.015
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.016
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.017
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.018
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.019
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.020
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.021
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.022
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.023
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.024
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.025
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.026
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.027
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.028
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.029
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.030
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.031
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.032
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.033
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.034
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.035
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.036
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.037
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.038
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  Icosphere00uv_down.039
+		mesh is an instance of :  Icosphere00uv_down.001.  Processing halted.
+	processing begun of mesh:  tree01.001
+		processing begun of material:  trunk01
+		processing begun of material:  leaves01
+			processing texture darkwood01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture new_green01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  terrain02e.Multimaterial#0
+		num positions      :  294
+		num normals        :  294
+		num tangents       :  0
+		num uvs            :  588
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  tree01.002
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.003
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.004
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.005
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.006
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.007
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.008
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.009
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.010
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.011
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.012
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.013
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.014
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree01.015
+		mesh is an instance of :  tree01.001.  Processing halted.
+	processing begun of mesh:  tree02.002
+		processing begun of material:  trunk01
+		processing begun of material:  leaves02
+		registered as also a user of material:  trunk01
+			processing texture new_mixed01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  terrain02e.Multimaterial#1
+		num positions      :  294
+		num normals        :  294
+		num tangents       :  0
+		num uvs            :  588
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  tree02.003
+		mesh is an instance of :  tree02.002.  Processing halted.
+	processing begun of mesh:  tree02.004
+		mesh is an instance of :  tree02.002.  Processing halted.
+	processing begun of mesh:  tree02.005
+		mesh is an instance of :  tree02.002.  Processing halted.
+	processing begun of mesh:  tree02.006
+		mesh is an instance of :  tree02.002.  Processing halted.
+	processing begun of mesh:  tree02.007
+		mesh is an instance of :  tree02.002.  Processing halted.
+	processing begun of mesh:  tree02.008
+		mesh is an instance of :  tree02.002.  Processing halted.
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  sky
+	writing mesh:  Terrain
+	writing mesh:  Icosphere00uv_down.001
+	writing mesh:  tree01.001
+	writing mesh:  tree02.002
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.469 secs
