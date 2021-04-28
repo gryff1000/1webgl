@@ -184,11 +184,15 @@ http://creativecommons.org/licenses/by/4.0/
 					myCamera1 = myScene.getCameraByName("Camera");
 					myCamera1.wheelPrecision =5;
 					myCamera1.maxZ =2200;
-					myCamera1.speed =0.1;
+					myCamera1.speed =0.2;
+					
+				/*
 					myCamera1.lowerRadiusLimit = 70;
 					myCamera1.upperRadiusLimit = 120;
 					myCamera1.lowerBetaLimit = 0.9;
 					myCamera1.upperBetaLimit = 1.518;
+				*/
+					
 				/*
 					// inside castle camera
 					myCamera2 = myScene.getCameraByName("Camera2");
@@ -203,7 +207,7 @@ http://creativecommons.org/licenses/by/4.0/
 					// start scene with arc rotate camera
 					myCamera = myCamera1;
 					myScene.activeCamera = myCamera;
-				    myScene.activeCamera.attachControl(canvas);
+				    	myScene.activeCamera.attachControl(canvas);
 					
 					// apply textures to terrain
 					var ground = myScene.getMeshByName("Terrain");
