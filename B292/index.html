@@ -225,6 +225,7 @@ http://creativecommons.org/licenses/by/4.0/
 					//get total meshes and vertices
 					var vertTotal = 0;
 					allMeshes = myScene.meshes;
+					console.log(allMeshes.length);
 					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
 					for (var i=0; i<allMeshes.length; i++){
 						if (allMeshes[i].getTotalVertices() > 0){
