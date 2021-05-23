@@ -1,0 +1,99 @@
+Exporter version: 6.2.4, Blender version: 2.81 (sub 16)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory   :  H:\babylon_projects\aPirate\
+	Python World class constructor completed
+	processing begun of skeleton:  Uni1228.001, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LHipJoint, index:  1
+		processing begun of bone:  LeftUpLeg, index:  2
+		processing begun of bone:  LeftLeg, index:  3
+		processing begun of bone:  LeftFoot, index:  4
+		processing begun of bone:  LeftToeBase, index:  5
+		processing begun of bone:  LowerBack, index:  6
+		processing begun of bone:  Spine, index:  7
+		processing begun of bone:  Spine1, index:  8
+		processing begun of bone:  LeftShoulder, index:  9
+		processing begun of bone:  LeftArm, index:  10
+		processing begun of bone:  LeftForeArm, index:  11
+		processing begun of bone:  LeftHand, index:  12
+		processing begun of bone:  LThumb, index:  13
+		processing begun of bone:  LeftFingerBase, index:  14
+		processing begun of bone:  LeftHandFinger1, index:  15
+		processing begun of bone:  Neck, index:  16
+		processing begun of bone:  Neck1, index:  17
+		processing begun of bone:  Head, index:  18
+		processing begun of bone:  RightShoulder, index:  19
+		processing begun of bone:  RightArm, index:  20
+		processing begun of bone:  RightForeArm, index:  21
+		processing begun of bone:  RightHand, index:  22
+		processing begun of bone:  RThumb, index:  23
+		processing begun of bone:  RightFingerBase, index:  24
+		processing begun of bone:  RightHandFinger1, index:  25
+		processing begun of bone:  RHipJoint, index:  26
+		processing begun of bone:  RightUpLeg, index:  27
+		processing begun of bone:  RightLeg, index:  28
+		processing begun of bone:  RightFoot, index:  29
+		processing begun of bone:  RightToeBase, index:  30
+		processing action walk:  in[1 - 24], out[0 - 24]
+	processing begun of mesh:  Uni1228
+		processing begun of material:  skin
+		num positions      :  1357
+		num normals        :  1357
+		num tangents       :  0
+		num uvs            :  2714
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  4488
+		Skeleton stats:  
+			Total Influencers:  2450
+			Avg # of influencers per vertex:  1.8055
+			Highest # of influencers observed:  7, num vertices with this:  8
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  10856
+	processing begun of mesh:  casualsuit02
+		processing begun of material:  blue
+		num positions      :  2624
+		num normals        :  2624
+		num tangents       :  0
+		num uvs            :  5248
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  12360
+		Skeleton stats:  
+			Total Influencers:  8522
+			Avg # of influencers per vertex:  3.2477
+			Highest # of influencers observed:  7, num vertices with this:  40
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  20992
+	processing begun of mesh:  Shoes01
+		processing begun of material:  shoes
+		num positions      :  2062
+		num normals        :  2062
+		num tangents       :  0
+		num uvs            :  4124
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  9960
+		Skeleton stats:  
+			Total Influencers:  3077
+			Avg # of influencers per vertex:  1.4922
+			Highest # of influencers observed:  3, num vertices with this:  12
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  8248
+	processing begun of node:  Empty
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Uni1228
+	writing mesh:  casualsuit02
+	writing mesh:  Shoes01
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.4191 secs
