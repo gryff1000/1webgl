@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src="https://cdn.babylonjs.com/babylon.max.js"></script>
+    <style>
+         html, body   { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; } 
+         #renderCanvas{ width: 100%; height: 100%; } 
+    </style>
+</head>
+<body>
+<canvas id="renderCanvas"></canvas>
+<script>
+var canvas = document.getElementById("renderCanvas");
+var engine = new BABYLON.Engine(canvas, true);
+
+var myScene = new BABYLON.Scene(engine);
+var url = "./"; 
+
+var animGroup;
+var soundsReady = 0;
+var theTobe;
+        
+BABYLON.SceneLoader.Append(url, "violetta01a.babylon", myScene);
+myScene.executeWhenReady(function () {
+            
+// Attach camera to canvas inputs
+myScene.activeCamera.attachControl(canvas);
+
+var light = new BABYLON.HemisphericLight("HemiLight", new BABYLON.Vector3(0, 1, 0), myScene);
+
+animGroup = myScene.getAnimationGroupByName("KeyAction");
+console.log(animGroup);
+
+createAudio();
+
+//Play the animation  
+animGroup.start(true, 1.0, 1, 420, false);
+//theTobe.play();
+
+// Once the scene is loaded, register a render loop
+engine.runRenderLoop(function() {
+      myScene.render();
+});
+});
+
+    //Resize
+    window.addEventListener("resize", function () {
+        engine.resize();
+    });
+	
+
+function createAudio(){
+
+theTobe = new BABYLON.Sound("tobe", "Locke03a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 1  });
+
+	//return;
+
+};
+
+
+function soundReady() {
+        soundsReady++;
+		//if(soundsReady > 0){
+		console.log(soundsReady);
+		theTobe.play()
+			//return;
+			
+		theTobe.onended = function() {
+			animGroup.pause();
+			animGroup.goToFrame(230);
+			console.log("paused")
+		};
+		//}
+};
+
+
+theTobe.onended = function() {
+animGroup.goToFrame(0);
+console.log("paused")
+};
+
+</script>
+</body>
+</html>
