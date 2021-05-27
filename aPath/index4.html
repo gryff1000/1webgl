@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Walk A Path</title>
+    <!--<script src="../hand.js"></script> -->
+	
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<!--<script src="https://preview.babylonjs.com/babylon.js"></script>-->
+	<!--<script src="babylon.mixMaterial.min.js"></script> -->
+    <!--<script src="../babylon.2.5.js"></script> -->
+	
+	<link rel="icon" href="data:,">
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align: center;
+		font-size: 60px;
+		color: red;
+		top: 50%;
+		width: 100%;
+		height: 60px;
+		display: none;
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	<div id = "credits">vvvvvvv</div>
+<!--
+	<div id ="container">
+	<div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div> </div>
+-->
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divEnding = document.getElementById("credits")
+			var divVerts = document.getElementById("verts")
+			var myScene = new BABYLON.Scene(engine);
+			//var sceneInstru;
+			var myCamera;
+			var myCamera1;
+			var myCamera2;
+			var allMeshes;
+			var aCube;
+			var skeleton;
+			
+			var theTrack = 0;
+		/*	
+			
+			var mix = new BABYLON.MixMaterial("mix", myScene);
+			
+			mix.mixTexture1 = new BABYLON.Texture("terrain_map.png", myScene);
+			
+			mix.diffuseTexture1 = new BABYLON.Texture("set_grass_rock02.jpg", myScene);//red
+			mix.diffuseTexture2 = new BABYLON.Texture("path04a.jpg", myScene);//green
+			mix.diffuseTexture3 = new BABYLON.Texture("set_grass_rock01.jpg", myScene);//blue;
+			mix.diffuseTexture4 = new BABYLON.Texture("new_cliff02.jpg", myScene);// alpha
+			//set repeat scales
+			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 5;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 5;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 10;
+			mix.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 20;
+			
+		*/	
+			
+			var dummyCamera = new BABYLON.FreeCamera("dummy",new BABYLON.Vector3(0,10,-100),myScene)
+			
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			
+			var aLength = 4*Math.PI/8;
+			var theAngle = Math.PI/4;
+			
+			//draw lines to form a square
+			const points = [];
+			points.push(new BABYLON.Vector3(0, 0, 0));
+			points.push(new BABYLON.Vector3(0, 0, -4));
+			points.push(new BABYLON.Vector3(-4, 0, -4));
+			points.push(new BABYLON.Vector3(-4, 0, 4));
+			points.push(new BABYLON.Vector3(0, 0, 4));
+			points.push(points[0]); //close the square;
+
+			BABYLON.MeshBuilder.CreateLines("square", {points: points})
+			
+			const slide = function (turn, dist) { //after covering dist apply turn
+				this.turn = turn;
+				this.dist = dist;
+			}
+			
+			const track = [];
+			track.push(new slide(Math.PI / 2, 4));
+			track.push(new slide(Math.PI / 2, 8));
+			track.push(new slide(Math.PI / 2, 16));
+			track.push(new slide(Math.PI / 2, 20));
+			track.push(new slide(Math.PI / 2, 24));
+			let distance = 0;
+			let step = 0.01;
+			let p = 0;
+	
+		   BABYLON.SceneLoader.Append("", "aCamera.babylon", myScene);
+           BABYLON.SceneLoader.Append("", "simple06b.babylon", myScene);
+           myScene.executeWhenReady(function () {
+				
+					
+					// Attach start camera to canvas inputs
+					myCamera1 = myScene.getCameraByName("Camera");
+					myCamera1.wheelPrecision =500;
+					myCamera1.maxZ =100;
+					myCamera1.speed =0.1;
+				
+					myCamera1.lowerRadiusLimit = 1;
+					myCamera1.upperRadiusLimit = 30;
+					//myCamera1.lowerBetaLimit = 0.9;
+					myCamera1.upperBetaLimit = 1.518;
+					
+					myCamera = myCamera1;
+					myScene.activeCamera = myCamera;
+				    myScene.activeCamera.attachControl(canvas);
+					
+					myScene.clearColor = new BABYLON.Color3(0.0,0.5,0.5);
+					
+					/*
+					allMeshes = myScene.meshes;
+					for (i=0; i < allMeshes.length; i++){
+						console.log(allMeshes[i].name);
+					}
+					*/
+					
+					aCube = myScene.getMeshByName("Empty");
+					aCube.billboardMode = BABYLON.Mesh.BILLBOARDMODE_NONE;
+					var clothes = aCube.getChildren();
+					console.log(clothes.length);
+					for(i=0; i<clothes.length; i++){
+						clothes[i].billboardMode = BABYLON.Mesh.BILLBOARDMODE_NONE;
+					
+					} 
+					
+					//aCube.position = new BABYLON.Vector3(0, 0, 0);
+					//aCube.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(-95), BABYLON.Space.LOCAL);
+					
+					skeleton = myScene.skeletons[0];
+					myScene.beginAnimation(skeleton, 1, 24, true, 1);
+					
+				
+					myScene.onBeforeRenderObservable.add(() => {
+						aCube.movePOV(0, 0, step);
+						distance += step;
+							
+						if(theTrack === 0){
+						
+							if (distance > track[p].dist) {        
+								aCube.rotate(BABYLON.Axis.Y, track[p].turn, BABYLON.Space.LOCAL);
+								p +=1;
+								p %= track.length;
+									if (p === 0) {
+										//console.log(p);
+										theTrack = 0;
+										distance = 0;
+										aCube.position = new BABYLON.Vector3(0, 0, 0); //reset to initial conditions
+										aCube.rotation = BABYLON.Vector3.Zero();//prevents error accumulation
+										//myScene.stopAllAnimations();
+									}
+							} //end if
+						} //end theTrack = 1
+						
+						
+					}); //end before render
+									
+					
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+				
+					
+				});
+			};
+					
+					
+				// Once the scene is loaded, just register a render loop to render it
+				engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+					myScene.render();
+				});
+    
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		 
+		
+	
+
+	
+		
+		
+    </script>
+</body>
+</html>
