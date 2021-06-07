@@ -1,0 +1,239 @@
+Exporter version: 2.93-beta 3, Blender version: 2.93.0 Beta
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\aPirate03\
+	Python World class constructor completed
+	processing begun of skeleton:  Pirate_base01a, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LHipJoint, index:  1
+		processing begun of bone:  LeftUpLeg, index:  2
+		processing begun of bone:  LeftLeg, index:  3
+		processing begun of bone:  LeftFoot, index:  4
+		processing begun of bone:  LeftToeBase, index:  5
+		processing begun of bone:  LowerBack, index:  6
+		processing begun of bone:  Spine, index:  7
+		processing begun of bone:  Spine1, index:  8
+		processing begun of bone:  LeftShoulder, index:  9
+		processing begun of bone:  LeftArm, index:  10
+		processing begun of bone:  LeftForeArm, index:  11
+		processing begun of bone:  LeftHand, index:  12
+		processing begun of bone:  LThumb, index:  13
+		processing begun of bone:  LeftFingerBase, index:  14
+		processing begun of bone:  LeftHandFinger1, index:  15
+		processing begun of bone:  Neck, index:  16
+		processing begun of bone:  Neck1, index:  17
+		processing begun of bone:  Head, index:  18
+		processing begun of bone:  jaw, index:  19
+		processing begun of bone:  RightShoulder, index:  20
+		processing begun of bone:  RightArm, index:  21
+		processing begun of bone:  RightForeArm, index:  22
+		processing begun of bone:  RightHand, index:  23
+		processing begun of bone:  RThumb, index:  24
+		processing begun of bone:  RightFingerBase, index:  25
+		processing begun of bone:  RightHandFinger1, index:  26
+		processing begun of bone:  RHipJoint, index:  27
+		processing begun of bone:  RightUpLeg, index:  28
+		processing begun of bone:  RightLeg, index:  29
+		processing begun of bone:  RightFoot, index:  30
+		processing begun of bone:  RightToeBase, index:  31
+		processing begun of bone:  RightFoot.IK, index:  32
+		processing begun of bone:  RightKnee.IK, index:  33
+		processing begun of bone:  RightHand.IK, index:  34
+		processing action hop:  in[1 - 40], out[0 - 40]
+		processing action KeyAction:  in[1 - 24], out[50 - 74]
+	processing begun of mesh:  body
+		processing begun of material:  skin
+			processing texture uni1228_Euro_Male_diff
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  777
+		num normals        :  777
+		num tangents       :  0
+		num uvs            :  1554
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  672
+		Skeleton stats:  
+			Total Influencers:  1171
+			Avg # of influencers per vertex:  1.5071
+			Highest # of influencers observed:  4, num vertices with this:  32
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  3108
+	processing begun of mesh:  eyes
+		processing begun of material:  :Low-poly:Eye_brown
+			processing texture teeth3_copy
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  0
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  172
+		Skeleton stats:  
+			Total Influencers:  96
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  96
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  pants
+		processing begun of material:  pirate
+			processing texture my_16x16gradient
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  634
+		num normals        :  634
+		num tangents       :  0
+		num uvs            :  1268
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1208
+		Skeleton stats:  
+			Total Influencers:  1867
+			Avg # of influencers per vertex:  2.9448
+			Highest # of influencers observed:  7, num vertices with this:  5
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  5072
+	processing begun of mesh:  coat
+		processing begun of material:  pirate
+		registered as also a user of material:  pirate
+		num positions      :  2020
+		num normals        :  2020
+		num tangents       :  0
+		num uvs            :  4040
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  3261
+		Skeleton stats:  
+			Total Influencers:  7100
+			Avg # of influencers per vertex:  3.5149
+			Highest # of influencers observed:  8, num vertices with this:  10
+			exported as 8 influencers
+			num skeletonWeights and skeletonIndices:  16160
+	processing begun of mesh:  crutch
+		processing begun of material:  pirate
+		registered as also a user of material:  pirate
+		num positions      :  74
+		num normals        :  74
+		num tangents       :  0
+		num uvs            :  148
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  144
+		Skeleton stats:  
+			Total Influencers:  74
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  74
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  296
+	processing begun of mesh:  hat
+		processing begun of material:  pirate
+		registered as also a user of material:  pirate
+		num positions      :  362
+		num normals        :  362
+		num tangents       :  0
+		num uvs            :  724
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  416
+		Skeleton stats:  
+			Total Influencers:  724
+			Avg # of influencers per vertex:  2
+			Highest # of influencers observed:  2, num vertices with this:  362
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  1448
+	processing begun of mesh:  boots
+		processing begun of material:  boots
+		Custom split normals with tangents being used
+		num positions      :  245
+		num normals        :  245
+		num tangents       :  980
+		num uvs            :  490
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  270
+		Skeleton stats:  
+			Total Influencers:  360
+			Avg # of influencers per vertex:  1.4694
+			Highest # of influencers observed:  2, num vertices with this:  115
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  980
+	processing begun of node:  Empty
+	processing begun of mesh:  head
+		processing begun of material:  skin
+		registered as also a user of material:  skin
+		num positions      :  561
+		num normals        :  561
+		num tangents       :  0
+		num uvs            :  1122
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  792
+		Skeleton stats:  
+			Total Influencers:  1566
+			Avg # of influencers per vertex:  2.7914
+			Highest # of influencers observed:  6, num vertices with this:  39
+			exported as 6 influencers
+			num skeletonWeights and skeletonIndices:  4488
+		Shape Keys:
+			Open_Low added
+				adding action "KeyAction":  [1 - 24]
+			Open Up added
+				adding action "KeyAction":  [1 - 24]
+			width added
+				adding action "KeyAction":  [1 - 24]
+	processing begun of mesh:  teeth_Low
+		processing begun of material:  eye_teeth
+			processing texture teeth3_copy
+				texture type:  diffuseTexture, mapped using: "UVTex"
+		num positions      :  137
+		num normals        :  137
+		num tangents       :  0
+		num uvs            :  274
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+		Skeleton stats:  
+			Total Influencers:  137
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  137
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  548
+	processing begun of mesh:  teeth_Up
+		processing begun of material:  eye_teeth
+		registered as also a user of material:  eye_teeth
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  0
+		num uvs            :  276
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+		Skeleton stats:  
+			Total Influencers:  276
+			Avg # of influencers per vertex:  2
+			Highest # of influencers observed:  2, num vertices with this:  138
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  552
+	processing begun of light (HEMI FROM AREA):  Light01
+	processing begun of light (HEMI FROM AREA):  Light.02
+========= Writing of JSON file started =========
+	writing mesh:  body
+	writing mesh:  eyes
+	writing mesh:  pants
+	writing mesh:  coat
+	writing mesh:  crutch
+	writing mesh:  hat
+	writing mesh:  boots
+	writing mesh:  head
+	writing mesh:  teeth_Low
+	writing mesh:  teeth_Up
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 3.3471 secs

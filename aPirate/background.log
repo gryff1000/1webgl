@@ -1,0 +1,187 @@
+Exporter version: 2.93-beta 3, Blender version: 2.93.0 Beta
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\aPirate03\
+	Python World class constructor completed
+	processing begun of mesh:  door1
+		processing begun of material:  doors
+			processing texture my_old_door2c
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  door3
+		mesh is an instance of :  door1.  Processing halted.
+	processing begun of node:  doors
+	processing begun of mesh:  door2
+		mesh is an instance of :  door1.  Processing halted.
+	processing begun of mesh:  sea
+		processing begun of material:  water
+			processing texture WaterPlainDark01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  target
+		processing begun of material:  Material
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  0
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  dock
+		processing begun of material:  street
+			processing texture stone01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  135
+		num normals        :  135
+		num tangents       :  0
+		num uvs            :  270
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+	processing begun of mesh:  box00
+		processing begun of material:  boxes
+			processing texture boxes_small_4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  box01
+		mesh is an instance of :  box00.  Processing halted.
+	processing begun of mesh:  box02
+		mesh is an instance of :  box00.  Processing halted.
+	processing begun of mesh:  box03
+		mesh is an instance of :  box00.  Processing halted.
+	processing begun of mesh:  dock_post
+		processing begun of material:  floor
+			processing texture my_old_door2c
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  52
+		num normals        :  52
+		num tangents       :  0
+		num uvs            :  104
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  dock_post.001
+		mesh is an instance of :  dock_post.  Processing halted.
+	processing begun of mesh:  dock_post.002
+		mesh is an instance of :  dock_post.  Processing halted.
+	processing begun of mesh:  dock_post.003
+		mesh is an instance of :  dock_post.  Processing halted.
+	processing begun of mesh:  new_barrel
+		processing begun of material:  barrel
+			processing texture barrel02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  151
+		num normals        :  151
+		num tangents       :  0
+		num uvs            :  302
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  174
+	processing begun of mesh:  new_barrel01
+		mesh is an instance of :  new_barrel.  Processing halted.
+	processing begun of mesh:  new_barrel02
+		mesh is an instance of :  new_barrel.  Processing halted.
+	processing begun of mesh:  new_pub
+		processing begun of material:  inside
+		processing begun of material:  new_pub
+		processing begun of material:  roof
+			processing texture wallpaper3
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture wall02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  background.Multimaterial#0
+		num positions      :  378
+		num normals        :  378
+		num tangents       :  0
+		num uvs            :  756
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  170
+	processing begun of mesh:  pub_floor
+		processing begun of material:  floor
+		registered as also a user of material:  floor
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  0
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  flag01
+		processing begun of material:  boxes
+		registered as also a user of material:  boxes
+		num positions      :  10
+		num normals        :  10
+		num tangents       :  0
+		num uvs            :  20
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  flag02
+		mesh is an instance of :  flag01.  Processing halted.
+	processing begun of mesh:  pub_sign
+		processing begun of material:  boxes
+		registered as also a user of material:  boxes
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  signpost
+		processing begun of material:  signpost
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  41
+	processing begun of mesh:  pub_sign01
+		mesh is an instance of :  pub_sign.  Processing halted.
+	processing begun of mesh:  signpost01
+		mesh is an instance of :  signpost.  Processing halted.
+========= Writing of JSON file started =========
+	writing mesh:  door1
+	writing mesh:  sea
+	writing mesh:  target
+	writing mesh:  dock
+	writing mesh:  box00
+	writing mesh:  dock_post
+	writing mesh:  new_barrel
+	writing mesh:  new_pub
+	writing mesh:  pub_floor
+	writing mesh:  flag01
+	writing mesh:  pub_sign
+	writing mesh:  signpost
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.0958 secs
