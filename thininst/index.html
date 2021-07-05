@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Welsh Tower</title>
+    <!--<script src="../hand.js"></script> -->
+	
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<!--<script src="https://preview.babylonjs.com/babylon.js"></script>-->
+	<script src="babylon.mixMaterial.min.js"></script>
+   <!-- <script src="babylon4.1.2.js"></script>-->
+	
+	<link rel="icon" href="data:,">
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#words {
+			position: absolute;
+			left:20%;
+			top:90%;
+			width:60%;
+			line-height: 2em;
+			font-family: Arial, Helvetica;
+			font-size: 16px;
+			color: white;
+			
+			display:none;
+			border:1px solid white;
+			text-align: center;
+			
+		}
+		
+		
+		#credits {
+		position: absolute;
+		text-align: center;
+		font-size: 60px;
+		color: red;
+		top: 50%;
+		width: 100%;
+		height: 60px;
+		display: none;
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	<div id = "credits">vvvvvvv</div>
+	<div id = "words">I'm here to find the body, not wander about</div>
+<!--
+	<div id ="container">
+	<div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div> </div>
+-->
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divEnding = document.getElementById("credits");
+			var divVerts = document.getElementById("verts");
+			var divTalk = document.getElementById("words");
+			var myScene = new BABYLON.Scene(engine);
+			//var sceneInstru;
+			var myCamera;
+			var myCamera1;
+			var myCamera2;
+			var camSensor;
+			//var allCamera;
+			var drown;
+			var camFlag = 1;
+			//arrays for opening closing doors
+			var direct = [0,1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,1,1,0,0,0,1,1,0];
+			var opened = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0];
+			
+			var allMeshes;
+			
+			var mix = new BABYLON.MixMaterial("mix", myScene);
+		
+			mix.mixTexture1 = new BABYLON.Texture("terrain_map02a.png", myScene);
+			mix.diffuseTexture1 = new BABYLON.Texture("grass_rock07.jpg", myScene);//red;
+			mix.diffuseTexture2 = new BABYLON.Texture("grass1a.jpg", myScene);//green
+			mix.diffuseTexture3 = new BABYLON.Texture("path04a.jpg", myScene);//blue
+			mix.diffuseTexture4 = new BABYLON.Texture("new_cliff02.jpg", myScene);// alpha
+			//set repeat scales
+			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 6;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 5;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 3;
+			mix.diffuseTexture4.uScale = 30;
+			mix.diffuseTexture4.vScale = 30;
+		/*	
+			var mix2 = new BABYLON.MixMaterial("mix", myScene);
+		
+			mix2.mixTexture1 = new BABYLON.Texture("terrain_map02a.png", myScene);
+			mix2.diffuseTexture1 = new BABYLON.Texture("mixmap_textures/grass_rock07.jpg", myScene);//red;
+			mix2.diffuseTexture2 = new BABYLON.Texture("mixmap_textures/grass1a.jpg", myScene);//green
+			mix2.diffuseTexture3 = new BABYLON.Texture("path04a.jpg", myScene);//blue
+			mix2.diffuseTexture4 = new BABYLON.Texture("new_cliff02.jpg", myScene);// alpha
+			//set repeat scales
+			mix2.diffuseTexture1.uScale = mix.diffuseTexture1.vScale =8;
+			mix2.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 8;
+			mix2.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 8;
+			mix2.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 40;
+		*/
+			var dummyCamera = new BABYLON.FreeCamera("dummy",new BABYLON.Vector3(0,10,-100),myScene)
+			
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+          
+		   BABYLON.SceneLoader.Append("", "thin_inst01.babylon", myScene);
+            myScene.executeWhenReady(function () {
+					
+			// arc rotate camera for scene if wanted
+			/*		
+					// Attach start camera to canvas inputs
+					myCamera1 = myScene.getCameraByName("Camera");
+					myCamera1.wheelPrecision =5;
+					myCamera1.maxZ =2200;
+					myCamera1.speed =0.1;
+					myCamera1.lowerRadiusLimit = 70;
+					myCamera1.upperRadiusLimit = 120;
+					myCamera1.lowerBetaLimit = 0.9;
+					myCamera1.upperBetaLimit = 1.518;
+			*/		
+			
+					//get wall to check for collisions
+					var wall = myScene.getMeshByName("wall");
+					
+					// actual camera - universal
+					myCamera2 = myScene.getCameraByName("Camera");
+					myCamera2.speed =0.1;
+					myCamera2.maxZ =2000;
+					
+					// start scene with universal camera
+					myCamera = myCamera2;
+					myScene.activeCamera = myCamera;
+					
+					// check for collision with outside walland show message.
+					myCamera.onCollide = function(mesh) {
+						hit = 1;
+						if (mesh === wall){
+							document.getElementById('words').style.display='block';
+							delay = setInterval(clearDelay, 3000);
+						}
+					};
+					
+				    myScene.activeCamera.attachControl(canvas);
+					
+					// get terrain to apply textures to
+					var ground = myScene.getMeshByName("ground_base");
+					
+					// get mesh for applying thin instances to
+					var groundGrass = myScene.getMeshByName("ground_grass");
+					groundGrass.isVisible = false;
+					var positions = groundGrass.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+					console.log(positions.length);
+					//get the mesh use for intances
+					var theGrass = myScene.getMeshByName("plant_mesh");
+					var grassArray = [];
+		
+					//set a counter to zero.
+					var number = 0;
+					
+					//set up the matrix every twelvth position in groundGrass mesh
+					for(i =0; i<positions.length; i+=15){
+						var x = Math.floor((Math.random() * 4) + 1);
+						//console.log(i + "  " + positions[i] + "   " +x);
+						
+						switch (x) {
+									case 1:
+										var matrix = BABYLON.Matrix.Translation((positions[i] + 0.4), (positions[i+1]), (positions[i+2]));
+										number = number + 1;
+										break;
+									case 2:
+										var matrix = BABYLON.Matrix.Translation((positions[i] - 0.4), (positions[i+1]), (positions[i+2]));
+										number = number + 1;
+										break;	
+									case 3:
+										var matrix = BABYLON.Matrix.Translation((positions[i]), (positions[i+1]), (positions[i+2] + 0.4));
+										number = number + 1;
+										break;
+									case 4:
+										var matrix = BABYLON.Matrix.Translation((positions[i]), (positions[i+1]), (positions[i+2] - 0.4));
+										number = number + 1;
+										break;	
+									case 5:
+										var matrix = BABYLON.Matrix.Translation((positions[i]), (positions[i+1]), (positions[i+2]));
+										number = number + 1;
+										break;
+									}
+					
+						grassArray.push(matrix);
+					}
+					
+					theGrass.thinInstanceAdd(grassArray);
+					//groundGrass.isVisible = false;
+					groundGrass.dispose();
+					console.log(number);
+					
+					//console.log(positions[3]);
+					
+					var exterior = myScene.getMeshByName("ground_outside");
+					ground.material = mix;
+					exterior.material = mix;
+					// Apply sky texture - normals facing in
+					var skymat = myScene.getMaterialByName("sky");
+					skymat.backFaceCulling = true;
+					
+					var theMats = myScene.materials;
+					//console.log(theMats.length);
+					//console.log(theMats[2].name);
+					//console.log(theMats[20].name);
+					// get lights and half strength
+					var theLights = myScene.lights;
+					//theLights[0].intensity = 0.5;
+					theLights[1].intensity = 0.3;
+					
+					// set scene parameters including scene color and fog parameters
+					myScene.clearColor = new BABYLON.Color3(0.0,0.0,0.0);
+					myScene.fogDensity = 0.020;
+					myScene.fogColor = new BABYLON.Color3(.5,0.5,0.4);
+					
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+		/*
+					//animate sea texture
+					var theSea = myScene.getMeshByName("sea");
+					BABYLON.Animation.CreateAndStartAnimation("u", theSea.material.diffuseTexture, "vOffset", 3, 1440, 0, 1, 1)
+					
+					// end scene code if you fall in water
+					camSensor = myScene.getMeshByName("camSensor1");
+					drown = myScene.getMeshByName("deepSea");
+					camSensor.actionManager = new BABYLON.ActionManager(myScene);
+					
+					camSensor.actionManager.registerAction(new BABYLON.ExecuteCodeAction(
+							{trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: drown},
+							function() {
+								myScene.fogDensity = 0.00000;
+								camFlag = 4;
+								divEnding.style.display = "block";
+								divEnding.innerHTML = "You Drowned!!";
+						}
+					));
+		*/			
+					/* remove maybe just rotate the empty instead?
+					
+					const animDoor1 = new BABYLON.Animation("openDoor", "rotation.y", 30, 
+					BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+					
+					const doorKeys1 = []; 
+					//At the animation key 0, the value of rotation.y is 0
+					doorKeys1.push({
+						frame: 0,
+						value: Math.PI
+					});
+					//At the animation key 30, (after 1 sec since animation fps = 30) the value of rotation.y is 2PI for a complete rotation
+					doorKeys1.push({
+						frame: 30,
+						value: Math.PI * 3/2 
+					});
+					
+					animDoor1.setKeys(doorKeys1);
+					*/
+					
+					// change camera code with KB
+		/*			
+					myScene.onKeyboardObservable.add((kbInfo) => {
+						switch (kbInfo.type) {
+							case BABYLON.KeyboardEventTypes.KEYDOWN:
+								switch (kbInfo.event.key) {
+									case "c":
+										if(camFlag === 1){
+											myCamera.detachControl(canvas);
+											myScene.activeCamera = myCamera2;
+											myScene.activeCamera.attachControl(canvas);
+											camFlag = 2;
+										}
+										else if(camFlag === 2){
+											myCamera.detachControl(canvas);
+											myScene.activeCamera = myCamera3;
+											myScene.activeCamera.attachControl(canvas);
+											camFlag = 3;
+										}
+										else if(camFlag ===3){
+											myCamera.detachControl(canvas);
+											myScene.activeCamera = myCamera1;
+											myScene.activeCamera.attachControl(canvas);
+											camFlag = 1;
+										}	
+										break;
+									}
+							break;			
+						}
+					});
+			*/
+
+			
+					
+					// door click code
+			/*
+			myScene.onPointerObservable.add((pointerInfo) => {
+					
+						myScene.onPointerDown = function (evt, pickResult) {
+							// We try to pick an object
+							if (pickResult.hit) {
+								myTrigger = pickResult.pickedMesh.name;
+								
+								//get door number to choose the empty
+								var num = parseInt(myTrigger.substr(6, 2));
+								var whichOne = "Empty" + num;
+								var whichDoor = myScene.getMeshByName(whichOne);
+								
+								if(opened[num] === 0){
+									if(direct[num] === 1){
+										whichDoor.rotation.y = whichDoor.rotation.y + Math.PI/2;
+									}
+									else {
+										whichDoor.rotation.y = whichDoor.rotation.y - Math.PI/2;
+									}
+									opened[num] = 1;
+								}
+								else {
+								
+									if(direct[num] === 1){
+										whichDoor.rotation.y = whichDoor.rotation.y - Math.PI/2;
+									}
+									else {
+										whichDoor.rotation.y = whichDoor.rotation.y + Math.PI/2;
+									}
+									opened[num] = 0;
+								
+								}
+								
+							}
+						}
+					});
+					
+					
+				});
+		*/
+			});
+			};
+				
+					
+				// Once the scene is loaded, just register a render loop to render it
+				engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+					myScene.render();
+				});
+    
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		var clearDelay = function(){
+		clearInterval(delay);
+		document.getElementById('words').style.display='none';
+		
+		//hilite.isPickable = true;
+		//hilite.setEnabled(true);
+		//console.log("reached");
+		};
+		
+		 
+		
+	
+
+	
+		
+		
+    </script>
+</body>
+</html>
