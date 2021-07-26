@@ -1,0 +1,156 @@
+Exporter version: 2.93.0, Blender version: 2.93.0 Beta
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\a_graveyard\
+	Python World class constructor completed
+	processing begun of mesh:  Button
+		processing begun of material:  start
+			processing texture start01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of camera (UniversalCamera):  startCam
+	processing begun of mesh:  item00
+		processing begun of material:  item
+			processing texture icons1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  item01
+		processing begun of material:  item
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  item02
+		processing begun of material:  item
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  item03
+		processing begun of material:  item
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  item04
+		processing begun of material:  item
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  item05
+		processing begun of material:  item
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  item06
+		processing begun of material:  item
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  item07
+		processing begun of material:  item
+		registered as also a user of material:  item
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of camera (UniversalCamera):  menu_Cam
+	processing begun of mesh:  backpack
+		processing begun of material:  backpack
+			processing texture icons1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  bpack00
+		processing begun of material:  backpack
+		registered as also a user of material:  backpack
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  bpack01
+		processing begun of material:  backpack
+		registered as also a user of material:  backpack
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  allitems
+	processing begun of node:  background
+========= Writing of JSON file started =========
+	writing mesh:  Button
+	writing mesh:  item00
+	writing mesh:  item01
+	writing mesh:  item02
+	writing mesh:  item03
+	writing mesh:  item04
+	writing mesh:  item05
+	writing mesh:  item06
+	writing mesh:  item07
+	writing mesh:  backpack
+	writing mesh:  bpack00
+	writing mesh:  bpack01
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.8149 secs

@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Graveyard</title>
+    <!--<script src="../hand.js"></script> -->
+	
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<!--<script src="https://preview.babylonjs.com/babylon.js"></script>-->
+	<script src="babylon.mixMaterial.min.js"></script>
+   <script src="draw.js"></script>
+	
+	<link rel="icon" href="data:,">
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#words {
+			position: absolute;
+			left:20%;
+			top:90%;
+			width:60%;
+			line-height: 2em;
+			font-family: Arial, Helvetica;
+			font-size: 16px;
+			color: white;
+			
+			display:none;
+			border:1px solid white;
+			text-align: center;
+			
+		}
+		
+		
+		#credits {
+		position: absolute;
+		text-align: center;
+		font-size: 60px;
+		color: red;
+		top: 50%;
+		width: 100%;
+		height: 60px;
+		display: none;
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	<div id = "credits">vvvvvvv</div>
+	<div id = "words">I'm here to find the body, not wander about</div>
+<!--
+	<div id ="container">
+	<div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div> </div>
+-->
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			// divs for scene data display
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divVerts = document.getElementById("verts");
+			//end scene data display
+			
+			var divEnding = document.getElementById("credits");
+			
+			//div for word text display
+			var divTalk = document.getElementById("words");
+			
+			var myScene = new BABYLON.Scene(engine);
+			//var sceneInstru;
+			var myCamera;
+			var myCamera1;
+			var myCamera2;
+			var myCamera3;
+			var camSensor;
+			//var allCamera;
+			var drown;
+			var camFlag = 1;
+			//arrays for opening closing doors
+			//var direct = [0,1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,1,1,0,0,0,1,1,0];
+			//var opened = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0];
+			
+			var allMeshes;
+			
+			var soundsReady = 0;
+			var Sounds = [];
+			
+			var mix = new BABYLON.MixMaterial("mix", myScene);
+		
+			mix.mixTexture1 = new BABYLON.Texture("terrain_map02a.png", myScene);
+			mix.diffuseTexture1 = new BABYLON.Texture("grass_rock07.jpg", myScene);//red;
+			mix.diffuseTexture2 = new BABYLON.Texture("grass1a.jpg", myScene);//green
+			mix.diffuseTexture3 = new BABYLON.Texture("path04a.jpg", myScene);//blue
+			mix.diffuseTexture4 = new BABYLON.Texture("new_cliff02.jpg", myScene);// alpha
+			//set repeat scales
+			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 6;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 5;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 3;
+			mix.diffuseTexture4.uScale = 30;
+			mix.diffuseTexture4.vScale = 30;
+		/*	
+			var mix2 = new BABYLON.MixMaterial("mix", myScene);
+		
+			mix2.mixTexture1 = new BABYLON.Texture("terrain_map02a.png", myScene);
+			mix2.diffuseTexture1 = new BABYLON.Texture("mixmap_textures/grass_rock07.jpg", myScene);//red;
+			mix2.diffuseTexture2 = new BABYLON.Texture("mixmap_textures/grass1a.jpg", myScene);//green
+			mix2.diffuseTexture3 = new BABYLON.Texture("path04a.jpg", myScene);//blue
+			mix2.diffuseTexture4 = new BABYLON.Texture("new_cliff02.jpg", myScene);// alpha
+			//set repeat scales
+			mix2.diffuseTexture1.uScale = mix.diffuseTexture1.vScale =8;
+			mix2.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 8;
+			mix2.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 8;
+			mix2.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 40;
+		*/
+			var dummyCamera = new BABYLON.FreeCamera("dummy",new BABYLON.Vector3(0,10,-100),myScene)
+			
+			
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			
+		/*	
+			BABYLON.Engine.audioEngine.useCustomUnlockedButton = true;
+
+			var button = undefined;
+			BABYLON.Engine.audioEngine.onAudioLockedObservable.add(() => {
+				if (button) {
+					return;
+				}
+				
+				button = document.createElement("button");
+				button.innerText = "CLICK ON ME TO THE AUDIO!!!";
+				button.style.position = "absolute";
+				button.style.top = "100px";
+				button.style.right = "200px";
+				button.style.zIndex = "99999";
+				document.body.append(button);
+					
+				button.onclick = () => {
+			
+					BABYLON.Engine.audioEngine.unlock(); 
+					button.remove();
+				}
+				
+				
+			});
+			
+		*/	
+			BABYLON.SceneLoader.Append("", "menu293.babylon", myScene);
+			BABYLON.SceneLoader.Append("", "thin_inst01.babylon", myScene);
+            myScene.executeWhenReady(function () {
+			
+					//console.log(myScene.gravity);
+					var startCamera = myScene.getCameraByName("startCam");
+					myScene.activeCamera = startCamera;
+					myScene.activeCamera.attachControl(canvas);
+					//console.log(startCamera.position);
+			
+					// create and hide replay button
+					aButton = myScene.getMeshByName("Button");
+					
+							//once action manager called on aButton (Start): hide button, set button texture for replay, play audio, reset scene, and move uvs on clapboard, enable the melon, and call audio start
+					var doStuff = function(){
+						//var ended = 1;
+						var takes = 1;
+						aButton.setEnabled(false);
+						BABYLON.Engine.audioEngine.unlock(); 
+						//myScene.activeCamera = myCamera2;
+						//myScene.activeCamera.attachControl(canvas);
+						
+						//var aButtonMat = myScene.getMaterialByName("menu6.button");
+						//aButtonMat.diffuseTexture.vOffset = .5;
+						theWind.play();
+					};
+					
+					aButton.actionManager = new BABYLON.ActionManager(myScene);
+					aButton.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, doStuff));
+					
+					//console.log(soundsReady);
+					//if all sounds loaded enable the start-replay button and make it pickable
+					//if(soundsReady > 13) {
+					//	aButton.setEnabled(true);
+					//	aButton.isPickable = true;
+						//console.log("entered");
+					//}
+			
+			
+					
+			// arc rotate camera for scene if wanted
+			/*		
+					// Attach start camera to canvas inputs
+					myCamera1 = myScene.getCameraByName("Camera");
+					myCamera1.wheelPrecision =5;
+					myCamera1.maxZ =2200;
+					myCamera1.speed =0.1;
+					myCamera1.lowerRadiusLimit = 70;
+					myCamera1.upperRadiusLimit = 120;
+					myCamera1.lowerBetaLimit = 0.9;
+					myCamera1.upperBetaLimit = 1.518;
+					
+					
+			*/		
+					var tempcam = myScene.getCameraByName("Camera");
+					myCamera2 = myScene.getCameraByName("menu_Cam");
+					
+					//console.log(tempcam.position);
+					
+					createMenu(myScene);
+			/*		
+                    var theItems = myScene.getMeshByName("allitems");
+					console.log(theItems.position);
+					var eachItem = theItems.getChildren();
+					console.log(eachItem.length);
+					//theItems.dispose();
+					for (i =0; i<eachItem.length; i++){
+						
+						eachItem[i].parent = myCamera2;
+						//console.log(eachItem[i].name);
+						eachItem[i].isVisible = false;
+					}
+					
+					var theMat = myScene.getMaterialByName("item");
+					theMat.albedoTexture.vOffset = 0.5
+					
+					var theBackpack = myScene.getMeshByName("background");
+					var backPack = theBackpack.getChildren();
+					for(i=0; i<backPack.length; i++){
+						backPack[i].parent = myCamera2;
+						console.log(backPack[i].name);
+					}
+					
+			*/		
+					//theItems.parent = myCamera2;
+					
+					myCamera2.position.x = tempcam.position.x;
+					myCamera2.position.z = tempcam.position.z;
+					myCamera2.position.y = tempcam.position.y
+					myCamera2.rotation = tempcam.rotation;
+					//myCamera2.position.x = 14;
+					//myCamera2.setTarget(BABYLON.Vector3.Zero());
+					myCamera2.speed = .1;
+					myCamera2.wheelPrecision = 500;
+					myCamera2.maxZ= 500;
+					myCamera2.angularSensibility =4000;
+					//myCamera2.inputs.attached.keyboard.angularSpeed = .002;
+					//myCamera2.inputs.addMouse();
+					
+					//myScene.activeCamera = myCamera2;
+					
+					
+					// Attach camera to canvas inputs or if fixed do not.
+                   
+				   //myScene.activeCamera.attachControl(canvas);
+			/*
+					myCamera3 = myScene.getCameraByName("menu_Cam");
+					//myCamera2 = myScene.getCameraByName("Camera");
+					//console.log("cam position = " + myCamera2.position);
+					myCamera3.position.x = -15;
+					myCamera3.rotation.y = Math.PI/2;
+					myCamera3.maxZ = 100;
+					myCamera3.speed = .1;
+					myCamera3.checkCollisions = true;
+			*/
+			
+					createAudio();
+					//get wall to check for collisions
+					var wall = myScene.getMeshByName("wall");
+					
+					// actual camera - universal
+					//myCamera2 = myScene.getCameraByName("Camera");
+					//myCamera2.speed =0.1;
+					//myCamera2.maxZ =2000;
+					
+					// start scene with universal camera
+					myCamera = myCamera2;
+					//myScene.activeCamera = myCamera;
+					
+					// check for collision with outside walland show message.
+					myCamera.onCollide = function(mesh) {
+						hit = 1;
+						if (mesh === wall){
+							document.getElementById('words').style.display='block';
+							delay = setInterval(clearDelay, 3000);
+						}
+					};
+					
+				   // myScene.activeCamera.attachControl(canvas);
+					
+					// get terrain to apply textures to
+					var ground = myScene.getMeshByName("ground_base");
+					
+					// get mesh for applying thin instances to
+					var groundGrass = myScene.getMeshByName("ground_grass");
+					groundGrass.isVisible = false;
+					var positions = groundGrass.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+					console.log(positions.length);
+					//get the mesh use for intances
+					var theGrass1 = myScene.getMeshByName("plant_mesh");
+					var grassArray1 = [];
+					var theGrass2 = myScene.getMeshByName("plant_mesh02");
+					var grassArray2 = [];
+					var theGrass3 = myScene.getMeshByName("plant_mesh03");
+					var grassArray3 = [];
+					var theRock1 = myScene.getMeshByName("aRock");
+					var rockArray1 = [];
+					var theRock2 = myScene.getMeshByName("aRock1");
+					var rockArray2 = [];
+		
+					//set a counter to zero.
+					var number = 0;
+				
+					//set a counter to zero.
+					//var number = 0;
+					
+					//set up the matrix every twelvth position in groundGrass mesh
+					for(i =0; i<positions.length; i+=24){
+					//for(i =1002; i<2002; i+=15){
+						var x = Math.floor((Math.random() * 5) + 1);
+						//console.log(i + "  " + positions[i] + "   " +x);
+						
+						switch (x) {
+									case 1:
+										var matrix = BABYLON.Matrix.Translation((positions[i] + 0.4), (positions[i+1]), (positions[i+2]));
+										 rockArray1.push(matrix);
+										number = number + 1;
+										break;
+									case 2:
+										var matrix = BABYLON.Matrix.Translation((positions[i] - 0.4), (positions[i+1]), (positions[i+2]));
+										 grassArray3.push(matrix);
+										number = number + 1;
+										break;	
+									case 3:
+										var matrix = BABYLON.Matrix.Translation((positions[i]), (positions[i+1]), (positions[i+2] + 0.4));
+										 grassArray1.push(matrix);
+										number = number + 1;
+										break;
+									case 4:
+										var matrix = BABYLON.Matrix.Translation((positions[i]), (positions[i+1]), (positions[i+2] - 0.4));
+										 grassArray2.push(matrix);
+										number = number + 1;
+										break;	
+									case 5:
+										var matrix = BABYLON.Matrix.Translation((positions[i]), (positions[i+1]), (positions[i+2]));
+										 rockArray2.push(matrix);
+										number = number + 1;
+										console.log(x);
+										break;
+									}
+					}// end for loop
+					
+					//print out each array length - so distribution of parts
+					
+					//console.log( "red = " + grassArray2.length);
+					//console.log("green = " + grassArray1.length);
+					//console.log("rock1 = " + rockArray1.length);
+					//console.log("rock2 = " + rockArray2.length);
+					//console.log("grass tall  = " + grassArray3.length);
+					// end print out
+					
+					// create the "thin instances" for each piece
+					theGrass3.thinInstanceAdd(grassArray3);
+					theGrass2.thinInstanceAdd(grassArray2);
+					theGrass1.thinInstanceAdd(grassArray1);
+					theRock1.thinInstanceAdd(rockArray1);
+					theRock2.thinInstanceAdd(rockArray2);
+					
+					//dispose of the "thin instance" map and print total of "thin instances"
+					groundGrass.dispose();
+					console.log(number);
+					
+					//console.log(positions[3]);
+					
+					// assiugn the ground mix materials
+					var exterior = myScene.getMeshByName("ground_outside");
+					ground.material = mix;
+					exterior.material = mix;
+					// Apply sky texture - normals facing in
+					var skymat = myScene.getMaterialByName("sky");
+					skymat.backFaceCulling = true;
+					
+					var theMats = myScene.materials;
+					
+					// get lights and set beneath light to half strength
+					var theLights = myScene.lights;
+					//theLights[0].intensity = 0.5;
+					theLights[1].intensity = 0.6;
+					
+					// set scene parameters including scene color and fog parameters
+					myScene.clearColor = new BABYLON.Color3(0.0,0.0,0.0);
+					myScene.fogDensity = 0.025;
+					myScene.fogColor = new BABYLON.Color3(0.2,0.2,0.25);
+					
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+					
+				/*	
+					// create and hide replay button
+					aButton = myScene.getMeshByName("Button");
+					
+							//once action manager called on aButton (Start): hide button, set button texture for replay, play audio, reset scene, and move uvs on clapboard, enable the melon, and call audio start
+					var doStuff = function(){
+						//var ended = 1;
+						var takes = 1;
+						aButton.setEnabled(false);
+						//myScene.activeCamera = myCamera2;
+						//myScene.activeCamera.attachControl(canvas);
+						
+						//var aButtonMat = myScene.getMaterialByName("menu6.button");
+						//aButtonMat.diffuseTexture.vOffset = .5;
+						//theStart.play();
+					};
+					
+					aButton.actionManager = new BABYLON.ActionManager(myScene);
+					aButton.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, doStuff));
+					
+					//console.log(soundsReady);
+					//if all sounds loaded enable the start-replay button and make it pickable
+					//if(soundsReady > 13) {
+					//	aButton.setEnabled(true);
+					//	aButton.isPickable = true;
+						//console.log("entered");
+					//}
+
+				*/
+				
+				
+				//click grave code
+				
+				myScene.onPointerObservable.add((pointerInfo) => {
+					
+						myScene.onPointerDown = function (evt, pickResult) {
+							if (pickResult.hit) {
+								console.log(pickResult.pickedMesh.name)
+								var aString = parseInt(6,4);
+								console.log(num);
+								//pickResult.pickedMesh.isPickable = false;
+							}
+						}
+				});
+				
+				
+					
+					// door click code
+			/*
+			myScene.onPointerObservable.add((pointerInfo) => {
+					
+						myScene.onPointerDown = function (evt, pickResult) {
+							// We try to pick an object
+							if (pickResult.hit) {
+								myTrigger = pickResult.pickedMesh.name;
+								
+								//get door number to choose the empty
+								var num = parseInt(myTrigger.substr(6, 2));
+								var whichOne = "Empty" + num;
+								var whichDoor = myScene.getMeshByName(whichOne);
+								
+								if(opened[num] === 0){
+									if(direct[num] === 1){
+										whichDoor.rotation.y = whichDoor.rotation.y + Math.PI/2;
+									}
+									else {
+										whichDoor.rotation.y = whichDoor.rotation.y - Math.PI/2;
+									}
+									opened[num] = 1;
+								}
+								else {
+								
+									if(direct[num] === 1){
+										whichDoor.rotation.y = whichDoor.rotation.y - Math.PI/2;
+									}
+									else {
+										whichDoor.rotation.y = whichDoor.rotation.y + Math.PI/2;
+									}
+									opened[num] = 0;
+								
+								}
+								
+							}
+						}
+					});
+					
+					
+				});
+		*/
+			}); // end of execute when ready
+			}; //end of if babylon engine
+				
+					
+				// Once the scene is loaded, just register a render loop to render it
+				engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+					myScene.render();
+				});
+    
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		
+		var clearDelay = function(){
+		clearInterval(delay);
+		document.getElementById('words').style.display='none';
+		
+		//hilite.isPickable = true;
+		//hilite.setEnabled(true);
+		//console.log("reached");
+		};
+		
+		//theWind.onended = function(){
+		
+		//	myScene.activeCamera.attachControl(canvas);
+		
+		//}
+		 
+		function createAudio(){
+
+			theWind = new BABYLON.Sound("wind", "windtunnel01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 1  });
+			theGulls = new BABYLON.Sound("gulls", "sea_gull01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.05  });
+			theVoice = new BABYLON.Sound("arrgh", "arghh04.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.05  });
+			//return;
+
+		};
+	
+		function soundReady() {
+				soundsReady++;
+				if(soundsReady > 2){
+				console.log(Sounds.length);
+					//theWind.play();
+					//return;
+					
+					theWind.onended = function() {
+						myScene.activeCamera = myCamera2;
+						myScene.activeCamera.attachControl(canvas);
+						
+						theGulls.play();
+								
+						/*		animGroup.stop();
+								animGroup.goToFrame(0);
+								aCube.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(90), BABYLON.Space.LOCAL);
+								theTrack = 0;
+								myScene.beginAnimation(skeleton, 30, 54, true, 1);
+								//p = 4;
+								//console.log(p + "  " + distance);
+								//console.log("paused")
+								theDoors[1].rotation.y = -Math.PI;
+						*/
+							
+					}; // end onended function
+				};//end if sounds ready
+		};//end soundsReady function
+/*		
+		function createMenu() {
+			var theItems = myScene.getMeshByName("allitems");
+			console.log(theItems.position);
+			var eachItem = theItems.getChildren();
+			console.log(eachItem.length);
+			//theItems.dispose();
+			for (i =0; i<eachItem.length; i++){
+				
+				eachItem[i].parent = myCamera2;
+				//console.log(eachItem[i].name);
+				eachItem[i].isVisible = false;
+			}
+			
+			var theMat = myScene.getMaterialByName("item");
+			theMat.albedoTexture.vOffset = 0.5
+			
+			var theBackpack = myScene.getMeshByName("background");
+			var backPack = theBackpack.getChildren();
+			for(i=0; i<backPack.length; i++){
+				backPack[i].parent = myCamera2;
+				console.log(backPack[i].name);
+			}
+		}
+*/
+    </script>
+</body>
+</html>
