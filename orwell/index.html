@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>1984</title>
+	
+	<!--
+	Playground instancing : https://playground.babylonjs.com/#X2YIW2#1 
+	Playground Cloning : https://playground.babylonjs.com/#X2YIW2
+	-->
+    <!--<script src="../hand.js"></script> -->
+	
+	<!--<script src="https://cdn.babylonjs.com/babylon.js"></script> -->
+	 <script src="https://preview.babylonjs.com/babylon.js"></script>
+	<!--<script src="babylon.mixMaterial.min.js"></script>-->
+    <!--<script src="../babylon.2.5.js"></script>
+	<script src="../howler.js"></script> -->
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 800px;
+		height:30px
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id="fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+<!--
+	<div id ="container"><div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div>
+-->
+	</div>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divVerts = document.getElementById("verts");
+			
+			
+			var myScene = new BABYLON.Scene(engine);
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			var chuff;
+			var mySkeleton = [];
+			var myTrigger;
+			var theSignal =0;
+			var flag = 0; 
+			var theAnim;
+			var myCamera;
+			var myCamera2;
+			var camFlag = 0;
+			var animFlag = 0;
+			var soundsReady = 0;
+			var aSignal1, aSignal2;
+		
+		
+			//BABYLON.SceneLoader.Append("", "camera.babylon", myScene);
+            BABYLON.SceneLoader.Append("", "1984_05b.babylon", myScene);
+                myScene.executeWhenReady(function () {
+				
+					//console.log(myScene.gravity);
+					var startCamera = myScene.getCameraByName("startCam");
+					myScene.activeCamera = startCamera;
+                    
+					// Attach camera to canvas inputs
+					myCamera = myScene.getCameraByName("Camera");
+                  
+					
+					myCamera.speed = .25;
+					myCamera.wheelPrecision = 20;
+					myCamera.maxZ= 500;
+					myCamera.lowerRadiusLimit = 2;
+					myCamera.upperRadiusLimit = 6.25;
+					myCamera.lowerBetaLimit = -1.700;
+					myCamera.upperBetaLimit = 1.528;
+
+					//myScene.activeCamera = myCamera;
+				    //myScene.activeCamera.attachControl(canvas);
+					
+					
+					// create and hide replay button
+					aButton = myScene.getMeshByName("Button");
+					
+					//once action manager called on aButton (Start): hide button, set button texture for replay, play audio, reset scene, and move uvs on clapboard, enable the melon, and call audio start
+					var doStuff = function(){
+						//var ended = 1;
+						var takes = 1;
+						aButton.setEnabled(false);
+						// code so sound will play in Chrome browser
+						BABYLON.Engine.audioEngine.unlock(); 
+						Intro1984.play();
+					};
+					
+					aButton.actionManager = new BABYLON.ActionManager(myScene);
+					aButton.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, doStuff));
+					
+					//get skeleton and animations
+					mySkeleton[0] = myScene.getSkeletonByName("1984_stand");
+					
+					//console.log(mySkeleton[0]);
+					mySkeleton[0].animationPropertiesOverride = new BABYLON.AnimationPropertiesOverride();
+					mySkeleton[0].animationPropertiesOverride.enableBlending = true;
+					mySkeleton[0].animationPropertiesOverride.blendingSpeed = 0.05;
+					mySkeleton[0].animationPropertiesOverride.loopMode = 1;
+					
+					var sitRange = mySkeleton[0].getAnimationRange("sitAction");
+					var standRange = mySkeleton[0].getAnimationRange("standAction");
+					var swingRange = mySkeleton[0].getAnimationRange("swingAction");
+					
+					myScene.beginAnimation(mySkeleton[0], sitRange.from, sitRange.to, true);
+					// end get sleleton
+					
+					//get screen and actions
+					aScreen = myScene.getMeshByName("screen");
+					//console.log(aScreen.position);
+					var clickTrigger = 1;
+					var isPlaying = 0;
+					var screenMat = myScene.getMaterialByName("screen");
+					
+					
+					var moreStuff = function(){
+						if(isPlaying === 0){
+							
+							switch (clickTrigger){
+								case 0 :
+									isPlaying =1;
+									screenMat.albedoTexture.uOffset = 0;
+									screenMat.albedoTexture.vOffset = 0;
+									//console.log("Screen Clicked");
+									console.log("case 1 is playing");
+									Hate00.play();
+									myScene.beginAnimation(mySkeleton[0],sitRange.from, sitRange.to,false, 1.0);
+									Hate00.onended = function(){
+										clickTrigger = 1;
+										isPlaying = 0;
+									}
+									//sitting
+									break;
+									
+									
+								case 1 :
+									isPlaying =1;
+									screenMat.albedoTexture.uOffset = 0.5;
+									Hate01.play();
+									myScene.beginAnimation(mySkeleton[0],standRange.from, standRange.to,false, 1.0);
+									console.log("case 1 is playing");
+									Hate01.onended = function(){
+										clickTrigger = 2;
+										isPlaying = 0;
+									}
+									break;
+									
+									
+								case 2 :
+									isPlaying =1;
+									screenMat.albedoTexture.vOffset = 0.5;
+									Ttalk02.play();
+									myScene.beginAnimation(mySkeleton[0],swingRange.from, swingRange.to, false, 0.5);
+									console.log("case 2 is playing");
+									//console.log(isPlaying);
+									Ttalk02.onended = function(){
+										clickTrigger = 3;
+										isPlaying = 0;
+									}
+									break;
+								
+								case 3 :
+									isPlaying =1;
+									Warpeace.play();
+									myScene.beginAnimation(mySkeleton[0],standRange.from, standRange.to,false, 1.0);
+									console.log("case 3 is playing");
+									Warpeace.onended = function(){
+										clickTrigger = 4;
+										isPlaying = 0;
+									}
+									break;
+									
+									
+								case 4 :
+									isPlaying =1;
+									screenMat.albedoTexture.uOffset = 0;
+									Chinaflu.play();
+									myScene.beginAnimation(mySkeleton[0],sitRange.from, sitRange.to,false, 1.0);
+									console.log("case 4 is playing");
+									Chinaflu.onended = function(){
+										clickTrigger = 5;
+										isPlaying = 0;
+									}
+									break;
+									
+									
+								case 5 :
+									isPlaying =1;
+									Hate01.play();
+									myScene.beginAnimation(mySkeleton[0],standRange.from, standRange.to,false, 1.0);
+									console.log("case 5 is playing");
+									Hate01.onended = function(){
+										clickTrigger = 0;
+										isPlaying = 0;
+									}
+									break;	
+									
+										
+							}
+						}
+					};
+					
+					aScreen.actionManager = new BABYLON.ActionManager(myScene);
+					aScreen.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, moreStuff));
+					
+
+					
+					
+					// Get the target and hide it
+					var target = myScene.getMeshByName("target");
+					target.isVisible = false;
+					
+					// positions for character instances
+					var positions = [ [2,0], [1,0], [-1,0], [-2,0], [0.5,1], [-0.5,1], [1.5,1], [-1.5,1]];
+					
+					//create character instances
+					var man =  myScene.getMeshByName("Uni1228");
+					var instance = [];
+					
+					for (i=0; i < 8; i++){
+						instance[i] = man.createInstance("man" + i);
+						//console.log(instance[i].name);
+						instance[i].position.x = positions[i][0];
+						instance[i].position.z = positions[i][1];
+					   
+					};
+				
+				
+					
+					createSound();
+					
+					
+					
+					
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+					
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+                        myScene.render();
+                    });
+                });
+           
+        };
+		
+		
+		
+		// Load the sound and play it automatically once ready
+		
+		function createSound(){
+		
+		Intro1984 = new BABYLON.Sound("intro", "1984_audio.mp3", myScene, soundReady, { loop: false, volume: 0.75 });
+		Hate00 = new BABYLON.Sound("warning", "hate_2mins01.mp3", myScene, soundReady, { loop: false, volume: 0.75 });
+		Hate01 = new BABYLON.Sound("hate", "hate_2mins02.mp3", myScene, soundReady, { loop: false, volume: 0.75 });
+		Ttalk01 = new BABYLON.Sound("isis", "trump_isis02.mp3", myScene, soundReady, { loop: false, volume: 0.75 });
+		Ttalk02 = new BABYLON.Sound("china", "China_pays.mp3", myScene, soundReady, { loop: false, volume: 0.5 });
+		Warpeace = new BABYLON.Sound("war", "warpeace.mp3", myScene, soundReady, { loop: false, volume: 0.5 });
+		Chinaflu = new BABYLON.Sound("go_away", "china flu03.mp3", myScene, soundReady, { loop: false, volume: 0.75 });
+		}
+	
+		function soundReady() {
+			soundsReady++;
+			
+			if(soundsReady === 7){
+				console.log("7 sounds ready");
+				Intro1984.onended = function() {
+					myScene.activeCamera = myCamera;
+					myScene.activeCamera.attachControl(canvas);
+					Hate00.play();
+				};
+			};
+		
+		};
+	
+
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+
+		
+		
+		
+		
+    </script>
+</body>
+</html>
