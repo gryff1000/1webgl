@@ -1,0 +1,187 @@
+Exporter version: 6.4.4, Blender version: 2.90.0
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\obrien02\
+	Python World class constructor completed
+	processing begun of skeleton:  New_obrien01, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LeftUpLeg, index:  1
+		processing begun of bone:  LeftLeg, index:  2
+		processing begun of bone:  LeftFoot, index:  3
+		processing begun of bone:  LeftToeBase, index:  4
+		processing begun of bone:  LowerBack, index:  5
+		processing begun of bone:  Spine, index:  6
+		processing begun of bone:  Spine1, index:  7
+		processing begun of bone:  LeftShoulder, index:  8
+		processing begun of bone:  LeftArm, index:  9
+		processing begun of bone:  LeftForeArm, index:  10
+		processing begun of bone:  LeftHand, index:  11
+		processing begun of bone:  LThumb, index:  12
+		processing begun of bone:  LeftFingerBase, index:  13
+		processing begun of bone:  LeftHandFinger1, index:  14
+		processing begun of bone:  Neck, index:  15
+		processing begun of bone:  Neck1, index:  16
+		processing begun of bone:  Head, index:  17
+		processing begun of bone:  RightShoulder, index:  18
+		processing begun of bone:  RightArm, index:  19
+		processing begun of bone:  RightForeArm, index:  20
+		processing begun of bone:  RightHand, index:  21
+		processing begun of bone:  RThumb, index:  22
+		processing begun of bone:  RightFingerBase, index:  23
+		processing begun of bone:  RightHandFinger1, index:  24
+		processing begun of bone:  RightUpLeg, index:  25
+		processing begun of bone:  RightLeg, index:  26
+		processing begun of bone:  RightFoot, index:  27
+		processing begun of bone:  RightToeBase, index:  28
+		Ignoring IK bone:  LeftLeg.IK
+		Ignoring IK bone:  RightLeg.IK
+		Ignoring IK bone:  RightHand.IK
+		Ignoring IK bone:  LeftHand.IK
+		Ignoring IK bone:  LeftKnee.IK
+		Ignoring IK bone:  RightKnee.IK
+		Ignoring IK bone:  RightElbow.IK
+		Ignoring IK bone:  LeftElbow.IK
+		processing action handAction:  in[1 - 41], out[0 - 41]
+		processing action standAction:  in[1 - 41], out[50 - 91]
+	processing begun of mesh:  New_obrien01:Uni1228
+		processing begun of material:  New_obrien01:Uni1228:Defaultskin
+			processing texture uni1228_Euro_Male_diff
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  1225
+		num normals        :  1225
+		num tangents       :  0
+		num uvs            :  2450
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1326
+		Skeleton stats:  
+			Total Influencers:  2110
+			Avg # of influencers per vertex:  1.7224
+			Highest # of influencers observed:  7, num vertices with this:  8
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  9800
+	processing begun of mesh:  New_obrien01:Low-poly
+		processing begun of material:  New_obrien01:Low-poly:Eye_brown
+			processing texture brown_eye
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  0
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  172
+		Skeleton stats:  
+			Total Influencers:  96
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  96
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  New_obrien01:Uniform_jacket
+		processing begun of material:  New_obrien01:Uniform_jacket:Uniform_jacket
+			processing texture uniform_jacket_black_red01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4291
+		num normals        :  4291
+		num tangents       :  0
+		num uvs            :  8582
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  5054
+		Skeleton stats:  
+			Total Influencers:  18088
+			Avg # of influencers per vertex:  4.2153
+			Highest # of influencers observed:  7, num vertices with this:  233
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  34328
+	processing begun of mesh:  New_obrien01:Uniform_pants
+		processing begun of material:  New_obrien01:Uniform_pants:Uniform_pants
+			processing texture uniform_pants
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  887
+		num normals        :  887
+		num tangents       :  0
+		num uvs            :  1774
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1426
+		Skeleton stats:  
+			Total Influencers:  1807
+			Avg # of influencers per vertex:  2.0372
+			Highest # of influencers observed:  5, num vertices with this:  6
+			exported as 5 influencers
+			num skeletonWeights and skeletonIndices:  7096
+	processing begun of mesh:  New_obrien01:Uniform_cap
+		processing begun of material:  New_obrien01:Uniform_cap:Uniform_cap
+			processing texture uniform_cap_black1024
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  891
+		num normals        :  891
+		num tangents       :  0
+		num uvs            :  1782
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1048
+		Skeleton stats:  
+			Total Influencers:  891
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  891
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  3564
+	processing begun of mesh:  New_obrien03:Exy_leather_boots
+		processing begun of material:  New_obrien03:Exy_leather_boots:Leahter_boots_matmaterial
+		num positions      :  1096
+		num normals        :  1096
+		num tangents       :  0
+		num uvs            :  2192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1576
+		Skeleton stats:  
+			Total Influencers:  2037
+			Avg # of influencers per vertex:  1.8586
+			Highest # of influencers observed:  3, num vertices with this:  126
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  4384
+	processing begun of mesh:  Button
+		processing begun of material:  start
+			processing texture start01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  Cube
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  New_obrien01:Uni1228
+	writing mesh:  New_obrien01:Low-poly
+	writing mesh:  New_obrien01:Uniform_jacket
+	writing mesh:  New_obrien01:Uniform_pants
+	writing mesh:  New_obrien01:Uniform_cap
+	writing mesh:  New_obrien03:Exy_leather_boots
+	writing mesh:  Button
+	writing mesh:  Cube
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 4.6479 secs
