@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Blue Lady</title>
+    <!--<script src="../hand.js"></script> -->
+	
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	
+    <!--<script src="../babylon.2.5.js"></script>
+	<script src="../howler.js"></script> -->
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 800px;
+		height:30px
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	
+	<!--
+	<div id ="container"><div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div></div>
+	-->
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var myScene = new BABYLON.Scene(engine);
+			var music;
+			var skeleton;
+			var myTrigger;
+			var flag = 0; 
+			
+			
+			
+			// Load the sound and play it automatically once ready
+			//music = new BABYLON.Sound("music", "Bassa Island Game Loop2.mp3", myScene, soundReady, { loop: true, volume: 0.5 });
+			
+			
+			/*
+					var skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, myScene);
+					var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", myScene);
+					skyboxMaterial.backFaceCulling = false;
+					//skybox.infiniteDistance = true;
+					skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("skybox/myfirststars1", myScene);
+					skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+					skyboxMaterial.diffuseColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+					skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+					skybox.material = skyboxMaterial;
+			*/		
+		
+			//BABYLON.SceneLoader.Append("", "camera.babylon", myScene);
+            BABYLON.SceneLoader.Append("", "un_rigged02.babylon", myScene);
+                myScene.executeWhenReady(function () {
+                    // Attach camera to canvas inputs
+					
+					var myCamera = myScene.getCameraByName("Camera");
+                   
+					myCamera.speed = .5;
+					myCamera.wheelPrecision = 200;
+					myCamera.maxZ= 500;
+					myScene.activeCamera = myCamera;
+				    myScene.activeCamera.attachControl(canvas);
+					
+					//myTrigger = myScene.getMeshByName("Cylinder");
+					//myTrigger.isPickable = true;
+					
+					skeleton = myScene.getSkeletonById(0);
+					//myScene.beginAnimation(skeleton, 1, 928, true, 1);
+					//music.play();
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                        myScene.render();
+                    });
+                });
+           // }, function (progress) {
+                // To do: give progress feedback to user
+            //});
+        }
+		
+		
+		
+		/*
+		var sound = new Howl({  
+		urls: ['Bassa Island Game Loop2.mp3'],
+		autoplay: false,  
+		loop: true, 
+		volume: 0.3,
+		});
+		*/
+		
+		// Load the sound and play it automatically once ready
+		music = new BABYLON.Sound("music", "Bassa_Island_Game_ Loop2.mp3", myScene, soundReady, { loop: true, volume: 0.5 });
+		
+		function soundReady() {
+			//soundsReady++;
+			//myScene.beginAnimation(skeleton, 1, 928, true, 1);
+			//music.play();
+		};
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		
+		
+		
+		window.addEventListener("click", function (evt) {
+		 
+			 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
+			 if (pickResult.hit){
+				if (flag === 0){
+					console.log("hit")
+					myScene.beginAnimation(skeleton, 1, 928, true, 1);
+					myTrigger.isPickable = false; 
+					music.play();
+					flag = 1;
+				};
+				//else {
+				// console.log("no hit");
+				//};
+			};
+		});
+		
+    </script>
+</body>
+</html>
