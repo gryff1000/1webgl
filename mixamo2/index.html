@@ -110,13 +110,14 @@ http://creativecommons.org/licenses/by/4.0/
 			*/		
 		
 			//BABYLON.SceneLoader.Append("", "camera.babylon", myScene);
-            BABYLON.SceneLoader.Append("", "un_rigged02.babylon", myScene);
+            BABYLON.SceneLoader.Append("", "un_rigged02a.babylon", myScene);
                 myScene.executeWhenReady(function () {
                     // Attach camera to canvas inputs
 					
 					var myCamera = myScene.getCameraByName("Camera");
+					console.log(myCamera.name)
                    
-					myCamera.speed = .5;
+					//myCamera.speed = .5;
 					myCamera.wheelPrecision = 200;
 					myCamera.maxZ= 500;
 					myScene.activeCamera = myCamera;
@@ -125,8 +126,8 @@ http://creativecommons.org/licenses/by/4.0/
 					//myTrigger = myScene.getMeshByName("Cylinder");
 					//myTrigger.isPickable = true;
 					
-					skeleton = myScene.getSkeletonById(0);
-					//myScene.beginAnimation(skeleton, 1, 928, true, 1);
+					skeleton = myScene.getSkeletonByName("Armature.001");
+					myScene.beginAnimation(skeleton, 1, 31, true, 1);
 					//music.play();
 					
                     // Once the scene is loaded, just register a render loop to render it
@@ -152,14 +153,14 @@ http://creativecommons.org/licenses/by/4.0/
 		*/
 		
 		// Load the sound and play it automatically once ready
-		music = new BABYLON.Sound("music", "Bassa_Island_Game_ Loop2.mp3", myScene, soundReady, { loop: true, volume: 0.5 });
-		
+		//music = new BABYLON.Sound("music", "Bassa_Island_Game_ Loop2.mp3", myScene, soundReady, { loop: true, volume: 0.5 });
+	/*	
 		function soundReady() {
 			//soundsReady++;
 			//myScene.beginAnimation(skeleton, 1, 928, true, 1);
 			//music.play();
 		};
-		
+	*/	
 		// Resize
         window.addEventListener("resize", function () {
             engine.resize();
@@ -167,7 +168,7 @@ http://creativecommons.org/licenses/by/4.0/
 		
 		
 		
-		
+	/*	
 		window.addEventListener("click", function (evt) {
 		 
 			 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
@@ -184,7 +185,7 @@ http://creativecommons.org/licenses/by/4.0/
 				//};
 			};
 		});
-		
+	*/	
     </script>
 </body>
 </html>
