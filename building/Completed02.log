@@ -1,0 +1,838 @@
+Exporter version: 2.93.4, Blender version: 3.0.0 Beta
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\demos\
+			WARNING: unsupported node type(ShaderNodeTexSky) will trigger baking
+	Python World class constructor completed
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  Plane.001
+		processing begun of material:  Material.016
+		num positions      :  258
+		num normals        :  258
+		num tangents       :  0
+		num uvs            :  516
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  path
+		processing begun of material:  Material.016
+		registered as also a user of material:  Material.016
+		num positions      :  579
+		num normals        :  579
+		num tangents       :  0
+		num uvs            :  1158
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  232
+	processing begun of mesh:  target
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Plane
+		processing begun of material:  Material
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Cube.002
+		WARNING: No materials have been assigned: 
+		num positions      :  15
+		num normals        :  15
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  window.001
+		processing begun of material:  mapText
+			processing texture colours01_4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  0
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  112
+	processing begun of mesh:  window.002
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.003
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.004
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  shop.001
+		processing begun of material:  mapText
+		registered as also a user of material:  mapText
+		num positions      :  459
+		num normals        :  459
+		num tangents       :  0
+		num uvs            :  918
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  224
+	processing begun of mesh:  door.001
+		processing begun of material:  mapText
+		registered as also a user of material:  mapText
+		num positions      :  280
+		num normals        :  280
+		num tangents       :  0
+		num uvs            :  560
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  141
+	processing begun of mesh:  roof.001
+		processing begun of material:  mapText
+		registered as also a user of material:  mapText
+		num positions      :  151
+		num normals        :  151
+		num tangents       :  0
+		num uvs            :  302
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  64
+	processing begun of mesh:  roof.002
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  pillar.001
+		processing begun of material:  mapText
+		registered as also a user of material:  mapText
+		num positions      :  493
+		num normals        :  493
+		num tangents       :  0
+		num uvs            :  986
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  236
+	processing begun of mesh:  pillar.002
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.003
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.001
+		processing begun of material:  mapText
+		registered as also a user of material:  mapText
+		num positions      :  94
+		num normals        :  94
+		num tangents       :  0
+		num uvs            :  188
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  window.005
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.006
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.007
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.008
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  shop.002
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.002
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  roof.003
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.004
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  pillar.004
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.005
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.006
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.002
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  window.009
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.010
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.011
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.012
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.013
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.014
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.015
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.016
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  roof.005
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.006
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.007
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.008
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  shop.003
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.003
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  shop.004
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.005
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  pillar.007
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.008
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.009
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.003
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  window.017
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.018
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.019
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.020
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.021
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.022
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.023
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.024
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  roof.009
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.010
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.011
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.012
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  shop.006
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.004
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  shop.007
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.008
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  pillar.010
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.011
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.012
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.004
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  Cube.001
+		WARNING: No materials have been assigned: 
+		num positions      :  35
+		num normals        :  35
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  48
+	processing begun of mesh:  window.025
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.026
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.027
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.028
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.029
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.030
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.031
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.032
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.033
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.034
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.035
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.036
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  shop.009
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.005
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  door.006
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  shop.010
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  roof.013
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.014
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.015
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.016
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  pillar.013
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.014
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.015
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.016
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.005
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  window.037
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.038
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.039
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.040
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.041
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.042
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.043
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.044
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.045
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.046
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.047
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.048
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  shop.011
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.007
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  door.008
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  shop.012
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  roof.017
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.018
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.019
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.020
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  pillar.017
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.018
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.019
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.020
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.006
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  window.049
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.050
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.051
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.052
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.053
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.054
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.055
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.056
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.057
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.058
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.059
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.060
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.061
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.062
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.063
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.064
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.065
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.066
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  roof.021
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.022
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.023
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.024
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.025
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.026
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  shop.013
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.009
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  shop.014
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.015
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.016
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.017
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  pillar.021
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.022
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.023
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.024
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.007
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  window.067
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.068
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.069
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.070
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.071
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.072
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.073
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.074
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.075
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.076
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.077
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.078
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.079
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.080
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.081
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.082
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.083
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.084
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  roof.027
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.028
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.029
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.030
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.031
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.032
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  shop.018
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.010
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  shop.019
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.020
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.021
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.022
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  pillar.025
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.026
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.027
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.028
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.008
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  Cube.003
+		WARNING: No materials have been assigned: 
+		num positions      :  18
+		num normals        :  18
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  window.085
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.086
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.087
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.088
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.089
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.090
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.091
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.092
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.093
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.094
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.095
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.096
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.097
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.098
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  shop.023
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.011
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  roof.033
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.034
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  pillar.029
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.030
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.031
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.032
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.033
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.034
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.035
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.036
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.009
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  window.099
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.100
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.101
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.102
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.103
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.104
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.105
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.106
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.107
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.108
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.109
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.110
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.111
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.112
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  shop.024
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.012
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  roof.035
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.036
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  pillar.037
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.038
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.039
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.040
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.041
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.042
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.043
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.044
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.010
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  window.113
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.114
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.115
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.116
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.117
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.118
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.119
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.120
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.121
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.122
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.123
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.124
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.125
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.126
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.127
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.128
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.129
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.130
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.131
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.132
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.133
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.134
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.135
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.136
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.137
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.138
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.139
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.140
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.141
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.142
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.143
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.144
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.145
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.146
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.147
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  roof.037
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.038
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.039
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.040
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.041
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  shop.025
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.013
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  shop.026
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.027
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.028
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  pillar.045
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.046
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.047
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.048
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.049
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.050
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.051
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.052
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.011
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of mesh:  window.148
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.149
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.150
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.151
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.152
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.153
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.154
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.155
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.156
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.157
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.158
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.159
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.160
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.161
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.162
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.163
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.164
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.165
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.166
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.167
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.168
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.169
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.170
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.171
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.172
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.173
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.174
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.175
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.176
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.177
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.178
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.179
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.180
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.181
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  window.182
+		mesh is an instance of :  window.001.  Processing halted.
+	processing begun of mesh:  roof.042
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.043
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.044
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.045
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  roof.046
+		mesh is an instance of :  roof.001.  Processing halted.
+	processing begun of mesh:  shop.029
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  door.014
+		mesh is an instance of :  door.001.  Processing halted.
+	processing begun of mesh:  shop.030
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.031
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  shop.032
+		mesh is an instance of :  shop.001.  Processing halted.
+	processing begun of mesh:  pillar.053
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.054
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.055
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.056
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.057
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.058
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.059
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar.060
+		mesh is an instance of :  pillar.001.  Processing halted.
+	processing begun of mesh:  pillar_top.012
+		mesh is an instance of :  pillar_top.001.  Processing halted.
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Plane.001
+	writing mesh:  path
+	writing mesh:  target
+	writing mesh:  Plane
+	writing mesh:  Cube.002
+	writing mesh:  window.001
+	writing mesh:  shop.001
+	writing mesh:  door.001
+	writing mesh:  roof.001
+	writing mesh:  pillar.001
+	writing mesh:  pillar_top.001
+	writing mesh:  Cube.001
+	writing mesh:  Cube.003
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.1283 secs
