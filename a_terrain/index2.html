@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Simple MineCraft</title>
+   
+	 <script src="https://cdn.babylonjs.com/babylon.js"></script>
+	 <script src="babylon.mixMaterial.min.js"></script>
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+		#pick {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 100px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<!--<div id="loader">Loading...</div> -->
+	<div id ="loader">Loading...</div>
+	<div id="fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	
+	
+	
+    <canvas height="695" width="1920" id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			
+			
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divVerts = document.getElementById("verts");
+			var divBones = document.getElementById("bones");
+			
+			
+			
+			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			
+		/*	
+			var mix = new BABYLON.MixMaterial("mix", myScene);
+		
+			mix.mixTexture1 = new BABYLON.Texture("terrain_map02a.png", myScene);
+			mix.diffuseTexture1 = new BABYLON.Texture("grass_rock07.jpg", myScene);//red;
+			mix.diffuseTexture2 = new BABYLON.Texture("grass1a.jpg", myScene);//green
+			mix.diffuseTexture3 = new BABYLON.Texture("path04a.jpg", myScene);//blue
+			mix.diffuseTexture4 = new BABYLON.Texture("new_cliff02.jpg", myScene);// alpha
+			//set repeat scales
+			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 6;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 5;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 3;
+			mix.diffuseTexture4.uScale = 30;
+			mix.diffuseTexture4.vScale = 30;
+			
+		*/	
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			
+			//BABYLON.SceneLoader.Append("", "Completed02.babylon", myScene);
+				BABYLON.SceneLoader.Append("", "mine01.babylon", myScene);
+			
+                myScene.executeWhenReady(function () {
+                    
+					myCamera2 = myScene.getCameraByName("Camera");
+
+					myCamera2.speed = .05;
+					myCamera2.wheelPrecision = 50;
+					myCamera2.maxZ= 500;
+					//myCamera2.angularSensibility =4000;
+					//myCamera2.inputs.attached.keyboard.angularSpeed = .002;
+					//myCamera2.inputs.addMouse();
+					myScene.activeCamera = myCamera2;
+					
+					
+					// Attach camera to canvas inputs or if fixed do not.
+                    myScene.activeCamera.attachControl(canvas);
+					
+					
+					//var aTrigger = myScene.getMeshByName("trigger01");
+					
+					
+					//var ground = myScene.getMeshByName("Plane.001");
+					//ground.material = mix;
+					
+					// change background colour
+					myScene.clearColor = new BABYLON.Color3(0.4,0.66,1);
+					
+
+					//get total meshes, vertices and bones
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+					
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+                    myScene.render();
+                    });
+                });
+        };
+		
+		
+		
+		
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+		
+		
+		
+    </script>
+
+
+</body></html>
