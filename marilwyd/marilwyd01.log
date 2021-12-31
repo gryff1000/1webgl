@@ -1,0 +1,496 @@
+Exporter version: 2.93.4, Blender version: 2.93.4
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\marilwyd\
+	Python World class constructor completed
+	processing begun of skeleton:  mari, id:  0
+		processing begun of bone:  base, index:  0
+		processing begun of bone:  neck, index:  1
+		processing begun of bone:  head, index:  2
+		processing action mari_lwydAction:  in[1 - 130], out[0 - 130]
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  cloak
+		animation processing begun
+			processing action mari_lwydAction:  in[1 - 130], out[0 - 130]
+		processing begun of material:  cloak
+			processing texture ao_cloak
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  1005
+		num normals        :  1005
+		num tangents       :  0
+		num uvs            :  2010
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1898
+		Skeleton stats:  
+			Total Influencers:  1442
+			Avg # of influencers per vertex:  1.4348
+			Highest # of influencers observed:  3, num vertices with this:  27
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  4020
+	processing begun of mesh:  door.L
+		animation processing begun
+			processing action Close:  in[1 - 30], out[0 - 30]
+		processing begun of material:  door
+			processing texture door01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  door.R
+		animation processing begun
+			processing action Close:  in[2 - 31], out[0 - 31]
+		processing begun of material:  door
+		registered as also a user of material:  door
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  doorframe
+		processing begun of material:  door
+		registered as also a user of material:  door
+		num positions      :  68
+		num normals        :  68
+		num tangents       :  0
+		num uvs            :  136
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  30
+	processing begun of mesh:  doorstep
+		processing begun of material:  stones
+			processing texture tiles9_dif
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  13
+		num normals        :  13
+		num tangents       :  0
+		num uvs            :  26
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6
+	processing begun of mesh:  eyes
+		processing begun of material:  eyes
+			processing texture horse_eye02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  0
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  172
+		Skeleton stats:  
+			Total Influencers:  96
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  96
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  gate
+		processing begun of material:  gate
+			processing texture garden_gate02x24
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  green_ribbon
+		processing begun of material:  green
+		num positions      :  55
+		num normals        :  55
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  30
+		Skeleton stats:  
+			Total Influencers:  55
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  55
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  220
+	processing begun of mesh:  horse_head
+		processing begun of material:  skull
+			processing texture bones01_3
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  949
+		num normals        :  949
+		num tangents       :  3796
+		num uvs            :  1898
+		num uvs2           :  0
+		num colors         :  3796
+		num triangles      :  1500
+		Skeleton stats:  
+			Total Influencers:  1255
+			Avg # of influencers per vertex:  1.3224
+			Highest # of influencers observed:  2, num vertices with this:  306
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  3796
+	processing begun of mesh:  red_ribbon
+		processing begun of material:  red
+		num positions      :  43
+		num normals        :  43
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+		Skeleton stats:  
+			Total Influencers:  43
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  43
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  172
+	processing begun of mesh:  newboots
+		processing begun of material:  boots
+			processing texture shoes03_diffuse
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  852
+		num normals        :  852
+		num tangents       :  0
+		num uvs            :  1704
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1296
+		Skeleton stats:  
+			Total Influencers:  852
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  852
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  3408
+	processing begun of mesh:  patio
+		processing begun of material:  stones
+		registered as also a user of material:  stones
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  wall
+		processing begun of material:  wall
+			processing texture baked_tile
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  55
+		num normals        :  55
+		num tangents       :  0
+		num uvs            :  110
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  gatepostR
+		processing begun of material:  wall
+		registered as also a user of material:  wall
+		num positions      :  23
+		num normals        :  23
+		num tangents       :  0
+		num uvs            :  46
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  gatepostL
+		mesh is an instance of :  gatepostR.  Processing halted.
+	processing begun of mesh:  doorframe.001
+		processing begun of material:  wallpaper
+			processing texture wallpaper01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  152
+		num normals        :  152
+		num tangents       :  0
+		num uvs            :  304
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  74
+	processing begun of mesh:  Cube
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  floor
+		processing begun of material:  floor
+			processing texture floor1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  ceiling
+		processing begun of material:  ceiling
+			processing texture ceiling_tile02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  holmes.001
+		processing begun of material:  pic_agatha
+			processing texture welshpoets01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  50
+		num normals        :  50
+		num tangents       :  0
+		num uvs            :  100
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  table_leaf.001
+		processing begun of material:  desk_base.002
+			processing texture welshpoets01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  81
+		num normals        :  81
+		num tangents       :  0
+		num uvs            :  162
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  36
+	processing begun of mesh:  table._back.001
+		processing begun of material:  desk_base.002
+		registered as also a user of material:  desk_base.002
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  0
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  leg_L.001
+		processing begun of material:  desk_base.002
+		registered as also a user of material:  desk_base.002
+		num positions      :  33
+		num normals        :  33
+		num tangents       :  0
+		num uvs            :  66
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  leg_R.001
+		mesh is an instance of :  leg_L.001.  Processing halted.
+	processing begun of node:  aTable.001
+	processing begun of mesh:  Plant_lower
+		processing begun of material:  leaves
+			processing texture leaf01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  130
+		num normals        :  130
+		num tangents       :  0
+		num uvs            :  260
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  Plant_upper
+		processing begun of material:  leaves
+		registered as also a user of material:  leaves
+		num positions      :  117
+		num normals        :  117
+		num tangents       :  0
+		num uvs            :  234
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  126
+	processing begun of mesh:  Plant_Pot.001
+		processing begun of material:  fireplace
+			processing texture fireplaces03
+				texture type:  diffuseTexture, mapped using: "Bake"
+		num positions      :  191
+		num normals        :  191
+		num tangents       :  0
+		num uvs            :  382
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  238
+	processing begun of node:  aPlant01
+	processing begun of mesh:  Plant_lower.001
+		mesh is an instance of :  Plant_lower.  Processing halted.
+	processing begun of mesh:  Plant_upper.001
+		mesh is an instance of :  Plant_upper.  Processing halted.
+	processing begun of mesh:  Plant_Pot.002
+		mesh is an instance of :  Plant_Pot.001.  Processing halted.
+	processing begun of node:  aPlant01.02
+	processing begun of mesh:  01case
+		processing begun of material:  oldwood
+			processing texture finewood02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  136
+		num normals        :  136
+		num tangents       :  0
+		num uvs            :  272
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  92
+	processing begun of mesh:  02face
+		processing begun of material:  oldwood
+		processing begun of material:  clockface.002
+		registered as also a user of material:  oldwood
+			processing texture clockparts2
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  marilwyd01.Multimaterial#0
+		num positions      :  174
+		num normals        :  174
+		num tangents       :  0
+		num uvs            :  348
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  84
+	processing begun of mesh:  03top
+		processing begun of material:  oldwood
+		registered as also a user of material:  oldwood
+		num positions      :  120
+		num normals        :  120
+		num tangents       :  0
+		num uvs            :  240
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  46
+	processing begun of mesh:  04door
+		processing begun of material:  oldwood
+		registered as also a user of material:  oldwood
+		num positions      :  433
+		num normals        :  433
+		num tangents       :  0
+		num uvs            :  866
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  240
+	processing begun of mesh:  05door
+		processing begun of material:  oldwood
+		registered as also a user of material:  oldwood
+		num positions      :  431
+		num normals        :  431
+		num tangents       :  0
+		num uvs            :  862
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  240
+	processing begun of mesh:  06col1
+		processing begun of material:  clockface.002
+		registered as also a user of material:  clockface.002
+		num positions      :  33
+		num normals        :  33
+		num tangents       :  0
+		num uvs            :  66
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  07col2
+		processing begun of material:  clockface.002
+		registered as also a user of material:  clockface.002
+		num positions      :  33
+		num normals        :  33
+		num tangents       :  0
+		num uvs            :  66
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  12pend
+		processing begun of material:  clockface.002
+		registered as also a user of material:  clockface.002
+		num positions      :  299
+		num normals        :  299
+		num tangents       :  0
+		num uvs            :  598
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  112
+	processing begun of mesh:  13clockhand
+		processing begun of material:  clock_hands.002
+			processing texture clockhands
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  14clockhand
+		processing begun of material:  clock_hands.002
+		registered as also a user of material:  clock_hands.002
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  15akey
+		processing begun of material:  clockface.002
+		registered as also a user of material:  clockface.002
+		num positions      :  99
+		num normals        :  99
+		num tangents       :  0
+		num uvs            :  198
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+	processing begun of node:  aClock
+	processing begun of light (HEMI FROM AREA):  Light_upper
+	processing begun of light (HEMI FROM AREA):  Light_lower
+========= Writing of JSON file started =========
+	writing mesh:  cloak
+	writing mesh:  door.L
+	writing mesh:  door.R
+	writing mesh:  doorframe
+	writing mesh:  doorstep
+	writing mesh:  eyes
+	writing mesh:  gate
+	writing mesh:  green_ribbon
+	writing mesh:  horse_head
+	writing mesh:  red_ribbon
+	writing mesh:  newboots
+	writing mesh:  patio
+	writing mesh:  wall
+	writing mesh:  gatepostR
+	writing mesh:  doorframe.001
+	writing mesh:  Cube
+	writing mesh:  floor
+	writing mesh:  ceiling
+	writing mesh:  holmes.001
+	writing mesh:  table_leaf.001
+	writing mesh:  table._back.001
+	writing mesh:  leg_L.001
+	writing mesh:  Plant_lower
+	writing mesh:  Plant_upper
+	writing mesh:  Plant_Pot.001
+	writing mesh:  01case
+	writing mesh:  02face
+	writing mesh:  03top
+	writing mesh:  04door
+	writing mesh:  05door
+	writing mesh:  06col1
+	writing mesh:  07col2
+	writing mesh:  12pend
+	writing mesh:  13clockhand
+	writing mesh:  14clockhand
+	writing mesh:  15akey
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.3545 secs
