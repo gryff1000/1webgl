@@ -1,0 +1,200 @@
+Exporter version: 2.93.4, Blender version: 2.93.4
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\quater_bobby02\
+	Python World class constructor completed
+	processing begun of skeleton:  aBobby, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LeftUpLeg, index:  1
+		processing begun of bone:  LeftLeg, index:  2
+		processing begun of bone:  LeftFoot, index:  3
+		processing begun of bone:  LeftToeBase, index:  4
+		processing begun of bone:  LowerBack, index:  5
+		processing begun of bone:  Spine, index:  6
+		processing begun of bone:  Spine1, index:  7
+		processing begun of bone:  LeftShoulder, index:  8
+		processing begun of bone:  LeftArm, index:  9
+		processing begun of bone:  LeftForeArm, index:  10
+		processing begun of bone:  LeftHand, index:  11
+		processing begun of bone:  LThumb, index:  12
+		processing begun of bone:  LeftFingerBase, index:  13
+		processing begun of bone:  LeftHandFinger1, index:  14
+		processing begun of bone:  Neck, index:  15
+		processing begun of bone:  Neck1, index:  16
+		processing begun of bone:  Head, index:  17
+		processing begun of bone:  jaw, index:  18
+		processing begun of bone:  RightShoulder, index:  19
+		processing begun of bone:  RightArm, index:  20
+		processing begun of bone:  RightForeArm, index:  21
+		processing begun of bone:  RightHand, index:  22
+		processing begun of bone:  RThumb, index:  23
+		processing begun of bone:  RightFingerBase, index:  24
+		processing begun of bone:  RightHandFinger1, index:  25
+		processing begun of bone:  RightUpLeg, index:  26
+		processing begun of bone:  RightLeg, index:  27
+		processing begun of bone:  RightFoot, index:  28
+		processing begun of bone:  RightToeBase, index:  29
+		Ignoring IK bone:  LeftLeg.IK
+		Ignoring IK bone:  RightLeg.IK
+		Ignoring IK bone:  RightHand.IK
+		Ignoring IK bone:  LeftHand.IK
+		Ignoring IK bone:  LeftKnee.IK
+		Ignoring IK bone:  RightKnee.IK
+		Ignoring IK bone:  RightElbow.IK
+		Ignoring IK bone:  LeftElbow.IK
+		processing action mouthAction:  in[1 - 30], out[0 - 30]
+		processing action standAction.:  in[1 - 60], out[40 - 100]
+	processing begun of mesh:  bobby_skin
+		processing begun of material:  skin
+			processing texture newskin01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  1180
+		num normals        :  1180
+		num tangents       :  0
+		num uvs            :  2360
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1294
+		Skeleton stats:  
+			Total Influencers:  2868
+			Avg # of influencers per vertex:  2.4305
+			Highest # of influencers observed:  5, num vertices with this:  64
+			exported as 5 influencers
+			num skeletonWeights and skeletonIndices:  9440
+	processing begun of mesh:  bobby_eyes
+		processing begun of material:  skin
+		registered as also a user of material:  skin
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  0
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  172
+		Skeleton stats:  
+			Total Influencers:  96
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  96
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  bobby_jacket
+		processing begun of material:  bobby_jacket
+			processing texture new_jacket01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4104
+		num normals        :  4104
+		num tangents       :  0
+		num uvs            :  8208
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4939
+		Skeleton stats:  
+			Total Influencers:  17211
+			Avg # of influencers per vertex:  4.1937
+			Highest # of influencers observed:  7, num vertices with this:  202
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  32832
+	processing begun of mesh:  bobby_boots
+		processing begun of material:  bobby_jacket
+		registered as also a user of material:  bobby_jacket
+		num positions      :  889
+		num normals        :  889
+		num tangents       :  0
+		num uvs            :  1778
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1216
+		Skeleton stats:  
+			Total Influencers:  1830
+			Avg # of influencers per vertex:  2.0585
+			Highest # of influencers observed:  3, num vertices with this:  126
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  3556
+	processing begun of mesh:  bobby_pants
+		animation processing begun
+			processing action standAction.:  in[1 - 60], out[0 - 60]
+		processing begun of material:  bobby_jacket
+		registered as also a user of material:  bobby_jacket
+		num positions      :  1255
+		num normals        :  1255
+		num tangents       :  0
+		num uvs            :  2510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2066
+		Skeleton stats:  
+			Total Influencers:  2212
+			Avg # of influencers per vertex:  1.7625
+			Highest # of influencers observed:  4, num vertices with this:  17
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  5020
+	processing begun of mesh:  helmet
+		processing begun of material:  bobby_jacket
+		registered as also a user of material:  bobby_jacket
+		num positions      :  2427
+		num normals        :  2427
+		num tangents       :  0
+		num uvs            :  4854
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1740
+		Skeleton stats:  
+			Total Influencers:  3997
+			Avg # of influencers per vertex:  1.6469
+			Highest # of influencers observed:  2, num vertices with this:  1570
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  9708
+	processing begun of mesh:  teeth_Low
+		processing begun of material:  skin
+		registered as also a user of material:  skin
+		num positions      :  137
+		num normals        :  137
+		num tangents       :  0
+		num uvs            :  274
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+		Skeleton stats:  
+			Total Influencers:  137
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  137
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  548
+	processing begun of mesh:  teeth_Up
+		processing begun of material:  skin
+		registered as also a user of material:  skin
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  0
+		num uvs            :  276
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+		Skeleton stats:  
+			Total Influencers:  138
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  138
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  552
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  bobby_skin
+	writing mesh:  bobby_eyes
+	writing mesh:  bobby_jacket
+	writing mesh:  bobby_boots
+	writing mesh:  bobby_pants
+	writing mesh:  helmet
+	writing mesh:  teeth_Low
+	writing mesh:  teeth_Up
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 3.5911 secs
