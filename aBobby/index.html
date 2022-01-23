@@ -241,10 +241,13 @@
 							var anim1 = myScene.beginAnimation(theSkeleton, 40,100,false,1);
 				
 							anim1.onAnimationEnd = function (){
-								console.log("ended")
+								console.log(("------------------");
+								console.log("stand anim ended")
 								var anim2 = myScene.beginAnimation(theSkeleton, 0,30,true,1)
 								theWords.play();
 								theWords.onended =  function() {
+									console.log("mouth anim ended");
+									console.log("----------------");
 									anim2 = myScene.beginAnimation(theSkeleton, 0,1,false,1)
 									button1.isVisible = true;
 									isPlaying = 0;
