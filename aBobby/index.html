@@ -255,10 +255,15 @@
 									
 									console.log("Total Meshes = " + allMeshes.length);
 									// now dispose of meshes
-									for (i=0; i<allMeshes.length; i++){
-										console.log("Deleted Meshes = " + i+ "  " + allMeshes[i].name);
-										allMeshes[i].dispose();
-									};
+									
+									while (allMeshes[0]) {
+                            							allMeshes[0].dispose();
+                        						};
+									
+									//for (i=0; i<allMeshes.length; i++){
+									//	console.log("Deleted Meshes = " + i+ "  " + allMeshes[i].name);
+									//	allMeshes[i].dispose();
+									//};
 									// show remaing meshes
 									allMeshes = myScene.meshes;
 									console.log("Remaining Meshes = " + allMeshes.length);
