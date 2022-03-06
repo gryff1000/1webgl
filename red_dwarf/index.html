@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>1984 : O'Brien Of The Thought Police</title>
+	
+	
+	<!--<script src="https://cdn.babylonjs.com/babylon.js"></script> -->
+	 <script src="https://preview.babylonjs.com/babylon.js"></script>
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 800px;
+		height:30px
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id="fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+<!--</div> -->
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divVerts = document.getElementById("verts");
+			
+			
+			var myScene = new BABYLON.Scene(engine);
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			var chuff;
+			var mySkeleton = [];
+			var myTrigger;
+			var theSignal =0;
+			var flag = 0; 
+			var theAnim;
+			var myCamera;
+			var myCamera2;
+			var camFlag = 0;
+			var animFlag = 0;
+			var soundsReady = 0;
+			var aSignal1, aSignal2;
+			var talkNum = 0;
+		
+			//BABYLON.SceneLoader.Append("", "camera.babylon", myScene);
+            BABYLON.SceneLoader.Append("", "krysten01.babylon", myScene);
+                myScene.executeWhenReady(function () {
+				
+					//console.log(myScene.gravity);
+					//var startCamera = myScene.getCameraByName("startCam");
+					//myScene.activeCamera = startCamera;
+                    
+					// Attach camera to canvas inputs
+					myCamera = myScene.getCameraByName("Camera");
+                  
+					
+					myCamera.speed = .25;
+					myCamera.wheelPrecision = 20;
+					myCamera.maxZ= 500;
+					myCamera.lowerRadiusLimit = 2;
+					myCamera.upperRadiusLimit = 5.25;
+					myCamera.lowerBetaLimit = -1.700;
+					myCamera.upperBetaLimit = 1.528;
+
+					myScene.activeCamera = myCamera;
+				    myScene.activeCamera.attachControl(canvas);
+					
+				
+					// create and hide replay button
+					//aButton = myScene.getMeshByName("Button");
+		/*			
+					//once action manager called on aButton (Start): hide button, set button texture for replay, play audio, reset scene, and move uvs on clapboard, enable the melon, and call audio start
+					var doStuff = function(){
+						//var ended = 1;
+						var takes = 1;
+						aButton.setEnabled(false);
+						// code so sound will play in Chrome browser
+						BABYLON.Engine.audioEngine.unlock(); 
+						myScene.beginAnimation(mySkeleton[0], 1, 21, false);
+						Obrien.play(0,0,10.4);
+					};
+					
+					aButton.actionManager = new BABYLON.ActionManager(myScene);
+					aButton.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, doStuff));
+		*/			
+					//get skeleton and animations
+					mySkeleton[0] = myScene.getSkeletonByName("Low_poly_square_base");
+					
+					//console.log(mySkeleton[0]);
+		/*			mySkeleton[0].animationPropertiesOverride = new BABYLON.AnimationPropertiesOverride();
+					mySkeleton[0].animationPropertiesOverride.enableBlending = true;
+					mySkeleton[0].animationPropertiesOverride.blendingSpeed = 0.05;
+					mySkeleton[0].animationPropertiesOverride.loopMode = 1;
+					
+					var handRange = mySkeleton[0].getAnimationRange("handAction");
+					var standRange = mySkeleton[0].getAnimationRange("standAction");
+					//var swingRange = mySkeleton[0].getAnimationRange("swingAction");
+					
+					//myScene.beginAnimation(mySkeleton[0], 1, 21, false);
+					// end get skeleton
+					
+		*/
+					
+					
+					// Get the target and hide it
+					var target = myScene.getMeshByName("Cube");
+					target.isVisible = false;
+		
+				
+		//			createSound();
+					
+					
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+					
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+                        myScene.render();
+                    });
+                });
+           
+        };
+		
+		
+		
+		// Load the sound and play it automatically once ready
+		
+		function createSound(){
+		
+			var talkArray  = [
+				[0.00,10.40],[11.00,14.29],[25.50,33.50],
+			];
+			
+			Obrien = new BABYLON.Sound("Obrien", "how_many_fingers02.mp3", myScene, soundReady, { loop: false, volume: 0.75 });
+	
+		};
+	
+		function soundReady() {
+			soundsReady++;
+			
+			if(soundsReady === 1){
+				console.log("sound ready");
+				//myScene.beginAnimation(mySkeleton[0], 1, 21, false);
+				//Obrien.play(0,0,10.4);
+				
+				Obrien.onended = function() {
+				//console.log(talkNum);
+					switch (talkNum){
+					
+						case 0 :
+							myScene.beginAnimation(mySkeleton[0], 21, 5, false);
+							talkNum = 1;
+							Obrien.play(0,25.5,8.0);
+						break;
+						
+						case 1 :
+							myScene.beginAnimation(mySkeleton[0], 5, 21, false);
+							talkNum = 2;
+							Obrien.play(0,11.0,14.29);
+						break;
+						
+						case 2 :
+							myScene.beginAnimation(mySkeleton[0], 21, 0, false);
+							aButton.setEnabled(true);
+							talkNum = 0;
+						break;
+					
+					};
+				};
+			};
+		
+		};
+	
+
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+
+		
+		
+		
+		
+    </script>
+</body>
+</html>
