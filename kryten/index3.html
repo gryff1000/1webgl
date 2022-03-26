@@ -1,0 +1,469 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Walk Path Example</title>
+    <!--<script src="../hand.js"></script> -->
+	
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<!--<script src="https://preview.babylonjs.com/babylon.js"></script>-->
+	<!--<script src="babylon.mixMaterial.min.js"></script> -->
+    <!--<script src="../babylon.2.5.js"></script> -->
+	
+	<link rel="icon" href="data:,">
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align: center;
+		font-size: 60px;
+		color: red;
+		top: 50%;
+		width: 100%;
+		height: 60px;
+		display: none;
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	<div id = "credits">vvvvvvv</div>
+<!--
+	<div id ="container">
+	<div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div> </div>
+-->
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divEnding = document.getElementById("credits")
+			var divVerts = document.getElementById("verts")
+			var myScene = new BABYLON.Scene(engine);
+			//var sceneInstru;
+			var myCamera;
+			var myCamera1;
+			var myCamera2;
+			var allMeshes;
+			var aCube;
+			var skeleton;
+			
+			var theTrack = 0;
+			var trigger = 0;
+		/*	
+			
+			var mix = new BABYLON.MixMaterial("mix", myScene);
+			
+			mix.mixTexture1 = new BABYLON.Texture("terrain_map.png", myScene);
+			
+			mix.diffuseTexture1 = new BABYLON.Texture("set_grass_rock02.jpg", myScene);//red
+			mix.diffuseTexture2 = new BABYLON.Texture("path04a.jpg", myScene);//green
+			mix.diffuseTexture3 = new BABYLON.Texture("set_grass_rock01.jpg", myScene);//blue;
+			mix.diffuseTexture4 = new BABYLON.Texture("new_cliff02.jpg", myScene);// alpha
+			//set repeat scales
+			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 5;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 5;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 10;
+			mix.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 20;
+			
+		*/	
+			
+			var dummyCamera = new BABYLON.FreeCamera("dummy",new BABYLON.Vector3(0,10,-100),myScene);
+			
+			
+			
+					
+			
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			
+			//var aLength = 4*Math.PI/8;
+			var turnAngle1 = Math.PI/2;
+			var turnAngle2 = 3*Math.PI/2;
+			
+			//draw lines to form a square left
+			const points = [];
+			
+			points.push(new BABYLON.Vector3(0, 0, 0));
+			points.push(new BABYLON.Vector3(0, 0, -2.5));
+			points.push(new BABYLON.Vector3(-7, 0, -2.5));
+			points.push(new BABYLON.Vector3(-7, 0, 2.5));
+			points.push(new BABYLON.Vector3(0, 0, 2.5));
+			//points.push(points[0]); //close the square;
+			points.push(new BABYLON.Vector3(0, 0, 0));
+			points.push(new BABYLON.Vector3(0, 0, -2.5));
+			points.push(new BABYLON.Vector3(7, 0, -2.5));
+			points.push(new BABYLON.Vector3(7, 0, 2.5));
+			points.push(new BABYLON.Vector3(0, 0, 2.5));
+			points.push(points[0]); //close the square;
+	
+		
+			//BABYLON.MeshBuilder.CreateLines("squareL&R", {points: points}); // adds a mesh but is not needed
+			
+			
+		/*	
+			//draw lines to form a square right
+			const points2 = [];
+			points2.push(new BABYLON.Vector3(0, 0, 0));
+			points2.push(new BABYLON.Vector3(0, 0, -4));
+			points2.push(new BABYLON.Vector3(8, 0, -4));
+			points2.push(new BABYLON.Vector3(8, 0, 4));
+			points2.push(new BABYLON.Vector3(0, 0, 4));
+			points2.push(points[0]); //close the square;
+		
+			BABYLON.MeshBuilder.CreateLines("squareR", {points: points2})
+		*/	
+			const slide = function (turn, dist) { //after covering dist apply turn
+				this.turn = turn;
+				this.dist = dist;
+			}
+			
+			const track = [];
+			track.push(new slide(turnAngle1, 2.5));
+			track.push(new slide(turnAngle1, 9.5));
+			track.push(new slide(turnAngle1, 14.5));
+			track.push(new slide(turnAngle1, 21.5));
+			track.push(new slide(turnAngle1, 24));
+		/*	
+			track.push(new slide(turnAngle2, 44));
+			track.push(new slide(turnAngle2, 52));
+			track.push(new slide(turnAngle2, 60));
+			track.push(new slide(turnAngle2, 64));
+			//track.push(new slide(turnAngle2, 72));
+		*/	
+		/*
+			let distance = 0;
+			let step = 0.015;
+			let p = 0;
+		*/
+			const track2 = [];
+			track2.push(new slide(turnAngle2, 2.5));
+			track2.push(new slide(turnAngle2, 9.5));
+			track2.push(new slide(turnAngle2, 14.5));
+			track2.push(new slide(turnAngle2, 21.5));
+			track2.push(new slide(turnAngle2, 24));
+			
+			/* original data for both tracks - just change the turnAngle
+			track2.push(new slide(turnAngle2, 4));
+			track2.push(new slide(turnAngle2, 12));
+			track2.push(new slide(turnAngle2, 20));
+			track2.push(new slide(turnAngle2, 28));
+			track2.push(new slide(turnAngle2, 32));
+			
+			*/
+				
+		
+			let distance = 0;
+			let step = 0.015;
+			let p = 0;
+			trigger = 1;
+
+		
+		
+			
+			  //BABYLON.SceneLoader.Append("", "aCamera.babylon", myScene);
+			  BABYLON.SceneLoader.Append("", "walls01.babylon", myScene);
+			  BABYLON.SceneLoader.Append("", "kryten01.babylon", myScene);
+			  myScene.executeWhenReady(function () {
+		   
+					//myScene.stopAllAnimations();
+					
+					var character = myScene.getMeshByName("Empty");
+					var fTarget = myScene.getMeshByName("follow_cube");
+					fTarget.parent = character;
+					
+					var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 1.5, -4), myScene);
+					camera.parent = fTarget;
+					camera.fov = BABYLON.Tools.ToRadians(20);
+					
+					var aLight = myScene.getLightByName("Light01");
+					aLight.intensity = 0.2;
+				
+					// set up a follow camera
+					//var camera = new BABYLON.FollowCamera("FollowCam", new BABYLON.Vector3(0, 0, 0), myScene);
+					
+					camera.fov = BABYLON.Tools.ToRadians(15);
+					
+					//set the glow
+			
+					var gl = new BABYLON.GlowLayer("glow", myScene, {
+						mainTextureSamples: 4
+					});
+					//include glow for just the light mesh
+					var theLights = myScene.getMeshByName("wall_lights");
+					gl.addIncludedOnlyMesh(theLights);
+					// set glow intensity	
+					gl.intensity = 1.0;
+					
+					//end set the glow
+				
+					
+					// Attach start camera to canvas inputs
+					myCamera1 = myScene.getCameraByName("Camera");
+					myCamera1.wheelPrecision =100;
+					myCamera1.maxZ =100;
+					myCamera1.speed =0.1;
+					myCamera1.fov = BABYLON.Tools.ToRadians(35);
+				
+					myCamera1.lowerRadiusLimit = 6;
+					myCamera1.upperRadiusLimit = 6;
+					myCamera1.lowerBetaLimit = 1.4000;
+					myCamera1.upperBetaLimit = 1.4000;
+					myCamera1.lowerAlphaLimit = -2.071;
+					myCamera1.upperAlphaLimit = -1.0710;
+					
+					myCamera = myCamera1;
+					myScene.activeCamera = myCamera1;
+				    myScene.activeCamera.attachControl(canvas);
+					
+					
+					
+					
+					
+			
+		/*			temp list mesh names code
+					var allMeshes = myScene.meshes;
+					for (i =0; i < allMeshes.length; i++){
+						console.log(allMeshes[i].name);
+					}
+		*/			
+					myScene.clearColor = new BABYLON.Color3(0.0,0.0,0.0);
+					
+					//get the empty and skeleton for the animation
+					aCube = myScene.getMeshByName("Empty");
+					skeleton = myScene.getSkeletonByName("kryten_rig");
+					//var isFrom = skeleton
+					//myScene.beginAnimation(skeleton, 1, 24, true, 0.5);
+					//var thebones = skeleton.bones;
+					//console.log(thebones.length);
+					
+					var speakRange = skeleton.getAnimationRange("aSpeakAction");
+					var walkRange = skeleton.getAnimationRange("aWalkAction");
+					
+					
+					// restart animations from keyboard with "s"
+					myScene.onKeyboardObservable.add((kbInfo) => {
+						switch (kbInfo.type) {
+							case BABYLON.KeyboardEventTypes.KEYDOWN:
+								switch (kbInfo.event.key) {
+									case "s":
+										//if (trigger = 1){
+											trigger = 0;
+											myScene.activeCamera = camera;
+											//myScene.activeCamera.attachControl(canvas);
+											//distance = 0;
+											//p = 0;
+											myScene.beginAnimation(skeleton, walkRange.from, walkRange.to, true, 1);
+											console.log(trigger);
+										//}
+										break;
+									case "default":	
+										break;
+									}
+							break;			
+						}
+					});
+					
+					
+					//if(trigger ===0 run it
+					myScene.onBeforeRenderObservable.add(() => {
+					
+						if(trigger === 0){
+						
+						aCube.movePOV(0, 0, step);
+						distance += step;
+						
+						if(theTrack === 0){
+						
+							if (distance > track[p].dist) {        
+								aCube.rotate(BABYLON.Axis.Y, track[p].turn, BABYLON.Space.LOCAL);
+								p +=1;
+								p %= track.length;
+									if (p === 0) {
+										//console.log(p);
+										theTrack = 1;
+										distance = 0;
+										
+										aCube.position = new BABYLON.Vector3(0, 0, 0); //reset to initial conditions
+										aCube.rotation = BABYLON.Vector3.Zero();//prevents error accumulation
+										myScene.stopAllAnimations();
+										myScene.activeCamera = myCamera1;
+										myScene.activeCamera.attachControl(canvas);
+										
+										trigger = 1;
+										p = 0;
+										
+										
+										
+										myScene.beginAnimation(skeleton, 58, 60, false, 0.5);
+									}
+							} //end if
+						} //end theTrack = 0
+						
+						else {
+							if (distance > track2[p].dist) {
+								aCube.rotate(BABYLON.Axis.Y, track2[p].turn, BABYLON.Space.LOCAL);
+								p +=1;
+								p %= track2.length;
+									if (p === 0) {
+										//console.log(p);
+										theTrack = 0;
+										distance = 0;
+										aCube.position = new BABYLON.Vector3(0, 0, 0); //reset to initial conditions
+										aCube.rotation = BABYLON.Vector3.Zero();//prevents error accumulation
+										
+										myScene.activeCamera = myCamera1;
+										myScene.activeCamera.attachControl(canvas);
+										trigger = 1;
+										myScene.stopAllAnimations();
+										//myScene.beginAnimation(skeleton, 58, 60, false, 0.5);
+									}
+							}
+							
+						}//end else Track = 1
+					
+						};
+					}); //end before render
+					
+					
+					//}; //end trigger
+									
+					
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+				
+					
+				});
+			};
+					
+					
+				// Once the scene is loaded, just register a render loop to render it
+				engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+					myScene.render();
+				});
+    
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		 
+		
+	
+
+	
+		
+		
+    </script>
+</body>
+</html>
