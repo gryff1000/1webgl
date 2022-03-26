@@ -1,0 +1,112 @@
+Exporter version: 2.93.4, Blender version: 2.93.4
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\red_dwarf4\
+	Python World class constructor completed
+	processing begun of mesh:  walls_inner.001
+		processing begun of material:  pink
+			processing texture column01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  194
+		num normals        :  194
+		num tangents       :  0
+		num uvs            :  388
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  100
+	processing begun of mesh:  walls_inner.002
+		mesh is an instance of :  walls_inner.001.  Processing halted.
+	processing begun of mesh:  walls_inner.007
+		mesh is an instance of :  walls_inner.001.  Processing halted.
+	processing begun of mesh:  walls_inner.008
+		mesh is an instance of :  walls_inner.001.  Processing halted.
+	processing begun of mesh:  walls_inner.009
+		mesh is an instance of :  walls_inner.001.  Processing halted.
+	processing begun of mesh:  walls_inner.010
+		mesh is an instance of :  walls_inner.001.  Processing halted.
+	processing begun of mesh:  walls_inner
+		processing begun of material:  white
+		processing begun of material:  walls.001
+			processing texture wall512_4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  walls01.Multimaterial#0
+		num positions      :  75
+		num normals        :  75
+		num tangents       :  0
+		num uvs            :  150
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  40
+	processing begun of mesh:  corners
+		processing begun of material:  walls.001
+		processing begun of material:  pink
+		processing begun of material:  wires
+		registered as also a user of material:  walls.001
+		registered as also a user of material:  pink
+			processing texture background01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  walls01.Multimaterial#1
+		num positions      :  63
+		num normals        :  63
+		num tangents       :  0
+		num uvs            :  126
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  floor
+		processing begun of material:  white
+		processing begun of material:  floor
+		registered as also a user of material:  white
+			processing texture grid512_1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  walls01.Multimaterial#2
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  0
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  wall_lights
+		processing begun of material:  pink
+		processing begun of material:  glow
+		registered as also a user of material:  pink
+		processing begun of multimaterial:  walls01.Multimaterial#3
+		num positions      :  378
+		num normals        :  378
+		num tangents       :  0
+		num uvs            :  756
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  144
+	processing begun of mesh:  walls_corners
+		processing begun of material:  walls
+			processing texture wall512_4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  206
+		num normals        :  206
+		num tangents       :  0
+		num uvs            :  412
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  90
+	processing begun of mesh:  walls_corners.002
+		mesh is an instance of :  walls_corners.  Processing halted.
+========= Writing of JSON file started =========
+	writing mesh:  walls_inner.001
+	writing mesh:  walls_inner
+	writing mesh:  corners
+	writing mesh:  floor
+	writing mesh:  wall_lights
+	writing mesh:  walls_corners
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.9139 secs
