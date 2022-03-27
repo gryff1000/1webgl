@@ -1,0 +1,141 @@
+Exporter version: 2.93.4, Blender version: 2.93.4
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\red_dwarf4\
+	Python World class constructor completed
+	processing begun of skeleton:  kryten_rig, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LHipJoint, index:  1
+		processing begun of bone:  LeftUpLeg, index:  2
+		processing begun of bone:  LeftLeg, index:  3
+		processing begun of bone:  LeftFoot, index:  4
+		processing begun of bone:  LeftToeBase, index:  5
+		processing begun of bone:  LowerBack, index:  6
+		processing begun of bone:  Spine, index:  7
+		processing begun of bone:  Spine1, index:  8
+		processing begun of bone:  LeftShoulder, index:  9
+		processing begun of bone:  LeftArm, index:  10
+		processing begun of bone:  LeftForeArm, index:  11
+		processing begun of bone:  LeftHand, index:  12
+		processing begun of bone:  LThumb, index:  13
+		processing begun of bone:  LeftFingerBase, index:  14
+		processing begun of bone:  LeftHandFinger1, index:  15
+		processing begun of bone:  Neck, index:  16
+		processing begun of bone:  Neck1, index:  17
+		processing begun of bone:  Head, index:  18
+		processing begun of bone:  jaw, index:  19
+		processing begun of bone:  RightShoulder, index:  20
+		processing begun of bone:  RightArm, index:  21
+		processing begun of bone:  RightForeArm, index:  22
+		processing begun of bone:  RightHand, index:  23
+		processing begun of bone:  RThumb, index:  24
+		processing begun of bone:  RightFingerBase, index:  25
+		processing begun of bone:  RightHandFinger1, index:  26
+		processing begun of bone:  RHipJoint, index:  27
+		processing begun of bone:  RightUpLeg, index:  28
+		processing begun of bone:  RightLeg, index:  29
+		processing begun of bone:  RightFoot, index:  30
+		processing begun of bone:  RightToeBase, index:  31
+		Ignoring IK bone:  LeftLeg.IK
+		Ignoring IK bone:  RightLeg.IK
+		Ignoring IK bone:  LKnee.IK
+		Ignoring IK bone:  RKnee.IK
+		Ignoring IK bone:  LHand.IK
+		Ignoring IK bone:  RHand.IK
+		Ignoring IK bone:  LElbow.IK
+		Ignoring IK bone:  RElbow.IK
+		processing action aSpeakAction:  in[1 - 60], out[0 - 60]
+		processing action aWalkAction:  in[1 - 60], out[70 - 130]
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  target
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  follow_cube
+		processing begun of material:  white
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Low_poly_square_base:Uni1228
+		processing begun of material:  bend
+			processing texture kirsten01b
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  3266
+		num normals        :  3266
+		num tangents       :  0
+		num uvs            :  6532
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  3056
+		Skeleton stats:  
+			WARNING: Maximum # of influencers exceeded for 77 vertices, extras ignored
+			Total Influencers:  11371
+			Avg # of influencers per vertex:  3.4816
+			Highest # of influencers observed:  12, num vertices with this:  77
+			exported as 8 influencers
+			num skeletonWeights and skeletonIndices:  26128
+	processing begun of mesh:  Low_poly_square_base:Low-poly
+		processing begun of material:  Low_poly_square_base:Low-poly:Eye_brown
+			processing texture brown_eye
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  0
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  172
+		Skeleton stats:  
+			Total Influencers:  96
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  96
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  controls
+		processing begun of material:  bend
+		processing begun of material:  white
+		registered as also a user of material:  bend
+		registered as also a user of material:  white
+		processing begun of multimaterial:  kryten01.Multimaterial#0
+		num positions      :  190
+		num normals        :  190
+		num tangents       :  0
+		num uvs            :  380
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  124
+		Skeleton stats:  
+			Total Influencers:  450
+			Avg # of influencers per vertex:  2.3684
+			Highest # of influencers observed:  3, num vertices with this:  70
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  760
+	processing begun of node:  Empty
+	processing begun of light (HEMI FROM AREA):  Light
+	processing begun of light (HEMI FROM AREA):  Light01
+========= Writing of JSON file started =========
+	writing mesh:  target
+	writing mesh:  follow_cube
+	writing mesh:  Low_poly_square_base:Uni1228
+	writing mesh:  Low_poly_square_base:Low-poly
+	writing mesh:  controls
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.0398 secs
