@@ -298,6 +298,7 @@ http://creativecommons.org/licenses/by/4.0/
 					//use a Highlight Layer to set the glow instead
 					
 					var hl1 = new BABYLON.HighlightLayer("hl1", myScene);
+				  	var lightMesh = myScene.getMeshByName("wall_lights");
 					hl1.addMesh(lightMesh, BABYLON.Color3.White(), true);
 				
 					
