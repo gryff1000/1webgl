@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>BABYLON - A Logic Maze</title>
+
+    <!--Loading babylon engine -->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    
+    <!--Loading camera tuto-->
+    <script src="index.js"></script>
+    <script src="createWorld.js"></script>
+
+    <!-- CSS -->
+    <!-- ------ -->
+    <style>
+        html, body, canvas {
+			background-color: black;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+		
+		#output {
+		position: absolute;
+		background-color: grey;
+		border:1px solid black;
+		text-align: left;
+		font-size: 18px;
+		color: purple;
+		top: 3px;
+		left: 12px;
+		width: 160px;
+		height:24px;
+		font-family:verdana, sans-serif;
+		
+		}
+		
+		#output2 {
+		
+		position: absolute;
+		background-color: grey;
+		border:1px solid black;
+		text-align: left;
+		font-size: 18px;
+		color: purple;
+		top: 3px;
+		left: 12px;
+		width: 160px;
+		height:24px;
+		font-family:verdana, sans-serif;
+		
+		}
+		
+		
+		#button1 {
+		position: absolute;
+		top: 16px;
+		left: 20%;
+		width: 185px;
+		height:32px;
+		border:2px solid black;
+		background-image:url('gradient1.png');
+		background-repeat:repeat-x;
+		}
+		
+		#button2 {
+		position: absolute;
+		top: 16px;
+		right: 20%;
+		width: 185px;
+		height:32px;
+		border:2px solid black;
+		background-image:url('gradient1.png');
+		background-repeat:repeat-x;
+		}
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 90%;
+		left: 10px;
+		width: 100px;
+		height:30px
+		}
+		
+		#item {
+		position: absolute;
+		top: 60px;
+		width: 100%;
+		display: none; 
+		}
+		
+		#item2 {
+		position: absolute;
+		top: 30px;
+		width: 100%;
+		height : 256px;
+		
+		}
+		
+		#win{
+		position: absolute;
+		left:25%;
+		top:50%;
+		width:50%;
+		height: 40px;
+		
+		
+		line-height: 2em;
+		text-align: center;
+		font-size: 32px;
+		color: white;
+		display: block;
+		
+		}
+		
+		
+    </style>
+
+</head>
+
+<!-- BODY -->
+<!-- ------ -->
+<body>
+
+	<div id ="fps">0</div>
+	<div id = "button1"><div id ="output">xxxx</div></div>
+	<div id = "button2"><div id = "output2">Gates Used = 0</div></div>
+	<div id = "item" align = "center"><a href="javascript:hide('item');"><img src="map1.png"  height="256" width="512"></a></div> 
+    <div id ="win"></div>
+    <!-- Main Canvas -->
+    <canvas id="renderCanvas"></canvas>
+   
+
+</body>
+</html>
