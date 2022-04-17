@@ -1,0 +1,118 @@
+Exporter version: 2.93.4, Blender version: 3.0.0
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\spaceship\final\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  planet1
+		processing begun of material:  planets
+			processing texture planets01_2
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  344
+		num normals        :  344
+		num tangents       :  0
+		num uvs            :  688
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  528
+	processing begun of mesh:  planet2
+		processing begun of material:  planets
+		registered as also a user of material:  planets
+		num positions      :  344
+		num normals        :  344
+		num tangents       :  0
+		num uvs            :  688
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  528
+	processing begun of mesh:  B5Ship
+		processing begun of material:  end01
+		processing begun of material:  blue
+		processing begun of material:  midship
+		processing begun of material:  aztec
+		processing begun of material:  windows
+		processing begun of material:  front
+			processing texture plates01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture noiseMap02_normal
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture lights
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture planes02_normal
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture planes02_diffuse
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture plates03nor
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture plates03
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture frame01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture front01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  Bship01d.Multimaterial#0
+		num positions      :  7411
+		num normals        :  7411
+		num tangents       :  0
+		num uvs            :  14822
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4316
+	processing begun of mesh:  panels_L
+		processing begun of material:  solar
+			processing texture solar_cells01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  885
+		num normals        :  885
+		num tangents       :  0
+		num uvs            :  1770
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  360
+	processing begun of mesh:  6boxes
+		processing begun of material:  front
+		registered as also a user of material:  front
+		num positions      :  186
+		num normals        :  186
+		num tangents       :  0
+		num uvs            :  372
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  72
+	processing begun of mesh:  black_boxes
+		processing begun of material:  front
+		registered as also a user of material:  front
+		num positions      :  58
+		num normals        :  58
+		num tangents       :  0
+		num uvs            :  116
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  pasnels_R
+		mesh is an instance of :  panels_L.  Processing halted.
+	processing begun of node:  animator
+		animation processing begun
+			processing action ShipAction:  in[1 - 240], out[0 - 240]
+	processing begun of camera (UniversalCamera):  backCam
+	processing begun of camera (UniversalCamera):  sideCam
+	processing begun of camera (UniversalCamera):  frontCam
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  planet1
+	writing mesh:  planet2
+	writing mesh:  B5Ship
+	writing mesh:  panels_L
+	writing mesh:  6boxes
+	writing mesh:  black_boxes
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.4914 secs
