@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BABYLON 5 is coming</title>
+    <!--<script src="../hand.js"></script> -->
+	
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<script src="https://cdn.babylonjs.com/gui/babylon.gui.js"></script>
+	<!--<script src="https://preview.babylonjs.com/babylon.js"></script>-->
+	<!--<script src="babylon.mixMaterial.min.js"></script>-->
+    <!--<script src="../babylon.2.5.js"></script> -->
+	
+	<!--<link rel="icon" href="data:,">-->
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align: center;
+		font-size: 60px;
+		color: red;
+		top: 50%;
+		width: 100%;
+		height: 60px;
+		display: none;
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	<div id = "credits">vvvvvvv</div>
+<!--
+	<div id ="container">
+	<div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div> </div>
+-->
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divEnding = document.getElementById("credits")
+			var divVerts = document.getElementById("verts")
+			var myScene = new BABYLON.Scene(engine);
+			//var sceneInstru;
+			var myCamera;
+			var myCamera1;
+			var myCamera2;
+			var camSensor;
+			//var allCamera;
+			var drown;
+			var camFlag = 1;
+			//arrays for opening closing doors
+			var direct = [0,1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,1,1,0,0,0,1,1,0];
+			var opened = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0];
+			
+			var isPlaying = 0;
+			var theAnimator;
+			
+			var allMeshes;
+			var theCams;
+			
+			
+			var dummyCamera = new BABYLON.FreeCamera("dummy",new BABYLON.Vector3(0,10,-100),myScene)
+			
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+           
+		   BABYLON.SceneLoader.Append("", "Bship01d.babylon", myScene);
+            myScene.executeWhenReady(function () {
+					
+					
+					theCams = myScene.cameras;
+					
+					//for(i=0; i<theCams.length; i++){
+					
+					//console.log(theCams[i].name);
+					
+					//};
+					
+					myCamera1 = theCams[1];
+					//console.log(myCamera1.position.z);
+					
+					myCamera = myCamera1;
+					myScene.activeCamera = myCamera;
+					
+					//create skybox
+					var skybox = BABYLON.Mesh.CreateBox("skyBox", 1000.0, myScene);
+					var skyboxMaterial = new BABYLON.StandardMaterial("skybox", myScene);
+					skyboxMaterial.backFaceCulling = false;
+					//skybox.infiniteDistance = true;
+					skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("skybox/myfirststars1", myScene);
+					skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+					skyboxMaterial.diffuseColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+					skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+					skybox.material = skyboxMaterial;
+					
+					
+					//start animation
+		
+					theAnimator = myScene.getMeshByName("animator");
+					createButtons();
+					
+				
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+				
+					
+				
+			
+				
+				
+					
+				});
+			};
+					
+					
+				// Once the scene is loaded, just register a render loop to render it
+				engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+					myScene.render();
+				});
+    
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		 
+		function createButtons(){
+			console.log("create buttons");
+			
+			var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+					var UiPanel = new BABYLON.GUI.StackPanel();
+					advancedTexture.addControl(UiPanel);
+
+					const button1 = BABYLON.GUI.Button.CreateSimpleButton("but1", "Back Cam");
+					button1.width = "150px"
+					button1.height = "40px";
+					button1.top = "-50px";
+					button1.left = "-350px";
+					button1.color = "yellow";
+					button1.cornerRadius = 20;
+					button1.background = "black";
+					//button1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+					button1.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+					button1.onPointerUpObservable.add(function() {
+						if( isPlaying === 0){
+					
+							myCamera = theCams[2];
+							myScene.activeCamera = myCamera;
+							myScene.activeCamera.attachControl(canvas);
+						}
+					
+					});
+			
+								
+					//	}
+						
+					//});
+					advancedTexture.addControl(button1); 
+					
+					const button2 = BABYLON.GUI.Button.CreateSimpleButton("but2", "Side Cam");
+					button2.width = "150px"
+					button2.height = "40px";
+					button2.top = "-50px";
+					button2.left = "150px";
+					button2.color = "yellow";
+					button2.cornerRadius = 20;
+					button2.background = "black";
+					//button1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+					button2.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+					button2.onPointerUpObservable.add(function() {
+						if( isPlaying === 0){
+						
+							myCamera = theCams[3];
+							myScene.activeCamera = myCamera;
+							myScene.activeCamera.attachControl(canvas);
+						}
+					
+					});
+					
+					advancedTexture.addControl(button2); 
+					
+					
+					const button3 = BABYLON.GUI.Button.CreateSimpleButton("but3", "Front Cam");
+					button3.width = "150px"
+					button3.height = "40px";
+					button3.top = "-50px";
+					button3.left = "-100px";
+					button3.color = "yellow";
+					button3.cornerRadius = 20;
+					button3.background = "black";
+					//button1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+					button3.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+					
+					button3.onPointerUpObservable.add(function() {
+						if( isPlaying === 0){
+				
+							myCamera = theCams[4];
+							myScene.activeCamera = myCamera;
+							myScene.activeCamera.attachControl(canvas);
+						}
+					
+					});
+					
+					
+					
+					advancedTexture.addControl(button3); 
+					
+					
+					const button4 = BABYLON.GUI.Button.CreateSimpleButton("but4", "Animate");
+					button4.width = "150px"
+					button4.height = "40px";
+					button4.top = "-50px";
+					button4.left = "400px";
+					button4.color = "yellow";
+					button4.cornerRadius = 20;
+					button4.background = "black";
+					//button1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+					button4.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+					
+					button4.onPointerUpObservable.add(function() {
+					
+						if(isPlaying === 0){
+							isPlaying = 1;
+							//console.log(isPlaying);
+					
+							myCamera = theCams[1];
+							myScene.activeCamera = myCamera;
+							myScene.activeCamera.attachControl(canvas);
+							var theAnim = myScene.beginAnimation(theAnimator, 0, 240, false, 1);
+							theAnim.onAnimationEnd = function () {
+								isPlaying = 0;
+								//console.log(isPlaying);
+							};
+						}
+					});
+					
+					
+					
+					advancedTexture.addControl(button4); 
+	
+			
+					// end ui creation and play functionality
+		
+		};
+	
+
+	
+		
+		
+    </script>
+</body>
+</html>
