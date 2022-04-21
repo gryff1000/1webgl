@@ -364,5 +364,5 @@
 ,"instances":[]}
 ],
 "cameras":[{"name":"Camera","id":"Camera","position":[0,0,-10.75],"rotation":[0,0,0],"fov":0.6911,"minZ":0.1,"maxZ":100,"ellipsoid":[0.2,0.9,0.2],"type":"ArcRotateCamera","alpha":-1.5708,"beta":1.5708,"radius":10.75,"Target":"Cube"}],"activeCameraID":"Camera",
-"lights":[{"name":"Light","id":"Light","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4.9}]
+"lights":[{"name":"Light","id":"Light","type":3,"direction":[0,1,0],"groundColor":[0,0,0],"range":40,"intensityMode":0,"intensity":2,"diffuse":[1,1,1],"specular":[1,1,1],"radius":4.9}]
 }
