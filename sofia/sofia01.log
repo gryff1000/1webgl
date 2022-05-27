@@ -1,0 +1,575 @@
+Exporter version: 2.93.4, Blender version: 2.93.4
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\mixamo\BJSProblem\sofia\sofia\New Folder\
+	Python World class constructor completed
+	processing begun of skeleton:  sofia, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  Spine, index:  1
+		processing begun of bone:  Spine1, index:  2
+		processing begun of bone:  Spine2, index:  3
+		processing begun of bone:  Neck, index:  4
+		processing begun of bone:  Head, index:  5
+		processing begun of bone:  HeadTop_End, index:  6
+		processing begun of bone:  HeadTop_End_end, index:  7
+		processing begun of bone:  LeftEye, index:  8
+		processing begun of bone:  LeftEye_end, index:  9
+		processing begun of bone:  RightEye, index:  10
+		processing begun of bone:  RightEye_end, index:  11
+		processing begun of bone:  LeftShoulder, index:  12
+		processing begun of bone:  LeftArm, index:  13
+		processing begun of bone:  LeftForeArm, index:  14
+		processing begun of bone:  LeftHand, index:  15
+		processing begun of bone:  LeftHandThumb1, index:  16
+		processing begun of bone:  LeftHandThumb2, index:  17
+		processing begun of bone:  LeftHandThumb3, index:  18
+		processing begun of bone:  LeftHandThumb4, index:  19
+		processing begun of bone:  LeftHandThumb4_end, index:  20
+		processing begun of bone:  LeftHandIndex1, index:  21
+		processing begun of bone:  LeftHandIndex2, index:  22
+		processing begun of bone:  LeftHandIndex3, index:  23
+		processing begun of bone:  LeftHandIndex4, index:  24
+		processing begun of bone:  LeftHandIndex4_end, index:  25
+		processing begun of bone:  LeftHandMiddle1, index:  26
+		processing begun of bone:  LeftHandMiddle2, index:  27
+		processing begun of bone:  LeftHandMiddle3, index:  28
+		processing begun of bone:  LeftHandMiddle4, index:  29
+		processing begun of bone:  LeftHandMiddle4_end, index:  30
+		processing begun of bone:  LeftHandRing1, index:  31
+		processing begun of bone:  LeftHandRing2, index:  32
+		processing begun of bone:  LeftHandRing3, index:  33
+		processing begun of bone:  LeftHandRing4, index:  34
+		processing begun of bone:  LeftHandRing4_end, index:  35
+		processing begun of bone:  LeftHandPinky1, index:  36
+		processing begun of bone:  LeftHandPinky2, index:  37
+		processing begun of bone:  LeftHandPinky3, index:  38
+		processing begun of bone:  LeftHandPinky4, index:  39
+		processing begun of bone:  LeftHandPinky4_end, index:  40
+		processing begun of bone:  RightShoulder, index:  41
+		processing begun of bone:  RightArm, index:  42
+		processing begun of bone:  RightForeArm, index:  43
+		processing begun of bone:  RightHand, index:  44
+		processing begun of bone:  RightHandThumb1, index:  45
+		processing begun of bone:  RightHandThumb2, index:  46
+		processing begun of bone:  RightHandThumb3, index:  47
+		processing begun of bone:  RightHandThumb4, index:  48
+		processing begun of bone:  RightHandThumb4_end, index:  49
+		processing begun of bone:  RightHandIndex1, index:  50
+		processing begun of bone:  RightHandIndex2, index:  51
+		processing begun of bone:  RightHandIndex3, index:  52
+		processing begun of bone:  RightHandIndex4, index:  53
+		processing begun of bone:  RightHandIndex4_end, index:  54
+		processing begun of bone:  RightHandMiddle1, index:  55
+		processing begun of bone:  RightHandMiddle2, index:  56
+		processing begun of bone:  RightHandMiddle3, index:  57
+		processing begun of bone:  RightHandMiddle4, index:  58
+		processing begun of bone:  RightHandMiddle4_end, index:  59
+		processing begun of bone:  RightHandRing1, index:  60
+		processing begun of bone:  RightHandRing2, index:  61
+		processing begun of bone:  RightHandRing3, index:  62
+		processing begun of bone:  RightHandRing4, index:  63
+		processing begun of bone:  RightHandRing4_end, index:  64
+		processing begun of bone:  RightHandPinky1, index:  65
+		processing begun of bone:  RightHandPinky2, index:  66
+		processing begun of bone:  RightHandPinky3, index:  67
+		processing begun of bone:  RightHandPinky4, index:  68
+		processing begun of bone:  RightHandPinky4_end, index:  69
+		processing begun of bone:  LeftUpLeg, index:  70
+		processing begun of bone:  LeftLeg, index:  71
+		processing begun of bone:  LeftFoot, index:  72
+		processing begun of bone:  LeftToeBase, index:  73
+		processing begun of bone:  LeftToe_End, index:  74
+		processing begun of bone:  LeftToe_End_end, index:  75
+		processing begun of bone:  RightUpLeg, index:  76
+		processing begun of bone:  RightLeg, index:  77
+		processing begun of bone:  RightFoot, index:  78
+		processing begun of bone:  RightToeBase, index:  79
+		processing begun of bone:  RightToe_End, index:  80
+		processing begun of bone:  RightToe_End_end, index:  81
+		processing action idle_sofia:  in[0 - 400], out[0 - 400]
+	processing begun of mesh:  EyeLeft
+		processing begun of material:  Wolf3D_Eye
+			processing texture eye_07_mask_1622793670
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  120
+		num normals        :  120
+		num tangents       :  480
+		num uvs            :  240
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  206
+		Skeleton stats:  
+			Total Influencers:  120
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  120
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  480
+		Shape Keys:
+			mouthOpen added
+			mouthSmile added
+			eyesClosed added
+			eyesLookUp added
+			eyesLookDown added
+			viseme_sil added
+			viseme_PP added
+			viseme_FF added
+			viseme_TH added
+			viseme_DD added
+			viseme_kk added
+			viseme_CH added
+			viseme_SS added
+			viseme_nn added
+			viseme_RR added
+			viseme_aa added
+			viseme_E added
+			viseme_I added
+			viseme_O added
+			viseme_U added
+			eyeBlinkLeft added
+			eyeLookDownLeft added
+			eyeLookInLeft added
+			eyeLookOutLeft added
+			eyeLookUpLeft added
+			eyeSquintLeft added
+			eyeWideLeft added
+			eyeBlinkRight added
+			eyeLookDownRight added
+			eyeLookInRight added
+			eyeLookOutRight added
+			eyeLookUpRight added
+			eyeSquintRight added
+			eyeWideRight added
+			jawForward added
+			jawLeft added
+			jawRight added
+			jawOpen added
+			mouthClose added
+			mouthFunnel added
+			mouthPucker added
+			mouthLeft added
+			mouthRight added
+			mouthSmileLeft added
+			mouthSmileRight added
+			mouthFrownLeft added
+			mouthFrownRight added
+			mouthDimpleLeft added
+			mouthDimpleRight added
+			mouthStretchLeft added
+			mouthStretchRight added
+			mouthRollLower added
+			mouthRollUpper added
+			mouthShrugLower added
+			mouthShrugUpper added
+			mouthPressLeft added
+			mouthPressRight added
+			mouthLowerDownLeft added
+			mouthLowerDownRight added
+			mouthUpperUpLeft added
+			mouthUpperUpRight added
+			browDownLeft added
+			browDownRight added
+			browInnerUp added
+			browOuterUpLeft added
+			browOuterUpRight added
+			cheekPuff added
+			cheekSquintLeft added
+			cheekSquintRight added
+			noseSneerLeft added
+			noseSneerRight added
+			tongueOut added
+	processing begun of mesh:  EyeRight
+		processing begun of material:  Wolf3D_Eye
+		registered as also a user of material:  Wolf3D_Eye
+		Custom split normals with tangents being used
+		num positions      :  124
+		num normals        :  124
+		num tangents       :  496
+		num uvs            :  248
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  206
+		Skeleton stats:  
+			Total Influencers:  124
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  124
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  496
+		Shape Keys:
+			mouthOpen added
+			mouthSmile added
+			eyesClosed added
+			eyesLookUp added
+			eyesLookDown added
+			viseme_sil added
+			viseme_PP added
+			viseme_FF added
+			viseme_TH added
+			viseme_DD added
+			viseme_kk added
+			viseme_CH added
+			viseme_SS added
+			viseme_nn added
+			viseme_RR added
+			viseme_aa added
+			viseme_E added
+			viseme_I added
+			viseme_O added
+			viseme_U added
+			eyeBlinkLeft added
+			eyeLookDownLeft added
+			eyeLookInLeft added
+			eyeLookOutLeft added
+			eyeLookUpLeft added
+			eyeSquintLeft added
+			eyeWideLeft added
+			eyeBlinkRight added
+			eyeLookDownRight added
+			eyeLookInRight added
+			eyeLookOutRight added
+			eyeLookUpRight added
+			eyeSquintRight added
+			eyeWideRight added
+			jawForward added
+			jawLeft added
+			jawRight added
+			jawOpen added
+			mouthClose added
+			mouthFunnel added
+			mouthPucker added
+			mouthLeft added
+			mouthRight added
+			mouthSmileLeft added
+			mouthSmileRight added
+			mouthFrownLeft added
+			mouthFrownRight added
+			mouthDimpleLeft added
+			mouthDimpleRight added
+			mouthStretchLeft added
+			mouthStretchRight added
+			mouthRollLower added
+			mouthRollUpper added
+			mouthShrugLower added
+			mouthShrugUpper added
+			mouthPressLeft added
+			mouthPressRight added
+			mouthLowerDownLeft added
+			mouthLowerDownRight added
+			mouthUpperUpLeft added
+			mouthUpperUpRight added
+			browDownLeft added
+			browDownRight added
+			browInnerUp added
+			browOuterUpLeft added
+			browOuterUpRight added
+			cheekPuff added
+			cheekSquintLeft added
+			cheekSquintRight added
+			noseSneerLeft added
+			noseSneerRight added
+			tongueOut added
+	processing begun of mesh:  Wolf3D_Body
+		processing begun of material:  Wolf3D_Body
+			processing texture Wolf3D_fullbody_f_N
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture body_texture
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  922
+		num normals        :  922
+		num tangents       :  3688
+		num uvs            :  1844
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1446
+		Skeleton stats:  
+			Total Influencers:  2008
+			Avg # of influencers per vertex:  2.1779
+			Highest # of influencers observed:  4, num vertices with this:  73
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  3688
+	processing begun of mesh:  Wolf3D_Head
+		processing begun of material:  Wolf3D_Skin
+			processing texture face_texture
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  2165
+		num normals        :  2165
+		num tangents       :  8660
+		num uvs            :  4330
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4094
+		Skeleton stats:  
+			Total Influencers:  2620
+			Avg # of influencers per vertex:  1.2102
+			Highest # of influencers observed:  4, num vertices with this:  7
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  8660
+		Shape Keys:
+			mouthOpen added
+			mouthSmile added
+			eyesClosed added
+			eyesLookUp added
+			eyesLookDown added
+			viseme_sil added
+			viseme_PP added
+			viseme_FF added
+			viseme_TH added
+			viseme_DD added
+			viseme_kk added
+			viseme_CH added
+			viseme_SS added
+			viseme_nn added
+			viseme_RR added
+			viseme_aa added
+			viseme_E added
+			viseme_I added
+			viseme_O added
+			viseme_U added
+			eyeBlinkLeft added
+			eyeLookDownLeft added
+			eyeLookInLeft added
+			eyeLookOutLeft added
+			eyeLookUpLeft added
+			eyeSquintLeft added
+			eyeWideLeft added
+			eyeBlinkRight added
+			eyeLookDownRight added
+			eyeLookInRight added
+			eyeLookOutRight added
+			eyeLookUpRight added
+			eyeSquintRight added
+			eyeWideRight added
+			jawForward added
+			jawLeft added
+			jawRight added
+			jawOpen added
+			mouthClose added
+			mouthFunnel added
+			mouthPucker added
+			mouthLeft added
+			mouthRight added
+			mouthSmileLeft added
+			mouthSmileRight added
+			mouthFrownLeft added
+			mouthFrownRight added
+			mouthDimpleLeft added
+			mouthDimpleRight added
+			mouthStretchLeft added
+			mouthStretchRight added
+			mouthRollLower added
+			mouthRollUpper added
+			mouthShrugLower added
+			mouthShrugUpper added
+			mouthPressLeft added
+			mouthPressRight added
+			mouthLowerDownLeft added
+			mouthLowerDownRight added
+			mouthUpperUpLeft added
+			mouthUpperUpRight added
+			browDownLeft added
+			browDownRight added
+			browInnerUp added
+			browOuterUpLeft added
+			browOuterUpRight added
+			cheekPuff added
+			cheekSquintLeft added
+			cheekSquintRight added
+			noseSneerLeft added
+			noseSneerRight added
+			tongueOut added
+	processing begun of mesh:  Wolf3D_Headwear
+		processing begun of material:  Wolf3D_Headwear
+			processing texture Hijabi_02_NormalDX
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture Hijabi_02_BaseColor
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  580
+		num normals        :  580
+		num tangents       :  2320
+		num uvs            :  1160
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  997
+		Skeleton stats:  
+			Total Influencers:  983
+			Avg # of influencers per vertex:  1.6948
+			Highest # of influencers observed:  3, num vertices with this:  142
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  2320
+	processing begun of mesh:  Wolf3D_Outfit_Bottom
+		processing begun of material:  Wolf3D_Outfit_Bottom
+			processing texture outfit_casual_11_v2_f_bottom_N
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture outfit_casual_11_v2_f_bottom_D
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  1853
+		num normals        :  1853
+		num tangents       :  7412
+		num uvs            :  3706
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  3062
+		Skeleton stats:  
+			Total Influencers:  3440
+			Avg # of influencers per vertex:  1.8564
+			Highest # of influencers observed:  4, num vertices with this:  27
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  7412
+	processing begun of mesh:  Wolf3D_Outfit_Footwear
+		processing begun of material:  Wolf3D_Outfit_Footwear
+			processing texture outfit_casual_11_v2_f_footwear_N
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture outfit_casual_11_v2_f_footwear_D
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  1163
+		num normals        :  1163
+		num tangents       :  4652
+		num uvs            :  2326
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1888
+		Skeleton stats:  
+			Total Influencers:  2350
+			Avg # of influencers per vertex:  2.0206
+			Highest # of influencers observed:  4, num vertices with this:  1
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  4652
+	processing begun of mesh:  Wolf3D_Outfit_Top
+		processing begun of material:  Wolf3D_Outfit_Top
+			processing texture outfit_casual_11_v2_f_top_N
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture outfit_casual_11_v2_f_top_D
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  2817
+		num normals        :  2817
+		num tangents       :  11268
+		num uvs            :  5634
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4299
+		Skeleton stats:  
+			Total Influencers:  8534
+			Avg # of influencers per vertex:  3.0295
+			Highest # of influencers observed:  4, num vertices with this:  1396
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  11268
+	processing begun of mesh:  Wolf3D_Teeth
+		processing begun of material:  Wolf3D_Teeth
+			processing texture Wolf3D_Teeth
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  113
+		num normals        :  113
+		num tangents       :  452
+		num uvs            :  226
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  100
+		Skeleton stats:  
+			Total Influencers:  113
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  113
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  452
+		Shape Keys:
+			mouthOpen added
+			mouthSmile added
+			eyesClosed added
+			eyesLookUp added
+			eyesLookDown added
+			viseme_sil added
+			viseme_PP added
+			viseme_FF added
+			viseme_TH added
+			viseme_DD added
+			viseme_kk added
+			viseme_CH added
+			viseme_SS added
+			viseme_nn added
+			viseme_RR added
+			viseme_aa added
+			viseme_E added
+			viseme_I added
+			viseme_O added
+			viseme_U added
+			eyeBlinkLeft added
+			eyeLookDownLeft added
+			eyeLookInLeft added
+			eyeLookOutLeft added
+			eyeLookUpLeft added
+			eyeSquintLeft added
+			eyeWideLeft added
+			eyeBlinkRight added
+			eyeLookDownRight added
+			eyeLookInRight added
+			eyeLookOutRight added
+			eyeLookUpRight added
+			eyeSquintRight added
+			eyeWideRight added
+			jawForward added
+			jawLeft added
+			jawRight added
+			jawOpen added
+			mouthClose added
+			mouthFunnel added
+			mouthPucker added
+			mouthLeft added
+			mouthRight added
+			mouthSmileLeft added
+			mouthSmileRight added
+			mouthFrownLeft added
+			mouthFrownRight added
+			mouthDimpleLeft added
+			mouthDimpleRight added
+			mouthStretchLeft added
+			mouthStretchRight added
+			mouthRollLower added
+			mouthRollUpper added
+			mouthShrugLower added
+			mouthShrugUpper added
+			mouthPressLeft added
+			mouthPressRight added
+			mouthLowerDownLeft added
+			mouthLowerDownRight added
+			mouthUpperUpLeft added
+			mouthUpperUpRight added
+			browDownLeft added
+			browDownRight added
+			browInnerUp added
+			browOuterUpLeft added
+			browOuterUpRight added
+			cheekPuff added
+			cheekSquintLeft added
+			cheekSquintRight added
+			noseSneerLeft added
+			noseSneerRight added
+			tongueOut added
+	WARNING: The following camera not visible in scene thus ignored: Camera
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  EyeLeft
+	writing mesh:  EyeRight
+	writing mesh:  Wolf3D_Body
+	writing mesh:  Wolf3D_Head
+	writing mesh:  Wolf3D_Headwear
+	writing mesh:  Wolf3D_Outfit_Bottom
+	writing mesh:  Wolf3D_Outfit_Footwear
+	writing mesh:  Wolf3D_Outfit_Top
+	writing mesh:  Wolf3D_Teeth
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 11.6391 secs
