@@ -1,0 +1,255 @@
+Exporter version: 2.93.4, Blender version: 2.93.4
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\XDrive\mixamo\BJSProblem\sofia\sofia\export_sofia\
+	Python World class constructor completed
+	processing begun of skeleton:  Armature, id:  0
+		processing begun of bone:  mixamorig:Hips, index:  0
+		processing begun of bone:  mixamorig:Spine, index:  1
+		processing begun of bone:  mixamorig:Spine1, index:  2
+		processing begun of bone:  mixamorig:Spine2, index:  3
+		processing begun of bone:  mixamorig:Neck, index:  4
+		processing begun of bone:  mixamorig:Head, index:  5
+		processing begun of bone:  mixamorig:LeftShoulder, index:  6
+		processing begun of bone:  mixamorig:LeftArm, index:  7
+		processing begun of bone:  mixamorig:LeftForeArm, index:  8
+		processing begun of bone:  mixamorig:LeftHand, index:  9
+		processing begun of bone:  mixamorig:LeftHandThumb1, index:  10
+		processing begun of bone:  mixamorig:LeftHandThumb2, index:  11
+		processing begun of bone:  mixamorig:LeftHandIndex1, index:  12
+		processing begun of bone:  mixamorig:LeftHandIndex2, index:  13
+		processing begun of bone:  mixamorig:LeftHandMiddle1, index:  14
+		processing begun of bone:  mixamorig:LeftHandMiddle2, index:  15
+		processing begun of bone:  mixamorig:LeftHandRing1, index:  16
+		processing begun of bone:  mixamorig:LeftHandRing2, index:  17
+		processing begun of bone:  mixamorig:LeftHandPinky1, index:  18
+		processing begun of bone:  mixamorig:LeftHandPinky2, index:  19
+		processing begun of bone:  mixamorig:RightShoulder, index:  20
+		processing begun of bone:  mixamorig:RightArm, index:  21
+		processing begun of bone:  mixamorig:RightForeArm, index:  22
+		processing begun of bone:  mixamorig:RightHand, index:  23
+		processing begun of bone:  mixamorig:RightHandThumb1, index:  24
+		processing begun of bone:  mixamorig:RightHandThumb2, index:  25
+		processing begun of bone:  mixamorig:RightHandIndex1, index:  26
+		processing begun of bone:  mixamorig:RightHandIndex2, index:  27
+		processing begun of bone:  mixamorig:RightHandMiddle1, index:  28
+		processing begun of bone:  mixamorig:RightHandMiddle2, index:  29
+		processing begun of bone:  mixamorig:RightHandRing1, index:  30
+		processing begun of bone:  mixamorig:RightHandRing2, index:  31
+		processing begun of bone:  mixamorig:RightHandPinky1, index:  32
+		processing begun of bone:  mixamorig:RightHandPinky2, index:  33
+		processing begun of bone:  mixamorig:LeftUpLeg, index:  34
+		processing begun of bone:  mixamorig:LeftLeg, index:  35
+		processing begun of bone:  mixamorig:LeftFoot, index:  36
+		processing begun of bone:  mixamorig:LeftToeBase, index:  37
+		processing begun of bone:  mixamorig:RightUpLeg, index:  38
+		processing begun of bone:  mixamorig:RightLeg, index:  39
+		processing begun of bone:  mixamorig:RightFoot, index:  40
+		processing begun of bone:  mixamorig:RightToeBase, index:  41
+		processing action idle:  in[1 - 180], out[0 - 180]
+		processing action slowRun:  in[1 - 23], out[190 - 213]
+		processing action walk:  in[1 - 36], out[220 - 256]
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of mesh:  Wolf3D_Outfit_Top
+		processing begun of material:  Wolf3D_Outfit_Top
+			processing texture outfit_casual_11_v2_f_top_N
+				texture type:  bumpTexture, mapped using: "Wolf3D_Outfit_TopDiffuseUVLayer"
+			processing texture outfit_casual_11_v2_f_top_D
+				texture type:  diffuseTexture, mapped using: "Wolf3D_Outfit_TopDiffuseUVLayer"
+		Custom split normals with tangents being used
+		num positions      :  2812
+		num normals        :  2812
+		num tangents       :  11248
+		num uvs            :  5624
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4299
+		Skeleton stats:  
+			Total Influencers:  7995
+			Avg # of influencers per vertex:  2.8432
+			Highest # of influencers observed:  5, num vertices with this:  139
+			exported as 5 influencers
+			num skeletonWeights and skeletonIndices:  22496
+	processing begun of mesh:  Wolf3D_Outfit_Bottom
+		processing begun of material:  Wolf3D_Outfit_Bottom
+			processing texture outfit_casual_11_v2_f_bottom_N
+				texture type:  bumpTexture, mapped using: "Wolf3D_Outfit_BottomDiffuseUVLayer"
+			processing texture outfit_casual_11_v2_f_bottom_D
+				texture type:  diffuseTexture, mapped using: "Wolf3D_Outfit_BottomDiffuseUVLayer"
+		Custom split normals with tangents being used
+		num positions      :  1855
+		num normals        :  1855
+		num tangents       :  7420
+		num uvs            :  3710
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  3062
+		Skeleton stats:  
+			Total Influencers:  4384
+			Avg # of influencers per vertex:  2.3633
+			Highest # of influencers observed:  4, num vertices with this:  1
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  7420
+	processing begun of mesh:  Wolf3D_Head
+		processing begun of material:  Wolf3D_Skin
+			processing texture face_texture
+				texture type:  diffuseTexture, mapped using: "Wolf3D_HeadDiffuseUVLayer"
+		Custom split normals with tangents being used
+		num positions      :  2165
+		num normals        :  2165
+		num tangents       :  8660
+		num uvs            :  4330
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4094
+		Skeleton stats:  
+			Total Influencers:  4479
+			Avg # of influencers per vertex:  2.0688
+			Highest # of influencers observed:  5, num vertices with this:  4
+			exported as 5 influencers
+			num skeletonWeights and skeletonIndices:  17320
+	processing begun of mesh:  EyeRight
+		processing begun of material:  Wolf3D_Eye
+			processing texture eye_07_mask_1622793670
+				texture type:  diffuseTexture, mapped using: "EyeRightDiffuseUVLayer"
+		Custom split normals with tangents being used
+		num positions      :  120
+		num normals        :  120
+		num tangents       :  480
+		num uvs            :  240
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  206
+		Skeleton stats:  
+			Total Influencers:  240
+			Avg # of influencers per vertex:  2
+			Highest # of influencers observed:  2, num vertices with this:  120
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  480
+	processing begun of mesh:  Wolf3D_Headwear
+		processing begun of material:  Wolf3D_Headwear
+			processing texture Hijabi_02_NormalDX
+				texture type:  bumpTexture, mapped using: "Wolf3D_HeadwearDiffuseUVLayer"
+			processing texture Hijabi_02_BaseColor
+				texture type:  diffuseTexture, mapped using: "Wolf3D_HeadwearDiffuseUVLayer"
+		Custom split normals with tangents being used
+		num positions      :  580
+		num normals        :  580
+		num tangents       :  2320
+		num uvs            :  1160
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  997
+		Skeleton stats:  
+			Total Influencers:  1387
+			Avg # of influencers per vertex:  2.3914
+			Highest # of influencers observed:  5, num vertices with this:  7
+			exported as 5 influencers
+			num skeletonWeights and skeletonIndices:  4640
+	processing begun of mesh:  EyeLeft
+		processing begun of material:  Wolf3D_Eye
+		registered as also a user of material:  Wolf3D_Eye
+		Custom split normals with tangents being used
+		num positions      :  120
+		num normals        :  120
+		num tangents       :  480
+		num uvs            :  240
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  206
+		Skeleton stats:  
+			Total Influencers:  240
+			Avg # of influencers per vertex:  2
+			Highest # of influencers observed:  2, num vertices with this:  120
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  480
+	processing begun of mesh:  Wolf3D_Teeth
+		processing begun of material:  Wolf3D_Teeth
+			processing texture Wolf3D_Teeth
+				texture type:  diffuseTexture, mapped using: "Wolf3D_TeethDiffuseUVLayer"
+		Custom split normals with tangents being used
+		num positions      :  113
+		num normals        :  113
+		num tangents       :  452
+		num uvs            :  226
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  100
+		Skeleton stats:  
+			Total Influencers:  226
+			Avg # of influencers per vertex:  2
+			Highest # of influencers observed:  2, num vertices with this:  113
+			exported as 2 influencers
+			num skeletonWeights and skeletonIndices:  452
+	processing begun of mesh:  Wolf3D_Body
+		processing begun of material:  Wolf3D_Body
+			processing texture Wolf3D_fullbody_f_N
+				texture type:  bumpTexture, mapped using: "Wolf3D_BodyDiffuseUVLayer"
+			processing texture body_texture
+				texture type:  diffuseTexture, mapped using: "Wolf3D_BodyDiffuseUVLayer"
+		Custom split normals with tangents being used
+		num positions      :  922
+		num normals        :  922
+		num tangents       :  3688
+		num uvs            :  1844
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1446
+		Skeleton stats:  
+			Total Influencers:  1648
+			Avg # of influencers per vertex:  1.7874
+			Highest # of influencers observed:  5, num vertices with this:  9
+			exported as 5 influencers
+			num skeletonWeights and skeletonIndices:  7376
+	processing begun of mesh:  Wolf3D_Outfit_Footwear
+		processing begun of material:  Wolf3D_Outfit_Footwear
+			processing texture outfit_casual_11_v2_f_footwear_N
+				texture type:  bumpTexture, mapped using: "Wolf3D_Outfit_FootwearDiffuseUVLayer"
+			processing texture outfit_casual_11_v2_f_footwear_D
+				texture type:  diffuseTexture, mapped using: "Wolf3D_Outfit_FootwearDiffuseUVLayer"
+		Custom split normals with tangents being used
+		num positions      :  1160
+		num normals        :  1160
+		num tangents       :  4640
+		num uvs            :  2320
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1888
+		Skeleton stats:  
+			Total Influencers:  2909
+			Avg # of influencers per vertex:  2.5078
+			Highest # of influencers observed:  4, num vertices with this:  3
+			exported as 4 influencers
+			num skeletonWeights and skeletonIndices:  4640
+	processing begun of mesh:  Cube
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Wolf3D_Outfit_Top
+	writing mesh:  Wolf3D_Outfit_Bottom
+	writing mesh:  Wolf3D_Head
+	writing mesh:  EyeRight
+	writing mesh:  Wolf3D_Headwear
+	writing mesh:  EyeLeft
+	writing mesh:  Wolf3D_Teeth
+	writing mesh:  Wolf3D_Body
+	writing mesh:  Wolf3D_Outfit_Footwear
+	writing mesh:  Cube
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 10.0326 secs
