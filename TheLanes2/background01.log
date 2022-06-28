@@ -1,0 +1,941 @@
+Exporter version: 2.93.4, Blender version: 2.93.4
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\quater_update01\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Sphere
+		processing begun of material:  sky
+			processing texture aSky03
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  306
+		num normals        :  306
+		num tangents       :  0
+		num uvs            :  612
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  480
+	processing begun of camera (UniversalCamera):  Camera2
+	processing begun of mesh:  Sensor
+		processing begun of material:  sensor
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  trigger1
+		processing begun of material:  sensor
+		registered as also a user of material:  sensor
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  trigger2
+		processing begun of material:  sensor
+		registered as also a user of material:  sensor
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  buildingsL
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+			processing texture dark_paint_seamless_S02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture brick_maps_normal
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture grey_black_S
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture new_doors01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture welsh_slates01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture dark_plywood
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			processing texture stone01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		processing begun of multimaterial:  background01.Multimaterial#0
+		num positions      :  1346
+		num normals        :  1346
+		num tangents       :  0
+		num uvs            :  2692
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  696
+	processing begun of mesh:  chimney01
+		processing begun of material:  walls
+		registered as also a user of material:  walls
+		num positions      :  64
+		num normals        :  64
+		num tangents       :  0
+		num uvs            :  128
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  26
+	processing begun of mesh:  chimney02
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney03
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney04
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney05
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney06
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney07
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney08
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney09
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney10
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  buildings_endL
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  frames
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#1
+		num positions      :  712
+		num normals        :  712
+		num tangents       :  0
+		num uvs            :  1424
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  349
+	processing begun of mesh:  buildings_endR
+		mesh is an instance of :  buildings_endL.  Processing halted.
+	processing begun of mesh:  buildingsR
+		mesh is an instance of :  buildingsL.  Processing halted.
+	processing begun of mesh:  buildingsL.001
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  frames
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#2
+		num positions      :  38
+		num normals        :  38
+		num tangents       :  0
+		num uvs            :  76
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  21
+	processing begun of mesh:  buildingsL.002
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  frames
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#3
+		num positions      :  1123
+		num normals        :  1123
+		num tangents       :  0
+		num uvs            :  2246
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  580
+	processing begun of mesh:  buildingsL.003
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  frames
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#4
+		num positions      :  226
+		num normals        :  226
+		num tangents       :  0
+		num uvs            :  452
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  116
+	processing begun of mesh:  chimney11
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney12
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  buildings_wallR
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  frames
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#5
+		num positions      :  16
+		num normals        :  16
+		num tangents       :  0
+		num uvs            :  32
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  chimney13
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney14
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  coll_detect
+		processing begun of material:  black.001
+		processing begun of material:  black.001
+		processing begun of material:  ground.001
+		processing begun of material:  frames
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  black.001
+			processing texture TexturesCom_MuddySand_2x2_1K_albedo
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		registered as also a user of material:  frames
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#6
+		num positions      :  74
+		num normals        :  74
+		num tangents       :  0
+		num uvs            :  148
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  36
+	processing begun of mesh:  roof_small
+		processing begun of material:  roof
+		registered as also a user of material:  roof
+		num positions      :  43
+		num normals        :  43
+		num tangents       :  0
+		num uvs            :  86
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  17
+	processing begun of mesh:  buildings_houses_backL
+		processing begun of material:  houseFront
+			processing texture house_piece02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  0
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6
+	processing begun of mesh:  buildings_houses_backR
+		mesh is an instance of :  buildings_houses_backL.  Processing halted.
+	processing begun of mesh:  pavement
+		processing begun of material:  white
+			processing texture pavement01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  98
+		num normals        :  98
+		num tangents       :  0
+		num uvs            :  196
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  62
+	processing begun of mesh:  roadway
+		processing begun of material:  black
+			processing texture Asphalt
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  0
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6
+	processing begun of mesh:  the_pit
+		processing begun of material:  ground
+		processing begun of material:  white
+		processing begun of material:  black
+			processing texture baked_soil02
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		registered as also a user of material:  white
+		registered as also a user of material:  black
+		processing begun of multimaterial:  background01.Multimaterial#7
+		num positions      :  1171
+		num normals        :  1171
+		num tangents       :  0
+		num uvs            :  2342
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2182
+	processing begun of mesh:  the_pit_top
+		processing begun of material:  ground
+		registered as also a user of material:  ground
+		num positions      :  180
+		num normals        :  180
+		num tangents       :  0
+		num uvs            :  360
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  308
+	processing begun of mesh:  rocket
+		processing begun of material:  rocket
+			processing texture my_16x16gradient
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  1079
+		num normals        :  1079
+		num tangents       :  0
+		num uvs            :  2158
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1156
+	processing begun of mesh:  roofL
+		processing begun of material:  roof
+		registered as also a user of material:  roof
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  roofR
+		mesh is an instance of :  roofL.  Processing halted.
+	processing begun of mesh:  roofR_square
+		processing begun of material:  roof
+		registered as also a user of material:  roof
+		num positions      :  277
+		num normals        :  277
+		num tangents       :  0
+		num uvs            :  554
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  118
+	processing begun of mesh:  post
+		processing begun of material:  woodpost
+			processing texture old_planks01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  55
+		num normals        :  55
+		num tangents       :  0
+		num uvs            :  110
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  post01
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post02
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post03
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post04
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post05
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post06
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post07
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post08
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post09
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post10
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post16
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post15
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post14
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post13
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post12
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post11
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post17
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post18
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post19
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post20
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post21
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post22
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post23
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post24
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post30
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post29
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post27
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post26
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post25
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  fence
+		processing begun of material:  corrugated
+			processing texture corrugate05
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  86
+		num normals        :  86
+		num tangents       :  0
+		num uvs            :  172
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  38
+	processing begun of mesh:  Plane
+		processing begun of material:  corrugated
+		registered as also a user of material:  corrugated
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  0
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  Plane.001
+		mesh is an instance of :  Plane.  Processing halted.
+	processing begun of mesh:  Plane.003
+		mesh is an instance of :  Plane.  Processing halted.
+	processing begun of mesh:  post31
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  post24.001
+		mesh is an instance of :  post.  Processing halted.
+	processing begun of mesh:  sign_pole_bomb
+		processing begun of material:  signs
+			processing texture signs03
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  54
+		num normals        :  54
+		num tangents       :  0
+		num uvs            :  108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  28
+	processing begun of mesh:  sign
+		processing begun of material:  signs
+		registered as also a user of material:  signs
+		num positions      :  18
+		num normals        :  18
+		num tangents       :  0
+		num uvs            :  36
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  support1
+		processing begun of material:  woodpost
+		registered as also a user of material:  woodpost
+		num positions      :  57
+		num normals        :  57
+		num tangents       :  0
+		num uvs            :  114
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  19
+	processing begun of mesh:  support2
+		mesh is an instance of :  support1.  Processing halted.
+	processing begun of mesh:  sign01
+		processing begun of material:  signs
+		registered as also a user of material:  signs
+		num positions      :  18
+		num normals        :  18
+		num tangents       :  0
+		num uvs            :  36
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  sign_pole_warn
+		mesh is an instance of :  sign_pole_bomb.  Processing halted.
+	processing begun of mesh:  support201
+		mesh is an instance of :  support1.  Processing halted.
+	processing begun of mesh:  support101
+		mesh is an instance of :  support1.  Processing halted.
+	processing begun of mesh:  Hobbs
+		processing begun of material:  signs
+		registered as also a user of material:  signs
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  Hob
+		processing begun of material:  signs
+		registered as also a user of material:  signs
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  0
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  buildings_wallR_alley00
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  frames
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#8
+		num positions      :  57
+		num normals        :  57
+		num tangents       :  0
+		num uvs            :  114
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  30
+	processing begun of mesh:  buildings_housesL
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  frames
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#9
+		num positions      :  1346
+		num normals        :  1346
+		num tangents       :  0
+		num uvs            :  2692
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  696
+	processing begun of mesh:  roofR_alley
+		processing begun of material:  roof
+		registered as also a user of material:  roof
+		num positions      :  27
+		num normals        :  27
+		num tangents       :  0
+		num uvs            :  54
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  buildings_wallR_alley01
+		processing begun of material:  walls
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  walls
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#10
+		num positions      :  45
+		num normals        :  45
+		num tangents       :  0
+		num uvs            :  90
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  chimney15
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney16
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney17
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of node:  Empty01
+	processing begun of mesh:  chimney18
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney19
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney20
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  roofR_alley.01
+		mesh is an instance of :  roofR_alley.  Processing halted.
+	processing begun of mesh:  alley_houses_back02
+		mesh is an instance of :  buildings_houses_backL.  Processing halted.
+	processing begun of mesh:  chimney21
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  alley_houses_back01
+		mesh is an instance of :  buildings_houses_backL.  Processing halted.
+	processing begun of mesh:  windows3
+		processing begun of material:  windows
+		registered as also a user of material:  windows
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  windows2
+		processing begun of material:  windows
+		registered as also a user of material:  windows
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  Empty02
+	processing begun of mesh:  alley_houses_back03
+		mesh is an instance of :  buildings_houses_backL.  Processing halted.
+	processing begun of mesh:  roofR_alley03
+		mesh is an instance of :  roofR_alley.  Processing halted.
+	processing begun of mesh:  chimney23
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney24
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney25
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney26
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  roofR_alley04
+		mesh is an instance of :  roofR_alley.  Processing halted.
+	processing begun of mesh:  chimney27
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney28
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  chimney29
+		mesh is an instance of :  chimney01.  Processing halted.
+	processing begun of mesh:  alley_houses_back03.001
+		mesh is an instance of :  buildings_houses_backL.  Processing halted.
+	processing begun of mesh:  buildings_wallR_alley01.001
+		processing begun of material:  frames
+		processing begun of material:  walls
+		processing begun of material:  doors
+		processing begun of material:  roof
+		processing begun of material:  windows
+		processing begun of material:  stonestep
+		registered as also a user of material:  frames
+		registered as also a user of material:  walls
+		registered as also a user of material:  doors
+		registered as also a user of material:  roof
+		registered as also a user of material:  windows
+		registered as also a user of material:  stonestep
+		processing begun of multimaterial:  background01.Multimaterial#11
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  windows1
+		processing begun of material:  windows
+		registered as also a user of material:  windows
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  alley_windows
+	processing begun of mesh:  windows0
+		processing begun of material:  windows
+		registered as also a user of material:  windows
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  factory01
+		processing begun of material:  factory01
+			processing texture towers01
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  14
+		num normals        :  14
+		num tangents       :  0
+		num uvs            :  28
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6
+	processing begun of mesh:  factory02
+		mesh is an instance of :  factory01.  Processing halted.
+	processing begun of mesh:  factory03
+		processing begun of material:  factory01
+		registered as also a user of material:  factory01
+		num positions      :  37
+		num normals        :  37
+		num tangents       :  0
+		num uvs            :  74
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  factory04
+		mesh is an instance of :  factory03.  Processing halted.
+	processing begun of mesh:  factory06
+		processing begun of material:  factory01
+		registered as also a user of material:  factory01
+		num positions      :  151
+		num normals        :  151
+		num tangents       :  0
+		num uvs            :  302
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+	processing begun of mesh:  factory05
+		mesh is an instance of :  factory06.  Processing halted.
+	processing begun of mesh:  factory07
+		mesh is an instance of :  factory01.  Processing halted.
+	processing begun of mesh:  brick_block01
+		processing begun of material:  walls
+		registered as also a user of material:  walls
+		num positions      :  136
+		num normals        :  136
+		num tangents       :  0
+		num uvs            :  272
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  52
+	processing begun of mesh:  brick_block01.001
+		mesh is an instance of :  brick_block01.  Processing halted.
+	processing begun of mesh:  brick_block01.002
+		mesh is an instance of :  brick_block01.  Processing halted.
+	processing begun of mesh:  brick_block01.003
+		mesh is an instance of :  brick_block01.  Processing halted.
+	processing begun of mesh:  brick_block01.004
+		mesh is an instance of :  brick_block01.  Processing halted.
+	processing begun of node:  bricks_single
+	processing begun of mesh:  brick.025_old
+		processing begun of material:  bricks.001
+			processing texture grey_black_S
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  brick.027_old
+		mesh is an instance of :  brick.025_old.  Processing halted.
+	processing begun of mesh:  brick.028_old
+		mesh is an instance of :  brick.025_old.  Processing halted.
+	processing begun of mesh:  brick.047_old
+		mesh is an instance of :  brick.025_old.  Processing halted.
+	processing begun of mesh:  brick.048_old
+		mesh is an instance of :  brick.025_old.  Processing halted.
+	processing begun of mesh:  brick.001
+		processing begun of material:  walls
+		registered as also a user of material:  walls
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  brick.002
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.003
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.004
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.005
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.006
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.007
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.008
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.009
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.010
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.011
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.012
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.013
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.014
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.015
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.016
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.017
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.018
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.019
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.020
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.021
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.022
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.023
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.024
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.025
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.026
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.027
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.028
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.029
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.030
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.031
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.032
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.033
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.034
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.035
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.036
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.037
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.038
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.039
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.040
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.041
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.042
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.043
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.044
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.045
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.046
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.047
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.048
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.049
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.050
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of mesh:  brick.051
+		mesh is an instance of :  brick.001.  Processing halted.
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Sphere
+	writing mesh:  Sensor
+	writing mesh:  trigger1
+	writing mesh:  trigger2
+	writing mesh:  buildingsL
+	writing mesh:  chimney01
+	writing mesh:  buildings_endL
+	writing mesh:  buildingsL.001
+	writing mesh:  buildingsL.002
+	writing mesh:  buildingsL.003
+	writing mesh:  buildings_wallR
+	writing mesh:  coll_detect
+	writing mesh:  roof_small
+	writing mesh:  buildings_houses_backL
+	writing mesh:  pavement
+	writing mesh:  roadway
+	writing mesh:  the_pit
+	writing mesh:  the_pit_top
+	writing mesh:  rocket
+	writing mesh:  roofL
+	writing mesh:  roofR_square
+	writing mesh:  post
+	writing mesh:  fence
+	writing mesh:  Plane
+	writing mesh:  sign_pole_bomb
+	writing mesh:  sign
+	writing mesh:  support1
+	writing mesh:  sign01
+	writing mesh:  Hobbs
+	writing mesh:  Hob
+	writing mesh:  buildings_wallR_alley00
+	writing mesh:  buildings_housesL
+	writing mesh:  roofR_alley
+	writing mesh:  buildings_wallR_alley01
+	writing mesh:  windows3
+	writing mesh:  windows2
+	writing mesh:  buildings_wallR_alley01.001
+	writing mesh:  windows1
+	writing mesh:  windows0
+	writing mesh:  factory01
+	writing mesh:  factory03
+	writing mesh:  factory06
+	writing mesh:  brick_block01
+	writing mesh:  brick.025_old
+	writing mesh:  brick.001
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.986 secs

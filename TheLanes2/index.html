@@ -1,0 +1,1033 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hobb's Lane</title>
+	
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<!--<script src="text1.js"</script>-->
+	<!--<script src="https://preview.babylonjs.com/babylon.js"></script> -->
+	<!--<script src="babylon.mixMaterial.min.js"></script> -->
+	
+	<script src="https://cdn.babylonjs.com/gui/babylon.gui.js"></script>
+	
+	<script src = "menu.js"></script>
+    
+	
+	<link rel="icon" href="ico.png">
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align: center;
+		font-size: 60px;
+		color: red;
+		top: 50%;
+		width: 100%;
+		height: 60px;
+		display: none;
+		}
+		
+		#words {
+		position: absolute;
+		left:20%;
+		top:90%;
+		width:60%;
+		text-align: center;
+		line-height: 2em;
+		font-family: Arial, Helvetica;
+		font-size: 16px;
+		color: white;
+		}
+		
+		#container {
+		width: 1000px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id ="loader">Loading...</div>
+	<div id = "fps">0</div>
+	<div id ="DCs">0</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	<div id = "credits">vvvvvvv</div>
+	<div id="words"></div>
+<!--
+	<div id ="container">
+	<div id = "credits" >"Bassa Island" royalty free music composed by Kevin Mcleod at www.incompetech.com 
+</br>Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+	
+	
+	</div> </div>
+-->
+	
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divEnding = document.getElementById("credits")
+			var divVerts = document.getElementById("verts")
+			var divWords = document.getElementById("words");
+			var myScene = new BABYLON.Scene(engine);
+			//var sceneInstru;
+			var myCamera;
+			var myCamera1;
+			var myCamera2;
+			var myCamera3;
+			var isActive = [0,0];
+			var allMeshes = 0;
+			var theWindows;
+			var bobbyMeshes;
+			var vertTotal = 0;
+			var theDoors;
+			var aCube;
+			var p = 0;
+			var distance;
+			var trigger = 1;
+			var skeleton;
+			var skeleton1;
+			var standRange;
+			var speakRange;
+			var idleRange;
+			var talkRange;
+			var whichAnim;
+			var animGroup;
+			//var isUnlocked = 0;
+			var button1;
+			var theSounds;
+			var soundsReady = 0;
+			var isLocked = 0;
+			isPlaying = 0;
+			var menuTotal = 0;
+			
+			var theTrack = 0;
+			
+			var lines = 0;
+			
+			var soundArray = [
+			[0.0, 7.662],
+			[9.077, 4.988],
+			[16.379, 11.514],
+			];
+
+			
+			const text = [
+				"Umm, a strange metal, it is not magnetic",
+				"Supposedly a seventy year old rocket, but I can't scratch it and there is no corrosion",
+				"And below the foundations of the surrounding houses and buildings",
+				"This is not a V-weapon, Colonel"
+			];
+			
+			const signText = [
+				"The new City Council name for the street. I wonder why?",
+				"The old street name. How old sergeant...?",
+				"Over a hundred years, Sir. It has been a strange neighbourhood for a while."
+			];
+			
+			const winText = [
+				"A Bogey - an old English Legend maybe ...",
+				"Irish, Scottish ... Gaelic legends. Seems very odd.",
+				"The grafitti is obsessed with skulls. Which is kind of curious",
+				"Bwbach - possibly to frighten children?"
+			];
+			
+			const colText = [
+				"Welcome Professor, come look at this. An old V-rocket so be very, very careful !!", 
+				"Uh, piffle ... piffle Professor.",
+				"All the records on the science and bombings have been lost in the chaos after the war.",
+			];
+			
+			var items;
+			//var uvZero = [1,0,1,.125, .875,.125,.875,0]; original settings
+			var uvZero = [0.125,0.875
+			,0.125,1
+			,0.0,1
+			,0.0,0.875];
+
+			var uvArray = [];
+			var whichObj;
+			var isOpen =false;
+			var thePics;
+			var isOpen1 = 0;
+			var isComplete = 0;
+			var bPack01;
+			var theSigns;
+			var theCount = 1;
+			
+			//https://playground.babylonjs.com/#NMCF6A#8//
+			
+			BABYLON.SceneLoader.ImportMesh("", "", "colonel07.babylon", myScene,
+					   function (meshes, particleSystems, skeletons) { 
+							skeleton1 = skeletons[0];
+							//console.log(skeleton1.name);
+							//console.log(skeleton1)
+							
+							idleRange = skeleton1.getAnimationRange("idleAction");
+							//console.log(idleRange);
+							talkRange = skeleton1.getAnimationRange("talkAction");
+							//console.log(talkRange);
+							divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+							//console.log(meshes.length);
+							
+							//theSoldier = myScene.getMeshByName("soldier");
+							//console.log(theSoldier.name);
+							
+						/*
+							for (var i=0; i<meshes.length; i++){
+								if (meshes[i].getTotalVertices() > 0){
+									vertTotal = vertTotal + meshes[i].getTotalVertices()
+									//console.log(vertTotal);
+								}
+								divVerts.innerHTML = vertTotal + " Total vertices";
+							}
+						*/	
+							
+						}
+			);
+				
+			
+					BABYLON.SceneLoader.ImportMesh("", "", "bobby01.babylon", myScene,
+					   function (meshes, particleSystems, skeletons) { 
+							skeleton = skeletons[0];
+							//console.log(skeleton.name);
+							aCube = myScene.getMeshByName("Empty");
+							speakRange = skeleton.getAnimationRange("mouthAction");
+							//console.log(idleRange);
+							standRange = skeleton.getAnimationRange("standAction");
+							var walkRange = skeleton.getAnimationRange("walkAction");
+							bobbyMeshes = meshes;
+							
+							divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+							//For "walking' path
+							//aCube.position = new BABYLON.Vector3(22, 0, -5);
+							//aCube.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(0), BABYLON.Space.LOCAL);
+						}
+					);
+					
+			
+			
+			
+			var dummyCamera = new BABYLON.FreeCamera("dummy",new BABYLON.Vector3(0,10,-100),myScene)
+			
+			const sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+	/*			
+			var aLength = 4*Math.PI/8;
+			var theAngle = Math.PI/4;
+			
+			var turnAngle1 = Math.PI/2;
+			var turnAngle2 = 3*Math.PI/2;
+			
+		//draw lines to form a square
+			const points = [];
+			// bobby path short
+			
+			points.push(new BABYLON.Vector3(22, 0, -5));
+			points.push(new BABYLON.Vector3(22, 0, -9));
+			points.push(new BABYLON.Vector3(27, 0, -9));
+			points.push(new BABYLON.Vector3(27, 0, -1));
+			points.push(new BABYLON.Vector3(22, 0, -1));
+			
+			// bobby path long
+			
+			//points.push(new BABYLON.Vector3(22, 0, -5));
+			//points.push(new BABYLON.Vector3(22, 0, -14.5));
+			//points.push(new BABYLON.Vector3(27, 0, -14.5));
+			//points.push(new BABYLON.Vector3(27, 0, 4.5));
+			//points.push(new BABYLON.Vector3(22, 0, 4.5));
+			
+			points.push(points[0]); //close the square;
+	*/		
+			
+			/* old pirate path
+			points.push(new BABYLON.Vector3(5, 0, 10));
+			points.push(new BABYLON.Vector3(9, 0, 10));
+			points.push(new BABYLON.Vector3(9, 0, 2));
+			points.push(new BABYLON.Vector3(5, 0, 2));
+			points.push(new BABYLON.Vector3(-5, 0, 2));
+			points.push(new BABYLON.Vector3(-5, 0, 10));
+			points.push(points[0]); //close the square;
+			*/
+			//BABYLON.MeshBuilder.CreateLines("square", {points: points})
+			
+			
+	/*		
+			
+			const slide = function (turn, dist) { //after covering dist apply turn
+				this.turn = turn;
+				this.dist = dist;
+			}
+			
+			
+			//Bobby move short
+			const track = [];
+			track.push(new slide(turnAngle2, 4));
+			track.push(new slide(turnAngle2, 9));
+			//track.push(new slide(90, 16));
+			track.push(new slide(turnAngle2, 17));
+			track.push(new slide(turnAngle2, 22));
+			track.push(new slide(turnAngle2, 26));
+			
+			//Bobby move long
+			
+	*/		
+		
+	/*		const track = [];
+			track.push(new slide(turnAngle2, 10));
+			track.push(new slide(turnAngle2, 15.5));
+			//track.push(new slide(90, 16));
+			track.push(new slide(turnAngle2, 35.5));
+			track.push(new slide(turnAngle2, 41));
+			track.push(new slide(turnAngle2, 51));
+			
+	*/		
+	
+	/*
+			//track.push(new slide(turnAngle2, 30));
+			//let distance = 0;
+			distance = 0;
+			let step = 0.015;
+			//let p = 0;
+	*/
+
+		   
+           BABYLON.SceneLoader.Append("", "background01.babylon", myScene);
+		   BABYLON.SceneLoader.Append("", "menu01.babylon", myScene);
+	
+           myScene.executeWhenReady(function () {
+		   
+		   
+					allMeshes = myScene.meshes
+					
+					var temp = myScene.getMeshByName("alley_windows");
+					theWindows = temp.getChildren();
+					
+					theWindows.reverse();
+				
+					var theRocket = myScene.getMeshByName("rocket");
+					theRocket.isPickable = false;
+			
+					var theTrigger = myScene.getMeshByName("trigger1");
+					var theTrigger2  = myScene.getMeshByName("trigger2");
+				
+					myCamera3 = myScene.getCameraByName("menu_Cam");
+					
+					myCamera3.position.x = -31.5;
+					myCamera3.position.z = -18.5;
+					myCamera3.rotation.y = Math.PI/2;
+					myCamera3.speed = 0.1;
+					myCamera3.wheelPrecision =500;
+					myCamera3.maxZ =1000;
+					myCamera3.applyGravity = true;
+					
+					var CamSensor = myScene.getMeshByName("Sensor");
+					CamSensor.position = new BABYLON.Vector3(0,0.5,0);
+					CamSensor.parent = myCamera3;
+					CamSensor.scaling = new BABYLON.Vector3(0.1,0.1,0.1);
+					CamSensor.checkCollisions = true;
+					
+					myScene.activeCamera = myCamera3;
+					//myScene.activeCamera.attachControl(canvas);
+					
+					
+					createMenu(myScene);
+					var bp_back =myScene.getMeshByName("bpack00");
+					//console.log(bp_back.name);
+					
+					
+					CamSensor.actionManager = new BABYLON.ActionManager(myScene);
+					
+					let inAction0 = new BABYLON.ExecuteCodeAction(
+						{trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: {mesh: theTrigger}},
+						(evt) => 
+						{
+							if(isActive[0] === 0){
+								//console.log("entered0");
+								isActive[0] = 1;
+								//divWords.innerHTML = "Entered the pit";
+								//theSounds.play(0, 34.5, 2.7);
+							}
+							else{
+								isActive[0] = 2;
+								//console.log(isActive[0]);
+							}
+						}
+					);
+					
+					
+					let outAction0 = new BABYLON.ExecuteCodeAction(
+							{
+								trigger: BABYLON.ActionManager.OnIntersectionExitTrigger, 
+								parameter: { 
+									mesh: theTrigger
+								}
+							},
+							(evt) => {
+							
+								if(isActive[0] === 1){
+									//console.log("left0");
+									//console.log(isActive[0]);
+									divWords.innerHTML = colText[0];
+									items[3].setVerticesData(BABYLON.VertexBuffer.UVKind, uvArray[3]);
+									const theAnim3 = myScene.beginAnimation(skeleton1, idleRange.from, idleRange.to, false, 0.5);
+									theAnim3.onAnimationEnd = function(){
+											//divWords.innerHTML = text[6];
+											theRocket.isPickable = true;
+											theTrigger.dispose();
+											isActive[0] = 2;
+											//console.log(isActive[0]);
+										
+										
+										};
+									
+									
+									//theTrigger.dispose();
+									//theTrigger.setEnabled = false;
+									//isActive = 0;
+									//myScene.removeMesh(theTrigger);
+									//var aRand0 = Math.floor(Math.random() * 9);
+									//theSounds.play(0,soundArray[aRand0][0], soundArray[aRand0][1]);
+									//llTriggers[0].setEnabled(false); 
+								}
+								//else{
+								//	isActive = 0;
+								//	divWords.innerHTML = "Exited the trigger with isActive = 2";
+								//}
+							}
+						);
+						
+						let inAction1 = new BABYLON.ExecuteCodeAction(
+						{trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: {mesh: theTrigger2}},
+						(evt) => 
+						{
+							if(isActive[1] === 0){
+								//console.log("entered0");
+								isActive[1] = 1;
+								divWords.innerHTML = " .... ";
+							}	
+								//theSounds.play(0, 34.5, 2.7);
+							//}
+							//else{
+							//	isActive = 0;
+							//}
+						}
+					);
+					
+					
+					let outAction1 = new BABYLON.ExecuteCodeAction(
+							{
+								trigger: BABYLON.ActionManager.OnIntersectionExitTrigger, 
+								parameter: { 
+									mesh: theTrigger2
+								}
+							},
+							(evt) => {
+								if(isActive[1] === 1){
+									divWords.innerHTML = "";
+									myCamera3.detachControl();
+									theSounds.play(0,soundArray[1][0], soundArray[1][1]);
+									
+									theTrigger2.dispose();
+									isActive[1] = 2;
+								}
+							
+								//if(isActive === 1){
+									//console.log("exit square");
+									//divWords.innerHTML = colText[0];
+									//const theAnim3 = myScene.beginAnimation(skeleton1, idleRange.from, idleRange.to, false, 0.5);
+									//theAnim3.onAnimationEnd = function(){
+									//		//divWords.innerHTML = text[6];
+									//		theRocket.isPickable = true;
+										
+										
+									//	};
+									
+									
+									//theTrigger.dispose();
+									//theTrigger.setEnabled = false;
+									//isActive = 0;
+									//myScene.removeMesh(theTrigger);
+									//var aRand0 = Math.floor(Math.random() * 9);
+									//theSounds.play(0,soundArray[aRand0][0], soundArray[aRand0][1]);
+									//llTriggers[0].setEnabled(false); 
+								//}
+								//else{
+								//	isActive = 0;
+									//divWords.innerHTML = "Exited the trigger with isActive is 0";
+								//}
+							}
+						);
+					
+					
+					CamSensor.actionManager.registerAction(inAction0);
+					CamSensor.actionManager.registerAction(outAction0);
+					CamSensor.actionManager.registerAction(inAction1);
+					CamSensor.actionManager.registerAction(outAction1);
+					
+					
+					
+					myScene.clearColor = new BABYLON.Color3(0.1,0.1,0.1);
+				
+					
+					createAudio();
+					
+			/*			
+					var observer = myScene.onBeforeRenderObservable.add(() => {
+						if(trigger  === 0){
+						
+						if(theTrack === 0){
+						aCube.movePOV(0, 0, step);
+						distance += step;
+						//console.log(p + "  " + distance);
+						//console.log(distance);
+						
+						//if(p > 1){
+						//	theTrack = 1;
+						//}
+							
+						//if(theTrack === 0){
+						
+							if (distance > track[p].dist) {        
+								aCube.rotate(BABYLON.Axis.Y, track[p].turn, BABYLON.Space.LOCAL);
+								p +=1;
+								//console.log(p + "  " + distance);
+						
+								p %= track.length;
+								//console.log(track.length);
+									if (p === 0) {
+										//console.log(p);
+										theTrack = 0;
+										distance = 0;
+										//aCube.position = new BABYLON.Vector3(0, 0, 4); //reset to initial conditions
+										//aCube.rotation = BABYLON.Vector3.Zero();//prevents error accumulation
+										aCube.position = new BABYLON.Vector3(22, 0, -5);
+										aCube.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(90), BABYLON.Space.LOCAL);
+										myScene.stopAllAnimations();
+										function myFunction() {
+										  //myScene.beginAnimation(skeleton, 40, 95, false, 1);
+										  myScene.beginAnimation(skeleton, 135, 140, false, 1);
+										}
+										
+										setTimeout(myFunction, 200)
+										
+										
+										// these lines appears to add "spit" effect but the stand action work fine if triggered by a key press ??
+										//myScene.beginAnimation(skeleton, 138, 140, false, 1);
+										//myScene.beginAnimation(skeleton, 40, 95, false, 1);
+										// ---------------------------------------????????????????????????--------------------------------------
+										
+										myScene.onBeforeRenderObservable.remove(observer);
+										
+										myScene.activeCamera.attachControl(canvas);
+										
+										console.log("camera ready");
+										
+										trigger = 2;
+									}
+							} //end if
+						} //end theTrack = 0		
+						
+					}}); //end before render
+			*/ 		
+					
+			/*		
+					// restart animations from keyboard with "s"
+					myScene.onKeyboardObservable.add((kbInfo) => {
+						switch (kbInfo.type) {
+					
+							case BABYLON.KeyboardEventTypes.KEYDOWN:
+								switch (kbInfo.event.key) {
+									case "s":
+										if(trigger === 1){
+											
+											trigger = 0;
+											myScene.beginAnimation(skeleton, 110, 140, true, 1);
+											//kryten.play();
+											//button1.background = "black";
+											//button1.isVisible = false;		
+										}
+						
+										break;
+									case "t":
+											whichAnim = myScene.beginAnimation(skeleton, speakRange.from, speakRange.to -1, true, 1);
+											myScene.beginAnimation(skeleton1, 70, 100, true, 1);
+											console.log("t pressed");
+											console.log(kbInfo);
+										break;
+									case "b":
+											myScene.stopAllAnimations();
+											myScene.beginAnimation(skeleton, 40, 100, false, 1);
+											//myScene.beginAnimation(skeleton, standRange.from, standRange.to -1, false, 1);
+											myScene.beginAnimation(skeleton1, idleRange.from, idleRange.to, false, 1);
+											console.log("b pressed");
+										break;	
+									
+									case "default":	
+										break;
+									}
+							break;			
+						}
+					});
+			*/		
+					
+					//When click event is raised
+					myScene.onPointerUp = function (evt, pickResult) {
+					//let lines =0;
+					// We try to pick an object
+					if (pickResult.hit) {
+					myTrigger = pickResult.pickedMesh.name;
+					myTrigger2 = pickResult.pickedMesh
+					//which object
+					switch (myTrigger){
+						case "rocket" :
+							if(lines < 4){
+								divWords.innerHTML = text[lines];
+								if(lines < 3){
+									//items[5 + lines].setEnabled = true;
+									items[5 + lines].setVerticesData(BABYLON.VertexBuffer.UVKind, uvArray[5 + lines]);
+								}
+								
+							
+								lines = lines + 1;
+							}
+							else{
+								lines = 0;
+								divWords.innerHTML = colText[1];
+								myTrigger2.isPickable = false;
+								//lines = lines + 1;
+								theAnim = myScene.beginAnimation(skeleton1, talkRange.from, talkRange.to, false, 0.5)
+									theAnim.onAnimationEnd = function(){
+										divWords.innerHTML = colText[2];
+										theAnim2 = myScene.beginAnimation(skeleton1, idleRange.from, idleRange.to, false, 0.5)
+										theAnim2.onAnimationEnd = function(){
+											menuTotal = menuTotal + 2;
+											clearText();
+											//divWords.innerHTML = "End of First Update";
+											//items[3].setEnabled(true);
+											items[4].setVerticesData(BABYLON.VertexBuffer.UVKind, uvArray[4]);
+											//menuTotal = menuTotal + 1;
+											
+										
+										
+										};
+										
+									};
+								
+							}
+							
+							break;
+							
+							
+						case "Hobbs" :
+							myTrigger2.isPickable = false;
+							divWords.innerHTML = signText[0];
+							
+							break;	
+							
+							
+						case "Hob" :
+							myTrigger2.isPickable = false;
+							theWindows[0].isPickable = true;
+							//console.log(theWindows[0].name);
+							divWords.innerHTML = signText[1];
+							//items[1].setEnabled(true);
+							//myTrigger.isPickable = false;
+							theAnim3 = myScene.beginAnimation(skeleton, standRange.from, standRange.to, false, 0.5)
+							theAnim3.onAnimationEnd = function(){
+								divWords.innerHTML = signText[2];
+							//items[1].setEnabled(true);
+							items[1].setVerticesData(BABYLON.VertexBuffer.UVKind, uvArray[1]);
+
+								theAnim4 = myScene.beginAnimation(skeleton, standRange.from, standRange.to, false, 0.5)
+								
+								theAnim4.onAnimationEnd = function(){
+									divWords.innerHTML = " ... ";
+									//console.log("reached");
+									//console.log(theWindows[0].name);
+									myScene.activeCamera = myCamera3;
+									myScene.activeCamera.attachControl(canvas);
+									isActive[1] = 2;
+									menuTotal = menuTotal + 1;
+									clearText();
+									
+									
+									
+								}
+							}
+							
+							break;
+							
+						
+							
+						case "windows0" :
+							myTrigger2.isPickable = false;
+							theWindows[1].isPickable = true;
+							//console.log(theWindows[1].name);
+							divWords.innerHTML = winText[0];
+							theSounds.play(0,soundArray[0][0], soundArray[0][1]);
+							break;
+						
+						case "windows1" :
+							myTrigger2.isPickable = false;
+							theWindows[2].isPickable = true;
+							//console.log(theWindows[2].name);
+							divWords.innerHTML = winText[1];
+							break;
+							
+						case "windows2" :
+							myTrigger2.isPickable = false;
+							theWindows[3].isPickable = true;
+							//console.log(theWindows[3].name);
+							divWords.innerHTML = winText[2];
+							break;
+						
+						case "windows3" :
+							myTrigger2.isPickable = false;
+							divWords.innerHTML = winText[3];
+							theSounds.play(0,soundArray[2][0], soundArray[2][1]);
+							//items[2].setEnabled(true);
+							items[2].setVerticesData(BABYLON.VertexBuffer.UVKind, uvArray[2]);
+							menuTotal = menuTotal + 1;
+							clearText();
+							
+							break;
+						
+							
+						default:
+							//console.log(myTrigger);
+							break;
+					
+					
+					}
+					
+					}
+					};
+					
+					createButtons();
+						
+					//get total meshes and vertices
+					
+					//allMeshes = myScene.meshes;
+					//console.log(allMeshes.length);
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+				
+					//animGroup.play(true);
+				//});
+			//};
+					
+					
+				// Once the scene is loaded, just register a render loop to render it
+				engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+					//divWords.innerHTML = myCamera2.position;
+					myScene.render();
+				});
+    
+			});
+		};
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		
+		function clearText(){
+			//console.log(menuTotal);
+			setTimeout(myFunction, 2000);
+				function myFunction() {
+				  //myScene.beginAnimation(skeleton, 40, 95, false, 1);
+				  if(menuTotal === 4){
+					divWords.innerHTML = "End of Update 1. Reload page to run again";
+				  }
+				  else{
+					divWords.innerHTML = " ...";
+				  }
+				}
+		}
+		
+// ----------------------Create Menu Function ----------------------------------------------------------		
+
+//------------------------End Create Menu----------------------------------------------------------------		
+		
+	
+		function createAudio(){
+
+			theSounds = new BABYLON.Sound("sounds", "Quater_sounds_bits01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.1  });
+			//theSounds = new BABYLON.Sound("sounds", "Quater_sounds_bits01.mp3", myScene, soundReady, {autoplay: false});
+			//theGulls = new BABYLON.Sound("gulls", "sea_gull01.mp3", myScene, soundReady, { loop: true, autoplay: false, volume: 0.05  });
+			
+		/*	var soundArray = [
+			[0.0, 7.662],
+			[9.077, 4.988],
+			[16.379, 11.514],
+			];
+		*/
+			//return;
+
+		};
+
+
+		function soundReady() {
+				soundsReady++;
+				//if(soundsReady > 0){
+				//console.log(soundsReady);
+				//console.log(theSounds.name);
+				//theSounds.play(0,soundArray[1][0], soundArray[1][1]);
+					//return;
+				//BABYLON.Engine.audioEngine.unlock(); 
+				theSounds.onended = function() {
+				/*
+					animGroup.stop();
+					animGroup.goToFrame(0);
+					aCube.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(90), BABYLON.Space.LOCAL);
+					theTrack = 0;
+					myScene.beginAnimation(skeleton, 30, 54, true, 1);
+					//p = 4;
+					//console.log(p + "  " + distance);
+				*/
+					//console.log("ended")
+					//theDoors[1].rotation.y = -Math.PI;
+				};
+				//}
+		};
+
+/*
+		theTobe.onended = function() {
+			animGroup.goToFrame(0);
+			console.log("paused")
+		};
+*/	
+
+		function createButtons(){
+			//console.log("create buttons");
+			
+			var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+					var UiPanel = new BABYLON.GUI.StackPanel();
+					advancedTexture.addControl(UiPanel);
+
+					button1 = BABYLON.GUI.Button.CreateSimpleButton("but1", "Start Game");
+					button1.width = "150px"
+					button1.height = "40px";
+					button1.top = "-50px";
+					button1.left = "0px";
+					button1.color = "grey";
+					button1.cornerRadius = 5;
+					//button1.alpha = 0.1;
+					button1.background = "rgba(0,0,0,0)";
+					//button1.background.alpha = 0.1;
+					//button1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+					button1.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+					button1.onPointerUpObservable.add(function() {
+						//console.log("button pressed");
+						
+						if(isLocked === 0){
+						   isLocked =1;
+						   //console.log("unlocked = " + isLocked);
+						   BABYLON.Engine.audioEngine.unlock(); 
+					   	}
+						if (isPlaying === 0){
+							theSounds.play(0,soundArray[1][0], soundArray[1][1]);
+							//myScene.beginAnimation(skeleton[0], speakRange.from, speakRange.to, true);
+							isPlaying = 1;
+							button1.isVisible = false;
+							myScene.activeCamera.attachControl(canvas);
+							
+						};
+						
+						//if (isPlaying === 0){
+					/*		if(trigger === 1){
+							//kryten.play();
+							//console.log(soundArray[0][1]);
+							//kryten.play(0, soundArray[arrayValue][0],soundArray[arrayValue][1]);
+							
+							trigger = 2;
+							whichAnim = myScene.beginAnimation(skeleton, 0, 60, true, 1);
+							kryten.play();
+								//myScene.beginAnimation(skeleton[0], speakRange.from, speakRange.to, true);
+							isPlaying = 1;
+							button1.isVisible = false;
+							
+						switch(arrayValue) {
+							  case 0:
+								// code block
+								console.log(soundArray[arrayValue][1]);
+								kryten.play(0, soundArray[arrayValue][0],soundArray[arrayValue][1]);
+								myScene.beginAnimation(skeleton[0], speakRange.from, speakRange.to, true);
+								break;
+							  
+							  case 1:
+								console.log(soundArray[arrayValue][1]);
+								kryten.play(0, soundArray[arrayValue][0],soundArray[arrayValue][1]);
+								myScene.beginAnimation(skeleton[0], speakRange.to, speakRange.from, true);
+								break;
+								
+								case 2:
+								console.log(soundArray[arrayValue][1]);
+								kryten.play(0, soundArray[arrayValue][0],soundArray[arrayValue][1]);
+								myScene.beginAnimation(skeleton[0], speakRange.to, speakRange.from, true);
+								break;
+								
+								case 3:
+								// code block
+								console.log(soundArray[arrayValue][1]);
+								kryten.play(0, soundArray[arrayValue][0],soundArray[arrayValue][1]);
+								myScene.beginAnimation(skeleton[0], speakRange.from, speakRange.to, true);
+								break;
+								
+								case 4:
+								// code block
+								console.log(soundArray[arrayValue][1]);
+								kryten.play(0, soundArray[arrayValue][0],soundArray[arrayValue][1]);
+								myScene.beginAnimation(skeleton[0], speakRange.from, speakRange.to, true);
+								break;
+								
+							  default:
+								// code block
+							} 
+							
+							
+							
+							arrayValue = arrayValue + 1;
+							if (arrayValue >3){ 
+								//{button2.isVisible = true};
+								button1.isVisible = false;
+								button2.isVisible = true;
+								};
+						}
+				*/		
+					//}
+					
+				//	}
+					});
+					advancedTexture.addControl(button1);  
+					
+					const button2 = BABYLON.GUI.Button.CreateSimpleButton("but2", "Play Second");
+					button2.width = "150px"
+					button2.height = "40px";
+					button2.top = "-50px";
+					button2.left = "0px";
+					button2.color = "yellow";
+					button2.cornerRadius = 20;
+					button2.background = "green";
+					//button1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+					button2.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+					button2.isVisible = false;
+					button2.onPointerUpObservable.add(function() {
+					
+						//console.log("button 2 pressed");
+						
+						if(isUnlocked === 0){
+						   isUnlocked =1;
+						  // console.log("unlocked = " + isUnlocked);
+						   BABYLON.Engine.audioEngine.unlock(); 
+					   	}
+						if (isPlaying === 0){
+							lager.play();
+							myScene.beginAnimation(skeleton[0], speakRange.from, speakRange.to, true);
+							isPlaying = 1;
+						}
+					});
+					advancedTexture.addControl(button2);  
+				
+					// end ui creation and play functionality
+		};
+		
+		
+    </script>
+</body>
+</html>
