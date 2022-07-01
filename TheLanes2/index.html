@@ -193,9 +193,10 @@ http://creativecommons.org/licenses/by/4.0/
 			var lines = 0;
 			
 			var soundArray = [
-			[0.0, 7.662],
-			[9.077, 4.988],
-			[16.379, 11.514],
+			[0.0, 7.67],
+			[9.077, 4.96],
+			[15.954, 5.78],
+			[23.457, 5.49],
 			];
 
 			
@@ -751,7 +752,7 @@ http://creativecommons.org/licenses/by/4.0/
 							theWindows[1].isPickable = true;
 							//console.log(theWindows[1].name);
 							divWords.innerHTML = winText[0];
-							theSounds.play(0,soundArray[0][0], soundArray[0][1]);
+							theSounds.play(0,soundArray[2][0], soundArray[2][1]);
 							break;
 						
 						case "windows1" :
@@ -771,7 +772,7 @@ http://creativecommons.org/licenses/by/4.0/
 						case "windows3" :
 							myTrigger2.isPickable = false;
 							divWords.innerHTML = winText[3];
-							theSounds.play(0,soundArray[2][0], soundArray[2][1]);
+							theSounds.play(0,soundArray[3][0], soundArray[3][1]);
 							//items[2].setEnabled(true);
 							items[2].setVerticesData(BABYLON.VertexBuffer.UVKind, uvArray[2]);
 							menuTotal = menuTotal + 1;
@@ -847,7 +848,8 @@ http://creativecommons.org/licenses/by/4.0/
 	
 		function createAudio(){
 
-			theSounds = new BABYLON.Sound("sounds", "Quater_sounds_bits01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.1  });
+			theSounds = new BABYLON.Sound("sounds", "Quater_sounds02.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.2  });
+			//theSounds = new BABYLON.Sound("sounds", "Quater_sounds_bits01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.1  });
 			//theSounds = new BABYLON.Sound("sounds", "Quater_sounds_bits01.mp3", myScene, soundReady, {autoplay: false});
 			//theGulls = new BABYLON.Sound("gulls", "sea_gull01.mp3", myScene, soundReady, { loop: true, autoplay: false, volume: 0.05  });
 			
