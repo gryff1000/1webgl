@@ -1,0 +1,171 @@
+Exporter version: 3.3.0, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\geonodes02\
+	Python World class constructor completed
+	processing begun of mesh:  aRock.001
+		processing begun of material:  rocks_4.arid
+			processing texture two_rocks1_dark1
+		Custom split normals with tangents being used
+		num positions      :  54
+		num normals        :  54
+		num tangents       :  216
+		num uvs            :  108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  54
+	processing begun of mesh:  aRock.002
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.003
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.004
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.005
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.006
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.007
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.008
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.009
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.010
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.011
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.012
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.013
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.014
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.015
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.016
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.017
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.018
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.019
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.020
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.021
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.022
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.023
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.024
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.025
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.026
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.027
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.028
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.029
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.030
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.031
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.032
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.033
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.034
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.035
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.036
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.037
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.038
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.039
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.040
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.041
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.042
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.043
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.044
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.045
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.046
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.047
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.048
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.049
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.050
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.051
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.052
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.053
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.054
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.055
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.056
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.057
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.058
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.059
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.060
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.061
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.062
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.063
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.064
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.065
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  aRock.066
+		mesh is an instance of :  aRock.001.  Processing halted.
+	processing begun of mesh:  terrain._new
+		processing begun of material:  terrain_splat_text
+		num positions      :  1024
+		num normals        :  1024
+		num tangents       :  0
+		num uvs            :  2048
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1922
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  aRock.001
+	writing mesh:  terrain._new
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.9176 secs
