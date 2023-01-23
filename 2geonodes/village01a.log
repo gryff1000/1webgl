@@ -1,0 +1,97 @@
+Exporter version: 3.3.0, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\village\
+	Python World class constructor completed
+	processing begun of mesh:  Plane
+		processing begun of material:  Material.002
+			processing texture grass_mud_diffuseOriginal
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  house_1.001
+		processing begun of material:  Material
+			processing texture house_1_v2
+		num positions      :  819
+		num normals        :  819
+		num tangents       :  0
+		num uvs            :  1638
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  338
+	processing begun of mesh:  cottage1.002
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		num positions      :  449
+		num normals        :  449
+		num tangents       :  0
+		num uvs            :  898
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  196
+	processing begun of mesh:  house_2.001
+		processing begun of material:  Material.001
+			processing texture house_1_v2
+		num positions      :  610
+		num normals        :  610
+		num tangents       :  0
+		num uvs            :  1220
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  248
+	processing begun of mesh:  house_1.002
+		mesh is an instance of :  house_1.001.  Processing halted.
+	processing begun of mesh:  house_1.003
+		mesh is an instance of :  house_1.001.  Processing halted.
+	processing begun of mesh:  house_1.004
+		mesh is an instance of :  house_1.001.  Processing halted.
+	processing begun of mesh:  house_2.002
+		mesh is an instance of :  house_2.001.  Processing halted.
+	processing begun of mesh:  house_2.003
+		mesh is an instance of :  house_2.001.  Processing halted.
+	processing begun of mesh:  house_2.004
+		mesh is an instance of :  house_2.001.  Processing halted.
+	processing begun of mesh:  cottage1.003
+		mesh is an instance of :  cottage1.002.  Processing halted.
+	processing begun of mesh:  house_1.005
+		mesh is an instance of :  house_1.001.  Processing halted.
+	processing begun of mesh:  cottage1.004
+		mesh is an instance of :  cottage1.002.  Processing halted.
+	processing begun of mesh:  house_2.005
+		mesh is an instance of :  house_2.001.  Processing halted.
+	processing begun of mesh:  house_1.006
+		mesh is an instance of :  house_1.001.  Processing halted.
+	processing begun of mesh:  house_1.007
+		mesh is an instance of :  house_1.001.  Processing halted.
+	processing begun of mesh:  house_1.008
+		mesh is an instance of :  house_1.001.  Processing halted.
+	processing begun of mesh:  house_2.006
+		mesh is an instance of :  house_2.001.  Processing halted.
+	processing begun of mesh:  house_2.007
+		mesh is an instance of :  house_2.001.  Processing halted.
+	processing begun of mesh:  house_2.008
+		mesh is an instance of :  house_2.001.  Processing halted.
+	processing begun of mesh:  cottage1.005
+		mesh is an instance of :  cottage1.002.  Processing halted.
+	processing begun of camera (ArcRotateCamera):  Camera
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Plane
+	writing mesh:  house_1.001
+	writing mesh:  cottage1.002
+	writing mesh:  house_2.001
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.0683 secs
