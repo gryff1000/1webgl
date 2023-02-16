@@ -587,7 +587,8 @@
 		
 		function createAudio(){
 
-	//BABYLON.Engine.audioEngine.unlock(); 
+		BABYLON.Engine.audioEngine.unlock();
+		console.log("audio unlocked");
 	
 		theIntro = new BABYLON.Sound("theSounds1", "intro02a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
 		theMagic1 = new BABYLON.Sound("theSounds2", "magic01a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
@@ -603,8 +604,8 @@
 			if(soundsReady > 4){
 			
 				console.log("sounds ready = " + soundsReady);
-				BABYLON.Engine.audioEngine.unlock();
-				console.log("audio unlocked");
+				//BABYLON.Engine.audioEngine.unlock();
+				//console.log("audio unlocked");
 				//theIntro.play();
 			}
 		
