@@ -603,6 +603,8 @@
 			if(soundsReady > 4){
 			
 				console.log("sounds ready = " + soundsReady);
+				BABYLON.Engine.audioEngine.unlock();
+				console.log("audio unlocked");
 				//theIntro.play();
 			}
 		
