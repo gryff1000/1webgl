@@ -1,0 +1,361 @@
+Exporter version: 3.3.1, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\castle3\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  start_cam
+	processing begun of mesh:  trigger01
+		processing begun of material:  Material
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  firebox
+		processing begun of material:  firebox
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  aLog01
+		processing begun of material:  wood
+		processing begun of material:  ends
+			processing texture burned_bark02a
+		processing begun of multimaterial:  walls02.Multimaterial#0
+		num positions      :  72
+		num normals        :  72
+		num tangents       :  0
+		num uvs            :  144
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+	processing begun of mesh:  aLog02
+		mesh is an instance of :  aLog01.  Processing halted.
+	processing begun of mesh:  new_col
+		processing begun of material:  Material_baked
+			processing texture stone_column2
+		num positions      :  33
+		num normals        :  33
+		num tangents       :  0
+		num uvs            :  66
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  new_col.001
+		mesh is an instance of :  new_col.  Processing halted.
+	processing begun of mesh:  new_col.002
+		mesh is an instance of :  new_col.  Processing halted.
+	processing begun of mesh:  new_col.003
+		mesh is an instance of :  new_col.  Processing halted.
+	processing begun of mesh:  new_col.004
+		mesh is an instance of :  new_col.  Processing halted.
+	processing begun of mesh:  new_col.005
+		mesh is an instance of :  new_col.  Processing halted.
+	processing begun of mesh:  new_col.006
+		mesh is an instance of :  new_col.  Processing halted.
+	processing begun of mesh:  new_col.007
+		mesh is an instance of :  new_col.  Processing halted.
+	processing begun of mesh:  inside-walls
+		processing begun of material:  thewall
+			processing texture brick1024
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  0
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  door-wall_03
+		processing begun of material:  thewall
+		processing begun of material:  bench
+		registered as also a user of material:  thewall
+			processing texture my_old_door2a
+		processing begun of multimaterial:  walls02.Multimaterial#1
+		num positions      :  94
+		num normals        :  94
+		num tangents       :  0
+		num uvs            :  188
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  42
+	processing begun of mesh:  door-wall_01
+		mesh is an instance of :  door-wall_03.  Processing halted.
+	processing begun of mesh:  doorInner01
+		processing begun of material:  thewall
+		processing begun of material:  bench
+		registered as also a user of material:  thewall
+		registered as also a user of material:  bench
+		processing begun of multimaterial:  walls02.Multimaterial#2
+		num positions      :  26
+		num normals        :  26
+		num tangents       :  0
+		num uvs            :  52
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  doorInner02
+		animation processing begun
+			processing action doorInner02_Action:  in[1 - 40], out[0 - 40]
+		processing begun of material:  thewall
+		processing begun of material:  bench
+		registered as also a user of material:  thewall
+		registered as also a user of material:  bench
+		processing begun of multimaterial:  walls02.Multimaterial#3
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  doorInner03
+		animation processing begun
+			processing action doorInner03_Action:  in[1 - 40], out[0 - 40]
+		processing begun of material:  thewall
+		processing begun of material:  bench
+		registered as also a user of material:  thewall
+		registered as also a user of material:  bench
+		processing begun of multimaterial:  walls02.Multimaterial#4
+		num positions      :  26
+		num normals        :  26
+		num tangents       :  0
+		num uvs            :  52
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  fire_col01
+		processing begun of material:  Material_baked
+		registered as also a user of material:  Material_baked
+		num positions      :  33
+		num normals        :  33
+		num tangents       :  0
+		num uvs            :  66
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  fire_col01.001
+		mesh is an instance of :  fire_col01.  Processing halted.
+	processing begun of mesh:  inside-walls.003
+		mesh is an instance of :  inside-walls.  Processing halted.
+	processing begun of mesh:  door-wall_00
+		mesh is an instance of :  door-wall_03.  Processing halted.
+	processing begun of mesh:  door-wall_02
+		mesh is an instance of :  door-wall_03.  Processing halted.
+	processing begun of mesh:  trigger02
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  inside-walls.004
+		mesh is an instance of :  inside-walls.  Processing halted.
+	processing begun of mesh:  doorInner04
+		animation processing begun
+			processing action doorInner04Action:  in[1 - 40], out[0 - 40]
+		processing begun of material:  thewall
+		processing begun of material:  bench
+		registered as also a user of material:  thewall
+		registered as also a user of material:  bench
+		processing begun of multimaterial:  walls02.Multimaterial#5
+		num positions      :  26
+		num normals        :  26
+		num tangents       :  0
+		num uvs            :  52
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  manuscript01
+		processing begun of material:  paper.001
+			processing texture paper01
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  0
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  42
+	processing begun of mesh:  walls
+		processing begun of material:  thewall
+		registered as also a user of material:  thewall
+		num positions      :  348
+		num normals        :  348
+		num tangents       :  0
+		num uvs            :  696
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  150
+	processing begun of mesh:  corridor
+		processing begun of material:  bench.001
+			processing texture my_old_door2a
+		num positions      :  195
+		num normals        :  195
+		num tangents       :  0
+		num uvs            :  390
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  mantle
+		processing begun of material:  bench
+		registered as also a user of material:  bench
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  0
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  hearth
+		processing begun of material:  thewall
+		registered as also a user of material:  thewall
+		num positions      :  20
+		num normals        :  20
+		num tangents       :  0
+		num uvs            :  40
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  door_top
+		processing begun of material:  bench.001
+		registered as also a user of material:  bench.001
+		num positions      :  80
+		num normals        :  80
+		num tangents       :  0
+		num uvs            :  160
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  30
+	processing begun of mesh:  doorL
+		animation processing begun
+			processing action doorL_Action:  in[1 - 40], out[0 - 40]
+		processing begun of material:  bench.001
+		registered as also a user of material:  bench.001
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  0
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  doorR
+		animation processing begun
+			processing action doorR_Action:  in[1 - 40], out[0 - 40]
+		processing begun of material:  bench.001
+		registered as also a user of material:  bench.001
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  corridor.001
+		processing begun of material:  bench.001
+		registered as also a user of material:  bench.001
+		num positions      :  197
+		num normals        :  197
+		num tangents       :  0
+		num uvs            :  394
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  door_top.001
+		processing begun of material:  bench.001
+		registered as also a user of material:  bench.001
+		num positions      :  78
+		num normals        :  78
+		num tangents       :  0
+		num uvs            :  156
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  30
+	processing begun of mesh:  doorEnd
+		processing begun of material:  bench.001
+		registered as also a user of material:  bench.001
+		num positions      :  61
+		num normals        :  61
+		num tangents       :  0
+		num uvs            :  122
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  theGround
+		processing begun of material:  ground
+			processing texture tiles9_norm
+			processing texture tiles9_dif
+		num positions      :  16
+		num normals        :  16
+		num tangents       :  0
+		num uvs            :  32
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  trapdoor
+		processing begun of material:  trap_mat
+		processing begun of material:  handle
+			processing texture trapdoor
+		processing begun of multimaterial:  walls02.Multimaterial#6
+		num positions      :  106
+		num normals        :  106
+		num tangents       :  0
+		num uvs            :  212
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  86
+	processing begun of mesh:  ceiling
+		processing begun of material:  ceiling
+			processing texture planks01_4
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of light (HEMI FROM AREA):  Area
+========= Writing of JSON file started =========
+	writing mesh:  trigger01
+	writing mesh:  firebox
+	writing mesh:  aLog01
+	writing mesh:  new_col
+	writing mesh:  inside-walls
+	writing mesh:  door-wall_03
+	writing mesh:  doorInner01
+	writing mesh:  doorInner02
+	writing mesh:  doorInner03
+	writing mesh:  fire_col01
+	writing mesh:  trigger02
+	writing mesh:  doorInner04
+	writing mesh:  manuscript01
+	writing mesh:  walls
+	writing mesh:  corridor
+	writing mesh:  mantle
+	writing mesh:  hearth
+	writing mesh:  door_top
+	writing mesh:  doorL
+	writing mesh:  doorR
+	writing mesh:  corridor.001
+	writing mesh:  door_top.001
+	writing mesh:  doorEnd
+	writing mesh:  theGround
+	writing mesh:  trapdoor
+	writing mesh:  ceiling
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 10.2554 secs

@@ -1,0 +1,270 @@
+Exporter version: 3.3.1, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\castle3\
+	Python World class constructor completed
+	processing begun of skeleton:  the_book, id:  0
+		processing begun of bone:  book base, index:  0
+		processing begun of bone:  book spine, index:  1
+		processing begun of bone:  book page, index:  2
+		processing action the_bookAction:  in[1 - 40], out[0 - 40]
+	processing begun of mesh:  ending1
+		processing begun of material:  paper
+			processing texture paper01
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  0
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  picture
+		processing begun of material:  bench
+		processing begun of material:  picture
+			processing texture benchwood01
+			processing texture dragon_quilt02
+		processing begun of multimaterial:  desk01a.Multimaterial#0
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  book_base
+		processing begun of material:  pages
+		processing begun of material:  cover
+			processing texture book_new1_anim1c_text1x1024_old15
+			processing texture book_new1_anim1c_text1x1024_old15
+		processing begun of multimaterial:  desk01a.Multimaterial#1
+		num positions      :  377
+		num normals        :  377
+		num tangents       :  0
+		num uvs            :  754
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  208
+		Skeleton stats:  
+			Total Influencers:  377
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  377
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  1508
+	processing begun of mesh:  bench
+		processing begun of material:  bench
+		registered as also a user of material:  bench
+		num positions      :  298
+		num normals        :  298
+		num tangents       :  0
+		num uvs            :  596
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  134
+	processing begun of mesh:  bench.stand
+		processing begun of material:  bench
+		registered as also a user of material:  bench
+		num positions      :  48
+		num normals        :  48
+		num tangents       :  0
+		num uvs            :  96
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of camera (UniversalCamera):  End_Cam
+	processing begun of mesh:  bell
+		processing begun of material:  bell
+		processing begun of material:  handle
+			processing texture brass_shadow02
+		processing begun of multimaterial:  desk01a.Multimaterial#2
+		num positions      :  378
+		num normals        :  378
+		num tangents       :  0
+		num uvs            :  756
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  406
+	processing begun of mesh:  bottle01
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  206
+		num normals        :  206
+		num tangents       :  0
+		num uvs            :  412
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  288
+	processing begun of mesh:  bottle02
+		mesh is an instance of :  bottle01.  Processing halted.
+	processing begun of mesh:  feather
+		processing begun of material:  feather
+			processing texture feather_1x512
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  cork
+		processing begun of material:  cork
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  0
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  46
+	processing begun of mesh:  candle
+		processing begun of material:  candle
+		num positions      :  80
+		num normals        :  80
+		num tangents       :  0
+		num uvs            :  160
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  150
+	processing begun of mesh:  flame
+		processing begun of material:  flame
+			processing texture flame
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  manuscript00
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  56
+		num normals        :  56
+		num tangents       :  0
+		num uvs            :  112
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  84
+	processing begun of mesh:  tarotDeck
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  26
+		num normals        :  26
+		num tangents       :  0
+		num uvs            :  52
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  14
+	processing begun of mesh:  tarot_card01
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  tarot_card02
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  cards
+	processing begun of mesh:  tarot_card03
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  tarot_card04
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Skull1
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  1135
+		num normals        :  1135
+		num tangents       :  0
+		num uvs            :  2270
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  668
+	processing begun of mesh:  books
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  9
+		num normals        :  9
+		num tangents       :  0
+		num uvs            :  18
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  aBook
+		processing begun of material:  paper
+		registered as also a user of material:  paper
+		num positions      :  72
+		num normals        :  72
+		num tangents       :  0
+		num uvs            :  144
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  28
+	processing begun of mesh:  aurabook
+		processing begun of material:  Material
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of light (HEMI FROM AREA):  Point
+	processing begun of light (HEMI FROM AREA):  Hemi
+========= Writing of JSON file started =========
+	writing mesh:  ending1
+	writing mesh:  picture
+	writing mesh:  book_base
+	writing mesh:  bench
+	writing mesh:  bench.stand
+	writing mesh:  bell
+	writing mesh:  bottle01
+	writing mesh:  feather
+	writing mesh:  cork
+	writing mesh:  candle
+	writing mesh:  flame
+	writing mesh:  manuscript00
+	writing mesh:  tarotDeck
+	writing mesh:  tarot_card01
+	writing mesh:  tarot_card02
+	writing mesh:  tarot_card03
+	writing mesh:  tarot_card04
+	writing mesh:  Skull1
+	writing mesh:  books
+	writing mesh:  aBook
+	writing mesh:  aurabook
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 3.2326 secs
