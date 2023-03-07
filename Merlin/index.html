@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>The Book</title>
+   <!-- <script src="../hand.js"></script>
+    <script src="../babylon.1.12-beta.js"></script>
+	<script src="../howler.js"></script> -->
+	
+	 <!-- <script src="https://cdn.babylonjs.com/babylon.js"></script>-->
+	 
+	 <script src = "https://preview.babylonjs.com/babylon.js"></script>
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height: 20px; 
+		display: block;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		
+		
+		#credits {
+		position: absolute;
+		background-color: black;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 200px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+		#pick {
+		position: absolute;
+		background-color: black;
+		border:2px solid grey;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80%;
+		width: 200px;
+		height:20px;
+		display: none;
+		}
+		
+    </style>
+</head>
+<body>
+	<div id="loader">Loading...</div>
+	<div id="fps">38 fps</div>
+	<div id ="DCs">0</div>
+	<!--<div id="pick">Book : closed twice</div>-->
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	<div id="pick"> Book : closed</div>
+	
+	<!--
+	<div id = "credits">To be Continued ... </div>;
+	-->
+	
+    <canvas height="695" width="1920" id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divVerts = document.getElementById("verts")
+			var divPick = document.getElementById("pick");
+			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			var mySkeleton = [];
+			var thetext = null;
+			var book = null;
+			var desk =null;
+			var isOpen = [false, false, false, false, false, false];
+			var hasPlayed = [false,false,false];
+			var isPlay = false;
+			var isAudio = 0;
+			var pageNum = 0;
+			var thePart = [];
+			var thePage;
+			var ps1, ps2;
+			var theDoorL, theDoorR;
+			var manuscript;
+			var uvArray = [];
+			var myCamera2;
+			var cardDeck = [];
+			var card_seen =[]
+			var cardnum = 1;
+			var soundsReady = 0;
+			var soundArray = ["theIntro","theMagic1","theMagic2"];
+
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			var uvZero = [0.125,0.75,
+							0.0,0.875,
+							0.0,0.75,
+							0.125,0.875];
+			
+			
+			/*
+			var uvZero = [0.125,0.875,
+							0.125,1,
+							0.0,1,
+							0.0,0.875];
+							
+			//[ 0.125, 0.751, 0, 0.876, 0, 0.751, 0.125, 0.876 ]
+			
+			
+			*/
+			
+			
+			
+			
+			BABYLON.SceneLoader.Append("", "menu6.babylon", myScene);
+            BABYLON.SceneLoader.Append("", "desk01a.babylon", myScene);
+			BABYLON.SceneLoader.Append("", "monk04b.babylon", myScene);
+			BABYLON.SceneLoader.Append("", "walls02.babylon", myScene);
+			
+                myScene.executeWhenReady(function () {
+				
+				//BABYLON.Engine.audioEngine.unlock();
+				//console.log("audio unlocked");
+				
+					var tempcam = myScene.getCameraByName("start_cam");
+					
+					console.log(tempcam.position);
+					
+					var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+                    
+					myCamera2 = myScene.getCameraByName("menu_Cam");
+					myCamera1 = myScene.getCameraByName("End_Cam");
+					
+					
+					
+					/*
+					myCamera1.lowerBetaLimit = 1.57;
+					myCamera1.upperBetaLimit = 1.57
+					myCamera1.lowerAlphaLimit = -1.57;
+					myCamera1.upperAlphaLimit = -1.57
+					*/
+					myCamera2.position.x = tempcam.position.x;
+					myCamera2.position.z = tempcam.position.z;
+					myCamera2.rotation = tempcam.rotation;
+					//myCamera2.position.x = 14;
+					//myCamera2.setTarget(BABYLON.Vector3.Zero());
+					myCamera2.speed = .05;
+					myCamera2.wheelPrecision = 500;
+					myCamera2.maxZ= 500;
+					//myCamera2.inputs.clear();
+					//myCamera2.inputs.addMouse();
+					myScene.activeCamera = myCamera2;
+					
+					//myScene.activeCamera = myCamera1;
+					
+					
+					// Attach camera to canvas inputs or if fixed do not.
+                   myScene.activeCamera.attachControl(canvas);
+					
+					
+					camSensor = new BABYLON.Mesh.CreateBox("sensor", 1, myScene);
+					camSensor.scaling = new BABYLON.Vector3(1, .1, 1);
+					camSensor.position = new BABYLON.Vector3(0.0, 0.5, 0.0);
+					camSensor.checkCollisions = true;
+					camSensor.isPickable = false;
+					camSensor.parent = myCamera2;
+					myCamera2.minZ = .05;
+					
+					manuscript = myScene.getMeshByName("manuscript01");
+					console.log("manuscript");
+					
+					
+					
+					
+		// Trigger code to close and open the entrance doors and any escape doors			
+					var aTrigger1 = myScene.getMeshByName("trigger01");
+					var aTrigger2 = myScene.getMeshByName("trigger02");
+					
+					camSensor.actionManager = new BABYLON.ActionManager(myScene);
+					
+					let outAction0 = new BABYLON.ExecuteCodeAction(
+						{
+							trigger: BABYLON.ActionManager.OnIntersectionExitTrigger, parameter: {mesh: aTrigger1}
+						},
+						(evt) => {
+							//console.log("left0");
+							//console.log(myCamera2.position);
+							var animation = myScene.beginAnimation(theDoorL, 40, 0, false, 0.5);
+							var animation = myScene.beginAnimation(theDoorR, 40, 0, false, 0.5);
+							//aTrigger.setEnabled(false);
+							camSensor.actionManager.unregisterAction(outAction0);
+						}
+					);
+					
+					let outAction1 = new BABYLON.ExecuteCodeAction(
+						{
+							trigger: BABYLON.ActionManager.OnIntersectionExitTrigger, parameter: {mesh: aTrigger2}
+						},
+						(evt) => {
+							//console.log("left0");
+							//console.log(myCamera2.position);
+							var animation = myScene.beginAnimation(theDoorI03, 40, 0, false, 0.5);
+							myScene.beginAnimation(mySkeleton[1],10,50,true, 1);
+							theFire01.play();
+							
+							theFire01.onended = function(){
+								//audioFlag = 0;	
+								myScene.stopAnimation(mySkeleton[1]);
+								thePicture.isPickable = true;
+								
+								console.log('finished anim');
+							};
+		
+							//var animation = myScene.beginAnimation(theDoorR, 40, 0, false, 0.5);
+							//aTrigger2.setEnabled(false);
+							camSensor.actionManager.unregisterAction(outAction1);
+						}
+					);
+					
+					camSensor.actionManager.registerAction(outAction0);
+					camSensor.actionManager.registerAction(outAction1);
+					
+		// End of Trigger code to close and open the entrance doors and any escape doors	
+					
+					
+					//draw the tarot cards in menu 
+					drawTarot(myScene);
+					
+					
+					
+		//get tarot cards on table
+					
+					theTarotDeck = myScene.getMeshByName("tarotDeck");
+					
+					var theCards = myScene.getMeshByName("cards");
+					card_seen = theCards.getChildren();
+					//console.log(card_seen.length);
+					for(i = 0; i<card_seen.length; i++){
+					
+						//console.log(card_seen[i].name);
+					
+					}
+					
+[1]		//Get the skeleton
+					mySkeleton[0] = myScene.getSkeletonByName("the_book");
+					mySkeleton[1] = myScene.getSkeletonByName("Monk01");
+					myScene.beginAnimation(mySkeleton[1],10,50,false, 1);
+					//And the page material
+					//thePage = myScene.getMaterialByName("book_base_baked");
+					thePage = myScene.getMaterialByName("pages");
+					console.log("thePage");
+		// end get skeleton			
+					
+					//Billboard the flame
+					var flame1 = myScene.getMeshByName("flame"); 
+					flame1.billboardMode = BABYLON.Mesh.BILLBOARDMODE_Y;
+					
+					//set the glow
+					var gl = new BABYLON.GlowLayer("glow", myScene);
+					gl.intensity = 2;
+					
+					
+					createAura();
+					createFire();
+					createAudio();
+					//BABYLON.Engine.audioEngine.unlock();
+					//console.log("audio unlocked");
+					
+					theDoorL =  myScene.getMeshByName("doorL");
+					theDoorR =  myScene.getMeshByName("doorR");
+					theDoorI02 = myScene.getMeshByName("doorInner02");
+					theDoorI03 = myScene.getMeshByName("doorInner03");
+					theDoorI03.isPickable = false;
+					theDoorI04 = myScene.getMeshByName("doorInner04");
+					theDoorI04.isPickable = false;
+					theTrapdoor = myScene.getMeshByName("trapdoor");
+					theTrapdoor.isPickable = false;
+					thePicture = myScene.getMeshByName("picture");
+					thePicture.isPickable = false;
+					
+					
+					//var animation = myScene.beginAnimation(theDoorL, 0, 40, false, 0.5);
+					
+					
+		//get total meshes and vertices and display
+					let vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+					
+		//end total meshes and vertices and display
+					
+					
+					
+            // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+					//console.log(myCamera2.position);
+                    myScene.render();
+                    });
+                });
+        };
+		
+		
+		function createAura(){
+		
+			var aAura = myScene.getMeshByName("aurabook");
+			aAura.isVisible = false;
+			var aAuraPos = aAura.position;
+			aAuraPos.y += .09;
+			
+			// Create a particle system
+			ps1 = new BABYLON.ParticleSystem("particles", 2000, myScene);
+
+			//Texture of each particle
+		   ps1.particleTexture = new BABYLON.Texture("star1.png", myScene);
+
+			// Where the particles come from
+			ps1.emitter = aAura; // the starting object, the emitter
+			ps1.minEmitBox = new BABYLON.Vector3(-0.01, 0, 0); // Starting all from
+			ps1.maxEmitBox = new BABYLON.Vector3(0.01, 0, 0); // To...
+
+			// Colors of all particles
+			ps1.color1 = new BABYLON.Color4(1.0, 0.0, 0.0, 1.0);
+			ps1.color2 = new BABYLON.Color4(1.0, 1.0, 0.0, 1.0);
+			ps1.colorDead = new BABYLON.Color4(0.2, 0.2, 0.2, 0.0);
+
+			// Size of each particle (random between...
+			ps1.minSize = 0.01;
+			ps1.maxSize = 0.05;
+
+			// Life time of each particle (random between...
+			ps1.minLifeTime = 0.1;
+			ps1.maxLifeTime = 0.2;
+
+			// Emission rate
+			ps1.emitRate = 400;
+
+			// Blend mode : BLENDMODE_ONEONE, or BLENDMODE_STANDARD
+			ps1.blendMode = BABYLON.ParticleSystem.BLENDMODE_ONEONE;
+
+			// Set the gravity of all particles
+			ps1.gravity = new BABYLON.Vector3(0, -9.81, 0);
+
+			// Direction of each particle after it has been emitted
+			ps1.direction1 = new BABYLON.Vector3(-3, 4, 3);
+			ps1.direction2 = new BABYLON.Vector3(3, 4, -3);
+
+			// Angular speed, in radians
+			ps1.minAngularSpeed = 0;
+			ps1.maxAngularSpeed = Math.PI;
+
+			// Speed
+			ps1.minEmitPower = .1;
+			ps1.maxEmitPower = 1;
+			ps1.updateSpeed = 0.001;
+			//console.log("reached");
+		};
+
+		
+		function createFire(){
+		
+			ps2 = new BABYLON.ParticleSystem("particles", 2000, myScene);
+
+			//Texture of each particle
+			ps2.particleTexture = new BABYLON.Texture("flame2.png", myScene);
+
+			var torch1 = myScene.getMeshByName("firebox");
+			torch1.isVisible = false;
+			//var torch2 = this.scene.getMeshByName("torch01");
+			//torch1.position.y = .4;
+
+			ps2.emitter = torch1;
+			ps2.blendMode = BABYLON.ParticleSystem.BLENDMODE_STANDARD;
+			ps2.minSize = 0.1;
+			ps2.maxSize = 0.8;
+			ps2.minLifeTime = 0.7;
+			ps2.maxLifeTime = 0.8;
+			ps2.minEmitBox = new BABYLON.Vector3(-0.15, 0, -0.15); // Starting all from
+			ps2.maxEmitBox = new BABYLON.Vector3(0.10, 0.1, 0.15); // To...
+			ps2.emitRate = 25;
+			//particleSystem.start();
+		
+		
+		
+		};
+		
+		
+		
+		function drawTarot(myScene){
+		
+			var theCards = myScene.getMeshByName("allitems");
+			var allCards = theCards.getChildren();
+			console.log("Cards =" + allCards.length);
+			//allCards.reverse();
+			for(i=0; i<allCards.length; i++){
+			
+			allCards[i].parent = myCamera2;
+			
+			//console.log(allCards[i].name);
+			
+			}
+			
+			//deck background
+			cardDeck[0] = myScene.getMeshByName("bpack00");
+			cardDeck[0].isVisible = false;
+			cardDeck[0].parent = myCamera2;
+			
+			//the card deck
+			theDeck = myScene.getMeshByName("bpack01");
+			cardDeck[1] = theDeck;
+			cardDeck[1].isVisible = false;
+			cardDeck[1].parent = myCamera2;
+			cardDeck[1].isPickable = true;
+			
+			
+			
+			
+			// all dealt cards background
+			var card_back = myScene.getMeshByName("backpack")
+			card_back.parent = myCamera2;
+			card_back.isVisible  = false;
+			
+			function showDeck(){
+				if(isAudio === 0){
+					if(cardnum > 6) {
+						//console.log("end not reached");
+						cardDeck[1].isPickable = false;
+						for (i = 1; i <7; i++){
+							allCards[i].isVisible = false;
+							//console.log( i + " cards gone");
+						}
+						//console.log("end reached");
+						card_back.isVisible = false;
+						cardDeck[1].isVisible = false;
+						cardDeck[0].isVisible = false;
+						return;
+					};
+				//console.log("a hit")
+					card_back.isVisible = true;
+					//for (i=1; i<7; i++){
+						//allCards[i].setVerticesData(BABYLON.VertexBuffer.UVKind, uvZero);
+						//allCards[2].uOffset = .125;
+						cardDeck[1].isPickable = false;
+						allCards[cardnum].setVerticesData(BABYLON.VertexBuffer.UVKind, uvArray[cardnum]);
+						allCards[cardnum].isVisible = true;
+						//uvArray[1]= allCards[i].setVerticesData(BABYLON.VertexBuffer.UVKind);
+						console.log(cardnum);
+						cardnum = cardnum +1;
+						//console.log(cardnum);
+						if(cardnum === 7){
+							isAudio = 1;
+							theCards02.play();
+							
+							theCards02.onended = function() {
+								isAudio = 0;
+								cardDeck[1].isPickable = true;
+								theDoorI03.isPickable = true;
+							;}
+						}
+						else {
+							cardDeck[1].isPickable = true;
+						}
+				//};
+				
+			};
+			};
+			
+			cardDeck[1].actionManager = new BABYLON.ActionManager(myScene);
+			var action = new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, showDeck);
+			//new BABYLON.SetValueAction(BABYLON.ActionManager.OnPickTrigger, card_back, "visibility", 1.0);
+			cardDeck[1].actionManager.registerAction(action)
+			
+			
+			for (i = 0; i < allCards.length; i++){
+				uvArray[i] = allCards[i].getVerticesData(BABYLON.VertexBuffer.UVKind);
+				//console.log(uvArray[i]);
+				//if(i > 5){
+				//allCards[i].setVerticesData(BABYLON.VertexBuffer.UVKind, uvZero);
+				//}
+				//items[i].setEnabled(false);
+				//items[i].isPickable = false;
+				//items[i].parent = myCamera2;
+			};
+			
+			//hide the cards
+			
+			for (i=1; i<7; i++){
+				allCards[i].setVerticesData(BABYLON.VertexBuffer.UVKind, uvZero);
+				allCards[i].isVisible = false;
+				//console.log(allCards[i].name);
+			};
+		
+			
+		
+		
+		}; //end drawTarot
+		
+		//};
+		
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+		// On Click evt
+		 window.addEventListener("click", function (evt) {
+		 
+		 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
+		 //console.log(pickResult);
+		 if (pickResult.hit)
+        	{
+            //console.log(pickResult.hit);	
+			var objname = pickResult.pickedMesh.name;
+			//console.log(objname);
+            	switch(objname) {
+				
+					case "book_base" :
+							// is it first or second page - play different audio tracks
+							
+							if(isAudio === 0){
+							if (!isOpen[6] && !isPlay && pageNum <2) {
+										isPlay = true;
+										isAudio = 1;
+										if (pageNum === 0) {
+											theMagic1.play();
+												theMagic1.onended = function() {
+													isAudio = 0;
+												};
+											}
+										else {
+											isAudio = 1;
+											theMagic2.play();
+											theMagic2.onended = function() {
+													isAudio = 0;
+												};
+											//pageNum = 0;
+										}
+										pageNum = pageNum +1;
+										console.log(pageNum);
+										//thePage.diffuseTexture.uOffset = 0.0;
+										divPick.textContent = "Book : opened " + pageNum + " time";
+										
+										
+										ps1.start();
+										myScene.beginAnimation(mySkeleton[0], 1, 40, false, .5, function(){
+											//particleSystem.start();
+											//divPick.textContent = "Book : open " + pageNum ;
+											isPlay = false;
+											isOpen[6] = true;
+											
+										});
+								}
+							//}
+							else if (!isPlay) {
+									isPlay = true;
+									
+									divPick.textContent = "Book : closed " + pageNum + " time";
+									ps1.stop();
+									myScene.beginAnimation(mySkeleton[0], 40, 1, false, .5, function(){
+										//divPick.textContent = "book closed x" + pageNum ;
+										//particleSystem.stop();
+										//thePage.diffuseTexture.uOffset -= 0.5;
+										thePage.diffuseTexture.vOffset -= 0.5;
+										if(pageNum < 2){
+											isPlay = false;
+										}
+										else{
+											document.getElementById('pick').style.display = "none"; 
+											var animation = myScene.beginAnimation(theDoorI02, 40, 0, false, 1.0);
+											
+										}
+										isOpen[6] = false;
+										// change the page
+										//var thepage = myScene.getMaterialByName("book_base_baked");
+										//thepage.diffuseTexture.uOffset -=0.5;
+									
+									});
+							}
+						}
+						
+					break;
+
+					case "doorL": // open start doors either click on left or right door, and play intro sound.
+                    	//divPick.textContent = objname;
+						var animation = myScene.beginAnimation(theDoorL, 0, 40, false, 0.5);
+						var animation = myScene.beginAnimation(theDoorR, 0, 40, false, 0.5);
+						theDoorL.isPickable = false;
+						theDoorR.isPickable = false;
+						BABYLON.Engine.audioEngine.unlock();
+						//console.log("audio unlocked");
+						isAudio = 1;
+						theIntro.play();
+						
+						theIntro.onended = function(){
+							isAudio = 0;	
+							console.log("Intro is finished");
+						};
+						
+						
+                    break;
+					
+					case "doorR" :  // open start doors either click on left or right door, and play intro sound.
+						var animation = myScene.beginAnimation(theDoorR, 0, 40, false, 0.5);
+						var animation = myScene.beginAnimation(theDoorL, 0, 40, false, 0.5);
+						theDoorL.isPickable = false;
+						theDoorR.isPickable = false;
+						BABYLON.Engine.audioEngine.unlock();
+						//console.log("audio unlocked");
+						isAudio = 1;
+						theIntro.play();
+						
+						theIntro.onended = function(){
+							isAudio = 0;	
+							console.log("Intro is finished");
+						};
+					break;
+					
+					case "doorInner02": // open door to magic room
+                    	//divPick.textContent = objname;
+						document.getElementById('pick').style.display = "block"; 
+						var animation = myScene.beginAnimation(theDoorI02, 0, 40, false, 0.5);
+						theDoorI02.isPickable = false;
+                    break;
+					
+					case "doorInner03":  // open door to wizard room and start fire system
+                    	//divPick.textContent = objname;
+						ps2.start();
+						var animation = myScene.beginAnimation(theDoorI03, 0, 40, false, 0.5);
+						//var animation = myScene.beginAnimation(theDoorR, 0, 40, false, 0.5);
+						theDoorI03.isPickable = false;
+						//theDoorR.isPickable = false;
+                    break;
+					
+					
+					case "doorInner04": // open door to trap door room
+                    	//divPick.textContent = objname;
+						var animation = myScene.beginAnimation(theDoorI04, 0, 40, false, 0.5);
+						theDoorI04.isPickable = false;
+                    break;
+					
+					case "tarotDeck": // hide tarot deck on desk and no longer pickable.
+						if (isAudio  === 0){
+							theTarotDeck.isPickable = false;
+							theTarotDeck.isVisible = false
+							cardDeck[0].isVisible = true;
+							cardDeck[1].isVisible = true;
+							cardDeck[1].isPickable = false;
+							for(i=0; i<card_seen.length; i++){
+								card_seen[i].isVisible = false;
+							}
+							isAudio = 1;
+							theCards01.play();
+							theCards01.onended = function() {
+								cardDeck[1].isPickable = true;
+								isAudio = 0;
+							};
+						};
+						//cardDeck[1].isPickable = true;
+						//theDoorR.isPickable = false;
+                    break;
+					
+					
+					case "manuscript01":  // play morgana audio
+						if(isAudio ===  0){
+							console.log("manuscript clicked");
+							manuscript.isPickable = false;
+							isAudio = 1;
+							myScene.beginAnimation(mySkeleton[1],10,50,true, 1);
+							theMorgana01.play();
+							theMorgana01.onended = function() {
+								myScene.stopAnimation(mySkeleton[1]);
+								isAudio = 0;
+							};
+						};	
+                    break;
+					
+					case "picture":  // play the picture audio
+						if(isAudio === 0){
+							console.log("dragons clicked");
+							thePicture.isPickable = false;
+							isAudio = 1;
+							myScene.beginAnimation(mySkeleton[1],10,50,true, 1);
+							thePicture01.play();
+							thePicture01.onended = function() {
+								myScene.stopAnimation(mySkeleton[1]);
+								isAudio = 0;
+								theDoorI04.isPickable = true; // open the last door to trap door
+								theTrapdoor.isPickable = true; 
+							};
+						};
+                    break;
+					
+					case "trapdoor": // exit audio and jump to ending
+                    	if(isAudio === 0){
+							theTrapdoor.isPickable = false;
+							isAudio = 1;
+							myScene.beginAnimation(mySkeleton[1],10,50,true, 1);
+							theExit01.play();
+							theExit01.onended = function(){
+								myScene.stopAnimation(mySkeleton[1]);
+								myCamera2.detachControl();
+								myScene.activeCamera = myCamera1;
+								console.log("trapdoor clicked");
+							};
+					}
+                    break;
+						
+            	}
+        	}
+		 
+		 }
+		 )
+	
+		
+		function createAudio(){
+
+			theIntro = new BABYLON.Sound("theSounds1", "intro02a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theMagic1 = new BABYLON.Sound("theSounds2", "magic01a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theMagic2 = new BABYLON.Sound("theSounds3", "magic02a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theCards01 = new BABYLON.Sound("theSounds4", "cards01a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theCards02 = new BABYLON.Sound("theSounds5", "cards02a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theFire01 = new BABYLON.Sound("theSounds1", "fire_room01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			thePicture01 = new BABYLON.Sound("theSounds1", "picture01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theMorgana01 = new BABYLON.Sound("theSounds1", "morgana01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theExit01 = new BABYLON.Sound("theSounds1", "exit01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			
+			
+			function soundReady() {
+				soundsReady++;
+				if(soundsReady >8){
+					console.log("sounds ready = " + soundsReady);
+				}
+			};
+
+	
+		};
+				
+		
+    </script>
+
+
+</body></html>
