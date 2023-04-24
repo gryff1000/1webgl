@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Isle Of The Dead</title>
+   
+	<script src="https://preview.babylonjs.com/babylon.js"></script>
+	<!-- <script src="babylon.mixMaterial.min.js"></script> -->
+	<script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+	
+	<link rel="icon" href="data:,">
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display: block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+		#pick {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 100px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<!--<div id="loader">Loading...</div> -->
+	
+	<div id="fps">0 fps</div>
+	<div id ="DCs">0</div>
+	<!--<div id="pick">Book : closed twice</div>-->
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	<!--<div id="pick">book closed</div> -->
+	
+	
+    <canvas height="695" width="1920" id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divVerts = document.getElementById("verts")
+			//var divPick = document.getElementById("pick");
+			//var divPick = document.getElementById("pick");
+			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			var theBars = [0,1,0,0,1,1,0,1,1,0];
+			var theCount;
+			var theLid;
+			var theSliders = [];
+			var myCamera;
+			var aFlag = 0;
+			
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			
+			/*
+			var mix = new BABYLON.MixMaterial("mix", myScene);
+			
+			mix.mixTexture1 = new BABYLON.Texture("new_splatA.png", myScene);
+			mix.diffuseTexture1 = new BABYLON.Texture("bakedGrass01.png", myScene);
+			mix.diffuseTexture3 = new BABYLON.Texture("rock2baked.png", myScene);
+			mix.diffuseTexture2 = new BABYLON.Texture("bakedRock01.png", myScene);
+			mix.diffuseTexture4 = new BABYLON.Texture("grass1.jpg", myScene);
+
+			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 10;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 10;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 20;
+			mix.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 1;
+			
+			*/
+			
+			//BABYLON.SceneLoader.Append("", "skydome01.babylon", myScene);
+			//BABYLON.SceneLoader.Append("", "terrain2023_02.babylon", myScene);
+			BABYLON.SceneLoader.Append("", "new_isle02.babylon", myScene);
+            
+			
+                myScene.executeWhenReady(function () {
+				
+					//myScene.clearColor = new BABYLON.Color3(.509,0.509,0.709);
+					//myScene.fogDensity = .00005;
+					//myScene.fogColor = new BABYLON.Color3(.05509,0.05509,0.0509);
+					//myScene.fogDensity = .005;
+					//myScene.fogEnd =100;
+					//myScene.fogColor = new BABYLON.Color3(.0509,0.0509,0.000);
+					
+			/*		var myCamera = myScene.getMeshByName("allCameras");
+					var theCameras =  myCamera.getChildren;
+					console.log(theCameras.length);
+					console.log(theCameras[0]);
+				
+					for (i=0; i<theCameras.length; i++){
+						console.log(theCameras[i].name);
+					};
+            */        
+					
+			/*		myCamera1 = myScene.getCameraByName("Camera1");
+					myCamera2 = myScene.getCameraByName("Camera2");
+					myCamera2.storeState();
+					myCamera3 = myScene.getCameraByName("Camera3");
+			*/
+					myCamera4 = myScene.getCameraByName("Camera4");
+					myCamera4.storeState();
+			
+					//myCamera4.speed = .2;
+					//myCamera4.wheelPrecision = 10;
+					//myCamera4.maxZ= 1000;
+					//myCamera4.minZ = .05;
+					//myCamera2.angularSensibility =4000;
+
+					//myCamera2.inputs.attached.keyboard.angularSpeed = .002;
+					//myCamera2.inputs.addMouse();
+					 
+					myCamera4.lowerBetaLimit = 1.0;
+					myCamera4.upperBetaLimit = 1.5
+					//myCamera4.lowerAlphaLimit = 1.0;
+					//myCamera4.upperAlphaLimit = 2.5
+					myCamera4.lowerRadiusLimit = 50;
+					myCamera4.upperRadiusLimit = 150;
+					 
+					
+					myScene.activeCamera = myCamera4;
+					myScene.activeCamera.speed = 0.2;
+					//myScene.activeCamera.wheelPrecision = 10;
+					//myScene.activeCamera.maxZ= 1000;
+					//myScene.activeCamera = .05;
+		/*			
+					camSensor = new BABYLON.Mesh.CreateBox("sensor", 1, myScene);
+					camSensor.scaling = new BABYLON.Vector3(2, .1, 2);
+					camSensor.position = new BABYLON.Vector3(0.0, 2.0, 0.0);
+					camSensor.isVisible = false;
+					camSensor.checkCollisions = true;
+					camSensor.isPickable = false;
+					camSensor.parent = myCamera;
+		*/			
+					
+					
+					// Attach camera to canvas inputs or if fixed do not.
+					myScene.activeCamera.attachControl(canvas);
+					
+					//myScene.gravity = new BABYLON.Vector3(0, -9.81, 0);
+					
+					
+					//var myLight1 = myScene.getLightByName("Light00");
+					var myLight1 = myScene.getLightByName("Light");
+					myLight1.intensity = 0.3;
+					myLight1.range = 200;
+					var myLight2 = myScene.getLightByName("Light01");
+					myLight2.intensity = 0.2;
+					myLight2.range = 100;
+					
+					
+					
+					var mix = new BABYLON.MixMaterial("mix", myScene);
+		
+					mix.mixTexture1 = new BABYLON.Texture("terrain_map02c.png", myScene);
+					
+					mix.diffuseTexture1 = new BABYLON.Texture("sandyCliff01.jpg", myScene);//red;
+					mix.diffuseTexture2 = new BABYLON.Texture("grass1.jpg", myScene);//green
+					mix.diffuseTexture3 = new BABYLON.Texture("new_sand_rock02.jpg", myScene);//blue
+					mix.diffuseTexture4 = new BABYLON.Texture("soil_sand01_diffuseOriginal.jpg", myScene);// alpha
+					//set repeat scales
+					mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 5;
+					mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 5;
+					mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 10;
+					mix.diffuseTexture4.uScale = 30;
+					mix.diffuseTexture4.vScale = 30;
+					
+			/*		
+					mix.diffuseTexture1 = new BABYLON.Texture("new_cliff02.jpg", myScene);//red;
+					mix.diffuseTexture2 = new BABYLON.Texture("new_sand_rock02.jpg", myScene);//green
+					mix.diffuseTexture3 = new BABYLON.Texture("path04a.jpg", myScene);//blue
+					mix.diffuseTexture4 = new BABYLON.Texture("soil_sand01_diffuseOriginal.jpg", myScene);// alpha
+					//set repeat scales
+					mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 6;
+					mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 5;
+					mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 3;
+					mix.diffuseTexture4.uScale = 30;
+					mix.diffuseTexture4.vScale = 30;
+			*/		
+					var terrain = myScene.getMeshByName("Landscape_new01");
+					terrain.material = mix;
+					
+					var treeMat = myScene.getMaterialByName("Material.004");
+					treeMat.useAlphaFromAlbedoTexture = false;
+					
+					
+					var Trees = myScene.getMeshByName("theTrees");
+					var allTrees = Trees.getChildren();
+					console.log(allTrees.length);
+					
+					for(i=0; i<allTrees.length; i++){
+					
+						//console.log(allTrees[i].name);
+						
+						//allTrees[i].scaling.x = 3;//new BABYLON.Vector3(3, 8, 1);
+						//allTrees[i].scaling.y = 2;
+						//allTrees[i].scaling.z = 1;
+						allTrees[i].parent = null;
+						allTrees[i].billboardMode = BABYLON.Mesh.BILLBOARDMODE_ALL;
+					
+					};
+					
+					//animate sea texture
+					//var theSea = myScene.getMeshByName("sea");
+					//BABYLON.Animation.CreateAndStartAnimation("u", theSea.material.diffuseTexture, "vOffset", 3, 1440, 0, 1, 1)
+					
+					// set scene parameters including scene color and fog parameters
+					myScene.clearColor = new BABYLON.Color3(0.0,0.0,0.0);
+					myScene.fogMode = BABYLON.Scene.FOGMODE_EXP;
+					myScene.fogDensity = .001;
+					myScene.fogColor = new BABYLON.Color3(.5509,0.5509,0.509);
+					
+			/*		
+					var aTree1 = myScene.getMeshByName("Empty.001");
+					//var theTrees = myScene.getMeshByName("Plane.002");
+					//aTree1.billboardMode = BABYLON.Mesh.BILLBOARDMODE_Y;
+					
+					var theTrees = aTree1.getChildren();
+					console.log(theTrees.length);
+					//theTrees.billboardMode = BABYLON.Mesh.BILLBOARDMODE_ALL;
+					
+					for (i = 0; i < theTrees.length; i++){
+						theTrees[i].billboardMode = BABYLON.Mesh.BILLBOARDMODE_Y;
+					}
+			*/		
+					//var theSky = myScene.getMeshByName("sky");
+					//theSky.applyFog = false;
+					
+					
+					//var aTrigger = myScene.getMeshByName("Trigger");
+					//var ground = myScene.getMeshByName("Terrain");
+					//ground.material = mix;
+					
+			/*		
+					theLid = myScene.getMeshByName("lid");
+					theBox = myScene.getMeshByName("box");
+					theBox.isPickable = true;
+					//theBox.isVisible = false;
+			*/		
+
+			/*		
+					for (i=0; i<theBars.length; i++){
+						theSliders[i] = myScene.getMeshByName("block.L" + i.toString())
+						//console.log("block.L" + i.toString());
+						//console.log(temp);
+						//theSliders[i].parent = theLid;
+					};
+			*/		
+					
+					
+					//theSliders[5].setParent(null);
+					//theSliders[0].positiox = -0.0n.3;
+					//theSliders[5].setParent(theLid);
+					
+
+					//Get the skeleton
+					
+					//mySkeleton[0] = myScene.getSkeletonByName("Armature");
+					// get the mesh
+					
+					
+					// limit rotation Dad72 code
+					/*
+					myScene.registerBeforeRender(function () {		            
+						
+						if (myCamera2.beta < 1.57){
+							myCamera2.beta = 1.57;
+						}
+						else if (myCamera2.beta > (Math.PI / 2)){
+							myCamera2.beta = (Math.PI / 2);
+						}
+					});
+					*/
+					
+					//get total meshes and vertices and display
+					let vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+					
+		//end total meshes and vertices and display
+		
+		
+		
+					myScene.onKeyboardObservable.add((kbInfo) => {
+						switch (kbInfo.type) {
+							case BABYLON.KeyboardEventTypes.KEYDOWN:
+								switch (kbInfo.event.key) {
+								
+									case "1":
+										myScene.activeCamera.detachControl(canvas);
+										myScene.activeCamera = myCamera1;
+										myScene.activeCamera.speed = 0.2;
+										myScene.activeCamera.attachControl(canvas);
+									break;		
+								
+									case "2":
+										myScene.activeCamera.detachControl(canvas);
+										myCamera2.restoreState();
+										myScene.activeCamera = myCamera2;
+										myScene.activeCamera.speed = 0.2;
+										myScene.activeCamera.attachControl(canvas);
+									break;	
+
+									case "3":
+										myScene.activeCamera.detachControl(canvas);
+										myScene.activeCamera = myCamera3;
+										myScene.activeCamera.speed = 0.2;
+										myScene.activeCamera.attachControl(canvas);
+									break;
+
+									case "4":
+										myScene.activeCamera.detachControl(canvas);
+										myCamera4.restoreState();
+										myScene.activeCamera = myCamera4;
+										myScene.activeCamera.speed = 0.2;
+										myScene.activeCamera.attachControl(canvas);
+									break;	
+								}
+						}});
+		
+		
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+                    myScene.render();
+                    });
+                });
+        };
+		
+		
+		
+		
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+		// On Click evt
+		
+		
+		 window.addEventListener("click", function (evt) {
+		 
+			 var pickResult = myScene.pick(evt.clientX, evt.clientY, null, false, null);
+			 if (pickResult.hit)
+				{
+				var objname1 = pickResult.pickedMesh.name;
+				//console.log(objname);
+				if (objname1.length > 7) var objname = objname1.substring(0,7) 
+				else objname = objname1;
+				console.log(objname);
+					switch(objname) {
+						case "lid" :
+							if(aFlag === 0){
+								//myScene.beginAnimation(mySkeleton[0],1,30,false, 1);
+								//mySkeleton[0].beginAnimation("mouthAction");
+								//theTrigger.isPickable = false;
+								//console.log("a hit");
+								//theTrigger.position.y = 0.75;
+								theCount = theBars.reduce(function(a, b){return a + b;}, 0);
+								console.log(theCount);
+								if (theCount > 9) {
+									parentClearAll();
+									theLid.position.y = 0.75;
+								}
+								else {
+								theLid.position.y = 0.35;
+								};
+								
+								//console.log(theCount);
+								aFlag = 1;
+							}
+							
+							else {
+								//myScene.beginAnimation(mySkeleton[0],30,1,false,1);
+								console.log("2nd hit");
+								theLid.position.y = 0.34;
+								aFlag = 0;
+								//theTrigger.isPickable = true
+							}
+							
+						break;
+						
+						case "block.L" :
+						
+							var n = parseInt(objname1.slice(-1));
+							//console.log("slider number = " + n)
+						
+							//theSliders[n].setParent(null);
+							//theSliders[n].position.x = -0.04;
+							
+							//var theBars = [0,1,0,1,1,1,0,1,1,0];
+							if (theBars[n] === 0){
+								//theSliders[n].setParent(null);
+								theSliders[n].position.x = -0.05;
+								theBars[n] = 1;
+								//parentClear(n);
+								
+							}
+							//theBars[n] = 1;
+							else {
+								theBars[n] = 0;
+								theSliders[n].position.x = 0;
+								theSliders[n].setParent(theLid);
+								
+								//console.log(n);
+							//}	
+							theCount = theBars.reduce(function(a, b){return a + b;}, 0);
+							console.log(theCount);
+								/*
+								if(theCount < 10){
+									for (i=0; i = 9; i++){
+							
+										theSliders[i].setParent(theLid);
+										theBars[i] = 1;
+									}
+								}
+								*/
+							//theSliders[n].setParent(theLid);
+							}
+							//parentClear(n);
+							//console.log(objname1);
+							break;
+							
+						default:
+						
+							//console.log(objname);
+							break;
+							
+							
+							
+						/*	
+						case "block.L1" :
+						
+							console.log(objname);
+							break;
+							
+						case "block.L2" :
+						
+							theSliders[2].setParent(null);
+							theSliders[2].position.x = -0.04;
+							
+							//var theBars = [0,1,0,1,1,1,0,1,1,0];
+							theBars[2] = 1;
+							theCount = theBars.reduce(function(a, b){return a + b;}, 0);
+							console.log(theCount);
+							if (theCount > 9) parentClear(2);
+							console.log(objname);
+							break;
+							
+						case "block.L3" :
+							theSliders[3].setParent(null);
+							theSliders[3].position.x = -0.04;
+							
+							//var theBars = [0,1,0,1,1,1,0,1,1,0];
+							theBars[3] = 1;
+							theCount = theBars.reduce(function(a, b){return a + b;}, 0);
+							console.log(theCount);
+							parentClear(3);
+							console.log(objname);
+							break;
+							
+						case "block.L4" :
+						
+							console.log(objname);
+							break;
+							
+						case "block.L5" :
+						
+							console.log(objname);
+							break;
+							
+						case "block.L6" :
+						
+							theSliders[6].setParent(null);
+							theSliders[6].position.x = -0.04;
+							
+							//var theBars = [0,1,0,1,1,1,0,1,1,0];
+							theBars[6] = 1;
+							theCount = theBars.reduce(function(a, b){return a + b;}, 0);
+							console.log(theCount);
+							parentClear(6);
+							console.log(objname);
+							break;
+							
+						case "block.L7" :
+						
+							console.log(objname);
+							break;
+							
+						case "block.L8" :
+						
+							console.log(objname);
+							break;
+							
+						case "block.L9" :
+						
+							theSliders[9].setParent(null);
+							theSliders[9].position.x = -0.04;
+							
+							//var theBars = [0,1,0,1,1,1,0,1,1,0];
+							theBars[9] = 1;
+							theCount = theBars.reduce(function(a, b){return a + b;}, 0);
+							console.log(theCount);
+							parentClear(9);
+							console.log(objname);
+							break;
+						*/
+						
+		
+		
+		
+					}
+				}
+		 
+		 });
+		 
+		 function parentClear(n) {
+			theSliders[n].setParent(null);
+		 };
+		 
+		 
+		 function parentClearAll() {
+			 for (i=0; i<theBars.length; i++){
+				theSliders[i].setParent(null);
+			 };
+		 };
+		 
+/*		 
+		 // On pick interpolations to open/close gate
+	var control = function(mesh1, mesh2, mesh3) {
+							
+	// events done in sequence 
+		mesh1.actionManager = new BABYLON.ActionManager(newScene);
+				
+	// gate action
+		mesh1.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh2, "position.y", +2.3, 2500))
+		.then(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh2, "position.y", 0.0, 2500))
+		mesh1.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh3, "position.y", +0.0, 250))
+		.then(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh3, "position.y", 2.3, 2500))
+	//lever action
+		mesh1.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh1, "rotation.z", Math.PI/12, 500))
+		.then(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh1, "rotation.z", 0, 250));
+		mesh1.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, playGate));
+					
+		}
+		
+		control(theVLever, theVGate1, theVGate2);
+		
+
+*/	
+		 
+		 
+		 
+		 
+		 
+/*	 
+		 // On pick interpolations to open door
+	var openDoor = function(mesh1,mesh2) {
+			mesh1.actionManager = new BABYLON.ActionManager(newScene);
+			//knob action
+			mesh1.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh1, "position.x", -0.6000, 250))
+			// gate action
+			mesh1.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh2, "rotation.y", -Math.PI/4, 2500))
+			//play sound	
+			mesh1.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, playDoor));
+		};
+		
+	openDoor(dknob,towerDoor);
+	
+	
+	return; //end door creation
+}
+
+*/
+		
+		
+		
+    </script>
+
+
+</body></html>

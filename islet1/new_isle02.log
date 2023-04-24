@@ -1,0 +1,461 @@
+Exporter version: 3.3.1, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\isle\
+	Python World class constructor completed
+	processing begun of mesh:  sea
+		processing begun of material:  theSea
+			processing texture dark_water
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  sky
+		processing begun of material:  sky
+			processing texture skydome_cloudy
+		num positions      :  308
+		num normals        :  308
+		num tangents       :  0
+		num uvs            :  616
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  480
+	processing begun of camera (ArcRotateCamera):  Camera4
+	processing begun of mesh:  Cube
+		processing begun of material:  Material.003
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Landscape_new01
+		processing begun of material:  Material.003
+		processing begun of material:  red
+		registered as also a user of material:  Material.003
+			processing texture terrain_map02b
+		processing begun of multimaterial:  new_isle02.Multimaterial#0
+		num positions      :  3779
+		num normals        :  3779
+		num tangents       :  0
+		num uvs            :  7558
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6585
+	processing begun of node:  theTrees
+	processing begun of mesh:  tree.001
+		processing begun of material:  Material.004
+			processing texture fir512dark
+		num positions      :  6
+		num normals        :  6
+		num tangents       :  0
+		num uvs            :  12
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  tree.002
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.003
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.004
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.005
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.006
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.007
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.008
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.009
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.010
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.011
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.012
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.013
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.014
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.015
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.016
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.017
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.018
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.019
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.020
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.021
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.022
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.023
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.024
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.025
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.026
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.027
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.028
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.029
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.030
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.031
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.032
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.033
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.034
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.035
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.036
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.037
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.038
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.039
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.040
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.041
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.042
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.043
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.044
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.045
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.046
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.047
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.048
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.049
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.050
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.051
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.052
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.053
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.054
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.055
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.056
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.057
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.058
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.059
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.060
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.061
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.062
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.063
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.064
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.065
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.066
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.067
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.068
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.069
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree.070
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  tree
+		mesh is an instance of :  tree.001.  Processing halted.
+	processing begun of mesh:  rock.019
+		processing begun of material:  Material
+			processing texture new_rock01n
+			processing texture new_rock01
+		num positions      :  84
+		num normals        :  84
+		num tangents       :  0
+		num uvs            :  168
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  rock.001
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.002
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.003
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.004
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.005
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.006
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.007
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.008
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.009
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.010
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.011
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.012
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.013
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.014
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.015
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.016
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  rock.017
+		mesh is an instance of :  rock.019.  Processing halted.
+	processing begun of mesh:  stair_walls
+		processing begun of material:  concrete_pillar
+			processing texture concrete03_normal
+			processing texture concrete03_diffuseOriginal
+		num positions      :  64
+		num normals        :  64
+		num tangents       :  0
+		num uvs            :  128
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  36
+	processing begun of mesh:  Stairs.002
+		processing begun of material:  tiled_steps
+			processing texture steps01
+		num positions      :  34
+		num normals        :  34
+		num tangents       :  0
+		num uvs            :  68
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  14
+	processing begun of mesh:  Stairs.001
+		processing begun of material:  theSteps
+			processing texture marble79b_normal
+			processing texture marble72b
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  pillar01
+		processing begun of material:  concrete_pillar
+		registered as also a user of material:  concrete_pillar
+		num positions      :  135
+		num normals        :  135
+		num tangents       :  0
+		num uvs            :  270
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  54
+	processing begun of mesh:  pillar02
+		mesh is an instance of :  pillar01.  Processing halted.
+	processing begun of mesh:  roofEdge.001
+		processing begun of material:  roof_edge
+		processing begun of material:  concrete_walls
+			processing texture roof256x01_n
+			processing texture roof256x01
+			processing texture marble79b_normal
+			processing texture marble72b
+		processing begun of multimaterial:  new_isle02.Multimaterial#1
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  entry_walls
+		processing begun of material:  concrete_walls
+		registered as also a user of material:  concrete_walls
+		num positions      :  71
+		num normals        :  71
+		num tangents       :  0
+		num uvs            :  142
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  34
+	processing begun of mesh:  door1
+		processing begun of material:  doors
+			processing texture my_old_door2d
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of node:  Empty
+	processing begun of mesh:  roofEdge.003
+		processing begun of material:  roof_edge
+		processing begun of material:  concrete_walls
+		registered as also a user of material:  roof_edge
+		registered as also a user of material:  concrete_walls
+		processing begun of multimaterial:  new_isle02.Multimaterial#2
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  entry_walls.001
+		processing begun of material:  concrete_walls
+		registered as also a user of material:  concrete_walls
+		num positions      :  110
+		num normals        :  110
+		num tangents       :  0
+		num uvs            :  220
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  50
+	processing begun of node:  Empty01
+	processing begun of mesh:  door1.001
+		processing begun of material:  doors
+		registered as also a user of material:  doors
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  entry_walls_steps
+		processing begun of material:  tiled_steps
+		registered as also a user of material:  tiled_steps
+		num positions      :  9
+		num normals        :  9
+		num tangents       :  0
+		num uvs            :  18
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of node:  Empty02
+	processing begun of mesh:  door1.002
+		processing begun of material:  doors
+		registered as also a user of material:  doors
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  entry_walls.002
+		processing begun of material:  concrete_walls
+		registered as also a user of material:  concrete_walls
+		num positions      :  122
+		num normals        :  122
+		num tangents       :  0
+		num uvs            :  244
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  54
+	processing begun of mesh:  entry_walls_steps.001
+		processing begun of material:  tiled_steps
+		registered as also a user of material:  tiled_steps
+		num positions      :  9
+		num normals        :  9
+		num tangents       :  0
+		num uvs            :  18
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  roofEdge.004
+		processing begun of material:  roof_edge
+		processing begun of material:  concrete_walls
+		registered as also a user of material:  roof_edge
+		registered as also a user of material:  concrete_walls
+		processing begun of multimaterial:  new_isle02.Multimaterial#3
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  rock_small_path
+		processing begun of material:  Material.003
+		processing begun of material:  red
+		registered as also a user of material:  Material.003
+		registered as also a user of material:  red
+		processing begun of multimaterial:  new_isle02.Multimaterial#4
+		num positions      :  0
+		num normals        :  0
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  0
+	WARNING: mesh, rock_small_path, has 0 vertices; ignored
+	processing begun of light (HEMI FROM AREA):  Light
+	processing begun of light (HEMI FROM AREA):  Light01
+========= Writing of JSON file started =========
+	writing mesh:  sea
+	writing mesh:  sky
+	writing mesh:  Cube
+	writing mesh:  Landscape_new01
+	writing mesh:  tree.001
+	writing mesh:  rock.019
+	writing mesh:  stair_walls
+	writing mesh:  Stairs.002
+	writing mesh:  Stairs.001
+	writing mesh:  pillar01
+	writing mesh:  roofEdge.001
+	writing mesh:  entry_walls
+	writing mesh:  door1
+	writing mesh:  roofEdge.003
+	writing mesh:  entry_walls.001
+	writing mesh:  door1.001
+	writing mesh:  entry_walls_steps
+	writing mesh:  door1.002
+	writing mesh:  entry_walls.002
+	writing mesh:  entry_walls_steps.001
+	writing mesh:  roofEdge.004
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.4298 secs
