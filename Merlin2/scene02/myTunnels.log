@@ -1,0 +1,387 @@
+Exporter version: 3.3.1, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\scene_dispose\scene02\scene02/textures
+	Python World class constructor completed
+	processing begun of mesh:  anEnd.005
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+			processing texture TexturesCom_Rock_CaveWall_A_2_5x2_5_1K_normal
+			processing texture new_rock2BW
+			processing texture cave_floor_normal
+			processing texture new_rock3
+		processing begun of multimaterial:  myTunnels.Multimaterial#0
+		num positions      :  95
+		num normals        :  95
+		num tangents       :  0
+		num uvs            :  190
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  anEnd.008
+		mesh is an instance of :  anEnd.005.  Processing halted.
+	processing begun of mesh:  anEnd.009
+		mesh is an instance of :  anEnd.005.  Processing halted.
+	processing begun of mesh:  anEnd.004
+		mesh is an instance of :  anEnd.005.  Processing halted.
+	processing begun of mesh:  door_wall1
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+		registered as also a user of material:  stone
+		registered as also a user of material:  stonefloor
+		processing begun of multimaterial:  myTunnels.Multimaterial#1
+		num positions      :  140
+		num normals        :  140
+		num tangents       :  0
+		num uvs            :  280
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  64
+	processing begun of mesh:  aDoor1
+		processing begun of material:  bench
+			processing texture old_door01
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of node:  Empty
+	processing begun of mesh:  aDoor2
+		processing begun of material:  bench
+		registered as also a user of material:  bench
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  door_wall2
+		mesh is an instance of :  door_wall1.  Processing halted.
+	processing begun of mesh:  aDoor3
+		processing begun of material:  bench
+		registered as also a user of material:  bench
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  door_wall3
+		mesh is an instance of :  door_wall1.  Processing halted.
+	processing begun of node:  Empty.001
+	processing begun of mesh:  door_wall4
+		mesh is an instance of :  door_wall1.  Processing halted.
+	processing begun of node:  Empty.002
+	processing begun of mesh:  aDoor4
+		processing begun of material:  bench
+		registered as also a user of material:  bench
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  0
+		num uvs            :  50
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  6_curve_S._noise
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+		registered as also a user of material:  stone
+		registered as also a user of material:  stonefloor
+		processing begun of multimaterial:  myTunnels.Multimaterial#2
+		num positions      :  254
+		num normals        :  254
+		num tangents       :  0
+		num uvs            :  508
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  288
+	processing begun of mesh:  6_curve_02.002
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+		registered as also a user of material:  stone
+		registered as also a user of material:  stonefloor
+		processing begun of multimaterial:  myTunnels.Multimaterial#3
+		num positions      :  120
+		num normals        :  120
+		num tangents       :  0
+		num uvs            :  240
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  144
+	processing begun of mesh:  6_curve_02.004
+		mesh is an instance of :  6_curve_02.002.  Processing halted.
+	processing begun of mesh:  6_curve_02.005
+		mesh is an instance of :  6_curve_02.002.  Processing halted.
+	processing begun of mesh:  X_Joint_UV_noise
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+		registered as also a user of material:  stone
+		registered as also a user of material:  stonefloor
+		processing begun of multimaterial:  myTunnels.Multimaterial#4
+		num positions      :  397
+		num normals        :  397
+		num tangents       :  0
+		num uvs            :  794
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  400
+	processing begun of mesh:  T_Joint_UV_noise
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+		registered as also a user of material:  stone
+		registered as also a user of material:  stonefloor
+		processing begun of multimaterial:  myTunnels.Multimaterial#5
+		num positions      :  320
+		num normals        :  320
+		num tangents       :  0
+		num uvs            :  640
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  320
+	processing begun of mesh:  T_Joint_UV_noise.001
+		mesh is an instance of :  T_Joint_UV_noise.  Processing halted.
+	processing begun of mesh:  Straight_base._90.noise
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+		registered as also a user of material:  stone
+		registered as also a user of material:  stonefloor
+		processing begun of multimaterial:  myTunnels.Multimaterial#6
+		num positions      :  417
+		num normals        :  417
+		num tangents       :  0
+		num uvs            :  834
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  144
+	processing begun of mesh:  Straight_base._90.noise.001
+		mesh is an instance of :  Straight_base._90.noise.  Processing halted.
+	processing begun of mesh:  Straight_base._90_short
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+		registered as also a user of material:  stone
+		registered as also a user of material:  stonefloor
+		processing begun of multimaterial:  myTunnels.Multimaterial#7
+		num positions      :  401
+		num normals        :  401
+		num tangents       :  0
+		num uvs            :  802
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  144
+	processing begun of mesh:  Stairs
+		processing begun of material:  stairs
+			processing texture TexturesCom_Wall_Stone5_5x2_5_1K_albedo
+		num positions      :  196
+		num normals        :  196
+		num tangents       :  0
+		num uvs            :  392
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  Stairs_90
+		processing begun of material:  stairs.001
+			processing texture TexturesCom_Wall_Stone5_5x2_5_1K_albedo
+		num positions      :  196
+		num normals        :  196
+		num tangents       :  0
+		num uvs            :  392
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  Straight_base._90_slant
+		processing begun of material:  stone
+		processing begun of material:  stonefloor
+		registered as also a user of material:  stone
+		registered as also a user of material:  stonefloor
+		processing begun of multimaterial:  myTunnels.Multimaterial#8
+		num positions      :  425
+		num normals        :  425
+		num tangents       :  0
+		num uvs            :  850
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  144
+	processing begun of mesh:  Straight_base._90_slant.003
+		mesh is an instance of :  Straight_base._90_slant.  Processing halted.
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  aLamp
+		processing begun of material:  aLantern
+		processing begun of material:  stick
+		processing begun of multimaterial:  myTunnels.Multimaterial#9
+		num positions      :  127
+		num normals        :  127
+		num tangents       :  0
+		num uvs            :  254
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  52
+	processing begun of mesh:  glass
+		processing begun of material:  glass1
+		num positions      :  12
+		num normals        :  12
+		num tangents       :  0
+		num uvs            :  24
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6
+	processing begun of mesh:  Vert
+		WARNING: No materials have been assigned: 
+		num positions      :  0
+		num normals        :  0
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  0
+	WARNING: mesh, Vert, has 0 vertices; ignored
+	processing begun of mesh:  newRock01
+		processing begun of material:  newRock01
+			processing texture small_rock01_dark
+		num positions      :  52
+		num normals        :  52
+		num tangents       :  0
+		num uvs            :  104
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  28
+	processing begun of mesh:  newRock01.016
+		mesh is an instance of :  newRock01.  Processing halted.
+	processing begun of mesh:  newRock01.017
+		mesh is an instance of :  newRock01.  Processing halted.
+	processing begun of mesh:  newRock01.018
+		mesh is an instance of :  newRock01.  Processing halted.
+	processing begun of mesh:  newRock01.019
+		mesh is an instance of :  newRock01.  Processing halted.
+	processing begun of mesh:  newRock01.020
+		mesh is an instance of :  newRock01.  Processing halted.
+	processing begun of mesh:  newRock01.021
+		mesh is an instance of :  newRock01.  Processing halted.
+	processing begun of mesh:  newRock01.022
+		mesh is an instance of :  newRock01.  Processing halted.
+	processing begun of mesh:  upper_arms_decimate.001
+		processing begun of material:  skeleton
+			processing texture bakedx3_blend01
+		num positions      :  298
+		num normals        :  298
+		num tangents       :  0
+		num uvs            :  596
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  234
+	processing begun of mesh:  skull_decimate.002
+		processing begun of material:  skeleton
+		registered as also a user of material:  skeleton
+		num positions      :  588
+		num normals        :  588
+		num tangents       :  0
+		num uvs            :  1176
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  592
+	processing begun of mesh:  ribs_decimated
+		processing begun of material:  skeleton
+		registered as also a user of material:  skeleton
+		num positions      :  849
+		num normals        :  849
+		num tangents       :  0
+		num uvs            :  1698
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  283
+	processing begun of mesh:  neck_decimated.001
+		processing begun of material:  skeleton
+		registered as also a user of material:  skeleton
+		num positions      :  601
+		num normals        :  601
+		num tangents       :  0
+		num uvs            :  1202
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  286
+	processing begun of mesh:  lower_arms_decimate.001
+		processing begun of material:  skeleton
+		registered as also a user of material:  skeleton
+		num positions      :  696
+		num normals        :  696
+		num tangents       :  0
+		num uvs            :  1392
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  232
+	processing begun of mesh:  hands_decimated
+		processing begun of material:  skeleton
+		registered as also a user of material:  skeleton
+		num positions      :  1078
+		num normals        :  1078
+		num tangents       :  0
+		num uvs            :  2156
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  446
+	processing begun of mesh:  key00
+		processing begun of material:  keyBaked
+			processing texture key_baked02
+		num positions      :  200
+		num normals        :  200
+		num tangents       :  0
+		num uvs            :  400
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  82
+	processing begun of mesh:  key01
+		processing begun of material:  keyBaked
+		registered as also a user of material:  keyBaked
+		num positions      :  200
+		num normals        :  200
+		num tangents       :  0
+		num uvs            :  400
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  82
+	processing begun of mesh:  key02
+		mesh is an instance of :  key01.  Processing halted.
+	processing begun of light (HEMI FROM AREA):  Light00
+	processing begun of light (HEMI FROM AREA):  Light01
+	processing begun of light (POINT):  Point00
+========= Writing of JSON file started =========
+	writing mesh:  anEnd.005
+	writing mesh:  door_wall1
+	writing mesh:  aDoor1
+	writing mesh:  aDoor2
+	writing mesh:  aDoor3
+	writing mesh:  aDoor4
+	writing mesh:  6_curve_S._noise
+	writing mesh:  6_curve_02.002
+	writing mesh:  X_Joint_UV_noise
+	writing mesh:  T_Joint_UV_noise
+	writing mesh:  Straight_base._90.noise
+	writing mesh:  Straight_base._90_short
+	writing mesh:  Stairs
+	writing mesh:  Stairs_90
+	writing mesh:  Straight_base._90_slant
+	writing mesh:  aLamp
+	writing mesh:  glass
+	writing mesh:  newRock01
+	writing mesh:  upper_arms_decimate.001
+	writing mesh:  skull_decimate.002
+	writing mesh:  ribs_decimated
+	writing mesh:  neck_decimated.001
+	writing mesh:  lower_arms_decimate.001
+	writing mesh:  hands_decimated
+	writing mesh:  key00
+	writing mesh:  key01
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.5289 secs
