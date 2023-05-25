@@ -104,6 +104,7 @@ function loadScene2(){
 					aDoor03.actionManager = new BABYLON.ActionManager(myScene);
 					aDoor03.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, function (evt) {
 						console.log("Door3 Action Manager trigger");
+						aDoor03.isPickable = false;
 						let animation1 = myScene.beginAnimation(aDoor03, 0, 40, false, 0.5);
 						theDoor.play();
 					}));
