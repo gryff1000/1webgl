@@ -21,7 +21,7 @@ function loadScene3(){
 					myCamera.upperRadiusLimit = 150;
 			*/	
 					
-					myScene.activeCamera.attachControl(canvas);
+					//myScene.activeCamera.attachControl(canvas);
 
 					console.log("This Scene is " + (sceneNum +1));
 					
