@@ -1,0 +1,144 @@
+Exporter version: 3.3.1, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\scene_dispose\scene03\scene03/textures
+	Python World class constructor completed
+	processing begun of skeleton:  Monk01, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LHipJoint, index:  1
+		processing begun of bone:  LeftUpLeg, index:  2
+		processing begun of bone:  LeftLeg, index:  3
+		processing begun of bone:  LeftFoot, index:  4
+		processing begun of bone:  LowerBack, index:  5
+		processing begun of bone:  Spine, index:  6
+		processing begun of bone:  Spine1, index:  7
+		processing begun of bone:  LeftShoulder, index:  8
+		processing begun of bone:  LeftArm, index:  9
+		processing begun of bone:  LeftForeArm, index:  10
+		processing begun of bone:  LeftHand, index:  11
+		processing begun of bone:  LThumb, index:  12
+		processing begun of bone:  LeftFingerBase, index:  13
+		processing begun of bone:  LeftHandFinger1, index:  14
+		processing begun of bone:  Neck, index:  15
+		processing begun of bone:  Neck1, index:  16
+		processing begun of bone:  Head, index:  17
+		processing begun of bone:  RightShoulder, index:  18
+		processing begun of bone:  RightArm, index:  19
+		processing begun of bone:  RightForeArm, index:  20
+		processing begun of bone:  RightHand, index:  21
+		processing begun of bone:  RThumb, index:  22
+		processing begun of bone:  RightFingerBase, index:  23
+		processing begun of bone:  RightHandFinger1, index:  24
+		processing begun of bone:  RHipJoint, index:  25
+		processing begun of bone:  RightUpLeg, index:  26
+		processing begun of bone:  RightLeg, index:  27
+		processing begun of bone:  RightFoot, index:  28
+		processing action bvh_row.action:  in[1 - 69], out[0 - 69]
+	processing begun of mesh:  boat
+		processing begun of material:  grey
+		processing begun of material:  blue
+			processing texture planks512
+		processing begun of multimaterial:  boat01c.Multimaterial#0
+		num positions      :  382
+		num normals        :  382
+		num tangents       :  0
+		num uvs            :  764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  246
+	processing begun of mesh:  coffin
+		processing begun of material:  Material
+		num positions      :  114
+		num normals        :  114
+		num tangents       :  0
+		num uvs            :  228
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  hood2
+		processing begun of material:  theRobe.001
+		num positions      :  716
+		num normals        :  716
+		num tangents       :  0
+		num uvs            :  1432
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1088
+		Skeleton stats:  
+			Total Influencers:  3045
+			Avg # of influencers per vertex:  4.2528
+			Highest # of influencers observed:  7, num vertices with this:  18
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  5728
+	processing begun of mesh:  Low-poly-eyes
+		animation processing begun
+			processing action bvh_row.action:  in[1 - 69], out[0 - 69]
+		processing begun of material:  Monk01:Low-poly:Eye_brown
+			processing texture brown_eye
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  0
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  172
+		Skeleton stats:  
+			Total Influencers:  96
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  96
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  robe2
+		animation processing begun
+			processing action bvh_row.action:  in[1 - 69], out[0 - 69]
+		processing begun of material:  theRobe.001
+		registered as also a user of material:  theRobe.001
+		num positions      :  743
+		num normals        :  743
+		num tangents       :  0
+		num uvs            :  1486
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1044
+		Skeleton stats:  
+			Total Influencers:  2439
+			Avg # of influencers per vertex:  3.2826
+			Highest # of influencers observed:  7, num vertices with this:  27
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  5944
+	processing begun of mesh:  skin_Uni1228
+		processing begun of material:  Monk01:Uni1228:Defaultskin.001
+		processing begun of material:  Material.001
+			processing texture unn1221_newface
+		processing begun of multimaterial:  boat01c.Multimaterial#1
+		num positions      :  1548
+		num normals        :  1548
+		num tangents       :  0
+		num uvs            :  3096
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1660
+		Skeleton stats:  
+			Total Influencers:  2706
+			Avg # of influencers per vertex:  1.7481
+			Highest # of influencers observed:  7, num vertices with this:  8
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  12384
+========= Writing of JSON file started =========
+	writing mesh:  boat
+	writing mesh:  coffin
+	writing mesh:  hood2
+	writing mesh:  Low-poly-eyes
+	writing mesh:  robe2
+	writing mesh:  skin_Uni1228
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.6738 secs
