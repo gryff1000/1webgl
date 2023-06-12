@@ -9,7 +9,7 @@ var myScene;
 var canvas;
 var sceneNum = 0;
 //changethge first in the array to a "START" button
-var theScenes = new Array("scene01/walls02e8.babylon", "scene02/myTunnels.babylon", "scene03/new_isle01.babylon");
+var theScenes = new Array("scene01/walls02e8.babylon", "scene02/myTunnels.babylon", "scene03/new_isle01.babylon", "scene04/endButton01.babylon");
 var myCamera2;
 //for(i=0; i<theScenes.length; i++){
 //	console.log(theScenes[i]);	
