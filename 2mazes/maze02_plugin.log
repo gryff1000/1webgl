@@ -1,0 +1,163 @@
+Exporter version: 3.3.1, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\2mazes_plugin\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera1
+	processing begun of camera (UniversalCamera):  Camera2
+	processing begun of camera (ArcRotateCamera):  Camera3
+	processing begun of mesh:  Cube
+		processing begun of material:  white
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  cam1ball
+		processing begun of material:  white
+		registered as also a user of material:  white
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  cam2ball
+		processing begun of material:  white
+		registered as also a user of material:  white
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  maze2
+		processing begun of material:  wall
+			processing texture stone01
+		num positions      :  2111
+		num normals        :  2111
+		num tangents       :  0
+		num uvs            :  4222
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1454
+	processing begun of mesh:  walls2
+		processing begun of material:  wall
+		registered as also a user of material:  wall
+		num positions      :  75
+		num normals        :  75
+		num tangents       :  0
+		num uvs            :  150
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  floor2
+		processing begun of material:  floor
+			processing texture tiles9_dif
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  path2
+		processing begun of material:  Material
+		num positions      :  527
+		num normals        :  527
+		num tangents       :  0
+		num uvs            :  1054
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  223
+	processing begun of node:  Hard
+	processing begun of mesh:  End2
+		processing begun of material:  red
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  maze1
+		processing begun of material:  wall
+		registered as also a user of material:  wall
+		num positions      :  802
+		num normals        :  802
+		num tangents       :  0
+		num uvs            :  1604
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  532
+	processing begun of mesh:  walls1
+		processing begun of material:  wall
+		registered as also a user of material:  wall
+		num positions      :  57
+		num normals        :  57
+		num tangents       :  0
+		num uvs            :  114
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  floor1
+		processing begun of material:  floor
+		registered as also a user of material:  floor
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  path1
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		num positions      :  844
+		num normals        :  844
+		num tangents       :  0
+		num uvs            :  1688
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  368
+	processing begun of node:  Easy
+	processing begun of mesh:  End1
+		processing begun of material:  red
+		registered as also a user of material:  red
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  Cube
+	writing mesh:  cam1ball
+	writing mesh:  cam2ball
+	writing mesh:  maze2
+	writing mesh:  walls2
+	writing mesh:  floor2
+	writing mesh:  path2
+	writing mesh:  End2
+	writing mesh:  maze1
+	writing mesh:  walls1
+	writing mesh:  floor1
+	writing mesh:  path1
+	writing mesh:  End1
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.0406 secs
