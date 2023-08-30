@@ -1,0 +1,62 @@
+Exporter version: 3.3.1, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\2mazes_svg\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera1
+	processing begun of mesh:  cam1ball
+		WARNING: No materials have been assigned: 
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  maze03
+		processing begun of material:  Stone
+			processing texture stone01
+		num positions      :  1152
+		num normals        :  1152
+		num tangents       :  0
+		num uvs            :  2304
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  480
+	processing begun of mesh:  path03
+		processing begun of material:  path
+		num positions      :  906
+		num normals        :  906
+		num tangents       :  0
+		num uvs            :  1812
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  324
+	processing begun of mesh:  floor03
+		processing begun of material:  floor
+			processing texture tiles9_dif
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  Easy
+	processing begun of light (HEMI FROM AREA):  Light01
+========= Writing of JSON file started =========
+	writing mesh:  cam1ball
+	writing mesh:  maze03
+	writing mesh:  path03
+	writing mesh:  floor03
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.15 secs
