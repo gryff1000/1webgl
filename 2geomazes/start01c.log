@@ -1,0 +1,73 @@
+Exporter version: 3.3.1, Blender version: 3.3.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\geonodes_maze\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera1
+	processing begun of mesh:  cam1ball
+		processing begun of material:  white
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Wall01
+		processing begun of material:  wall
+			processing texture stone01
+		num positions      :  929
+		num normals        :  929
+		num tangents       :  0
+		num uvs            :  1858
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  442
+	processing begun of node:  maze01
+	processing begun of mesh:  destination
+		processing begun of material:  red
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Pillar01
+		processing begun of material:  wall
+		registered as also a user of material:  wall
+		num positions      :  7264
+		num normals        :  7264
+		num tangents       :  0
+		num uvs            :  14528
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2904
+	processing begun of mesh:  floor01
+		processing begun of material:  floor
+			processing texture tiles9_dif
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  cam1ball
+	writing mesh:  Wall01
+	writing mesh:  destination
+	writing mesh:  Pillar01
+	writing mesh:  floor01
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.401 secs
