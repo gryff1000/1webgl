@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>BABYLON - Maze Demo</title>
+
+    <!--Loading babylon engine -->
+<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src = "https://cdn.babylonjs.com/gui/babylon.gui.js"></script>
+	
+   <!-- <script src ="../hand.js"></script> -->
+  <!--  <script src="../babylon.3.0.js"></script> -->
+	<!--
+<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+-->
+	 
+	 <!--sound -->
+	<!--<script src= "../howler.js"></script> -->
+    
+	<!--Loading scene control & creation-->
+	<script src ="maze1.js"></script>
+	<script src ="draw.js"></script>
+    <script src ="loader.js"></script>
+    <script src ="createScene.js"></script>
+	<!--<script src ="playAudio.js"></script>-->
+	
+    <!-- CSS -->
+    
+    <style>
+        html, body {
+			background-color: black;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+			width: 100%;
+            height: 100%;
+		}
+		
+		#words {
+			position: absolute;
+			left:25%;
+			top:85%;
+			width:50%;
+			line-height: 2em;
+			text-align: center;
+			font-family: Arial, Helvetica;
+			font-size: 16px;
+			color: white;
+			display: none;
+			
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+			position: absolute;
+			left:25%;
+			top:70%;
+			width:50%;
+			height: 24%;
+			border: 2px dotted #202020;
+			background-color: black;
+			line-height: 2em;
+			text-align: center;
+			font-size: 16px;
+			color: white;
+			display: none;
+			
+		}
+		
+		#about {
+			position: absolute;
+			left:25%;
+			top:70%;
+			width:50%;
+			height: 24%;
+			border: 2px dotted #202020;
+			background-color: black;
+			line-height: 2em;
+			text-align: center;
+			font-size: 16px;
+			color: white;
+			display: none;
+			
+		}
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+
+</head>
+
+<!-- HTML -->
+
+<body>
+<!-- Info displays not used in final demo -->
+<div id="fps">0</div>
+<div id ="DCs">0</div>
+<div id ="meshes">0</div>
+<div id = "verts">0</div>
+<!--<div id="credits">Credits</div>
+<div id="about">About</div>
+
+<div id="words">text</div>
+-->
+   
+<!-- Main Canvas -->
+<canvas id="renderCanvas"></canvas>
+    
+
+</body>
+</html>
