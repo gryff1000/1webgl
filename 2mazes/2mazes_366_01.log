@@ -1,0 +1,84 @@
+Exporter version: 3.3.2, Blender version: 3.6.3
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\2mazes_plugin\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera1
+	processing begun of camera (ArcRotateCamera):  Camera3
+	processing begun of mesh:  target
+		processing begun of material:  Material
+			processing texture tiles9_dif
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  maze
+		processing begun of material:  Material.001
+			processing texture stone01
+		num positions      :  3593
+		num normals        :  3593
+		num tangents       :  0
+		num uvs            :  7186
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1418
+	processing begun of mesh:  floor
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  cam1ball
+		processing begun of material:  Material.003
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  end
+		processing begun of material:  Material.002
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Stairs
+		processing begun of material:  Material.001
+		registered as also a user of material:  Material.001
+		num positions      :  326
+		num normals        :  326
+		num tangents       :  0
+		num uvs            :  652
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  124
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  target
+	writing mesh:  maze
+	writing mesh:  floor
+	writing mesh:  cam1ball
+	writing mesh:  end
+	writing mesh:  Stairs
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.9551 secs
