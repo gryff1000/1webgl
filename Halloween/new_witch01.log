@@ -1,0 +1,140 @@
+Exporter version: 3.3.2, Blender version: 3.6.3
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\halloween2\
+	Python World class constructor completed
+	processing begun of skeleton:  Monk01, id:  0
+		processing begun of bone:  Hips, index:  0
+		processing begun of bone:  LHipJoint, index:  1
+		processing begun of bone:  LeftUpLeg, index:  2
+		processing begun of bone:  LeftLeg, index:  3
+		processing begun of bone:  LeftFoot, index:  4
+		processing begun of bone:  LeftToeBase, index:  5
+		processing begun of bone:  LowerBack, index:  6
+		processing begun of bone:  Spine, index:  7
+		processing begun of bone:  Spine1, index:  8
+		processing begun of bone:  LeftShoulder, index:  9
+		processing begun of bone:  LeftArm, index:  10
+		processing begun of bone:  LeftForeArm, index:  11
+		processing begun of bone:  LeftHand, index:  12
+		processing begun of bone:  LThumb, index:  13
+		processing begun of bone:  LeftFingerBase, index:  14
+		processing begun of bone:  LeftHandFinger1, index:  15
+		processing begun of bone:  Neck, index:  16
+		processing begun of bone:  Neck1, index:  17
+		processing begun of bone:  Head, index:  18
+		processing begun of bone:  RightShoulder, index:  19
+		processing begun of bone:  RightArm, index:  20
+		processing begun of bone:  RightForeArm, index:  21
+		processing begun of bone:  RightHand, index:  22
+		processing begun of bone:  RThumb, index:  23
+		processing begun of bone:  RightFingerBase, index:  24
+		processing begun of bone:  RightHandFinger1, index:  25
+		processing begun of bone:  RHipJoint, index:  26
+		processing begun of bone:  RightUpLeg, index:  27
+		processing begun of bone:  RightLeg, index:  28
+		processing begun of bone:  RightFoot, index:  29
+		processing begun of bone:  RightToeBase, index:  30
+		Ignoring IK bone:  LLeg.IK
+		Ignoring IK bone:  RLeg.IK
+		Ignoring IK bone:  LKnee.IK
+		Ignoring IK bone:  RKnee.IK
+		Ignoring IK bone:  LElbow.IK
+		Ignoring IK bone:  RElbow.IK
+		Ignoring IK bone:  LHand.IK
+		Ignoring IK bone:  RHand.IK
+		processing action candyAction:  in[1 - 31], out[0 - 31]
+		processing action sitAction:  in[1 - 31], out[40 - 71]
+		processing action welcomeAction:  in[1 - 31], out[80 - 111]
+	processing begun of mesh:  skin_Uni1228
+		processing begun of material:  Monk01:Uni1228:Defaultskin
+		processing begun of material:  grey_hair
+		processing begun of material:  Monk01:Low-poly:Eye_brown
+			processing texture unn1221_newface
+			processing texture brown_eye
+		processing begun of multimaterial:  new_witch01.Multimaterial#0
+		num positions      :  1645
+		num normals        :  1645
+		num tangents       :  0
+		num uvs            :  3290
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1832
+		Skeleton stats:  
+			Total Influencers:  2834
+			Avg # of influencers per vertex:  1.7228
+			Highest # of influencers observed:  7, num vertices with this:  8
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  13160
+	processing begun of mesh:  robe2
+		processing begun of material:  theRobe
+		num positions      :  746
+		num normals        :  746
+		num tangents       :  0
+		num uvs            :  1492
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1044
+		Skeleton stats:  
+			Total Influencers:  2448
+			Avg # of influencers per vertex:  3.2815
+			Highest # of influencers observed:  7, num vertices with this:  27
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  5968
+	processing begun of mesh:  hat
+		processing begun of material:  theRobe
+		processing begun of material:  grey_hair
+		registered as also a user of material:  theRobe
+		registered as also a user of material:  grey_hair
+		processing begun of multimaterial:  new_witch01.Multimaterial#1
+		num positions      :  681
+		num normals        :  681
+		num tangents       :  0
+		num uvs            :  1362
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1368
+		Skeleton stats:  
+			Total Influencers:  1574
+			Avg # of influencers per vertex:  2.3113
+			Highest # of influencers observed:  3, num vertices with this:  312
+			exported as 3 influencers
+			num skeletonWeights and skeletonIndices:  2724
+	processing begun of mesh:  bucket
+		processing begun of material:  theRobe
+		registered as also a user of material:  theRobe
+		num positions      :  325
+		num normals        :  325
+		num tangents       :  0
+		num uvs            :  650
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  128
+	processing begun of mesh:  candy
+		processing begun of material:  candy
+			processing texture candybars01
+		num positions      :  120
+		num normals        :  120
+		num tangents       :  0
+		num uvs            :  240
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  40
+	processing begun of light (HEMI FROM AREA):  witchLight
+========= Writing of JSON file started =========
+	writing mesh:  skin_Uni1228
+	writing mesh:  robe2
+	writing mesh:  hat
+	writing mesh:  bucket
+	writing mesh:  candy
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.6696 secs
