@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>House In The Woods</title>
+   
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	 <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+	<!--<script src="babylon.mixMaterial.min.js"></script>-->
+	<link rel="icon" href="data:,">
+	
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+		
+		#fps {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 10px;
+		width: 60px;
+		height:30px
+		display:none;
+		}
+		
+		#DCs {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 60px;
+		height: 20px;
+		display:block;
+		}
+		
+		#meshes {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 50px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#verts {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 85px;
+		left: 10px;
+		width: 132px;
+		height: 20px;
+		display:block;
+		}
+		
+		#credits {
+		position: absolute;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 200px;
+		width: 400px;
+		height:30px
+		}
+		
+		#container {
+		width: 700px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		}
+		 
+		#loader {
+		position: absolute;
+		background-color: red;
+		width: 100%;
+        height: 100%;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		display:none;
+		}
+		
+		#pick {
+		position: absolute;
+		background-color: black;
+		border:2px solid red;
+		text-align:center;
+		font-size: 16px;
+		color: white;
+		top: 15px;
+		left: 80px;
+		width: 100px;
+		height:30px
+		display:none;
+		}
+		
+    </style>
+</head>
+<body>
+	<!--<div id="loader">Loading...</div> -->
+
+	<div id = "fps">0</div>
+	<div id ="DCs">1</div>
+	<div id ="meshes">0</div>
+	<div id = "verts">0</div>
+	
+	
+    <canvas height="695" width="1920" id="renderCanvas"></canvas>
+    <script>
+        if (BABYLON.Engine.isSupported()) {
+            var canvas = document.getElementById("renderCanvas");
+            var engine = new BABYLON.Engine(canvas, true);
+			var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			//var divFps = document.getElementById("fps");
+			var divFps = document.getElementById("fps");
+			var divDCs = document.getElementById("DCs");
+			var divAllMeshs = document.getElementById("meshes");
+			var divVerts = document.getElementById("verts");
+			//var myScene = new BABYLON.Scene(engine);
+			var sceneInstru = new BABYLON.SceneInstrumentation(myScene);
+			
+			
+			//var divPick = document.getElementById("pick");
+			//var myScene = new BABYLON.Scene(engine); // NEW scene variable captures the meshes
+			var mySkeleton;
+			//var theAnim3;
+			//var welRange;
+			//var theRaptor;
+			//var myCamera2;
+			//var aFlag = 0;
+			var aDoor;
+			var isOpen = 0;
+			var soundsReady = 0;
+			var soundLocked = 0;
+			var aRand0;
+			// srart and length
+			var laughArray = [
+			  [0.0, 2.000],
+			  [2.100, 7.000],
+			  [5.900, 3.200],
+			  [9.2000, 1.200],
+			];
+			var hasLaughed = 0;
+			var crowArray = [
+			  [0.0, 2.000],
+			  [3.000, 2.300],
+			  [6.600, 2.300],
+			  [9.400, 1.400],
+			  [12.000, 0.700],
+			  [13.300, 2.300],
+			];
+			
+			var witchArray = [
+			  [0.02, 5.500],
+			  [6.100, 3.500],
+			  [9.900, 5.500],
+			];
+			
+			var trickArray = [
+				[0.0, 2.220],
+				[2.380, 1.160],
+			];
+			
+			var Trig1;
+			var Trig2
+			var CamSensor;
+			
+			var aGhost;
+			var animGhost;
+			var aGrave;
+			var welcome;
+			var theCandy;
+			var allLights;
+		
+			var mix = new BABYLON.MixMaterial("mix", myScene);
+			
+			mix.mixTexture1 = new BABYLON.Texture("new_splatA1.png", myScene);
+			
+			
+			mix.diffuseTexture1 = new BABYLON.Texture("bakedGrass01.png", myScene);
+			mix.diffuseTexture2 = new BABYLON.Texture("rock_path02a.jpg", myScene);
+			mix.diffuseTexture3 = new BABYLON.Texture("rock2baked.png", myScene);
+			mix.diffuseTexture4 = new BABYLON.Texture("grass1.jpg", myScene);
+
+			mix.diffuseTexture1.uScale = mix.diffuseTexture1.vScale = 10;
+			mix.diffuseTexture2.uScale = mix.diffuseTexture2.vScale = 20;
+			mix.diffuseTexture3.uScale = mix.diffuseTexture3.vScale = 10;
+			mix.diffuseTexture4.uScale = mix.diffuseTexture4.vScale = 1;
+			
+			
+			
+			//BABYLON.SceneLoader.Append("", "skydome01.babylon", myScene);
+			BABYLON.SceneLoader.Append("", "new_witch01.babylon", myScene);
+			BABYLON.SceneLoader.Append("", "house03.babylon", myScene);
+			//BABYLON.SceneLoader.Append("", "new_witch01.babylon", myScene);
+			
+            
+			
+                myScene.executeWhenReady(function () {
+				
+						myScene.clearColor = new BABYLON.Color3(.0509,0.0509,0.0509);
+			//myScene.fogDensity = .015;
+			//myScene.fogColor = new BABYLON.Color3(.0509,0.0509,0.000);
+                    
+					myScene.gravity = new BABYLON.Vector3(0, -3, 0);
+					
+					myCamera2 = myScene.getCameraByName("Camera");
+					
+
+					myCamera2.speed = .1;
+					myCamera2.wheelPrecision = 200;
+					myCamera2.maxZ= 500;
+					//myCamera2.angularSensibility =4000;
+
+					//myCamera2.inputs.attached.keyboard.angularSpeed = .002;
+					//myCamera2.inputs.addMouse();
+					 /*
+					myCamera2.lowerBetaLimit = 1.57;
+					myCamera2.upperBetaLimit = 1.57
+					myCamera2.lowerRadiusLimit = 5;
+					myCamera2.upperRadiusLimit = 6;
+					 */
+					
+					myScene.activeCamera = myCamera2;
+			/*		
+					if(soundLocked === 0){
+								BABYLON.Engine.audioEngine.unlock();
+								soundLocked =1;
+					};
+			*/		
+					
+					// Attach camera to canvas inputs or if fixed do not.
+					myScene.activeCamera.attachControl(canvas);
+					
+					allLights = myScene.lights;
+					console.log(allLights.length);
+					allLights[0].intensity = 1.5; // witch Light
+					allLights[1].intensity = 0.3; //Light3
+					allLights[2].intensity = 1.5;//Point
+					allLights[3].intensity = 0.15; //Light2
+					allLights[4].intensity = 0.25; //Light1
+					//allLights[4].intensity = 0.4; //Light3
+			/*		
+					for(i=0; i<allLights.length; i++){
+						console.log(allLights[i].name)
+					};
+			*/		
+					let aTriggers = myScene.getMeshByName("Triggers");
+					var allTriggers = aTriggers.getChildren();
+		/*			console.log(allTriggers.length);
+					for(i=0; i<allTriggers.length; i++){
+						console.log(allTriggers[i].name);
+					};
+		*/			
+					Trig1 = allTriggers[0];
+					Trig2 = allTriggers[1];
+					aDoor = myScene.getMeshByName("theDoor");
+					//myScene.beginAnimation(aDoor, 1, 31, false, 0.5);
+					aDoor.isPickable  = false;
+					theCandy = myScene.getMeshByName("candy");
+					theCandy.isPickable = false;
+					
+					
+					
+					CamSensor = myScene.getMeshByName("Sensor");
+					CamSensor.position = new BABYLON.Vector3(0,0.5,0);
+					CamSensor.parent = myCamera2;
+					CamSensor.checkCollisions =true;
+					CamSensor.actionManager = new BABYLON.ActionManager(myScene);
+					
+					let outAction0 = new BABYLON.ExecuteCodeAction(
+							{
+								trigger: BABYLON.ActionManager.OnIntersectionExitTrigger, 
+								parameter: { 
+									mesh: Trig1
+								}
+							},
+							(evt) => {
+								//console.log("left first Trigger");
+								if(soundLocked === 0){
+									BABYLON.Engine.audioEngine.unlock()
+								soundLocked =1;
+								};
+								
+								//playCrow();
+								theCrow.play();
+								
+								CamSensor.actionManager.unregisterAction(outAction0)
+							}
+					);
+					
+					let inAction1 = new BABYLON.ExecuteCodeAction(
+							{
+								trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, 
+								parameter: { 
+									mesh: Trig2
+								}
+							},
+							(evt) => {
+								//console.log("left second Trigger");
+								if(soundLocked === 0){
+									BABYLON.Engine.audioEngine.unlock()
+								soundLocked =1;
+								};
+								
+								aDoor.isPickable  = false;
+								//playCrow();
+								
+								//CamSensor.actionManager.unregisterAction(outAction1)
+							}
+						);	
+						
+						
+					let outAction1 = new BABYLON.ExecuteCodeAction(
+							{
+								trigger: BABYLON.ActionManager.OnIntersectionExitTrigger, 
+								parameter: { 
+									mesh: Trig2
+								}
+							},
+							(evt) => {
+								//console.log("left third Trigger");
+								if(soundLocked === 0){
+									BABYLON.Engine.audioEngine.unlock()
+								soundLocked =1;
+								};
+								
+								aGhost.isPickable  = true;
+								//playCrow();
+								
+								//CamSensor.actionManager.unregisterAction(outAction1)
+							}
+						);	
+					
+					
+					CamSensor.actionManager.registerAction(outAction0);
+					CamSensor.actionManager.registerAction(inAction1);
+					CamSensor.actionManager.registerAction(outAction1);
+					
+					createAudio();
+					
+					aDoor.actionManager = new BABYLON.ActionManager(myScene);
+					aDoor.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, function (evt) 
+					{
+						//console.log("clicked");
+						if(isOpen === 0){
+							aDoor.isPickable = false;
+								aRand0 = Math.floor(Math.random() * 6); // create random number 0->5
+								//console.log(aRand0);
+								theCrow.play(0,crowArray[aRand0][0], crowArray[aRand0][1]);
+								let openDoor = myScene.beginAnimation(aDoor, 1, 31, false, 0.5);
+								
+								theCrow.onended = function(){
+									theWitch.play(0,witchArray[0][0], witchArray[0][1]);
+									//theWitch1.play()
+									welcome = myScene.beginAnimation(mySkeleton, 80, 111, true, 0.45);
+									
+									
+								}	
+								theWitch.onended = function(){
+									welcome.stop();
+									isOpen =1;
+									theCandy.isPickable = true;
+									let candy = myScene.beginAnimation(mySkeleton, 0, 15,false, 0.5);
+									
+									//let candy = myScene.beginAnimation(mySkeleton, 0,31,false, 0.5);
+									//theWitch.onended = function(){
+									//theWitch.play(0,witchArray[0][0], witchArray[0][1]);
+									//theWitch.onended = function(){
+										//aDoor.isPickable = true;
+								//};
+							
+								if(isOpen ===1){
+									//isOpen = 0;
+									 theWitch.play(0,witchArray[2][0], witchArray[2][1]);
+									// let candy = myScene.beginAnimation(mySkeleton, 15,31,false, 0.5);
+									 theWitch.onended = function(){
+									//	isOpen = 1;
+									//let candy = myScene.beginAnimation(mySkeleton, 15,31,false, 0.5);
+									
+									
+										//console.log("finished");
+									 };
+									 candy.onAnimationEnd = function (){
+										//let candy = myScene.beginAnimation(mySkeleton, 15,31,false, 0.5);
+										//console.log("ended");
+									 }
+								};
+							
+								};
+									 
+								//	 aDoor.isPickable = true;
+								//};
+							
+						//}
+						};
+						
+			/*			if(isOpen === 1){
+							aDoor.isPickable = false;
+								aRand0 = Math.floor(Math.random() * 6); // create random number 0->5
+								//console.log(aRand0);
+								theCrow.play(0,crowArray[aRand0][0], crowArray[aRand0][1]);
+								let openDoor = myScene.beginAnimation(aDoor, 31, 1, false, 0.5);
+								theCrow.onended = function(){
+									//theWitch.play(0,witchArray[0][0], witchArray[0][1]);
+									if(hasLaughed < 3){
+										theLaugh.play(0,laughArray[0][0], laughArray[0][1]);
+										hasLaughed = hasLaughed +1;
+										console.log("line 390 = " + hasLaughed);
+									}
+									let welcome = myScene.beginAnimation(mySkeleton, 80, 111, false, 0.45);
+									isOpen = 0;
+									aDoor.isPickable = false;
+									
+									theLaugh.onended = function(){
+										if(hasLaughed ===  2){
+											theWitch.play(0,witchArray[1][0], witchArray[1][1]);
+											theWitch.onended = function(){
+											
+												theLaugh.play(0,laughArray[1][0], laughArray[1][1]);
+												hasLaughed = hasLaughed + 1;
+												console.log("line 402 = " + hasLaughed);
+											}
+											//theLaugh.onended = function(){
+											//	theWitch.play(0,witchArray[1][0], witchArray[1][1]);
+											//}
+										}
+										
+										
+										if(hasLaughed ===  1){
+											theLaugh.play(0,laughArray[2][0], laughArray[2][1]);
+											hasLaughed = hasLaughed + 1;
+											console.log("line 413 = " + hasLaughed);
+											//theLaugh.onended = function(){
+												//theWitch.play(0,witchArray[1][0], witchArray[1][1]);
+											//}
+										}
+									};
+									
+								};
+							
+						}
+			*/		
+					}
+					));
+					
+					//if(soundLocked === 0){
+					//	BABYLON.Engine.audioEngine.unlock()
+					//	soundLocked =1;
+					//};
+					
+					var aRand0 = Math.floor(Math.random() * 6); // create random number 0->5
+					theCrow.play(0,crowArray[aRand0][0], crowArray[aRand0][1]);
+					
+			/*		
+					var theSky = myScene.getMeshByName("sky");
+					//theSky.applyFog = false;
+					
+					
+					var aTrigger = myScene.getMeshByName("Trigger");
+			*/		
+					var ground = myScene.getMeshByName("zTerrain");
+					ground.material = mix;
+					
+					
+					theCandy.actionManager = new BABYLON.ActionManager(myScene);
+					theCandy.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, function (evt) 
+					{
+						//console.log("clicked");
+						theCandy.isPickable = false;
+						theLaugh.play(0,laughArray[0][0], laughArray[0][1]);
+						//hasLaughed = 0;
+						aDoor.isPickable = false;
+						isOpen = 0;
+						let candy = myScene.beginAnimation(mySkeleton, 15,31,false, 0.5);
+						candy.onAnimationEnd = function (){
+							//let candy = myScene.beginAnimation(mySkeleton, 15,31,false, 0.5);
+							//console.log("ended");
+							let openDoor = myScene.beginAnimation(aDoor, 31, 1, false, 0.5);
+							openDoor.onAnimationEnd  = function(){
+								theLaugh.play(0,laughArray[1][0], laughArray[1][1]);
+						/*		theLaugh.onended = function(){
+									theWitch.play(0,witchArray[1][0], witchArray[1][1]);
+									//theWitch1.play()
+									//welcome = myScene.beginAnimation(mySkeleton, 80, 111, true, 0.45);
+									
+									
+								}	
+						*/		
+								
+							//console.log("play second laugh here");
+							}
+						}
+						//let openDoor = myScene.beginAnimation(aDoor, 31, 1, false, 0.5);
+						//let candy = myScene.beginAnimation(mySkeleton, 15,31,false, 0.5);
+						
+						
+						
+					
+					}
+					));
+					
+					
+					
+					aGhost = myScene.getMeshByName("ghost");
+					animGhost = myScene.beginAnimation(aGhost, 0, 61, true, 0.5);
+					aGhost.isPickable = false;
+					
+					aGhost.actionManager = new BABYLON.ActionManager(myScene);
+					aGhost.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, function (evt) 
+					{
+						//console.log("clicked");
+						aGhost.isPickable = false;
+						theTrick.play(0,trickArray[1][0], trickArray[1][1]);
+						aDoor.isPickable = true;
+						//hasLaughed = 0;
+						
+					
+					}
+					));
+					
+					aGrave = myScene.getMeshByName("grave_rip");
+					aGrave.isPickable = true;
+					aGrave.actionManager = new BABYLON.ActionManager(myScene);
+					aGrave.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, function (evt) 
+						{
+							//console.log("clicked");
+							aGrave.isPickable = false;
+							theTrick.play(0,trickArray[0][0], trickArray[0][1]);
+						}
+					));
+					
+					//Get the skeleton
+					mySkeleton = myScene.getSkeletonByName("Monk01");
+					/*mySkeleton.animationPropertiesOverride = new BABYLON.AnimationPropertiesOverride();
+					mySkeleton.animationPropertiesOverride.enableBlending = true;
+					mySkeleton.animationPropertiesOverride.blendingSpeed = 0.05;
+					mySkeleton.animationPropertiesOverride.loopMode = 1;
+					*/
+					
+					sitRange = mySkeleton.getAnimationRange("sitAction");
+					welRange =  mySkeleton.getAnimationRange("welcomeAction");
+					theSit = myScene.beginAnimation(mySkeleton, sitRange.from, sitRange.to, false, 0.5);
+					
+			
+			
+			/*		// get the mesh
+					theTrigger = myScene.getMeshByName("Trigger");
+			*/		
+					
+					// limit rotation Dad72 code
+					/*
+					myScene.registerBeforeRender(function () {		            
+						
+						if (myCamera2.beta < 1.57){
+							myCamera2.beta = 1.57;
+						}
+						else if (myCamera2.beta > (Math.PI / 2)){
+							myCamera2.beta = (Math.PI / 2);
+						}
+					});
+					*/
+					
+					
+					//get total meshes and vertices
+					var vertTotal = 0;
+					allMeshes = myScene.meshes;
+					divAllMeshs.innerHTML = allMeshes.length + " Total meshes";
+					for (var i=0; i<allMeshes.length; i++){
+						if (allMeshes[i].getTotalVertices() > 0){
+							vertTotal = vertTotal + allMeshes[i].getTotalVertices()
+						}
+					}
+					divVerts.innerHTML = vertTotal + " Total vertices";
+					
+					
+                    // Once the scene is loaded, just register a render loop to render it
+                    engine.runRenderLoop(function() {
+					divFps.innerHTML = engine.getFps().toFixed() + " fps";
+					divDCs.innerHTML = sceneInstru.drawCallsCounter.current.toString() + " DCs";
+                    myScene.render();
+                    });
+                });
+        };
+		
+		
+		
+		
+		
+		
+		// Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+		
+		
+		window.addEventListener("keyup", onKeyUp);
+	   
+	   
+		function onKeyUp(event) {
+			
+			switch (event.keyCode) {
+				   
+				case 85 : //'u'
+					//console.log("u pressed");
+					allLights[1].intensity = allLights[1].intensity + 0.05; //Light3
+					console.log(allLights[1].intensity);
+				   break;
+				   
+				 case 68 : //'d'
+						//console.log("d pressed");
+						allLights[1].intensity = allLights[1].intensity - 0.05; //Light3
+						console.log(allLights[1].intensity);
+				   break;  
+				   
+				default: 
+					
+					break;
+			}
+			
+		}
+
+	
+		 
+		 
+		 function createAudio(){
+
+			theCrow = new BABYLON.Sound("theSounds1", "crows.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			
+			theWitch = new BABYLON.Sound("theSounds2", "witch02.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+	
+			theLaugh = new BABYLON.Sound("theSounds3", "laugh03.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			
+			theTrick = new BABYLON.Sound("theSounds3", "trick02.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+		/*	theCards01 = new BABYLON.Sound("theSounds4", "cards01a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theCards02 = new BABYLON.Sound("theSounds5", "cards02a.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theFire01 = new BABYLON.Sound("theSounds1", "fire_room01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			thePicture01 = new BABYLON.Sound("theSounds1", "picture01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theMorgana01 = new BABYLON.Sound("theSounds1", "morgana01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+			theExit01 = new BABYLON.Sound("theSounds1", "exit01.mp3", myScene, soundReady, { loop: false, autoplay: false, volume: 0.5  });
+	*/		
+			
+			function soundReady() {
+				soundsReady++;
+				if(soundsReady >3){
+					console.log("sounds ready = " + soundsReady);
+				}
+			};
+
+	
+		};
+		
+		function playCrow(){
+			//Trig1.dispose();
+			aRand0 = Math.floor(Math.random() * 6); // create random number 0->5
+			theCrow.play(0,crowArray[aRand0][0], crowArray[aRand0][1]);
+			//theCrow.play();
+		}
+		
+    </script>
+
+
+</body></html>
