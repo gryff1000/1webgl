@@ -1,0 +1,55 @@
+Exporter version: 3.3.2, Blender version: 3.6.3
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  STD
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  H:\babylon_projects\new_terrain\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  terrain
+		processing begun of material:  Material.002
+			processing texture terrain_map
+		num positions      :  5256
+		num normals        :  5256
+		num tangents       :  0
+		num uvs            :  10512
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9796
+	processing begun of mesh:  terrain.001
+		processing begun of material:  Material.002
+		registered as also a user of material:  Material.002
+		num positions      :  60
+		num normals        :  60
+		num tangents       :  0
+		num uvs            :  120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  tree1
+		processing begun of material:  trunk02.001
+		processing begun of material:  leaves02.001
+			processing texture darkwood01
+			processing texture new_mixed01
+		processing begun of multimaterial:  new_terrain_02a.Multimaterial#0
+		num positions      :  294
+		num normals        :  294
+		num tangents       :  0
+		num uvs            :  588
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of light (HEMI FROM AREA):  Light
+========= Writing of JSON file started =========
+	writing mesh:  terrain
+	writing mesh:  terrain.001
+	writing mesh:  tree1
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.7317 secs
